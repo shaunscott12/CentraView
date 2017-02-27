@@ -1,0 +1,1213 @@
+.body
+{
+  margin: 0px;
+  padding: 0px;
+  font-family: verdana, sans-serif;
+  font-size: 76%;
+}
+
+table.headerTable
+{
+		background-color: #17283c;
+		height: 35px;
+}
+
+.headerTitleText
+{
+  font-family: verdana, sans-serif;
+		font-size: 85%;
+		font-weight: bold;
+		color: #ffffff;
+		padding-right: 15px;
+}
+
+td.rightBorder
+{
+  background-color: #345788;
+		width: 10px;
+}
+
+/*** TABS START ***/
+
+td.tabsOff
+{
+  color: #abc4d7;
+		background-color: #17283c;
+		border-bottom:#abc4d7 1px solid;
+		height: 20px;
+		text-align: center;
+		align: center;
+		padding-left: 4px;
+		padding-right: 4px;		
+		white-space: nowrap;
+}
+a.tabsOff
+{
+  color: #a2b3bf;
+  text-decoration: none;
+		font-family: verdana, sans-serif;
+		font-size: 65%;
+}
+
+td.tabsOn
+{
+		background-color: #345788;
+  border-right: #abc4d7 1px solid;
+  border-top: #abc4d7 1px solid;		
+  border-left: #abc4d7 1px solid;
+		height: 20px;
+		text-align: center;
+		align: center;
+		padding-left: 5px;
+		padding-right: 5px;		
+		white-space: nowrap;
+}
+
+a.tabsOn
+{
+  font-weight: bold;
+  font-size: 65%;
+  color: #abc4d7;
+  font-family: verdana, sans-serif;
+  text-decoration: none;		
+}
+
+td.tabsSpacer
+{
+  background: url('/centraview/images/tabs_divider.gif') no-repeat center center;
+  background-color: #17283c;
+  border-bottom:#abc4d7 1px solid;
+  height: 20px;
+  align: center;
+  padding: 0px;		
+}
+
+td.tabsBottomRule
+{
+  height: 10px;
+		background-color: #345788;
+}
+
+td.tabsTopRule
+{
+  height: 2px;
+		background-color: #17283c;
+}
+
+/*** TABS END ***/
+
+/*** FOOTER START ***/
+
+td.footerTopRule
+{
+  height: 11px;
+  background-color: #345788;
+}
+
+td.footerDivider
+{
+  height: 0.5px;
+  background-image: url('/images/footer_tile.gif');
+}
+
+td.footerContent
+{
+  padding-right: 7px;
+  padding-left: 7px;
+  background-color: #334a60;
+}
+
+.footerTextLeft
+{
+  font-family: verdana, sans-serif;
+  font-size: 65%;
+  color: #9fbed0;
+  text-align: left;
+		position: relative;
+  top: -2px;
+}
+
+.footerTextRight
+{
+  font-family: verdana, sans-serif;
+  font-size: 65%;
+  color: #75a2bc;
+  text-align: right;
+  position: relative;
+		top: -2px;
+}
+
+/*** FOOTER END ***/
+
+
+/*** LEFT NAVIGATION MENU START ***/
+table#leftNavOutterTable
+{
+  height: 100%;
+}
+
+td.leftNavLeftBorder
+{
+  width: 10px;
+		background-color: #345788;
+}
+
+td.leftNavRightTD
+{
+  background-color: #b8cae1;
+}
+
+.leftNavTopBG
+{
+  background-color: #a0b3cb;
+}
+
+td.leftNavDivider
+{
+  height: 2px;
+  background: url('/images/left_nav_divider_tile.gif');
+}
+
+td.leftNavTitle
+{
+  font-family: verdana, arial, sans-serif;
+  font-size: 85%;
+  font-weight: bold;
+  color: #345788;
+  padding-top: 11px;
+  padding-bottom: 11px;
+    
+}
+
+.secNavOn
+{
+  font-family: verdana, sans-serif;
+  font-weight: bold;
+  font-size: 65%;
+  color: #345788;
+  background-color:#d8dfea;
+  height: 21px;
+}
+
+.secNavOnLeft
+{
+  font-family: verdana, sans-serif;
+  font-size: 35%;
+  font-weight: bold;
+  color: #345788;
+  background-color: #d8dfea;
+  padding-left: 5px;
+  border-left: #d8dfea 2px solid;
+  width: 12px;
+  text-align: left;
+}
+
+.secNavOnLink
+{
+  cursor: hand;
+  color: #345788;
+  text-decoration: none;
+}
+
+.secNavOnBottom
+{
+  height: 2px;
+  bckground-color: #d8dfea;
+}
+
+.secNavOff
+{
+  border: #ffe994 1px solid;
+  height: 21px;
+}
+
+.secNavOffLeft
+{
+  font-family: verdana, sans-serif;
+  font-size: 65%;
+  font-weight: bold;
+		color: #0b2953;
+  background-color: #7c91b2;
+  width: 14px;
+  height: 21px;
+  text-align: left;
+  padding-left: 5px;
+}
+
+.secNavOffRight
+{
+  font-family: verdana, sans-serif;
+		font-size: 65%;
+		font-weight: bold;
+  color: #0b2953;
+  background-color: #7c91b2;
+  width: 155px;
+  height: 21px;
+  cursor: hand;
+}
+
+.secNavOffLink
+{
+  cursor: hand;
+  color: #0b2953;
+  text-decoration: none;
+}
+/*** LEFT NAVIGATION MENU END ***/
+
+td.mainContentBG
+{
+  background-color: #d8dfea;
+}
+
+.plainText
+{
+  font-family: verdana, arial, sans-serif;
+  font-size: 65%;
+  color: #334a60;
+}
+
+.formTitleColumn
+{
+  font-family: verdana, arial, sans-serif;
+  font-size: 65%;
+  color: #334a60;
+}
+
+.formContentColumn
+{
+  font-family: verdana, arial, sans-serif;
+  font-size: 65%;
+  color: #334a60;
+  
+  
+}
+
+/**** RIGHT SIDE INFO PANEL START ****/
+td.infoPanelHeader
+{
+  background-color: #a0b3cb;
+		padding-left: 5px;
+		padding-right: 5px;
+}
+
+.infoPanelHeaderText
+{
+  font-weight: bold;
+  font-size: 65%;
+  color: #334a60;
+  font-family: verdana, sans-serif;
+}
+
+td.infoPanelMain
+{
+  padding: 5px;
+  background-color: #b8cae1;
+}
+
+.infoPanelMainText
+{
+  font-size: 65%;
+  color: #334a60;
+  font-family: verdana, sans-serif;
+}
+/**** RIGHT SIDE INFO PANEL END ****/
+
+/**** SECTIONAL HEADER START ****/
+td.sectionalHeaderShadow
+{
+  background-image: url('/centraview/images/popup_shadow.gif');
+		height: 2px;
+}
+
+td.sectionalHeader
+{
+  border-top: #b7d4d1 1px solid;
+  border-bottom: #7d93b2 1px solid;
+  background-color: #9ebed1;
+}
+
+.sectionalHeaderText
+{
+  padding-left: 2px;
+  padding-right: 2px;
+  font-family: verdana, arial, sans-serif;
+  font-size: 65%;
+  font-weight: bold;
+  color: #334a60;
+}
+
+
+td.supportBlueHeader
+{
+  color: #FFFFFF;
+  font-family: verdana, arial, sans-serif;
+  font-weight: bold;
+  font-size: 65%;
+  padding-left: 3px;
+  background-color: #7c91b2;
+		height: 20px;
+}
+/**** SECTIONAL HEADER  END  ****/
+
+/**** FORM ELEMENTS START ****/
+input.buttonDarkBlue
+{
+  font-family: verdana, arial, sans-serif;
+  font-size: 65%;
+		font-weight: bold;
+		color: #334a60;
+		background-color: #a0becb;		
+  height: 17px;
+  border: #265c78 1px solid;
+  cursor: hand;
+}
+input.whiteBlueBorder
+{
+  border: #a0b3cb 1px solid;
+  color: #264878;
+  font-family: verdana, arial, sans-serif;
+  font-size: 95%;
+  padding-left:4px;
+  background-color: white;
+  height: 17px;
+}
+
+select.whiteBlueBorder
+{
+  border: #a0b3cb 1px solid;
+  font-family: verdana, arial, sans-serif;
+  font-size: 95%;
+  color: #264878;
+  padding-left:4px;
+}
+
+textarea.whiteBlueBorder
+{
+  border: #a0b3cb 1px solid;
+  font-family: verdana, arial, sans-serif;
+  font-size: 95%;
+  color: #264878;
+		padding-left:4px;
+}
+
+input.lightBlueButton
+{
+    BORDER-RIGHT: #264878 1px solid;
+    BORDER-TOP: #264878 1px solid;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #264878 1px solid;
+    CURSOR: hand;
+    COLOR: #4a6e9f;
+    BORDER-BOTTOM: #264878 1px solid;
+    FONT-FAMILY: verdana, sans-serif;
+    BACKGROUND-COLOR: #c3d4ea
+}
+
+/**** FORM ELEMENTS  END  ****/
+
+
+/**** SEARCH BAR START ****/
+td.searchBar
+{
+  border: #7c91b2 1px solid;
+  height: 31px;
+  background-color: #ffffff;
+}
+
+input.searchBarButton
+{
+  border: #264878 1px solid;
+		background-color: #d8dfea;
+  font-family: verdana, arial, sans-serif;
+		font-size: 65%;
+		font-weight: bold;
+  color: #4a6e9f;
+  height: 17px;
+  cursor: hand;
+}
+
+input.searchBarTextBox
+{
+  border: #a0b3cb 1px solid;
+  font-family: verdana, arial, sans-serif;
+		font-size: 65%;
+		color: #264878;		
+  height: 17px;
+}
+
+a.searchBarTextLink
+{
+  font-family: verdana, arial, sans-serif;
+		font-size: 65%;
+		font-weight: bold;
+  color: #4a6e9f;
+}
+
+td.crumbsBar
+{
+  border: #7c91b2 1px solid;
+  background-color: #ffffff;
+		padding-left: 5px;
+		padding-top: 1px;
+		padding-bottom: 3px;
+}
+
+span.crumbsBarTitle
+{
+		font-family: verdana, arial, sans-serif;
+  font-weight: bold;
+		font-size: 65%;
+		color:#334a60;		
+}
+
+span.crumbsBarCrumbs
+{
+		font-family: verdana, arial, sans-serif;
+		font-size: 65%;
+		color:#334a60;		
+}
+
+a.crumbsBar
+{
+		font-family: verdana, arial, sans-serif;
+		color:#334a60;				
+}
+
+/**** SEARCH BAR START ****/
+
+td.loginInfoTop
+{
+  padding: 0px;
+		height: 5px;
+}
+
+td.loginInfoLeft
+{
+  padding: 2px;
+  font-family: verdana, arial, sans-serif;
+		font-size: 65%;
+}
+
+td.loginInfoRight
+{
+  padding: 2px;
+  font-family: verdana, arial, sans-serif;
+		font-size: 65%;
+}
+
+td.loginButton
+{
+  padding: 2px;
+		text-align: center;
+}
+
+input.logoutButton
+{
+  font-family: verdana, arial, sans-serif;
+  font-size: 65%;
+  font-weight: bold;
+  color: #334a60;
+  background-color: #a0becb;		
+  height: 17px;
+  border: #265c78 1px solid;
+  cursor: hand;
+}
+
+td.centerDivider
+{
+  background-color: #6f86a7;
+}
+
+a.popupLink
+{
+  color: #334a60;
+  text-decoration: underline;
+  cursor: hand;
+}
+
+a.popupLink:hover
+{
+  color: #146ea3;
+  text-decoration: underline;
+  cursor: hand;	
+}
+
+a.popupLink:visited
+{
+  color: #937810;
+  text-decoration: underline;
+  cursor: hand;	
+}
+
+td.emailMessageTD
+{
+  border: #7c91b2 1px solid;
+  height: 31px;
+  background-color: #ffffff;
+}
+
+span.emailMessageText
+{
+  font-size: 65%;
+}
+
+span.emailPrevNext
+{
+  font-size: 65%;
+	font-weight: bold;
+}
+
+table.orderFormHeader
+{
+  font-family: verdana, arial, sans-serif;
+  border:#7d93b2 1px solid;
+  font-size: 65%; 
+  color: #334a60;
+}
+
+td.orderFormHeaderTop
+{
+  font-size: 65%; 
+  color: #334a60;
+  font-family: verdana, arial, sans-serif;
+  background-color:#9ebed1;
+  font-weight:bold;
+  text-align: center;
+  border-bottom: #7d93b2 1px solid;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+td.orderFormHeaderContent
+{
+  font-size: 65%; 
+  color: #334a60;
+  font-family: verdana, arial, sans-serif;
+  background-color: #ffffff;
+  border-right: #7d93b2 1px solid;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 7px;
+  padding-right: 7px;
+}
+td.orderFormHeaderContentEnd
+{
+  font-size: 65%; 
+  color: #334a60;
+  font-family: verdana, arial, sans-serif;
+  background-color: #ffffff;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+
+.blueTextOnWhite
+{
+  font-size: 65%; 
+  color: #334a60;
+  font-family: verdana, arial, sans-serif;
+}
+
+.orderTitleText
+{
+  font-size: 65%;
+  font-weight: bold;
+  color: #334a60;
+  font-family: verdana, sans-serif;
+}
+
+.faqTitleText
+{
+  font-size: 65%;
+  font-weight: bold;
+  color: #334a60;
+  font-family: verdana, sans-serif;
+}
+/**** PAGING START ****/
+td.topPagingBar
+{
+  border: #937810 1px solid;
+  border-bottom: #ffe994 1px solid;
+  background-color: #ffe994;
+}
+
+td.bottomPagingBar
+{
+  border: #937810 1px solid;
+  border-top: #ffe994 1px solid;
+  background-color: #ffe994;
+}
+
+input.pagingButton
+{
+  border: #937810 1px solid;
+  background-color: #fff8c5;
+		color: #937810;
+		font-family: verdana, arial, sans-serif;
+		font-size: 65%;
+  font-weight: bold;
+  cursor: hand;
+  height: 17px;
+}
+
+.pagingTotalText
+{
+  font-family: verdana, arial, sans-serif;
+		font-size: 55%;
+  color: #937810;
+}
+
+.pagingTotalTextBold
+{
+  font-family: verdana, arial, sans-serif;
+		font-size: 55%;
+		font-weight: bold;
+  color: #937810;
+}
+
+.pagingPagesText
+{
+  font-family: verdana, arial, sans-serif;
+  font-size: 55%;
+  color: #334a60;
+}
+
+.pagingBlueTextBold
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 55%;
+    COLOR: #334a60;
+    FONT-FAMILY: verdana, sans-serif;
+}
+
+td.pagingDrop
+{
+  border: #937810 1px solid;
+  background-color: #fff8c5;
+		color: #937810;
+  font-family: verdana, arial, sans-serif;
+  font-size: 65%;
+  font-weight: bold;		
+  width: 100px;
+		height: 18px;
+  cursor: hand;
+}
+td.dropdownMenu3
+{
+    BORDER-RIGHT: #937810 1px solid;
+    PADDING-LEFT: 9px;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #937810 1px solid;
+    CURSOR: hand;
+    COLOR: #937810;
+    BORDER-BOTTOM: #937810 1px solid;
+    FONT-FAMILY: verdana, sans-serif;
+    HEIGHT: 16px;
+    BACKGROUND-COLOR: #fff8c5;
+    TEXT-ALIGN: left
+}
+span.dropdownMenu3
+{
+    DISPLAY: none;
+    Z-INDEX: 3;
+    LEFT: -1px;
+    WIDTH: 51px;
+    POSITION: absolute;
+    TOP: 17px
+}
+
+td.leftPagingBorder
+{
+  border-right: #7d93b2 1px solid;
+  border-left: #937810 1px solid;
+  background-color: #ffe994;
+}
+
+td.rightPagingBorder
+{
+  border-right: #937810 1px solid;
+  border-left: #7d93b2 1px solid;
+  background-color: #ffe994;
+}
+
+td.pagingTableHeadShadow
+{
+  background-color: #7d93b2;
+}
+
+td.pagingTableHeadShadowLt
+{
+  background-color: #b1d0dc
+}
+
+td.pagingTableHeadCheck
+{
+  border-right: #7d93b2 1px solid;
+  border-bottom: #a0bbdb 1px solid;
+  background-color: #9ebed1;
+}
+
+td.pagingTableHeadText
+{
+  padding-left: 2px;
+  padding-right: 2px;
+  background-color: #9ebed1;
+  font-family: verdana, arial, sans-serif;
+  font-size: 65%;
+  font-weight: bold;
+  color: #334a60;
+  text-decoration: none;  
+}
+
+a.pagingTableHeadText
+{
+  font-family: verdana, arial, sans-serif;
+  color: #334a60;
+  text-decoration: none;
+}
+
+a.pagingTableHeadText:hover
+{
+  color: #146ea3;
+  text-decoration: underline;
+}
+
+td.pagingTableHeadBottom
+{
+  background-color: #7d93b2;
+}
+
+tr.emailRowUnreadOdd
+{
+  background-color: #e4eaf3;
+		font-weight: bold;
+}
+
+tr.emailRowUnreadEven
+{
+  background-color: #f8fafc;
+		font-weight: bold;
+}
+
+td.pagingTableCheck
+{
+  border-right: #7d93b2 1px solid;
+  border-bottom: #a0bbdb 1px solid;
+  background-color: #fff8c5;
+}
+
+td.pagingTableCheckSelected
+{
+  border-right: #7d93b2 1px solid;
+  border-bottom: #a0bbdb 1px solid;
+  background-color: #ffeba0;
+}
+
+td.pagingTableCheckBottom
+{
+  border-right: #7d93b2 1px solid;
+  background-color: #fff8c5;
+}
+
+td.pagingTableCheckBottomSelected
+{
+  border-right: #7d93b2 1px solid;
+  background-color: #ffeba0;
+}
+
+td.pagingTableIconOdd
+{
+  border-right: #a0bbdb 1px solid;
+  text-align: center;
+}
+
+td.pagingTableOdd
+{
+    BORDER-RIGHT: #a0bbdb 1px solid;
+    PADDING-RIGHT: 5px;
+    PADDING-LEFT: 5px;
+    FONT-SIZE: 65%;
+  color: #334a60;
+    FONT-FAMILY: verdana, sans-serif;
+}
+
+a.pagingTableLink
+{
+  color: #334a60;
+}
+
+a.pagingTableLink:hover
+{
+  color: #146ea3;
+}
+
+a.pagingTableLink:visited
+{
+  color: #937810;
+}
+
+td.pagingTableOddEnd
+{
+  padding-left: 5px;
+  padding-right: 5px;
+		font-family: verdana, arial, sans-serif;
+  font-size: 65%;
+  color: #334a60;
+}
+
+td.pagingTableEven
+{
+    BORDER-RIGHT: #a0bbdb 1px solid;
+    PADDING-RIGHT: 5px;
+    PADDING-LEFT: 5px;
+    FONT-SIZE: 65%;
+    COLOR: #334a60;
+    FONT-FAMILY: verdana, sans-serif;
+}
+td.pagingTableEvenEnd
+{
+    PADDING-RIGHT: 5px;
+    PADDING-LEFT: 5px;
+    FONT-SIZE: 65%;
+    COLOR: #334a60;
+    FONT-FAMILY: verdana, sans-serif;
+}
+
+tr.pagingTableRowEven
+{
+  background-color: #f8fafc;
+}
+
+tr.pagingTableRowOdd
+{
+  background-color: #e4eaf3;
+}
+
+
+td.pagingTableIconEven
+{
+  border-right: #a0bbdb 1px solid;
+  text-align: center;
+}
+
+.pagingTableHeadBottom
+{
+  background-color: #7d93b2;
+}
+
+/**** PAGING  END  ****/
+
+
+/*****  Addition of classes starts  *************/
+.logoTile
+{
+    BACKGROUND-IMAGE: url(/centraview/images/logo_tile.gif)
+}
+
+.headerTopTile
+{
+    BACKGROUND-IMAGE: url(/centraview/images/top_tile.gif)
+}
+
+.headerTopLeftGradient
+{
+    BACKGROUND-IMAGE: url(/centraview/images/top_left_gradient.gif)
+}
+
+.headerTopRightGradient
+{
+    BACKGROUND-IMAGE: url(/centraview/images/top_right_gradient.gif)
+}
+
+.headerMiddle
+{
+    BACKGROUND-IMAGE: url(/centraview/images/middle_gradient_tile.gif)
+}
+
+.headerBottomGradient
+{
+    BACKGROUND-IMAGE: url(/centraview/images/bottom_gradient.gif)
+}
+
+.headerDivider
+{
+    BACKGROUND-IMAGE: url(/centraview/images/tab_tile.gif)
+}
+
+.popupTableInstructionText
+{
+    PADDING-RIGHT: 3px;
+    FONT-SIZE: 65%;
+    COLOR: #334a60;
+    font-family: verdana, arial, sans-serif;
+}
+
+.leftNavBottomBG
+{
+    BACKGROUND-COLOR: #b8cae1
+}
+
+.HomeTableHead
+{
+    BORDER-RIGHT: #7d93b2 1px solid;
+    BORDER-TOP: #7d93b2 1px solid;
+    BORDER-LEFT: #7d93b2 1px solid;
+    BORDER-BOTTOM: #7d93b2 1px solid;
+    BACKGROUND-COLOR: #9ebed1
+}
+
+.homeTableHeadLight
+{
+    BACKGROUND-COLOR: #b7d4d1
+}
+
+.popupTableHeadText
+{
+    PADDING-RIGHT: 2px;
+    PADDING-LEFT: 2px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 65%;
+    COLOR: #334a60;
+    font-family: verdana, arial, sans-serif;
+}
+
+.HomeTableOdd
+{
+    BORDER-RIGHT: #7d93b2 1px solid;
+    PADDING-RIGHT: 5px;
+    BORDER-TOP: 1px;
+    PADDING-LEFT: 5px;
+    FONT-SIZE: 65%;
+    PADDING-BOTTOM: 3px;
+    BORDER-LEFT: #7d93b2 1px solid;
+    COLOR: #334a60;
+    PADDING-TOP: 3px;
+    BORDER-BOTTOM: #7d93b2 1px solid;
+    font-family: verdana, arial, sans-serif;
+}
+
+.HomeText
+{
+    
+    PADDING-RIGHT: 5px;
+    PADDING-LEFT: 5px;
+    FONT-SIZE: 65%;
+    PADDING-BOTTOM: 3px;
+    COLOR: #334a60;
+    PADDING-TOP: 3px;
+    FONT-FAMILY: verdana, arial, sans-serif;
+}
+
+.entityAlertRow
+{
+    BORDER-RIGHT: #ff7d39 1px solid;
+    BORDER-TOP: #ff7d39 1px solid;
+    BORDER-LEFT: #ff7d39 1px solid;
+    BORDER-BOTTOM: #ff7d39 1px solid;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: #ffefe7
+}
+
+.entityAlertText
+{
+    FONT-SIZE: 65%;
+    COLOR: #cd4800;
+    font-family: verdana, arial, sans-serif;
+}
+
+.homePageBtn
+{
+    BORDER-RIGHT: #4f7b91 1px solid;
+    BORDER-TOP: #4f7b91 1px solid;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 55%;
+    BORDER-LEFT: #4f7b91 1px solid;
+    COLOR: #4f7b91;
+    BORDER-BOTTOM: #4f7b91 1px solid;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 16px;
+    BACKGROUND-COLOR: #b2cad5
+}
+
+.footerBG
+{
+    PADDING-RIGHT: 7px;
+    PADDING-LEFT: 7px;
+    BACKGROUND-COLOR: #334a60
+}
+
+.headerText
+{
+    FONT-SIZE: 100%;
+    COLOR: #ffffff;
+    font-family:  sans-serif
+}
+
+.footerLeftText
+{
+    FONT-SIZE: 65%;
+    COLOR: #9fbed0;
+    font-family: verdana, arial, sans-serif;
+    POSITION: relative;
+    TOP: -2px;
+    TEXT-ALIGN: left
+}
+
+.mainbody
+{
+  margin: 0px;
+		padding: 0px;
+		font-family: verdana, sans-serif;
+		font-size: 100%;
+}
+
+A.pagingTableLink
+{
+    COLOR: #334a60
+}
+
+.activityDivider
+{
+    BACKGROUND-IMAGE: url(/centraview/images/activity_horiz_tile.gif)
+}
+
+td.searchBuilder
+{
+	COLOR: #FFFFFF;
+    font-family: verdana, arial, sans-serif;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 65%;
+    PADDING-LEFT: 3px;
+    BACKGROUND-COLOR: #7c91b2;
+}
+
+.popupTextArea
+{
+    BORDER-RIGHT: #a0b3cb 1px solid;
+    BORDER-TOP: #a0b3cb 1px solid;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #a0b3cb 1px solid;
+    WIDTH: 170px;
+    COLOR: #264878;
+    BORDER-BOTTOM: #a0b3cb 1px solid;
+    font-family: verdana, arial, sans-serif;
+    BACKGROUND-COLOR: #e7ecf3
+}
+.popupTableHeadShadow
+{
+    BACKGROUND-IMAGE: url(/centraview/images/popup_shadow.gif)
+}
+
+.popupTableHead
+{
+    BORDER-TOP: #b7d4d1 1px solid;
+    BORDER-BOTTOM: #7d93b2 1px solid;
+    BACKGROUND-COLOR: #9ebed1
+}
+.popupTableHeadBottom
+{
+    BACKGROUND-COLOR: #7d93b2
+}
+.popupTableRow
+{
+    BACKGROUND-COLOR: #d8dfea
+}
+
+.popupTableTD
+{
+    BORDER-RIGHT: #6f86a7 1px solid
+}
+.popupDarkTD
+{
+    BACKGROUND-COLOR: #a0b3cb
+}
+.popupTableText
+{
+    FONT-SIZE: 65%;
+    COLOR: #334a60;
+    font-family: verdana, arial, sans-serif;
+}
+.fileBrowseButton
+{
+    BORDER-RIGHT: #265c78 1px solid;
+    BORDER-TOP: #265c78 1px solid;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 75%;
+    BORDER-LEFT: #265c78 1px solid;
+    CURSOR: hand;
+    COLOR: #334a60;
+    BORDER-BOTTOM: #265c78 1px solid;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: #e7ecf3
+}
+.popupButton
+{
+    BORDER-RIGHT: #265c78 1px solid;
+    BORDER-TOP: #265c78 1px solid;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #265c78 1px solid;
+    CURSOR: hand;
+    COLOR: #334a60;
+    BORDER-BOTTOM: #265c78 1px solid;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: #a0becb
+}
+.popupTableDivider
+{
+    BACKGROUND-COLOR: #6f86a7
+}
+.mainTableBG
+{
+    BACKGROUND-COLOR: #345788
+}
+.contactTableHeadCheck
+{
+    BORDER-RIGHT: #7d93b2 1px solid;
+    BORDER-BOTTOM: #a0bbdb 1px solid;
+    BACKGROUND-COLOR: #9ebed1
+}
+
+.errorMessageBox
+{
+  padding: 2px;
+  color: #cd4800;
+  background-color: #ffefe7;
+  border: #cd4800 1px solid;
+  font-family: verdana, arial, sans-serif;
+  font-size: 65%;
+}
+
+.errorMessageHeader
+{
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.textBoxWhiteBlueBorder
+{
+    BORDER-RIGHT: #a0b3cb 1px solid;
+    BORDER-TOP: #a0b3cb 1px solid;
+    FONT-SIZE: 95%;
+    BORDER-LEFT: #a0b3cb 1px solid;
+    COLOR: #264878;
+    BORDER-BOTTOM: #a0b3cb 1px solid;
+    font-family: verdana, arial, sans-serif;
+		padding-left:4px;
+}
+
+.textInputWhiteBlueBorder
+{
+  border: #a0b3cb 1px solid;
+  color: #264878;
+  font-size: 95%;
+  font-family: verdana, arial, sans-serif;
+  padding-left:3px;
+  height: 17px;
+}

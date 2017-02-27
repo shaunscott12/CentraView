@@ -1,0 +1,168 @@
+<?xml version="1.0" ?>
+<!-- This is QBXMLConfig  xml file -->
+
+
+<config>
+<AccountQueryRs>
+<voname>com.centraview.account.helper.GLAccountVO</voname>
+<Separator>Account</Separator>
+<modulename>GLAccount</modulename>
+<Name get="getTitle" set="setTitle" type="java.lang.String">none</Name>
+<ParentRef get="getParentAccountID" set="setParentAccountID" type="int" cvtoaa="getEXIDFromID" aatocv="getIDFromEXID" table="Entity">none</ParentRef>
+<AccountType get="getGLAccountType" set="setGLAccountType" type="java.lang.String">none</AccountType>
+<Desc get="getDescription" set="setDescription" type="java.lang.String">none</Desc>
+<OpenBalance get="getBalance" set="setBalance" type="float">none</OpenBalance>
+</AccountQueryRs>
+
+
+
+<CustomerQueryRs>
+<voname>com.centraview.contact.entity.EntityVO</voname>
+<Separator>Customer</Separator>
+<modulename>Customer</modulename>
+<Name get="getName" type="java.lang.String" set="setName">none</Name>
+<BillAddress  get="getPrimaryAddress" set="setPrimaryAddress" type="com.centraview.contact.helper.AddressVO" isprimary="YES" xml="Address.xml" tag="address" >none </BillAddress>
+<Phone get="getPhone" type="java.lang.String" set="setPhone">none</Phone>
+<Fax get="getFax" type="java.lang.String" set="setFax">none</Fax>
+<Email get="getEmail" type="java.lang.String" set="setEmail">none</Email>
+</CustomerQueryRs>
+
+
+
+<EmployeeQueryRs>
+<voname>com.centraview.contact.individual.IndividualVO</voname>
+<modulename>Individual</modulename>
+<Separator>Employee</Separator>
+<Name get="getUserName" type="java.lang.String" set="setUserName">none</Name>                            
+<FirstName get="getFirstName" type="java.lang.String" set="setFirstName">none</FirstName>             
+<MiddleName get="getMiddleName" type="java.lang.String" set="setMiddleName">none</MiddleName>            
+<LastName get="getLastName" type="java.lang.String" set="setLastName">none</LastName>                    
+<EmployeeAddress get="getPrimaryAddress" type="com.centraview.contact.helper.AddressVO" isprimary="YES" set="setPrimaryAddress" xml="Address.xml" tag="address">none</EmployeeAddress>
+<Phone get="getPhone" set="setPhone" type="java.lang.String">none</Phone>
+<Email get="getEmail" set="setEmail" type="java.lang.String">none</Email>
+</EmployeeQueryRs>
+
+
+
+<ItemInventoryQueryRs> 
+<voname>com.centraview.account.item.ItemVO</voname>
+<Separator>ItemInventory</Separator>
+<modulename>ItemInventory</modulename>
+<Name get="getItemName" type="java.lang.String" set="setItemName">none</Name>
+<SalesPrice get="getPrice" type="double" set="setPrice">none</SalesPrice> 
+<IncomeAccountRef get="getGlAccountId" type="int" set="setGlAccountId" table="GLAccount"  cvtoaa="getEXIDFromID" aatocv="getIDFromEXID">none</IncomeAccountRef>
+<PurchaseCost get="getCost" type="double" set="setCost">none</PurchaseCost> 
+<COGSAccountRef get="getGlAccountId" type="int" set="setGlAccountId" table="GLAccount" cvtoaa="getEXIDFromID" aatocv="getIDFromEXID">none</COGSAccountRef>
+<PrefVendorRef get="getVendorid" type="int" set="setVendorid" cvtoaa="getEXIDFromID" aatocv="getIDFromEXID" table="GLAccount">none</PrefVendorRef>
+<AssetAccountRef get="getGlAccountId" type="int" set="setGlAccountId" table="GLAccount" cvtoaa="getEXIDFromID" aatocv="getIDFromEXID">none</AssetAccountRef>
+<ReorderPoint get="getQtyOnBackOrder" type="int" set="setQtyOnBackOrder" >none</ReorderPoint>        
+<QuantityOnHand get="getQtyOnHand" type="int" set="setQtyOnHand">none</QuantityOnHand>           
+</ItemInventoryQueryRs>
+
+
+
+<ItemNonInventoryQueryRs> 
+<voname>com.centraview.account.item.ItemVO</voname>
+<Separator>ItemNonInventory</Separator>
+<modulename>ItemNonInventory</modulename>
+<Name get="getItemName" type="java.lang.String" set="setItemName">none</Name>
+<ParentRef get="getSubItemOfId" type="int" table="Item" cvtoaa="getEXIDFromID">none</ParentRef>
+<SalesOrPurchase xml="QBXMLItemSPAdd.xml" tag="SalesOrPurchase">none</SalesOrPurchase>
+</ItemNonInventoryQueryRs> 
+
+
+<ItemPaymentQueryRs> 
+<voname>com.centraview.account.item.ItemVO</voname>
+<Separator>ItemPayment</Separator>
+<modulename>Item</modulename>
+<Name get="getItemName" type="java.lang.String" set="setItemName">none</Name>
+<SalesPrice get="getPrice" type="double" set="setPrice">none</SalesPrice> 
+<IncomeAccountRef get="getGlAccountId" type="int" set="setGlAccountId" table="GLAccount"  cvtoaa="getEXIDFromID" aatocv="getIDFromEXID">none</IncomeAccountRef>
+<PurchaseCost get="getCost" type="double" set="setCost">none</PurchaseCost> 
+<COGSAccountRef get="getGlAccountId" type="int" set="setGlAccountId"  table="GLAccount" cvtoaa="getEXIDFromID" aatocv="getIDFromEXID">none</COGSAccountRef>
+<PrefVendorRef get="getVendorid" type="int" set="setVendorid" cvtoaa="getEXIDFromID" aatocv="getIDFromEXID" table="GLAccount">none</PrefVendorRef>
+<ReorderPoint get="getQtyOnBackOrder" type="int" set="setQtyOnBackOrder" >none</ReorderPoint>        
+<QuantityOnHand get="getQtyOnHand" type="int" set="setQtyOnHand">none</QuantityOnHand>           
+<AssetAccountRef get="getGlAccountId" type="int" set="setGlAccountId" table="GLAccount" cvtoaa="getEXIDFromID" aatocv="getIDFromEXID">none</AssetAccountRef>
+</ItemPaymentQueryRs>
+
+
+<ItemServiceQueryRs>
+<voname>com.centraview.account.item.ItemVO</voname>
+<Separator>ItemService</Separator>
+<modulename>ItemService</modulename>
+<Name get="getItemName" type="java.lang.String" set="setItemName">none</Name>
+<ParentRef get="getSubItemOfId" type="int" table="Item" cvtoaa="getEXIDFromID">none</ParentRef>
+<SalesOrPurchase xml="QBXMLItemSPAdd.xml" tag="SalesOrPurchase">none</SalesOrPurchase>
+</ItemServiceQueryRs>
+
+<PaymentMethodQueryRs>
+<voname>com.centraview.account.helper.PaymentMethodVO</voname>
+<Separator>PaymentMethod</Separator>
+<modulename>PaymentMethod</modulename>
+<Name get="getTitle" set="setTitle" type="java.lang.String">none</Name>
+</PaymentMethodQueryRs>
+
+
+<VendorQueryRs>
+<Separator>Vendor</Separator>
+<modulename>Vendor</modulename>
+<voname>com.centraview.contact.entity.EntityVO</voname>
+<Name get="getName" type="java.lang.String" set="setName">none</Name>
+<VendorAddress get="getPrimaryAddress" type="com.centraview.contact.helper.AddressVO" set="setPrimaryAddress" xml="Address.xml" tag="address">none</VendorAddress>
+<Phone get="getPhone" type="java.lang.String" set="setPhone">none</Phone>
+<Fax get="getFax" type="java.lang.String" set="setFax">none</Fax>
+<Email get="getEmail" type="java.lang.String" set="setEmail">none</Email>
+</VendorQueryRs>
+
+<BillQueryRs>
+<voname>com.centraview.account.expense.ExpenseVO</voname>
+<Separator>Bill</Separator>
+<modulename>Expense</modulename>
+<VendorRef get="getEntityIDValue" type="int" set="setEntityIDValue" cvtoaa="getEXIDFromID" aatocv="getIDFromEXID" table="Entity">none</VendorRef>
+<TxnDate get="getDateEntered" type="java.sql.Date" set="setDateEntered">none</TxnDate>
+<Memo get="getExpenseDescription" type="java.lang.String" set="setExpenseDescription">none</Memo>
+<ItemLineAdd cvtoaa="getTagsFromItemLines">none</ItemLineAdd>
+</BillQueryRs>
+
+<InvoiceQueryRs>
+<voname>com.centraview.account.invoice.InvoiceVO</voname>
+<modulename>Invoice</modulename>
+<Separator>Invoice</Separator>
+<CustomerRef get="getCustomerId" type="int" set="setCustomerId" cvtoaa="getEXIDFromID" aatocv="getIDFromEXID" table="Entity">none
+</CustomerRef>
+<TxnDate get="getInvoiceDate">none</TxnDate>
+<BillAddress get="getBillToAddress" type="java.lang.String" set="setBillToAddress" cvtoaa="getTagsFromValue" aatocv="getValueFromTags">none</BillAddress>
+<ShipAddress get="getShipToAddress" type="java.lang.String" set="setShipToAddress" cvtoaa="getTagsFromValue"   aatocv="getValueFromTags" >none</ShipAddress>
+<PONumber get="getPo">none</PONumber>
+<Memo get="getNotes">none</Memo>
+<InvoiceLineAdd cvtoaa="getTagsFromItemLines">none</InvoiceLineAdd>
+</InvoiceQueryRs>
+
+
+<PurchaseOrderQueryRs>
+<voname>com.centraview.account.purchaseorder.PurchaseOrderVO</voname>
+<Separator>PurchaseOrder</Separator>
+<modulename>PurchaseOrder</modulename>
+<VendorRef get="getVendorId" type="int" set="setVendorId" cvtoaa="getEXIDFromID" aatocv="getIDFromEXID" table="Entity">none
+</VendorRef>
+<ShipToEntityRef get="getShipToId" type="int" set="setShipToId" cvtoaa="getEXIDFromID" aatocv="getIDFromEXID" table="Entity">none
+</ShipToEntityRef>
+<TxnDate get="getPurchaseOrderDate" type="java.sql.Date" set="setPurchaseOrderDate" >none</TxnDate>
+<VendorAddress get="getBillToAddress" type="java.lang.String" set="setBillToAddress" cvtoaa="getTagsFromValue" aatocv="getValueFromTags">none</VendorAddress>
+<ShipAddress get="getShipToAddress" type="java.lang.String" set="setShipToAddress" cvtoaa="getTagsFromValue"   aatocv="getValueFromTags">none</ShipAddress>
+<PurchaseOrderLineAdd cvtoaa="getTagsFromItemLines">none</PurchaseOrderLineAdd>
+</PurchaseOrderQueryRs>
+
+<ReceivePaymentQueryRs>
+<voname>com.centraview.account.payment.PaymentVO</voname>
+<modulename>Payment</modulename>
+<Separator>ReceivePayment</Separator>
+<CustomerRef get="getEntityID" type="int" set="setEntityID" cvtoaa="getEXIDFromID" aatocv="getIDFromEXID" table="Entity">none</CustomerRef>
+<TotalAmount get="getPaymentAmount" type="float" set="setPaymentAmount">none</TotalAmount>
+<PaymentMethodRef get="getPaymentMethodID" type="int" set="setPaymentMethodID" cvtoaa="getEXIDFromID" aatocv="getIDFromEXID" table="PaymentMethod">none</PaymentMethodRef>
+<RefNumber get="getReference" type="java.lang.String" set="setReference">none</RefNumber>                
+<Memo get="getDescription" type="java.lang.String" set="setDescription">none</Memo>                 
+</ReceivePaymentQueryRs>
+
+</config>

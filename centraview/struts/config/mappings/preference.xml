@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" 
+          "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<!--
+ * $RCSfile: preference.xml,v $    $Revision: 1.7 $  $Date: 2005/09/02 20:14:50 $ - $Author: mcallist $
+ * 
+ * The contents of this file are subject to the Open Software License
+ * Version 2.1 ("the License"); you may not use this file except in
+ * compliance with the License. You may obtain a copy of the License at
+ * http://www.centraview.com/opensource/license.html
+ * 
+ * Software distributed under the License is distributed on an "AS IS"
+ * basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+ * License for the specific language governing rights and limitations
+ * under the License.
+ * 
+ * The Original Code is: CentraView Open Source. 
+ * 
+ * The developer of the Original Code is CentraView.  Portions of the
+ * Original Code created by CentraView are Copyright (c) 2004 CentraView,
+ * LLC; All Rights Reserved.  The terms "CentraView" and the CentraView
+ * logos are trademarks and service marks of CentraView, LLC.
+-->
+<struts-config>
+  <form-beans>
+  
+    <form-bean name="mailCheckForm" type="org.apache.struts.action.DynaActionForm">
+      <form-property name="mailCheckInterval" type="java.lang.Integer" />
+    </form-bean>
+  
+    <form-bean name="homesettingsForm" type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="minutes" type="java.lang.String" initial="0"/>
+      <form-property name="seconds" type="java.lang.String" initial="0"/>
+      <form-property name="minutesValue" type="java.lang.String" initial="0"/>
+      <form-property name="secondsValue" type="java.lang.String" initial="0"/>
+      <form-property name="portletsLeft" type="java.lang.String" initial="0"/>
+      <form-property name="portletsLeftValue" type="java.lang.String" initial="0"/>
+      <form-property name="portletsRight" type="java.lang.String" initial="0"/>
+      <form-property name="portletsRightValue" type="java.lang.String" initial="0"/>
+    </form-bean>
+    
+    <form-bean name="mailAccountListForm" type="org.apache.struts.action.DynaActionForm">
+      <form-property name="accountList" type="java.util.ArrayList" />
+    </form-bean>
+    
+    <form-bean name="mailAccountForm" type="org.apache.struts.action.DynaActionForm">
+      <form-property name="accountID" type="java.lang.Integer" />
+      <form-property name="accountName" type="java.lang.String" />
+      <form-property name="yourName" type="java.lang.String" />
+      <form-property name="emailAddress" type="java.lang.String" />
+      <form-property name="replyTo" type="java.lang.String" />
+      <form-property name="serverType" type="java.lang.String" />
+      <form-property name="mailServer" type="java.lang.String" />
+      <form-property name="smtpServer" type="java.lang.String" />
+      <form-property name="username" type="java.lang.String" />
+      <form-property name="password" type="java.lang.String" />
+      <form-property name="port" type="java.lang.Integer" />
+      <form-property name="leaveOnServer" type="java.lang.Boolean" />
+      <form-property name="authenticationRequiredForSMTP" type="java.lang.Boolean" />
+      <form-property name="signature" type="java.lang.String" />
+    </form-bean>
+    
+    <!-- for preferences emails -->
+    <form-bean name="emailSettings" type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="accountid" type="java.lang.String" initial=""/>
+      <form-property name="ownerName" type="java.lang.String" initial=""/>
+      <form-property name="accountname" type="java.lang.String" initial=""/>
+      <form-property name="address" type="java.lang.String" initial=""/>
+      <form-property name="leaveonserver" type="java.lang.String" initial=""/>
+      <form-property name="username" type="java.lang.String" initial=""/>
+      <form-property name="mailserver" type="java.lang.String" initial=""/>
+      <form-property name="name" type="java.lang.String" initial=""/>
+      <form-property name="password" type="java.lang.String" initial=""/>
+      <form-property name="replyto" type="java.lang.String" initial=""/>
+      <form-property name="servertype" type="java.lang.String" initial=""/>
+      <form-property name="signature" type="java.lang.String" initial=""/>
+      <form-property name="smtpserver" type="java.lang.String" initial=""/>
+      <form-property name="port" type="java.lang.String" initial=""/>
+      <form-property name="cmpsave" type="java.lang.String" initial=""/>
+      <form-property name="composeType" type="java.lang.String" initial="PLAIN" />
+      <form-property name="emailCompositionFlag" type="java.lang.String" initial="true"/>
+    </form-bean>
+    
+    <form-bean name="delegationForm" type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="search" type="java.lang.String"/>
+      <form-property name="action" type="java.lang.String"/>      
+      <form-property name="TYPEOFMODULE" type="java.lang.String"/>      
+      <form-property name="view" type="java.lang.String[]"/>
+      <form-property name="schedule" type="java.lang.String[]"/>
+      <form-property name="viewschedule" type="java.lang.String[]"/>
+      <form-property name="viewsend" type="java.lang.String[]"/>
+      <form-property name="send" type="java.lang.String[]"/>
+    </form-bean>
+    
+    <form-bean name="prefCalendarForm" type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="minutes" type="java.lang.String" initial="0"/>
+      <form-property name="seconds" type="java.lang.String" initial="0"/>
+      <form-property name="radio" type="java.lang.String" initial="DAILY"/>
+    </form-bean>
+    
+    <form-bean name="syncPreferencesForm" type="org.apache.struts.action.DynaActionForm">
+      <form-property name="syncAsPrivate" type="java.lang.Boolean" />
+    </form-bean>
+
+
+  </form-beans>
+
+  <action-mappings>
+  
+    <action path="/preference/user_profile" type="com.centraview.preference.DisplayUserProfileHandler" scope="request" validate="false" name="individualForm">
+      <forward name=".view.preference.user_profile" path=".view.preference.user_profile"/>
+    </action>  
+
+    <action path="/preference/save_user_profile" type="com.centraview.preference.SaveUserProfileHandler" scope="request" validate="false" name="individualForm">
+      <forward name=".view.preference.user_profile" path="/preference/user_profile.do"/>
+    </action>
+
+    <action path="/preference/home_settings" type="com.centraview.preference.DisplayHomeSettingsHandler" scope="request" validate="false" name="homesettingsForm">
+      <forward name=".view.preference.home_settings" path=".view.preference.home_settings" />
+    </action>
+
+    <action path="/preference/save_home_settings" type="com.centraview.preference.SaveHomeSettingsHandler" scope="request" validate="false" name="homesettingsForm">
+      <forward name="save" path="/preference/home_settings.do" redirect="true" />
+    </action>
+
+    <action path="/preference/mail/account_list" type="com.centraview.preference.mail.AccountListHandler" name="mailAccountListForm" scope="request" validate="false">
+      <forward name=".view.preference.mail.account_list" path=".view.preference.mail.account_list" />
+    </action>
+    
+    <action path="/preference/mail/new_account" type="com.centraview.preference.mail.NewAccountHandler" name="mailAccountForm" scope="request" validate="false">
+      <forward name=".view.preference.mail.new_account" path=".view.preference.mail.new_account" />
+   </action>
+
+    <action path="/preference/mail/save_new_account" type="com.centraview.preference.mail.SaveNewAccountHandler" name="mailAccountForm" scope="request" validate="false">
+      <forward name=".view.preference.mail.new_account" path=".view.preference.mail.new_account" />
+      <forward name=".forward.preference.mail.account_list" path="/preference/mail/account_list.do" redirect="true" />
+    </action>
+
+    <action path="/preference/mail/edit_account" type="com.centraview.preference.mail.EditAccountHandler" name="mailAccountForm" scope="request" validate="false">
+      <forward name=".view.preference.mail.view_account" path=".view.preference.mail.view_account" />
+    </action>
+
+    <action path="/preference/mail/save_account" type="com.centraview.preference.mail.SaveAccountHandler" name="mailAccountForm" scope="request" validate="false">
+      <forward name=".forward.preference.mail.account_list" path="/preference/mail/account_list.do" redirect="true" />
+      <forward name=".view.preference.mail.view_account" path=".view.preference.mail.view_account" />
+    </action>
+
+    <action path="/preference/mail/delete_account" type="com.centraview.preference.mail.DeleteAccountHandler" name="mailAccountForm" scope="request" validate="false">
+      <forward name=".forward.preference.mail.account_list" path="/preference/mail/account_list.do" redirect="true" />
+    </action>
+
+    <action path="/preference/mail/composition" type="com.centraview.preference.DisplayEmailComposition" name="emailSettings" scope="request" validate="false">
+      <forward name=".view.preference.mail.compose_settings" path=".view.preference.mail.compose_settings" />
+    </action>
+
+    <action path="/preference/mail/save_composition" type="com.centraview.preference.SaveEmailComposition" name="emailSettings" scope="request" validate="false">
+      <forward name=".view.preference.mail.compose_settings" path=".view.preference.mail.compose_settings" />
+    </action>
+
+    <action path="/preference/mail/auto_email_check" type="com.centraview.preference.mail.AutoCheckHandler" name="mailCheckForm" scope="request" validate="false">
+      <forward name=".view.preference.mail.auto_check_settings" path=".view.preference.mail.auto_check_settings" />
+    </action>
+
+    <action path="/preference/mail/update_auto_check" type="com.centraview.preference.mail.UpdateAutoCheckHandler" name="mailCheckForm" scope="request" validate="false">
+      <forward name=".forward.preference.mail.auto_check_settings" path="/preference/mail/auto_email_check.do" redirect="true" />
+    </action>
+
+    <action path="/preference/mail/delegation" type="com.centraview.preference.ViewDelegatorHandler" scope="request" validate="false" name="delegationForm">
+      <forward name=".view.preference.mail.delegation_settings" path=".view.preference.mail.delegation_settings" />
+      <forward name=".view.preference.calendar_delegation" path=".view.preference.calendar_delegation" />      
+    </action>
+    
+    <action path="/preference/calendar/edit_delegation" type="com.centraview.preference.SaveDelegatorHandler" scope="request" validate="false" name="delegationForm" >
+      <forward name=".forward.preference.mail.delegation_settings" path="/preference/mail/delegation.do?TYPEOFMODULE=Email" redirect="true" />
+    <forward name=".forward.preference.calendar.delegation_settings" path="/preference/calendar_delegation.do?TYPEOFMODULE=Activities" redirect="true" />            
+      <forward name=".view.preference.mail.delegation_settings" path=".view.preference.mail.delegation_settings" />
+    </action>    
+    <action path="/preference/mail/edit_delegation" type="com.centraview.preference.SaveDelegatorHandler" scope="request" validate="false" name="delegationForm" >
+      <forward name=".forward.preference.mail.delegation_settings" path="/preference/mail/delegation.do?TYPEOFMODULE=Email" redirect="true" />
+    <forward name=".forward.preference.calendar.delegation_settings" path="/preference/calendar_delegation.do?TYPEOFMODULE=Activities" redirect="true" />            
+      <forward name=".view.preference.mail.delegation_settings" path=".view.preference.mail.delegation_settings" />
+    </action>
+
+    <action path="/preference/calendar_settings" type="com.centraview.preference.DisplayCalendarHandler" scope="request" validate="false" name="prefCalendarForm">
+      <forward name=".view.preference.calendar_settings" path=".view.preference.calendar_settings" />
+    </action>
+    
+    <action path="/preference/save_calendar_settings" type="com.centraview.preference.SaveCalendarHandler" scope="request" validate="false" name="prefCalendarForm">
+      <forward name="save" path="/preference/calendar_settings.do" redirect="true" />
+    </action>
+
+    <action path="/preference/calendar_delegation" type="com.centraview.preference.ViewDelegatorHandler" scope="request" validate="false" name="delegationForm">
+      <forward name=".view.preference.calendar.delegation_settings" path=".view.preference.calendar_delegation" />
+      <forward name=".view.preference.calendar_delegation" path=".view.preference.calendar_delegation" />
+    </action>
+    
+    <action path="/preference/display_sync" type="com.centraview.preference.sync.DisplaySyncHandler" name="syncPreferencesForm" scope="request" validate="false">
+      <forward name=".view.preference.sync_prefs" path=".view.preference.sync_prefs"/>
+    </action>
+
+    <action path="/preference/update_sync_prefs" type="com.centraview.preference.sync.UpdatePrefsHandler" name="syncPreferencesForm" scope="request" validate="false">
+      <forward name="showSyncPrefs" path="/preference/display_sync.do" redirect="true" />
+    </action>
+
+    <action path="/preference/toggle_chart" type="com.centraview.preference.ToggleChartHandler">
+      <forward name="ticket" path="/support/ticket_list.do" redirect="true"/>
+      <forward name="sales" path="/sales/opportunity_list.do" redirect="true"/>
+    </action>
+
+  </action-mappings>
+  
+</struts-config>

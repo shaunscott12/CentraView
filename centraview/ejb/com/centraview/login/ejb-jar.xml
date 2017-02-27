@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE ejb-jar PUBLIC "-//Sun Microsystems, Inc.//DTD Enterprise JavaBeans 2.0//EN" "http://java.sun.com/dtd/ejb-jar_2_0.dtd">
+
+<ejb-jar>
+ <enterprise-beans>
+  <session>
+		<ejb-name>Login</ejb-name>
+		<home>com.centraview.login.LoginHome</home>
+		<remote>com.centraview.login.Login</remote>
+		<local-home>com.centraview.login.LoginLocalHome</local-home>
+		<local>com.centraview.login.LoginLocal</local>
+		<ejb-class>com.centraview.login.LoginEJB</ejb-class>
+
+		<session-type>Stateless</session-type>
+		<transaction-type>Bean</transaction-type>
+  </session>
+ </enterprise-beans>
+</ejb-jar>

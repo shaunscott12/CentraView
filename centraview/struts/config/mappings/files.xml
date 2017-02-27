@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" 
+          "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<!--
+ * $RCSfile: files.xml,v $    $Revision: 1.8 $  $Date: 2005/09/01 20:16:12 $ - $Author: mcallist $
+ * 
+ * The contents of this file are subject to the Open Software License
+ * Version 2.1 ("the License"); you may not use this file except in
+ * compliance with the License. You may obtain a copy of the License at
+ * http://www.centraview.com/opensource/license.html
+ * 
+ * Software distributed under the License is distributed on an "AS IS"
+ * basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+ * License for the specific language governing rights and limitations
+ * under the License.
+ * 
+ * The Original Code is: CentraView Open Source. 
+ * 
+ * The developer of the Original Code is CentraView.  Portions of the
+ * Original Code created by CentraView are Copyright (c) 2004 CentraView,
+ * LLC; All Rights Reserved.  The terms "CentraView" and the CentraView
+ * logos are trademarks and service marks of CentraView, LLC.
+-->
+     
+<struts-config>
+  <form-beans>
+    <form-bean name="fileform" type="com.centraview.file.FileForm"/>
+    
+    <form-bean name="folderform" type="com.centraview.file.FolderForm"/>
+   </form-beans>
+  
+  <action-mappings>
+  
+    <!-- File list -->
+    <action path="/files/file_list" scope="request" type="com.centraview.file.FileValueListAction">
+        <forward name=".view.files.list" path=".view.files.valuelist"/>
+        <forward name=".view.files.filelookup" path=".view.lookup"/>
+    </action>
+
+    <action path="/files/file_lookup" type="org.apache.struts.actions.ForwardAction" parameter="/files/file_list.do?actionType=lookup"/>    
+      
+    <!-- Left_nav handler -->
+    <action path="/files/folder_list" type="com.centraview.file.FolderNavigator" name="folderform" scope="request" validate="false">
+        <forward name=".view.files.folderlist" path="/jsp/pages/files/folder_tree.jsp"/>
+      </action>
+      
+      <!-- File dispatch -->
+      <action path="/files/file_dispatch" scope="request" type="com.centraview.file.FileDispatchAction"/>
+      
+      <!-- View files -->
+      <action path="/files/file_view" type="com.centraview.file.ViewFileHandler" name="fileform" scope="request" validate="false">
+        <forward name=".view.files.editfile" path=".view.files.edit.file"/>
+        <forward name="failure" path=".view.files.edit.file" />
+      </action>
+      
+      <!-- Download file -->
+      <action path="/files/file_download" scope="request" type="com.centraview.file.DownLoadFileHandler" validate="false">
+        <forward name="downloadfile" path="/jsp/common/Download.jsp"/>
+      </action>
+      
+      <!-- Delete file -->
+      <action path="/files/file_delete" type="com.centraview.file.FileListDeleteHandler" name="fileform" validate="false">
+      <forward name=".view.files.list" path="/files/file_list.do"/>
+      </action>
+            
+      
+      <!-- New folder -->
+      <action path="/files/folder_new" type="com.centraview.file.NewFolderHandler" name="folderform"  scope="request" validate="false">
+        <forward name=".view.files.newfolder" path=".view.files.new.folder"/>
+      </action>
+      
+      <!-- View folder -->
+      <action path="/files/folder_view" type="com.centraview.file.ViewFolderHandler" name="folderform" scope="request" validate="false">
+        <forward name=".view.files.editfolder" path=".view.files.edit.folder"/>
+      </action>
+  
+      <!-- Duplicate dispatch -->
+      <action path="/files/dup_dispatch" scope="request" type="com.centraview.file.FileDuplicateDispatchAction"/>
+      
+      <!-- Duplicate file -->
+      <action path="/files/file_dup" type="com.centraview.file.DuplicateFileHandler" name="fileform" scope="request" validate="false">
+        <forward name=".view.files.duplicatefile" path=".view.files.new.file"/>
+      </action>
+      
+      <!-- Duplicate folder -->
+      <action path="/files/folder_dup" type="com.centraview.file.DuplicateFolderHandler" name="folderform" scope="request" validate="false">
+        <forward name=".view.files.duplicatefolder" path=".view.files.new.folder"/>
+      </action>
+      
+      <!-- New file -->
+      <action path="/files/file_new" type="com.centraview.file.NewFileHandler" name="fileform" scope="request" validate="false">
+        <forward name=".view.files.newfile" path=".view.files.new.file"/>
+      </action>
+      
+      <!-- Save New file -->
+      <action path="/files/save_new_file" type="com.centraview.file.SaveNewFileHandler" scope="request" name="fileform" input=".view.files.new.file" validate="true">
+        <forward name=".view.files.newfile" path=".view.files.new.file"/>
+      </action>
+      
+      <!-- Save Edit file -->
+      <action path="/files/save_edit_file" type="com.centraview.file.SaveEditFileHandler" scope="request" name="fileform" input=".view.files.edit.file" validate="true">
+        <forward name=".view.files.editfile" path=".view.files.edit.file"/>
+        <forward name=".view.files.list" path="/files/file_list.do"/>
+      </action>
+      
+      <!-- Save Duplicate file -->
+      <action path="/files/save_duplicate_file" type="com.centraview.file.SaveDuplicateFileHandler" scope="request" name="fileform" validate="false">
+        <forward name=".view.files.duplicatefile" path=".view.files.new.file"/>
+      </action>    
+  
+      <action path="/files/save_duplicate_folder" type="com.centraview.file.SaveDuplicateFolderHandler" scope="request" name="folderform" validate="false">
+        <forward name=".view.files.duplicatefolder" path=".view.files.new.folder"/>
+      </action>
+  
+      <action name="folderform" path="/files/save_new_folder" scope="request" type="com.centraview.file.SaveNewFolderHandler" validate="true" input=".view.files.new.folder">
+        <forward name=".view.files.savenewfolder" path=".view.files.new.folder"/>
+      </action>
+      
+      <action name="folderform" path="/files/save_edit_folder" scope="request" type="com.centraview.file.SaveEditFolderHandler" validate="true" input=".view.files.edit.folder">
+        <forward name=".view.files.saveeditfolder" path=".view.files.edit.folder"/>
+        <forward name=".view.files.savenewfolder" path=".view.files.new.folder"/>
+      </action>
+
+  </action-mappings>
+</struts-config>

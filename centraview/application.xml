@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+ * $RCSfile: application.xml,v $    $Revision: 1.1.1.1 $  $Date: 2005/04/28 20:21:19 $ - $Author: mking_cv $
+ * 
+ * The contents of this file are subject to the Open Software License
+ * Version 2.1 ("the "License"); you may not use this file except in
+ * compliance with the License. You may obtain a copy of the License at
+ * http://www.centraview.com/opensource/license.html
+ * 
+ * Software distributed under the License is distributed on an "AS IS"
+ * basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+ * License for the specific language governing rights and limitations
+ * under the License.
+ * 
+ * The Original Code is: CentraView Open Source. 
+ * 
+ * The developer of the Original Code is CentraView.  Portions of the
+ * Original Code created by CentraView are Copyright (c) 2004 CentraView,
+ * LLC; All Rights Reserved.  The terms "CentraView" and the CentraView
+ * logos are trademarks and service marks of CentraView, LLC.
+-->
+
+<!DOCTYPE application PUBLIC "-//Sun Microsystems, Inc.//DTD J2EE Application 1.3//EN" "http://java.sun.com/dtd/application_1_3.dtd">
+
+<application>
+	<display-name>CentraView</display-name>
+<!-- EJBs -->
+<module><ejb>AccountFacade.jar</ejb></module>
+<module><ejb>AccountHelper.jar</ejb></module>
+<module><ejb>AccountList.jar</ejb></module>
+<module><ejb>ActivityFacade.jar</ejb></module>
+<module><ejb>ActivityHelper.jar</ejb></module>
+<module><ejb>ActivityList.jar</ejb></module>
+<module><ejb>AdditionalMenu.jar</ejb></module>
+<module><ejb>AdminList.jar</ejb></module>
+<module><ejb>AdvancedSearch.jar</ejb></module>
+<module><ejb>Alert.jar</ejb></module>
+<module><ejb>AppSettings.jar</ejb></module>
+<module><ejb>Authorization.jar</ejb></module>
+<module><ejb>CommonHelper.jar</ejb></module>
+<module><ejb>ContactFacade.jar</ejb></module>
+<module><ejb>ContactHelper.jar</ejb></module>
+<module><ejb>ContactList.jar</ejb></module>
+<module><ejb>CustomField.jar</ejb></module>
+<module><ejb>CvAttic.jar</ejb></module>
+<module><ejb>CvCalendar.jar</ejb></module>
+<module><ejb>CvFile.jar</ejb></module>
+<module><ejb>EmailFacade.jar</ejb></module>
+<module><ejb>EmailHelper.jar</ejb></module>
+<module><ejb>EmailList.jar</ejb></module>
+<module><ejb>EmailManage.jar</ejb></module>
+<module><ejb>Employee.jar</ejb></module>
+<module><ejb>Entity.jar</ejb></module>
+<module><ejb>Events.jar</ejb></module>
+<module><ejb>Expense.jar</ejb></module>
+<module><ejb>Faq.jar</ejb></module>
+<module><ejb>GetMail.jar</ejb></module>
+<module><ejb>Group.jar</ejb></module>
+<module><ejb>History.jar</ejb></module>
+<module><ejb>HrExpense.jar</ejb></module>
+<module><ejb>HrFacade.jar</ejb></module>
+<module><ejb>HrLists.jar</ejb></module>
+<module><ejb>Individual.jar</ejb></module>
+<module><ejb>Inventory.jar</ejb></module>
+<module><ejb>Invoice.jar</ejb></module>
+<module><ejb>Item.jar</ejb></module>
+<module><ejb>KnowledgeBase.jar</ejb></module>
+<module><ejb>List.jar</ejb></module>
+<module><ejb>Literature.jar</ejb></module>
+<module><ejb>LiteratureAdmin.jar</ejb></module>
+<module><ejb>Login.jar</ejb></module>
+<module><ejb>Mail.jar</ejb></module>
+<module><ejb>MailDeliver.jar</ejb></module>
+<module><ejb>ManageFolder.jar</ejb></module>
+<module><ejb>MarketingFacade.jar</ejb></module>
+<module><ejb>MarketingList.jar</ejb></module>
+<module><ejb>Note.jar</ejb></module>
+<module><ejb>Opportunity.jar</ejb></module>
+<module><ejb>Order.jar</ejb></module>
+<module><ejb>Payment.jar</ejb></module>
+<module><ejb>Preference.jar</ejb></module>
+<module><ejb>Printtemplate.jar</ejb></module>
+<module><ejb>ProjectFacade.jar</ejb></module>
+<module><ejb>Project.jar</ejb></module>
+<module><ejb>ProjectLists.jar</ejb></module>
+<module><ejb>ProjectsHelper.jar</ejb></module>
+<module><ejb>Promotion.jar</ejb></module>
+<module><ejb>Proposal.jar</ejb></module>
+<module><ejb>PurchaseOrder.jar</ejb></module>
+<module><ejb>Report.jar</ejb></module>
+<module><ejb>RulesManage.jar</ejb></module>
+<module><ejb>SaleFacade.jar</ejb></module>
+<module><ejb>SaleHelper.jar</ejb></module>
+<module><ejb>SaleList.jar</ejb></module>
+<module><ejb>SaveDraft.jar</ejb></module>
+<module><ejb>Search.jar</ejb></module>
+<module><ejb>SendMail.jar</ejb></module>
+<module><ejb>ServerSettings.jar</ejb></module>
+<module><ejb>Source.jar</ejb></module>
+<module><ejb>SupportFacade.jar</ejb></module>
+<module><ejb>SupportHelper.jar</ejb></module>
+<module><ejb>SupportList.jar</ejb></module>
+<module><ejb>SyncFacade.jar</ejb></module>
+<module><ejb>QBSync.jar</ejb></module>
+<module><ejb>SyncMail.jar</ejb></module>
+<module><ejb>Task.jar</ejb></module>
+<module><ejb>Ticket.jar</ejb></module>
+<module><ejb>TimeSheet.jar</ejb></module>
+<module><ejb>TimeSlip.jar</ejb></module>
+<module><ejb>User.jar</ejb></module>
+<module><ejb>View.jar</ejb></module>
+<module><ejb>GlobalReplace.jar</ejb></module>
+<module><ejb>Merge.jar</ejb></module>
+<module><ejb>EmailSettings.jar</ejb></module>
+<module><ejb>ValueList.jar</ejb></module>
+<module><ejb>Chart.jar</ejb></module>
+<module><ejb>License.jar</ejb></module>
+</application>

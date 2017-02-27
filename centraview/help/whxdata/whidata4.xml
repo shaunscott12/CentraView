@@ -1,0 +1,272 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<indexdata>
+<key name="Meetings" >
+  <topic name="Adding Meetings" url="adding_meetings.htm" />
+  <topic name="Deleting Meetings" url="deleting_meetings.htm" />
+  <topic name="Duplicating Meetings" url="duplicating_meetings.htm" />
+  <topic name="Viewing Meetings" url="viewing_meetings.htm" />
+  <key name="adding" >
+    <topic name="Adding Meetings" url="adding_meetings.htm" />
+  </key>
+  <key name="deleting" >
+    <topic name="Deleting Meetings" url="deleting_meetings.htm" />
+  </key>
+  <key name="duplicating" >
+    <topic name="Duplicating Meetings" url="duplicating_meetings.htm" />
+  </key>
+  <key name="viewing" >
+    <topic name="Viewing Meetings" url="viewing_meetings.htm" />
+  </key>
+</key>
+<key name="Next actions" >
+  <topic name="Adding Next Actions" url="adding_next_actions.htm" />
+  <topic name="Deleting Next Actions" url="deleting_next_actions.htm" />
+  <topic name="Duplicating Next Actions" url="duplicating_next_actions.htm" />
+  <topic name="Viewing Next Actions" url="viewing_next_actions.htm" />
+  <key name="adding" >
+    <topic name="Adding Next Actions" url="adding_next_actions.htm" />
+  </key>
+  <key name="deleting" >
+    <topic name="Deleting Next Actions" url="deleting_next_actions.htm" />
+  </key>
+  <key name="duplicating" >
+    <topic name="Duplicating Next Actions" url="duplicating_next_actions.htm" />
+  </key>
+  <key name="viewing" >
+    <topic name="Viewing Next Actions" url="viewing_next_actions.htm" />
+  </key>
+</key>
+<key name="Notes" >
+  <topic name="Adding Notes" url="adding_notes.htm" />
+  <topic name="Deleting Notes" url="deleting_notes.htm" />
+  <topic name="Duplicating Notes" url="duplicating_notes.htm" />
+  <topic name="Viewing Notes" url="viewing_notes.htm" />
+  <key name="adding" >
+    <topic name="Adding Notes" url="adding_notes.htm" />
+  </key>
+  <key name="deleting" >
+    <topic name="Deleting Notes" url="deleting_notes.htm" />
+  </key>
+  <key name="duplicating" >
+    <topic name="Duplicating Notes" url="duplicating_notes.htm" />
+  </key>
+  <key name="viewing" >
+    <topic name="Viewing Notes" url="viewing_notes.htm" />
+  </key>
+</key>
+<key name="Order history" >
+  <topic name="Adding Order History" url="adding_order_history.htm" />
+  <topic name="Deleting Order History" url="deleting_order_history.htm" />
+  <topic name="Viewing Order History" url="viewing_order_history.htm" />
+  <key name="adding" >
+    <topic name="Adding Order History" url="adding_order_history.htm" />
+  </key>
+  <key name="deleting" >
+    <topic name="Deleting Order History" url="deleting_order_history.htm" />
+  </key>
+  <key name="viewing" >
+    <topic name="Viewing Order History" url="viewing_order_history.htm" />
+  </key>
+</key>
+<key name="Payments" >
+  <topic name="Adding Payments" url="adding_payments.htm" />
+  <topic name="Deleting Payments" url="deleting_payments.htm" />
+  <topic name="Viewing Payments" url="viewing_payments.htm" />
+  <key name="adding" >
+    <topic name="Adding Payments" url="adding_payments.htm" />
+  </key>
+  <key name="deleting" >
+    <topic name="Deleting Payments" url="deleting_payments.htm" />
+  </key>
+  <key name="viewing" >
+    <topic name="Viewing Payments" url="viewing_payments.htm" />
+  </key>
+</key>
+<key name="Project tasks" >
+  <topic name="Adding Project Tasks" url="adding_project_tasks.htm" />
+  <topic name="Deleting Project Tasks" url="deleting_project_tasks.htm" />
+  <topic name="Duplicating Project Tasks" url="duplicating_project_tasks.htm" />
+  <topic name="Viewing Project Tasks" url="viewing_project_tasks.htm" />
+  <key name="adding" >
+    <topic name="Adding Project Tasks" url="adding_project_tasks.htm" />
+  </key>
+  <key name="deleting" >
+    <topic name="Deleting Project Tasks" url="deleting_project_tasks.htm" />
+  </key>
+  <key name="duplicating" >
+    <topic name="Duplicating Project Tasks" url="duplicating_project_tasks.htm" />
+  </key>
+  <key name="viewing" >
+    <topic name="Viewing Project Tasks" url="viewing_project_tasks.htm" />
+  </key>
+</key>
+<key name="Projects" >
+  <topic name="Adding Projects" url="adding_projects.htm" />
+  <topic name="Deleting Projects" url="deleting_projects.htm" />
+  <topic name="Duplicating Projects" url="duplicating_projects.htm" />
+  <topic name="Viewing Projects" url="viewing_projects.htm" />
+  <key name="adding" >
+    <topic name="Adding Projects" url="adding_projects.htm" />
+  </key>
+  <key name="deleting" >
+    <topic name="Deleting Projects" url="deleting_projects.htm" />
+  </key>
+  <key name="duplicating" >
+    <topic name="Duplicating Projects" url="duplicating_projects.htm" />
+  </key>
+  <key name="viewing" >
+    <topic name="Viewing Projects" url="viewing_projects.htm" />
+  </key>
+</key>
+<key name="Proposals" >
+  <topic name="Adding Proposals" url="adding_proposals.htm" />
+  <topic name="Deleting Proposals" url="deleting_proposals.htm" />
+  <topic name="Duplicating Proposals" url="duplicating_proposals.htm" />
+  <topic name="Viewing Proposals" url="viewing_proposals.htm" />
+  <key name="adding" >
+    <topic name="Adding Proposals" url="adding_proposals.htm" />
+  </key>
+  <key name="deleting" >
+    <topic name="Deleting Proposals" url="deleting_proposals.htm" />
+  </key>
+  <key name="duplicating" >
+    <topic name="Duplicating Proposals" url="duplicating_proposals.htm" />
+  </key>
+  <key name="viewing" >
+    <topic name="Viewing Proposals" url="viewing_proposals.htm" />
+  </key>
+</key>
+<key name="Purchase orders" >
+  <topic name="Adding Purchase Orders" url="adding_purchase_orders.htm" />
+  <topic name="Deleting Purchase Orders" url="deleting_purchase_orders.htm" />
+  <topic name="Viewing Purchase Orders" url="viewing_purchase_orders.htm" />
+  <key name="adding" >
+    <topic name="Adding Purchase Orders" url="adding_purchase_orders.htm" />
+  </key>
+  <key name="deleting" >
+    <topic name="Deleting Purchase Orders" url="deleting_purchase_orders.htm" />
+  </key>
+  <key name="viewing" >
+    <topic name="Viewing Purchase Orders" url="viewing_purchase_orders.htm" />
+  </key>
+</key>
+<key name="Reading email" >
+  <topic name="Reading Email" url="reading_email.htm" />
+</key>
+<key name="Sales opportunities" >
+  <topic name="Adding Sales Opportunities" url="adding_sales_opportunities.htm" />
+  <topic name="Deleting Sales Opportunities" url="deleting_sales_opportunities.htm" />
+  <topic name="Duplicating Sales Opportunities" url="duplicating_sales_opportunities.htm" />
+  <topic name="Viewing Sales Opportunities" url="viewing_sales_opportunities.htm" />
+  <key name="adding" >
+    <topic name="Adding Sales Opportunities" url="adding_sales_opportunities.htm" />
+  </key>
+  <key name="deleting" >
+    <topic name="Deleting Sales Opportunities" url="deleting_sales_opportunities.htm" />
+  </key>
+  <key name="duplicating" >
+    <topic name="Duplicating Sales Opportunities" url="duplicating_sales_opportunities.htm" />
+  </key>
+  <key name="viewing" >
+    <topic name="Viewing Sales Opportunities" url="viewing_sales_opportunities.htm" />
+  </key>
+</key>
+<key name="Setting email rules" >
+  <topic name="Setting Email Rules" url="setting_email_rules.htm" />
+</key>
+<key name="Support tickets" >
+  <topic name="Adding Support Tickets" url="adding_support_tickets.htm" />
+  <topic name="Deleting Support Tickets" url="deleting_support_tickets.htm" />
+  <topic name="Viewing Support Tickets" url="viewing_support_tickets.htm" />
+  <key name="adding" >
+    <topic name="Adding Support Tickets" url="adding_support_tickets.htm" />
+  </key>
+  <key name="deleting" >
+    <topic name="Deleting Support Tickets" url="deleting_support_tickets.htm" />
+  </key>
+  <key name="viewing" >
+    <topic name="Viewing Support Tickets" url="viewing_support_tickets.htm" />
+  </key>
+</key>
+<key name="Tasks" >
+  <topic name="Adding Tasks" url="adding_tasks.htm" />
+  <topic name="Deleting Tasks" url="deleting_tasks.htm" />
+  <topic name="Duplicating Tasks" url="duplicating_tasks.htm" />
+  <topic name="Viewing Tasks" url="viewing_tasks.htm" />
+  <key name="adding" >
+    <topic name="Adding Tasks" url="adding_tasks.htm" />
+  </key>
+  <key name="deleting" >
+    <topic name="Deleting Tasks" url="deleting_tasks.htm" />
+  </key>
+  <key name="duplicating" >
+    <topic name="Duplicating Tasks" url="duplicating_tasks.htm" />
+  </key>
+  <key name="viewing" >
+    <topic name="Viewing Tasks" url="viewing_tasks.htm" />
+  </key>
+</key>
+<key name="Time sheets" >
+  <topic name="Adding Time Sheets" url="adding_time_sheets.htm" />
+  <key name="adding" >
+    <topic name="Adding Time Sheets" url="adding_time_sheets.htm" />
+  </key>
+</key>
+<key name="Timeslips" >
+  <topic name="Adding Timeslips" url="adding_timeslips.htm" />
+  <topic name="Deleting Timeslips" url="deleting_timeslips.htm" />
+  <topic name="Duplicating Timeslips" url="duplicating_timeslips.htm" />
+  <topic name="Viewing Timeslips" url="viewing_timeslips.htm" />
+  <key name="adding" >
+    <topic name="Adding Timeslips" url="adding_timeslips.htm" />
+  </key>
+  <key name="deleting" >
+    <topic name="Deleting Timeslips" url="deleting_timeslips.htm" />
+  </key>
+  <key name="duplicating" >
+    <topic name="Duplicating Timeslips" url="duplicating_timeslips.htm" />
+  </key>
+  <key name="viewing" >
+    <topic name="Viewing Timeslips" url="viewing_timeslips.htm" />
+  </key>
+</key>
+<key name="ToDos" >
+  <topic name="Adding ToDos" url="adding_to_dos.htm" />
+  <topic name="Deleting ToDos" url="deleting_to_dos.htm" />
+  <topic name="Duplicating ToDos" url="duplicating_to_dos.htm" />
+  <topic name="Viewing ToDos" url="viewing_to_dos.htm" />
+  <key name="adding" >
+    <topic name="Adding ToDos" url="adding_to_dos.htm" />
+  </key>
+  <key name="deleting" >
+    <topic name="Deleting ToDos" url="deleting_to_dos.htm" />
+  </key>
+  <key name="duplicating" >
+    <topic name="Duplicating ToDos" url="duplicating_to_dos.htm" />
+  </key>
+  <key name="viewing" >
+    <topic name="Viewing ToDos" url="viewing_to_dos.htm" />
+  </key>
+</key>
+<key name="Trouble tickets" >
+  <topic name="Duplicating Trouble Tickets" url="duplicating_support_tickets.htm" />
+  <key name="duplicating" >
+    <topic name="Duplicating Trouble Tickets" url="duplicating_support_tickets.htm" />
+  </key>
+</key>
+<key name="Vendors" >
+  <topic name="Adding Vendors" url="adding_vendors.htm" />
+  <topic name="Deleting Vendors" url="deleting_vendors.htm" />
+  <topic name="Viewing Vendors" url="viewing_vendors.htm" />
+  <key name="adding" >
+    <topic name="Adding Vendors" url="adding_vendors.htm" />
+  </key>
+  <key name="deleting" >
+    <topic name="Deleting Vendors" url="deleting_vendors.htm" />
+  </key>
+  <key name="viewing" >
+    <topic name="Viewing Vendors" url="viewing_vendors.htm" />
+  </key>
+</key>
+
+</indexdata>

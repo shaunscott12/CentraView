@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" 
+          "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<!--
+ * $RCSfile: support.xml,v $    $Revision: 1.9 $  $Date: 2005/09/06 16:02:05 $ - $Author: mcallist $
+ * 
+ * The contents of this file are subject to the Open Software License
+ * Version 2.1 ("the License"); you may not use this file except in
+ * compliance with the License. You may obtain a copy of the License at
+ * http://www.centraview.com/opensource/license.html
+ * 
+ * Software distributed under the License is distributed on an "AS IS"
+ * basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+ * License for the specific language governing rights and limitations
+ * under the License.
+ * 
+ * The Original Code is: CentraView Open Source. 
+ * 
+ * The developer of the Original Code is CentraView.  Portions of the
+ * Original Code created by CentraView are Copyright (c) 2004 CentraView,
+ * LLC; All Rights Reserved.  The terms "CentraView" and the CentraView
+ * logos are trademarks and service marks of CentraView, LLC.
+-->
+
+<struts-config>
+  <form-beans>
+    <form-bean name="knowledgebaseform" type="com.centraview.support.knowledgebase.KnowledgeBaseForm"/>
+    
+    <form-bean name="categoryform" type="com.centraview.support.knowledgebase.CategoryForm"/>
+    
+    <form-bean name="ticketform" type="com.centraview.support.ticket.TicketForm"/>
+    
+    <form-bean name="faqform" type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="faqid" type="java.lang.String" initial=""/>
+      <form-property name="title" type="java.lang.String" initial=""/>
+      <form-property name="status" type="java.lang.String" initial=""/>
+      <form-property name="publishToCustomerView" type="java.lang.String" initial=""/>
+    </form-bean>
+    
+    <form-bean name="categoryform" type="com.centraview.support.knowledgebase.CategoryForm"/>
+
+    <form-bean name="threadform" type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="ticketnumber" type="java.lang.String" initial=""/>
+      <form-property name="ticketsubject" type="java.lang.String" initial=""/>
+      <form-property name="detail" type="java.lang.String" initial=""/>
+      <form-property name="selectstatus" type="java.lang.String" initial=""/>
+      <form-property name="selectpriority" type="java.lang.String" initial=""/>
+      <form-property name="mgrlookup" type="java.lang.String" initial=""/>
+      <form-property name="assignto" type="java.lang.String" initial=""/>
+      <form-property name="entityname" type="java.lang.String" initial=""/>
+      <form-property name="selectcontact" type="java.lang.String" initial=""/>
+      <form-property name="selectcategory" type="java.lang.String" initial=""/>
+      <form-property name="selecttype" type="java.lang.String" initial=""/>
+      <form-property name="selectclosedonfirstcall" type="java.lang.String" initial=""/>
+      <form-property name="title" type="java.lang.String" initial=""/>
+      <form-property name="threaddetail" type="java.lang.String" initial=""/>
+      <form-property name="priority" type="java.lang.String" initial=""/>
+      <form-property name="createdby" type="java.lang.String" initial=""/>
+      <form-property name="createdbyid" type="java.lang.String" initial=""/>
+      <form-property name="createddate" type="java.lang.String" initial=""/>
+      <form-property name="modifieddate" type="java.lang.String" initial=""/>
+      <form-property name="timesliptitle" type="java.lang.String" initial=""/>
+      <form-property name="ticketdetail" type="java.lang.String" initial=""/>
+      <form-property name="threadid" type="java.lang.String" initial=""/>
+      <form-property name="day" type="java.lang.String" initial=""/>
+      <form-property name="month" type="java.lang.String" initial=""/>
+      <form-property name="year" type="java.lang.String" initial=""/>
+      <form-property name="starttime" type="java.lang.String" initial=""/>
+      <form-property name="endtime" type="java.lang.String" initial=""/>
+      <form-property name="hours" type="java.lang.String" initial=""/>
+      <form-property name="minutes" type="java.lang.String" initial=""/>
+    </form-bean>
+    
+    <form-bean name="fileticketform" type="com.centraview.support.common.FileTicketForm"/>
+
+    <form-bean name="questionform" type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="faqid" type="java.lang.String" initial=""/>
+      <form-property name="title" type="java.lang.String" initial=""/>
+      <form-property name="answer" type="java.lang.String" initial=""/>
+    </form-bean>
+  </form-beans>
+
+  <action-mappings>
+  
+    <action path="/support/ticket_lookup" type="org.apache.struts.actions.ForwardAction" parameter="/support/ticket_list.do?actionType=lookup"/>  
+      
+  <!-- Ticket list -->
+  <action path="/support/ticket_list" type="com.centraview.support.ticket.TicketValueListHandler">
+       <forward name=".view.support.tickets.list" path=".view.valuelist"/>
+       <forward name=".view.support.tickets.my.list" path=".view.valuelist.my_tickets"/>
+       <forward name=".view.support.tickets.all.list" path=".view.valuelist.all_tickets"/>
+    <forward name=".view.support.ticketslookup" path=".view.lookup"/>       
+    </action>
+    
+    <!-- FAQ list -->
+    <action path="/support/faq_list" scope="request" type="com.centraview.support.faq.FAQValueListAction" validate="false">
+      <forward name=".view.support.faq.list" path=".view.valuelist"/>
+    </action>
+    
+    <!-- Knowledgebase list -->
+    <action path="/support/knowledgebase_list" type="com.centraview.support.knowledgebase.KnowledgeBaseValueListAction" validate="false" scope="request">
+      <forward name=".view.support.knowledgebase.list" path=".view.support.knowledgebase.valuelist"/>
+    </action>
+    
+    <!-- View Knowledgebase -->
+    <action path="/support/knowledgebase_view" type="com.centraview.support.knowledgebase.ViewKnowledgebaseHandler" scope="request" name="knowledgebaseform" validate="false">
+      <forward name=".view.support.knowledgebase.view" path=".view.support.knowledgebase.view"/>
+      <forward name=".view.support.knowledgebase.edit" path=".view.support.knowledgebase.edit"/>
+    </action>
+    
+    <!-- New Knowledgebase entry -->
+    <action path="/support/knowledgebase_new" type="com.centraview.support.knowledgebase.NewKnowledgebaseHandler" scope="request" name="knowledgebaseform" validate="false">
+      <forward name=".view.support.knowledgebase.new" path=".view.support.knowledgebase.new"/>
+    </action>
+    
+    <!-- New KB Category -->
+    <action path="/support/knowledgebase_newcategory" type="com.centraview.support.knowledgebase.NewCategoryHandler" scope="request" name="categoryform" validate="false">
+     <forward name=".view.support.knowledgebase.newcat" path=".view.support.knowledgebase.newcat"/>
+    </action>
+    
+    <!-- Edit KB Category -->
+    <action path="/support/knowledgebase_editcategory" type="com.centraview.support.knowledgebase.ViewCategoryHandler" name="categoryform" scope="request" validate="false">
+      <forward name=".view.support.knowledgebase.editcat" path=".view.support.knowledgebase.editcat"/>
+       <forward name="duplicatecategory" path="/jsp/support/knowledgebase/duplicatecategory_support_c.jsp"/>
+    </action>
+    
+    <!-- Delete Knowledgebase entry -->
+    <action path="/support/knowledgebase_delete" type="com.centraview.support.knowledgebase.KnowledgeBaseDeleteHandler">
+      <forward name="KnowledgebaseList" path="/support/knowledgebase_list_list.do" redirect="true"/>
+    </action>
+    
+    <!-- Duplicate Knowledgebase Entry -->
+    <action path="/support/knowledgebase_dup" type="com.centraview.support.knowledgebase.DuplicateKBHandler" scope="request" name="knowledgebaseform" validate="false">
+      <forward name="editcategory" path="/support/knowledgebase_viewcategory.do"/>
+      <forward name="editkb" path="/support/knowledgebase_view.do"/>
+    </action>
+    
+    <!-- View KB Category -->
+    <action path="/support/knowledgebase_viewcategory" type="com.centraview.support.knowledgebase.ViewCategoryHandler" name="categoryform" scope="request" validate="false">
+       <forward name=".view.support.knowledgebase.editcat" path=".view.support.knowledgebase.editcat"/>
+       <forward name="duplicatecategory" path="/jsp/support/knowledgebase/duplicatecategory_support_c.jsp"/>
+    </action>
+    
+    <!-- show new ticket screen -->
+    <action path="/support/new_ticket" scope="request" type="com.centraview.support.ticket.NewTicketHandler" name="ticketform" validate="false">
+      <forward name=".view.support.new_ticket" path=".view.support.new_ticket" />
+    </action>
+    
+    <!-- save new ticket -->
+    <action path="/support/save_new_ticket" type="com.centraview.support.ticket.SaveTicketHandler" name="ticketform" scope="request" validate="true" input=".view.support.new_ticket">
+      <forward name=".forward.close_window" path="/jsp/pages/common/window_close.jsp?parentReload=true" />
+      <forward name=".view.support.new_ticket" path="/support/new_ticket.do?refreshParent=true" redirect="true"/>
+    </action>
+
+    <!-- View ticket -->
+    <action path="/support/view_ticket" type="com.centraview.support.ticket.ViewTicketHandler" name="ticketform" scope="request" validate="false">
+      <forward name=".view.support.ticket_detail" path=".view.support.ticket_detail" />
+    </action>
+    
+    <!-- save existing ticket -->
+    <action path="/support/save_edit_ticket" type="com.centraview.support.ticket.EditTicketHandler" name="ticketform" scope="request" validate="true" input=".view.support.ticket_detail">
+      <forward name=".view.support.ticket_detail" path="/support/view_ticket.do?refreshParent=true" />
+      <forward name=".view.support.new_ticket" path="/support/new_ticket.do?refreshParent=true" redirect="true"/>
+      <forward name="closeWindow" path="/jsp/pages/common/window_close.jsp?parentReload=true"/>
+    </action>
+    
+    <!-- Delete ticket -->
+    <action path="/support/ticket_delete" type="com.centraview.support.ticket.TicketListDeleteHandler">
+      <forward name="ticketList" path="/support/ticket_list" redirect="true"/>
+      <forward name="deletePopup" path="/jsp/pages/common/window_close.jsp?parentReload=true"/>      
+     </action>
+    
+    <action path="/support/oc_action" type="com.centraview.support.ticket.OCActionHandler" name="ticketform" scope="request" validate="false">
+      <forward name=".view.support.ticket_detail" path="/support/view_ticket.do?refreshParent=true" />
+    </action>
+
+    <!-- show new thread screen -->
+    <action path="/support/new_thread" type="com.centraview.support.ticket.NewThreadHandler" name="ticketform" scope="request" validate="false">
+      <forward name=".view.support.new_thread" path=".view.support.new_thread" />
+    </action>
+
+    <!-- save thread -->
+    <action path="/support/save_thread" type="com.centraview.support.ticket.SaveThreadHandler" name="threadform" scope="request" validate="true" input="/support/new_thread.do">
+      <forward name=".forward.close_window" path="/jsp/pages/common/window_close.jsp?parentReload=true" />
+      <forward name=".view.support.new_thread" path="/support/new_thread.do?refreshParent=true" />
+    </action>
+    
+    <!-- view thread -->
+    <action path="/support/view_thread" type="com.centraview.support.ticket.ViewEditThreadHandler" name="threadform" scope="request" validate="false">
+      <forward name=".view.support.thread_detail" path=".view.support.thread_detail" />
+    </action>  
+
+    <!-- attach list of files to ticket -->
+    <action path="/support/attach_files" type="com.centraview.support.common.SaveAttachFileHandler" name="fileticketform" scope="request" validate="false">
+      <forward name=".view.support.ticket_detail" path="/support/view_ticket.do" />
+    </action>
+
+     <!-- View FAQ -->
+     <action path="/support/faq_view" type="com.centraview.support.faq.ViewFaqHandler" name="faqform" scope="request" validate="false">
+       <forward name=".view.support.faq.edit" path=".view.support.faq.edit"/>
+       <forward name=".view.support.faq.new" path=".view.support.faq.new"/>
+       <forward name=".view.support.faq.view" path=".view.support.faq.view"/>
+    </action>
+    
+    <!-- Delete FAQ -->
+    <action path="/support/faq_delete" type="com.centraview.support.faq.FAQListDeleteHandler"/>
+    
+    <!-- View dispatch -->
+    <action path="/support/knowledgebase_dispatch" scope="request" type="com.centraview.support.knowledgebase.KnowledgebaseDispatchAction"/>
+
+    <action path="/support/ticket_pie_chart" type="com.centraview.support.ticket.TicketPieChartHandler" scope="request" validate="false" />
+    <action path="/support/ticket_bar_chart" type="com.centraview.support.ticket.TicketBarChartHandler" scope="request" validate="false" />
+    
+    <action path="/support/save_category" type="com.centraview.support.knowledgebase.SaveNewCategoryHandler" name="categoryform" scope="request" validate="true" input="/support/knowledgebase_newcategory.do">
+      <forward name="savecategory" path="/jsp/support/knowledgebase/addCategory_support_c.jsp"/>
+      <forward name="viewcategory" path="/support/knowledgebase_viewcategory.do"/>
+      <forward name="newcategory" path="/support/knowledgebase_newcategory.do"/>
+      <forward name="permission" path="/RecordPermission.do"/>
+      <forward name="cat_permission" path="/RecordPermission.do"/>
+    </action>
+    
+    <action path="/support/save_knowledgebase" type="com.centraview.support.knowledgebase.AddKnowledgebaseHandler" name="knowledgebaseform" scope="request" validate="true" input="/support/knowledgeBase_new.do">
+      <forward name="savekb" path="/support/knowledgebase_new.do"/>
+      <forward name="permission" path="/RecordPermission.do"/>
+    </action>
+    
+    <action path="/support/edit_knowledgebase" type="com.centraview.support.knowledgebase.EditKnowledgebaseHandler" name="knowledgebaseform" scope="request" validate="true" input="/support/knowledgebase_view.do?typeofoperation=editkb">
+      <forward name="editfolder" path="/jsp/support/knowledgebase/editknowledgebase_support_c.jsp"/>
+      <forward name="newkb" path="/support/knowledgebase_view.do?typeofoperation=editkb"/>
+    </action>
+    
+    <action path="/support/update_category" type="com.centraview.support.knowledgebase.EditCategoryHandler" name="categoryform" scope="request" validate="true" input="/support/knowledgebase_viewcategory.do">
+      <forward name="savecategory" path="/jsp/support/knowledgebase/editCategory_support_c.jsp"/>
+      <forward name="viewcategory" path="/support/knowledgebase_viewcategory.do"/>
+    </action>
+    
+    <action path="/support/save_faq" type="com.centraview.support.faq.SaveFAQHandler" name="faqform" scope="request" validate="true" input="/jsp/support/add_faq_c.jsp">
+      <forward name="displayfaq" path="/support/faq_list.do"/>
+      <forward name="newfaq" path="/support/faq_view.do?typeofoperation=ADD"/>
+    </action>
+
+    <action path="/support/delete_question" type="com.centraview.support.faq.DeleteQuestionHandler" name="questionform" scope="request" validate="false" input="">
+      <forward name="displayquestion" path="/support/faq_view.do"/>
+    </action>
+    
+    <action path="/support/display_question" type="com.centraview.support.faq.DisplayQuestionHandler" name="questionform" scope="request" validate="false">
+      <forward name=".view.support.faq.question.new" path=".view.support.faq.question.new"/>
+      <forward name=".view.support.faq.question.edit" path=".view.support.faq.question.edit"/>
+    </action>
+    
+    <action path="/support/save_question" type="com.centraview.support.faq.SaveQuestionHandler" name="questionform" scope="request" validate="true" input=".view.support.faq.question.new">
+      <forward name="displayquestion" path=".view.support.faq.question.new"/>
+    </action>
+
+    <action path="/support/print_ticket" scope="request" type="com.centraview.support.ticket.PrintTicketHandler" name="ticketform" validate="false">
+      <forward name="printticket" path="/jsp/pages/support/print_close.jsp"/>
+    </action>    
+  </action-mappings>
+</struts-config>

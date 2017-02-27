@@ -1,0 +1,106 @@
+<!DOCTYPE tiles-definitions PUBLIC
+  "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+  "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+<!--
+ * $RCSfile: accounting.xml,v $    $Revision: 1.3 $  $Date: 2005/09/13 22:01:07 $ - $Author: mcallist $
+ * 
+ * The contents of this file are subject to the Open Software License
+ * Version 2.1 ("the License"); you may not use this file except in
+ * compliance with the License. You may obtain a copy of the License at
+ * http://www.centraview.com/opensource/license.html
+ * 
+ * Software distributed under the License is distributed on an "AS IS"
+ * basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+ * License for the specific language governing rights and limitations
+ * under the License.
+ * 
+ * The Original Code is: CentraView Open Source. 
+ * 
+ * The developer of the Original Code is CentraView.  Portions of the
+ * Original Code created by CentraView are Copyright (c) 2004 CentraView,
+ * LLC; All Rights Reserved.  The terms "CentraView" and the CentraView
+ * logos are trademarks and service marks of CentraView, LLC.
+-->
+<tiles-definitions>
+
+  <definition name=".view.accounting.new_order" extends=".view.default">
+    <put name="focus_element" value="" />
+    <put name="search_bar" value="/jsp/pages/blank.jsp" />
+    <put name="main_content" value="/jsp/pages/accounting/orders/new_order.jsp" />
+  </definition>
+  
+  <definition name=".view.accounting.view_order" extends=".view.default">
+    <put name="focus_element" value="" />
+    <put name="search_bar" value="/jsp/pages/blank.jsp" />
+    <put name="main_content" value="/jsp/pages/accounting/orders/view_order.jsp" />
+  </definition>
+
+  <definition name=".view.accounting.expenses.new" extends=".view.default">
+    <put name="focus_element" value="" />
+    <put name="search_bar" value="/jsp/pages/blank.jsp" />
+    <put name="main_content" value="/jsp/pages/accounting/expenses/new_expense.jsp" />
+  </definition>
+
+  <definition name=".view.accounting.expenses.edit" extends=".view.default">
+    <put name="focus_element" value="" />
+    <put name="search_bar" value="/jsp/pages/blank.jsp" />
+    <put name="main_content" value="/jsp/pages/accounting/expenses/edit_expense.jsp" />
+  </definition>
+
+  <definition name=".view.accounting.new_invoice" extends=".view.default">
+    <put name="focus_element" value="" />
+    <put name="search_bar" value="/jsp/pages/blank.jsp" />
+    <put name="main_content" value="/jsp/pages/accounting/invoices/new_invoice.jsp" />
+  </definition>
+
+  <definition name=".view.accounting.view_invoice" extends=".view.default">
+    <put name="focus_element" value="" />
+    <put name="search_bar" value="/jsp/pages/blank.jsp" />
+    <put name="main_content" value="/jsp/pages/accounting/invoices/view_invoice.jsp" />
+  </definition>
+
+  <definition name=".view.accounting.purchaseorder.new" extends=".view.default">
+    <put name="focus_element" value="" />
+    <put name="search_bar" value="/jsp/pages/blank.jsp" />
+    <put name="main_content" value="/jsp/pages/accounting/purchaseorders/new_purchaseorder.jsp" />
+  </definition>  
+
+  <definition name=".view.accounting.new_payment" extends=".view.default">
+    <put name="focus_element" value="" />
+    <put name="search_bar" value="/jsp/pages/blank.jsp" />
+    <put name="main_content" value="/jsp/pages/accounting/payments/new_payment.jsp" />
+  </definition>
+
+  <definition name=".view.accounting.view_payment" extends=".view.default">
+    <put name="focus_element" value="" />
+    <put name="search_bar" value="/jsp/pages/blank.jsp" />
+    <put name="main_content" value="/jsp/pages/accounting/payments/view_payment.jsp" />
+  </definition>  
+
+  <definition name=".view.accounting.purchaseorder.edit" extends=".view.default">
+    <put name="focus_element" value="" />
+    <put name="search_bar" value="/jsp/pages/blank.jsp" />
+    <put name="main_content" value="/jsp/pages/accounting/purchaseorders/edit_purchaseorder.jsp" />
+  </definition>
+
+  <definition name=".view.accounting.item_detail" extends=".view.default">
+    <put name="focus_element" value="" />
+    <put name="search_bar" value="/jsp/pages/blank.jsp" />
+    <put name="main_content" value="/jsp/pages/accounting/item/item_detail.jsp" />
+  </definition>  
+
+  <definition name=".view.vendor.valuelist" extends=".view.valuelist">
+    <put name="main_content" value="/jsp/tiles/value_list.jsp" />
+    <putList name="js_includes">
+      <add value="value_list_js.jsp" />
+      <add value="vendor.jsp" />
+    </putList>
+  </definition>  
+
+  <definition name=".view.accounting.inventory_detail" extends=".view.default">
+    <put name="focus_element" value="" />
+    <put name="search_bar" value="/jsp/pages/blank.jsp" />
+    <put name="main_content" value="/jsp/pages/accounting/inventory/inventory_detail.jsp" />
+  </definition>  
+  
+</tiles-definitions>

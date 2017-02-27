@@ -1,0 +1,163 @@
+<!DOCTYPE tiles-definitions PUBLIC
+  "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+  "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+<!--
+ * $RCSfile: marketing.xml,v $    $Revision: 1.2 $  $Date: 2005/07/25 13:07:52 $ - $Author: mcallist $
+ * 
+ * The contents of this file are subject to the Open Software License
+ * Version 2.1 ("the License"); you may not use this file except in
+ * compliance with the License. You may obtain a copy of the License at
+ * http://www.centraview.com/opensource/license.html
+ * 
+ * Software distributed under the License is distributed on an "AS IS"
+ * basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+ * License for the specific language governing rights and limitations
+ * under the License.
+ * 
+ * The Original Code is: CentraView Open Source. 
+ * 
+ * The developer of the Original Code is CentraView.  Portions of the
+ * Original Code created by CentraView are Copyright (c) 2004 CentraView,
+ * LLC; All Rights Reserved.  The terms "CentraView" and the CentraView
+ * logos are trademarks and service marks of CentraView, LLC.
+-->
+<tiles-definitions>
+
+  <definition name=".view.marketing.new.listmanager" extends=".view.popup.default">
+    <put name="focus_element" value="listname"/>
+    <put name="page_header" value="Data Import: Step 1"/>
+    <put name="top_bar" value="/jsp/pages/blank.jsp"/>
+    <put name="main_content" value="/jsp/pages/marketing/new_listmanager.jsp"/>
+    <put name="bottom_bar" value="/jsp/pages/blank.jsp"/>
+  </definition>  
+
+  <definition name=".view.marketing.listmanager.import.1" extends=".view.popup.default">
+    <put name="focus_element" value="fieldseprator"/>
+    <put name="page_header" value="Data Import: Step 2"/>
+    <put name="top_bar" value="/jsp/pages/blank.jsp"/>
+    <put name="main_content" value="/jsp/pages/marketing/listmanager_import_1.jsp"/>
+    <put name="bottom_bar" value="/jsp/pages/blank.jsp"/>
+  </definition>  
+
+  <definition name=".view.marketing.listmanager.import.2" extends=".view.popup.default">
+    <put name="focus_element" value=""/>
+    <put name="page_header" value="Data Import: Step 3"/>
+    <put name="top_bar" value="/jsp/pages/blank.jsp"/>
+    <put name="main_content" value="/jsp/pages/marketing/listmanager_import_2.jsp"/>
+    <put name="bottom_bar" value="/jsp/pages/blank.jsp"/>
+  </definition> 
+  
+  <definition name=".view.marketing.listmanager.import.3" extends=".view.popup.default">
+    <put name="focus_element" value=""/>
+    <put name="page_header" value="Data Import: Step 4"/>
+    <put name="top_bar" value="/jsp/pages/blank.jsp"/>
+    <put name="main_content" value="/jsp/pages/marketing/listmanager_import_3.jsp"/>
+    <put name="bottom_bar" value="/jsp/pages/blank.jsp"/>
+  </definition>   
+
+  <definition name=".view.marketing.edit.listmanager" extends=".view.default">
+    <put name="focus_element" value="listname"/>
+    <put name="search_bar" value="/jsp/pages/blank.jsp" />
+
+    <put name="main_content" value="/jsp/pages/marketing/edit_listmanager.jsp" />
+    <putList name="js_includes">
+      <add value="value_list_js.jsp" />
+    </putList>
+  </definition>
+
+  <definition name=".view.marketing.new.promotion" extends=".view.default">
+    <put name="focus_element" value="pname"/>
+    <put name="search_bar" value="/jsp/pages/blank.jsp" />
+
+    <put name="main_content" value="/jsp/pages/marketing/new_promotion.jsp" />
+    <putList name="js_includes">
+      <add value="value_list_js.jsp" />
+    </putList>
+  </definition>
+
+  <definition name=".view.marketing.edit.promotion" extends=".view.default">
+    <put name="focus_element" value="pname"/>
+    <put name="search_bar" value="/jsp/pages/blank.jsp" />
+
+    <put name="main_content" value="/jsp/pages/marketing/edit_promotion.jsp" />
+    <putList name="js_includes">
+      <add value="value_list_js.jsp" />
+    </putList>
+  </definition>  
+
+  <definition name=".view.marketing.literaturefulfillment.detail" extends=".view.popup.default">
+    <put name="focus_element" value="title"/>
+    <put name="page_header" value="Literature Details"/>
+    <put name="top_bar" value="/jsp/pages/blank.jsp"/>
+    <put name="main_content" value="/jsp/pages/marketing/literaturefulfillment_detail.jsp"/>
+    <put name="bottom_bar" value="/jsp/pages/marketing/literaturefulfillment_button.jsp"/>
+  </definition>  
+
+  <definition name=".view.marketing.literature.lookup" extends=".view.popup.default">
+    <put name="focus_element" value="searchTextBox"/>
+    <put name="page_header" value="Lookup Literature"/>
+    <put name="top_bar" value="/jsp/pages/blank.jsp"/>
+    <put name="main_content" value="/jsp/pages/marketing/literature_lookup.jsp"/>
+    <put name="bottom_bar" value="/jsp/pages/blank.jsp"/>
+  </definition>  
+
+  <definition name=".view.marketing.edit.event" extends=".view.default">
+    <put name="focus_element" value="name"/>
+    <put name="search_bar" value="/jsp/pages/blank.jsp" />
+
+    <put name="main_content" value="/jsp/pages/marketing/edit_events.jsp" />
+    <putList name="js_includes">
+      <add value="value_list_js.jsp" />
+    </putList>    
+  </definition>    
+
+  <definition name=".view.marketing.new.event" extends=".view.default">
+    <put name="focus_element" value="name"/>
+    <put name="search_bar" value="/jsp/pages/blank.jsp" />
+
+    <put name="main_content" value="/jsp/pages/marketing/new_events.jsp" />
+
+  </definition>    
+  
+  <definition name=".view.marketing.attachments" extends=".view.popup.default">
+    <put name="focus_element" value=""/>
+    <put name="page_header" value="Attach Files" />
+    <put name="top_bar" value="/jsp/pages/blank.jsp"/>
+    <put name="main_content" value="/jsp/pages/marketing/attachments.jsp" />
+    <put name="bottom_bar" value="/jsp/pages/blank.jsp"/>
+
+  </definition>
+
+  <definition name=".view.marketing.mailmerge" extends=".view.default">
+    <put name="focus_element" value="ename"/>
+    <put name="search_bar" value="/jsp/pages/blank.jsp" />
+
+    <put name="main_content" value="/jsp/pages/marketing/mail_merge.jsp" />
+
+  </definition>    
+  
+  <definition name=".view.marketing.mailmerge.detail" extends=".view.default">
+    <put name="focus_element" value="id"/>
+    <put name="search_bar" value="/jsp/pages/blank.jsp" />
+
+    <put name="main_content" value="/jsp/pages/marketing/mailmerge_detail.jsp" />
+
+  </definition>    
+  
+  <definition name=".view.marketing.mailmerge.preview" extends=".view.default">
+    <put name="focus_element" value=""/>
+    <put name="search_bar" value="/jsp/pages/blank.jsp" />
+
+    <put name="main_content" value="/jsp/pages/marketing/mailmerge_preview.jsp" />
+
+  </definition>    
+
+  <definition name=".view.marketing.mailmerge.success" extends=".view.default">
+    <put name="focus_element" value=""/>
+    <put name="search_bar" value="/jsp/pages/blank.jsp" />
+
+    <put name="main_content" value="/jsp/pages/marketing/mailmerge_success.jsp" />
+
+  </definition>    
+  
+</tiles-definitions>

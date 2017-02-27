@@ -1,0 +1,414 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+
+<head>
+<title>About WebForm Import</title>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<meta name="generator" content="RoboHelp by eHelp Corporation www.ehelp.com">
+<link rel="stylesheet" href="centraview_ns.css"><script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='centraview.css'>");}
+//-->
+</script>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute; left:0px; top:0px; z-index:4; visibility:hidden; }
+-->
+</style><script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Email");
+addTocInfo("Email\nAbout WebForm Import");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("centraview.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<h1>About WebForm Import</h1>
+
+<p>Webform Import Instructions</p>
+
+<p>---------------------------</p>
+
+<p>In order for an email to have the ability to be imported into CentraView</p>
+
+<p>as a Contact, the following Header must be set on the email when it 
+ is</p>
+
+<p>sent:</p>
+
+<p>X-CentraView-Webform: Contact</p>
+
+<p>This should be one of the standard RFC-822 mail headers at the top of</p>
+
+<p>the message source. Some mail clients have the ability of setting an</p>
+
+<p>outgoing header on a message. Also, most programming languages offer 
+ the</p>
+
+<p>ability to add a header to a message before it is sent. This is how 
+ we</p>
+
+<p>have intended Webform Import to work with CentraView.</p>
+
+<p>A developer would create a form on a webpage which submits to a script</p>
+
+<p>written in any programming language with the ability to send email.</p>
+
+<p>(PHP, perl, JSP, Java, ASP, .Net, etc) The programmer would have to</p>
+
+<p>write a script to take input from the web form, and send an email to 
+ a</p>
+
+<p>given email address. That given email address can then be checked within</p>
+
+<p>CentraView's Email module. When the user views the message with the</p>
+
+<p>X-CentraView-Webform: Contact header set, a button will appear at the</p>
+
+<p>top of the screen, allowing the user to import the content of the</p>
+
+<p>message as a Contact record.</p>
+
+<p>The email must be formatted within the proper guidelines in order to 
+ be</p>
+
+<p>validly imported into CentraView. The most critical issue is that the</p>
+
+<p>fields must have the correct names and the correct format. The field</p>
+
+<p>names are case sensitive and must appear at the beginning of the line,</p>
+
+<p>followed by a colon, followed by a space, and finally, the content to 
+ be</p>
+
+<p>imported into that field.</p>
+
+<p>For example, to import &quot;John&quot; into the First Name field, the 
+ email would</p>
+
+<p>need to contain the line:</p>
+
+<p>First Name: John</p>
+
+<p>Again, the field name (all content before the &quot;:&quot;) must be 
+ exactly as</p>
+
+<p>specified in the field list below. Custom fields are also able to be</p>
+
+<p>imported. They cannot be listed below, due to their dynamic nature. 
+ In</p>
+
+<p>order to a Custom Field to be imported, it must be configured in</p>
+
+<p>CentraView first; meaning that an Administrative user must create the</p>
+
+<p>Custom Field in the Administration module.</p>
+
+<p>Any fields listed in the email, which are not valid fields, will not 
+ be</p>
+
+<p>imported. They will not adversely affect the functionality of Webform</p>
+
+<p>Import, they will simply be ignored.</p>
+
+<p>The email can also contain content other than the fields to be imported.</p>
+
+<p>This content can appear anywhere within the email message, it will</p>
+
+<p>simply be ignored.</p>
+
+<p>Here is an example of a valid import email:</p>
+
+<p>-----BEGIN EMAIL------</p>
+
+<p>Someone has submitted a form on yourwebsite.com. Their information is</p>
+
+<p>below.</p>
+
+<p>First Name: John</p>
+
+<p>Last Name: Doe</p>
+
+<p>Main Phone: 555-555-1234</p>
+
+<p>Fax Phone:</p>
+
+<p>Email: example@example.com</p>
+
+<p>Industry: Sales and Marketing</p>
+
+<p>Entity Name: MyCompany, Corp.</p>
+
+<p>Entity Main Phone: 555-345-2222</p>
+
+<p>Company Home: Washington</p>
+
+<p>This email can be imported using the webform import utility.</p>
+
+<p>------END EMAIL-------</p>
+
+<p>In the example above, the following fields will be imported correctly:</p>
+
+<p>-First Name</p>
+
+<p>-Last Name</p>
+
+<p>-Main Phone</p>
+
+<p>-Fax Phone (empty)</p>
+
+<p>-Email</p>
+
+<p>-Industry (if set up as a Custom Field)</p>
+
+<p>-Entity Name</p>
+
+<p>-Entity Main Phone</p>
+
+<p>The field &quot;Company Home&quot; will be ignored, unless it was set 
+ up as a</p>
+
+<p>custom field. All other lines in the message will be ignored by the</p>
+
+<p>Webform Import.</p>
+
+<p>One thing to note is that all fields pertaining to an Entity record 
+ will</p>
+
+<p>have &quot;Entity &quot; as the first word in the field name. So you 
+ may have the</p>
+
+<p>Custom Field &quot;Industry&quot; set up for both Entity records and 
+ Individual</p>
+
+<p>records. To allow both fields to work through Webform Import, you would</p>
+
+<p>place &quot;Entity &quot; before &quot;Industry&quot; to indicate that 
+ this is the Industry</p>
+
+<p>field related to the Entity, and not the Individual.</p>
+
+<p>The full list of fields is as follows:</p>
+
+<p>&nbsp;First 
+ Name</p>
+
+<p>&nbsp;MI</p>
+
+<p>&nbsp;Last 
+ Name</p>
+
+<p>&nbsp;Street1</p>
+
+<p>&nbsp;Street2</p>
+
+<p>&nbsp;City</p>
+
+<p>&nbsp;State</p>
+
+<p>&nbsp;Zip</p>
+
+<p>&nbsp;Country</p>
+
+<p>&nbsp;Main 
+ Phone</p>
+
+<p>&nbsp;Main 
+ Phone Ext</p>
+
+<p>&nbsp;Fax Phone</p>
+
+<p>&nbsp;Fax Phone 
+ Ext</p>
+
+<p>&nbsp;Mobile 
+ Phone</p>
+
+<p>&nbsp;Mobile 
+ Phone Ext</p>
+
+<p>&nbsp;Home 
+ Phone</p>
+
+<p>&nbsp;Home 
+ Phone Ext</p>
+
+<p>&nbsp;Other 
+ Phone</p>
+
+<p>&nbsp;Other 
+ Phone Ext</p>
+
+<p>&nbsp;Pager 
+ Phone</p>
+
+<p>&nbsp;Pager 
+ Phone Ext</p>
+
+<p>&nbsp;Work 
+ Phone</p>
+
+<p>&nbsp;Work 
+ Phone Ext</p>
+
+<p>&nbsp;Email</p>
+
+<p>&nbsp;Source</p>
+
+<p>&nbsp;Title</p>
+
+<p>&nbsp;ID2</p>
+
+<p>&nbsp;Entity 
+ Name</p>
+
+<p>&nbsp;Entity 
+ Street1</p>
+
+<p>&nbsp;Entity 
+ Street2</p>
+
+<p>&nbsp;Entity 
+ City</p>
+
+<p>&nbsp;Entity 
+ State</p>
+
+<p>&nbsp;Entity 
+ Zip</p>
+
+<p>&nbsp;Entity 
+ Country</p>
+
+<p>&nbsp;Entity 
+ Main Phone</p>
+
+<p>&nbsp;Entity 
+ Main Phone Ext</p>
+
+<p>&nbsp;Entity 
+ Fax Phone</p>
+
+<p>&nbsp;Entity 
+ Fax Phone Ext</p>
+
+<p>&nbsp;Entity 
+ Mobile Phone</p>
+
+<p>&nbsp;Entity 
+ Mobile Phone Ext</p>
+
+<p>&nbsp;Entity 
+ Home Phone</p>
+
+<p>&nbsp;Entity 
+ Home Phone Ext</p>
+
+<p>&nbsp;Entity 
+ Other Phone</p>
+
+<p>&nbsp;Entity 
+ Other Phone Ext</p>
+
+<p>&nbsp;Entity 
+ Pager Phone</p>
+
+<p>&nbsp;Entity 
+ Pager Phone Ext</p>
+
+<p>&nbsp;Entity 
+ Work Phone</p>
+
+<p>&nbsp;Entity 
+ Work Phone Ext</p>
+
+<p>&nbsp;Entity 
+ Email</p>
+
+<p>&nbsp;Entity 
+ Source</p>
+
+<p>&nbsp;Entity 
+ ID2</p>
+
+<p>Remember that these fields must appear exactly as they are written</p>
+
+<p>above, and are case-sensitive. They can, however, appear in any order</p>
+
+<p>you like.</p>
+
+<p>Once the email has reached the Inbox of CentraView's Email module, the</p>
+
+<p>user can view the message details. On the message details screen, a</p>
+
+<p>button will appear at the top of the page labeled &quot;Import Contact&quot;.</p>
+
+<p>When the user clicks this button, a screen will open showing the fields</p>
+
+<p>in the email, along with the values from the email. The user has the</p>
+
+<p>option to change any of these values at this time. Only valid fields</p>
+
+<p>will be shown on this screen.</p>
+
+<p>When the user is done modifying any of the values they wish, they will</p>
+
+<p>click &quot;Save&quot; to save the Contact into the database. At this 
+ time, the</p>
+
+<p>process is complete.</p>
+
+<p>&nbsp;</p>
+
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</body>
+</html>

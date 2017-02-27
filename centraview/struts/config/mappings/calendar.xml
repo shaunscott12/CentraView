@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" 
+          "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<!--
+ * $RCSfile: calendar.xml,v $    $Revision: 1.6 $  $Date: 2005/07/31 04:17:36 $ - $Author: mcallist $
+ *
+ * The contents of this file are subject to the Open Software License
+ * Version 2.1 ("the License"); you may not use this file except in
+ * compliance with the License. You may obtain a copy of the License at
+ * http://www.centraview.com/opensource/license.html
+ * 
+ * Software distributed under the License is distributed on an "AS IS"
+ * basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+ * License for the specific language governing rights and limitations
+ * under the License.
+ * 
+ * The Original Code is: CentraView Open Source. 
+ * 
+ * The developer of the Original Code is CentraView.  Portions of the
+ * Original Code created by CentraView are Copyright (c) 2004 CentraView,
+ * LLC; All Rights Reserved.  The terms "CentraView" and the CentraView
+ * logos are trademarks and service marks of CentraView, LLC.
+-->         
+<struts-config>
+
+  <form-beans>
+    <form-bean name="calendarForm" type="org.apache.struts.action.DynaActionForm">
+      <form-property name="selectView" type="java.lang.String" initial=""/>
+      <form-property name="timeZoneVec" type="java.util.Vector" />
+      <form-property name="timeZone" type="java.lang.String" initial=""/>
+      <form-property name="activityType" type="java.lang.String" initial=""/>
+      <form-property name="activityTypeVec" type="java.util.Vector" />
+      <form-property name="delegatorName" type="java.lang.String" initial=""/>
+      <form-property name="delegatorNameVec" type="java.util.Vector" />
+      <form-property name="selectedDate" type="java.lang.String" initial=""/>
+      <form-property name="selectedDay" type="java.lang.String" />
+      <form-property name="selectedMonth" type="java.lang.String" />
+      <form-property name="selectedMonthName" type="java.lang.String" />
+      <form-property name="selectedYear" type="java.lang.String" />
+      <form-property name="currentDate" type="java.lang.String" />
+      <form-property name="currentDay" type="java.lang.Integer" />
+      <form-property name="currentMonth" type="java.lang.Integer" />
+      <form-property name="currentMonthName" type="java.lang.String" />
+      <form-property name="currentYear" type="java.lang.Integer" />
+      <form-property name="nonCalendarActivity" type="java.util.ArrayList" />
+      <form-property name="calendarNavBar" type="java.util.ArrayList" />
+      <form-property name="headerList" type="java.util.HashMap" />
+      <form-property name="headerLinkList" type="java.util.HashMap" />
+      <form-property name="dateList" type="java.util.HashMap" />
+      <form-property name="showWeeklyColumn" type="java.lang.Boolean" />      
+      <form-property name="startDayOfWeek" type="java.lang.Integer" />
+    </form-bean>  
+
+    <form-bean name="dateTimeSelectForm" type="org.apache.struts.action.DynaActionForm">
+      <form-property name="selectedDate" type="java.util.GregorianCalendar" />
+      <form-property name="currentDate" type="java.util.GregorianCalendar" />
+      <form-property name="month" type="java.lang.Integer" />
+      <form-property name="year" type="java.lang.Integer" />
+      <form-property name="startDate" type="java.lang.String" />
+      <form-property name="endDate" type="java.lang.String" />
+      <form-property name="startTime" type="java.lang.String" />
+      <form-property name="endTime" type="java.lang.String" />
+      <form-property name="dateTimeType" type="java.lang.Integer" />
+      <form-property name="showWeeklyColumn" type="java.lang.Boolean" />
+      <form-property name="simpleMode" type="java.lang.Boolean" initial="false" />
+    </form-bean>
+    
+  </form-beans>
+  
+  <action-mappings>
+    <action path="/calendar" type="com.centraview.calendar.CommonCalendarHandler" scope="request" validate="false" name="calendarForm">
+      <forward name=".view.calendar.dailylist" path=".view.calendar.daily"/>
+      <forward name=".view.calendar.weeklycolumnarlist" path=".view.calendar.weekly.columns"/>
+      <forward name=".view.calendar.weeklylist" path=".view.calendar.weekly"/>
+      <forward name=".view.calendar.monthlylist" path=".view.calendar.monthly"/>
+      <forward name=".view.calendar.yearlylist" path=".view.calendar.yearly"/>
+    </action>
+    
+    <action path="/calendar/select_date_time" type="com.centraview.calendar.SelectDateTimeHandler" name="dateTimeSelectForm" scope="request" validate="false">
+      <forward name=".view.calendar.datetime" path=".view.calendar.popup.datetime" />
+    </action>  
+    
+    <action path="/calendar/popup_calendar" type="com.centraview.calendar.PopupCalendar" scope="request" name="calendarForm" validate="false">
+      <forward name=".view.calendar.popup.calendar" path=".view.calendar.popup.calendar" />
+    </action>      
+    
+  </action-mappings>
+  
+</struts-config>
+

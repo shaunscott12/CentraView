@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<jboss>
+
+	<enterprise-beans>
+		<session>
+		    <ejb-name>ServerSettings</ejb-name>
+
+         <method-attributes>
+           <method>
+             <method-name>getServerSettings</method-name>
+             <read-only>true</read-only>
+           </method>
+           <method>
+             <method-name>RegisterTimer</method-name>
+             <read-only>true</read-only>
+           </method>
+           <method>
+             <method-name>DeregisterTimer</method-name>
+             <read-only>true</read-only>
+           </method>
+            <method>
+              <method-name>setDataSource</method-name>
+              <read-only>true</read-only>
+            </method>
+          </method-attributes>
+
+			<jndi-name>ServerSettings</jndi-name><local-jndi-name>local/ServerSettings</local-jndi-name>
+
+      		</session>
+	</enterprise-beans>
+
+
+
+   </jboss>
+

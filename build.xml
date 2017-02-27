@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+ * $RCSfile: build.xml,v $    $Revision: 1.12 $  $Date: 2005/07/31 06:42:33 $ - $Author: mcallist $
+ * 
+ * The contents of this file are subject to the Open Software License
+ * Version 2.1 ("the License"); you may not use this file except in
+ * compliance with the License. You may obtain a copy of the License at
+ * http://www.centraview.com/opensource/license.html
+ * 
+ * Software distributed under the License is distributed on an "AS IS"
+ * basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+ * License for the specific language governing rights and limitations
+ * under the License.
+ * 
+ * The Original Code is: CentraView Open Source. 
+ * 
+ * The developer of the Original Code is CentraView.  Portions of the
+ * Original Code created by CentraView are Copyright (c) 2004 CentraView,
+ * LLC; All Rights Reserved.  The terms "CentraView" and the CentraView
+ * logos are trademarks and service marks of CentraView, LLC.
+-->
+
+<project name="centraview" default="build" basedir=".">
+
+  <!-- Sets up the properties needed to build CentraView. -->
+  <property name="name" value="centraview" />
+  <property name="build" value="build" />
+  <property name="build.classes" value="${build}/classes" />
+  <property name="build.lib" value="${build}/lib" />
+  <property name="build.ejb" value="${build}/ejb" />
+  <property name="build.all" value="${build}/temp" />
+  <property name="build.docs" value="${build}/api" />
+  <property name="build.deploy" value="${build}/centraview" />
+  <property name="build.inf" value="${build.deploy}/WEB-INF" />
+  <property name="build.debug" value="true" />
+  <property name="build.optimize" value="false" />
+  <property name="build.deprecation" value="false" />
+  <property name="src" value="centraview" />
+  <property name="src.struts" value="${src}/struts" />
+  <property name="src.ejb" value="${src}/ejb" />
+  <property name="src.servlet" value="${src}/servlet" />
+  <property name="src.applet" value="${src}/applet" />
+  <property name="libs" value="thirdpartyjars" />
+  <property name="dtds" value="${src.ejb}/dtd" />
+  <property name="alert.jar" value="AlertApplet.jar" />
+  <property name="buildjars" value="buildjars" />
+  <property name="buildjars-tc4" value="tc4-buildjars" />
+  <property name="exploded" value="${build}/exploded" />
+  <property name="e-ear" value="${exploded}/centraview.ear" />
+  <property name="e-war" value="${e-ear}/centraview.war" />
+  <!-- Deploy Locations. -->
+  <property name="deploy.jboss.linux" value="/var/jboss/server/default/deploy" />
+  <property name="deploy.jboss.lib.linux" value="/var/jboss/server/default/lib" />
+  <property name="deploy.tomcat.linux" value="/var/lib/tomcat4/webapps" />
+  <property name="deploy.tomcat.shared.linux" value="/var/lib/tomcat4/shared" />
+  <property name="deploy.jboss.windows" value="C:\\jboss-3.0.8\\server\\default\\deploy" />
+  <property name="deploy.jboss.lib.windows" value="C:\\jboss-3.0.8\\server\\default\\lib" />
+  <property name="deploy.tomcat.windows" value="C:\\jakarta-tomcat-4.1.29\\webapps" />
+  <property name="deploy.tomcat.shared.windows" value="C:\\jakarta-tomcat-4.1.29\\shared" />
+
+  <!-- classpath for general compile -->
+  <path id="build.classpath">
+    <pathelement location="${build.all}" />
+    <fileset dir="${libs}">
+      <include name="**/*.jar" />
+    </fileset>
+  </path>
+
+  <!-- classpath for jsp compile -->
+  <path id="jspc.classpath">
+    <path refid="build.classpath" />
+    <fileset dir="${buildjars}">
+      <include name="**/*.jar" />
+    </fileset>
+  </path>
+
+  <!-- classpath for jsp compile -->
+  <path id="jspc-tc4.classpath">
+    <path refid="build.classpath" />
+    <fileset dir="${buildjars-tc4}">
+      <include name="**/*.jar" />
+    </fileset>
+  </path>
+
+  <!-- Init target, gets current time. -->
+  <target name="init">
+    <echo>You are running ${os.name}</echo>
+    <tstamp>
+      <format property="build.time" pattern="MM/dd/yyyy hh:mm aa" timezone="EST" />
+    </tstamp>
+    <echo>Building CentraView on ${build.time}</echo>
+  </target>
+  <!-- End of init target. -->
+
+  <!-- Sets up the Operating System Variables. -->
+  <target name="DetermineOperatingSystem">
+    <condition property="LinuxOS">
+      <os name="Linux" />
+    </condition>
+    <condition property="WindowsOS">
+      <os family="windows" />
+    </condition>
+  </target>
+
+  <!-- Makes any temporary directories. -->
+  <target name="makedirs" depends="init">
+    <mkdir dir="${build}" />
+    <mkdir dir="${build.classes}" />
+    <mkdir dir="${build.all}" />
+    <mkdir dir="${build.docs}" />
+    <mkdir dir="${build.lib}" />
+    <mkdir dir="${build.ejb}" />
+    <mkdir dir="${build.deploy}" />
+    <mkdir dir="${build.inf}" />
+    <mkdir dir="${build.inf}/lib" />
+    <mkdir dir="${build}/jsp_java" />
+    <mkdir dir="${exploded}" />
+    <mkdir dir="${e-ear}" />
+    <mkdir dir="${e-war}" />
+  </target>
+
+  <!-- Cleans and deletes any compiled files/copied descriptor files. -->
+  <target name="clean">
+    <delete dir="${build}" includeEmptyDirs="true" />
+  </target>
+
+  <!-- Compile all necessary files. -->
+  <target name="compile" depends="makedirs">
+    <echo>Building All Classes</echo>
+    <javac destdir="${build.all}" fork="true" memoryMaximumSize="512m" debug="${build.debug}" optimize="${build.optimize}" deprecation="${build.deprecation}">
+      <src path="${src.struts}" />
+      <src path="${src.ejb}" />
+      <src path="${src}/applet" />
+      <src path="${src.servlet}" />
+      <src path="${src.applet}" />
+      <include name="**/*.java" />
+      <exclude name="**/testclients/**" />
+      <exclude name="**/synch/**" />
+      <classpath refid="build.classpath" />
+    </javac>
+  </target>
+
+  <!-- Build the EJB Jar files. -->
+  <target name="ejbjar" depends="compile">
+    <!--Build all of the EJB.jar files. -->
+    <ejbjar srcdir="${build.all}" manifest="${src.ejb}/ejb-manifest.txt" descriptordir="${src.ejb}/com/centraview" naming="ejb-name" dependency="none">
+      <dtd publicId="-//Sun Microsystems, Inc.//DTD Enterprise JavaBeans 2.0//EN" location="${dtds}/ejb-jar_2_0.dtd" />
+      <dtd publicId="-//Sun Microsystems, Inc.//DTD Enterprise JavaBeans 1.1//EN" location="${dtds}/ejb-jar_1_1.dtd" />
+      <dtd publicId="-//Sun Microsystems, Inc.//DTD J2EE Application 1.3//EN" location="${dtds}/application_1_3.dtd" />
+      <jboss destdir="${build.ejb}" />
+      <include name="**/ejb-jar.xml" />
+      <classpath>
+        <fileset dir="${build.all}" />
+      </classpath>
+    </ejbjar>
+  </target>
+
+  <!-- Build the CVClient Jar File. -->
+  <target name="cvclient" depends="compile, ejbjar">
+    <jar update="true" destfile="${build.lib}/centraview.jar" basedir="${build.all}" />
+  </target>
+
+  <target name="standaloneCopy" depends="compile, cvclient, copyWebFiles">
+    <copy todir="${build.inf}/lib">
+      <fileset dir="${build.lib}">
+        <include name="centraview.jar" />
+      </fileset>
+      <fileset dir="${libs}">
+        <include name="struts.jar" />
+      </fileset>
+    </copy>
+  </target>
+
+  <!-- Copy the web files to the CentraView folder -->
+  <target name="copyWebFiles" depends="compile">
+    <copy todir="${build.deploy}">
+      <fileset dir="${src}">
+        <include name="index.jsp" />
+        <include name="favicon.ico" />
+        <include name="jsp/**" />
+        <include name="images/**" />
+        <include name="stylesheet/**" />
+        <include name="help/**" />
+        <include name="fckeditor/**" />
+      </fileset>
+    </copy>
+    <copy todir="${build.inf}">
+      <fileset dir="${src}/struts/config">
+        <exclude name="**/*.properties" />
+        <exclude name="**/web-header.xml" />
+        <exclude name="**/web-footer.xml" />
+        <include name="**/*.xml" />
+        <include name="**/*.tld" />
+        <include name="**/*.wsdd" />
+        <include name="**/*.dtd" />
+      </fileset>
+      <fileset dir="${src}/struts/tld">
+        <include name="**/*.xml" />
+        <include name="**/*.tld" />
+      </fileset>
+    </copy>
+    <copy todir="${build.inf}/classes">
+      <fileset dir="${src}/struts/config">
+        <include name="*.properties" />
+        <exclude name="log4j.properties" />
+      </fileset>
+    </copy>
+    <chmod dir="${build.inf}" perm="ugo+rwx" />
+    <!-- what is the purpose of this chmod -->
+  </target>
+
+  <!-- Build the CentraView War File. -->
+  <target name="war" depends="compile, cvclient, copyWebFiles">
+    <war destfile="${build}/centraview.war" webxml="${build.inf}/web.xml">
+      <fileset dir="${build.deploy}">
+        <exclude name="WEB-INF/**" />
+      </fileset>
+      <webinf dir="${build.inf}">
+        <exclude name="lib/**" />
+        <exclude name="classes/**" />
+        <exclude name="web.xml" />
+      </webinf>
+      <lib dir="${build.inf}/lib" />
+      <classes dir="${build.inf}/classes" />
+    </war>
+  </target>
+  <!-- End of Build the CentraView War File. -->
+
+  <!-- Calls build targets and copies cofigs/web files/etc.. to deploy directories. -->
+  <target name="build" depends="ejbjar, copyWebFiles, cvclient, standaloneCopy, buildWebXml, AlertAppletJar, war, ear" />
+  <target name="build-noejb" depends="ejbjar, copyWebFiles, cvclient, standaloneCopy, buildWebXml, AlertAppletJar, war, ear" />
+  <!-- Production Build pre-compiles the JSPs -->
+  <target name="release" depends="compile, ejbjar, copyWebFiles, AlertAppletJar, jspc, cvclient, war, ear" />
+  <target name="os-release" depends="compile, ejbjar, copyWebFiles, AlertAppletJar, buildWebXml, jspc-tc5, cvclient, os-war, os-ear" />
+
+  <!-- Deploys the compiled files to the necessary places. -->
+  <target name="deploy">
+    <antcall target="deployLinuxEJB" />
+    <antcall target="deployLinuxTheRest" />
+    <antcall target="deployWindowsEJB" />
+    <antcall target="deployWindowsTheRest" />
+  </target>
+  <target name="deployNoEJB">
+    <antcall target="deployLinuxTheRest" />
+    <antcall target="deployWindowsTheRest" />
+  </target>
+  <!-- End of Deploys the compiled files to the necessary places. -->
+
+  <!-- Deploys the compiled EJB files to the necessary places on Linux. -->
+  <target name="deployLinuxEJB" depends="DetermineOperatingSystem" if="LinuxOS">
+    <copy todir="${deploy.jboss.linux}" overwrite="true">
+      <fileset dir="${build}">
+        <include name="**/*.ear" />
+      </fileset>
+    </copy>
+    <copy todir="${deploy.jboss.lib.linux}" overwrite="true">
+      <fileset dir="${libs}">
+        <include name="mysql*.jar" />
+      </fileset>
+    </copy>
+    <echo>Please restart you JBoss instance.</echo>
+  </target>
+  <!-- Deploys the non-EJB compiled files to the necessary places on Linux. -->
+  <target name="deployLinuxTheRest" depends="DetermineOperatingSystem" if="LinuxOS">
+    <delete dir="${deploy.tomcat.linux}/${name}" />
+    <copy todir="${deploy.tomcat.linux}" overwrite="true">
+      <fileset dir="${build}">
+        <include name="**/*.war" />
+      </fileset>
+    </copy>
+    <copy todir="${deploy.tomcat.shared.linux}/lib">
+      <fileset dir="${libs}">
+        <include name="**/*.jar" />
+      </fileset>
+    </copy>
+    <copy todir="${deploy.tomcat.shared.linux}/classes">
+      <fileset dir="${src}/struts/config">
+        <include name="*.properties" />
+        <exclude name="CentraView.properties" />
+      </fileset>
+    </copy>
+    <echo>Please restart you Tomcat instance.</echo>
+  </target>
+  <!-- End of Deploys the compiled files to the necessary places on Linux. -->
+
+  <!-- Deploys the complied EJB files to the necessary places on Windows. -->
+  <target name="deployWindowsEJB" depends="DetermineOperatingSystem" if="WindowsOS">
+    <copy todir="${deploy.jboss.windows}" overwrite="true">
+      <fileset dir="${build}">
+        <include name="**/*.ear" />
+      </fileset>
+    </copy>
+    <copy todir="${deploy.jboss.lib.windows}" overwrite="true">
+      <fileset dir="${libs}">
+        <include name="mysql*.jar" />
+      </fileset>
+    </copy>
+    <echo>Please restart you JBoss instance.</echo>
+  </target>
+
+  <!-- Deploys the non-EJB compiled files to the necessary places on Windows. -->
+  <target name="deployWindowsTheRest" depends="DetermineOperatingSystem" if="WindowsOS">
+    <delete dir="${deploy.tomcat.windows}/${name}" />
+    <copy todir="${deploy.tomcat.windows}" overwrite="true">
+      <fileset dir="${build}">
+        <include name="**/*.war" />
+      </fileset>
+    </copy>
+    <copy todir="${deploy.tomcat.shared.windows}\\lib">
+      <fileset dir="${libs}">
+        <include name="**/*.jar" />
+      </fileset>
+    </copy>
+    <copy todir="${deploy.tomcat.shared.windows}\\classes">
+      <fileset dir="${src}/struts/config">
+        <include name="*.properties" />
+        <exclude name="CentraView.properties" />
+      </fileset>
+    </copy>
+    <echo>Please restart you Tomcat instance.</echo>
+  </target>
+  <!-- End of Deploys the compiled files to the necessary places on Windows. -->
+
+  <!-- Generates the Javadoc API for the CentraView Java classes. -->
+  <target name="api" depends="makedirs">
+    <javadoc destdir="${build.docs}" author="true" version="true" Splitindex="true" Windowtitle="CentraView API">
+      <classpath refid="build.classpath" />
+      <fileset dir="${src.struts}">
+        <include name="com/**/*.java" />
+      </fileset>
+      <fileset dir="${src.ejb}">
+        <include name="com/**/*.java" />
+      </fileset>
+      <link href="http://java.sun.com/j2se/1.3/docs/api/" />
+      <link href="http://java.sun.com/j2ee/sdk_1.3/techdocs/api/" />
+      <link href="http://jakarta.apache.org/struts/api/" />
+    </javadoc>
+  </target>
+  <!-- End of Generates the Javadoc API for the CentraView Java classes. -->
+
+  <target name="ear" depends="ejbjar,cvclient">
+    <ear destfile="${build}/centraview.ear" appxml="${src}/application.xml">
+      <fileset dir="${build.ejb}" includes="*.jar" />
+      <zipfileset dir="${build.lib}" prefix="lib" />
+      <zipfileset dir="${libs}" prefix="lib">
+        <exclude name="jboss*" />
+        <exclude name="jug_1.0.3.jar" />
+      </zipfileset>
+    </ear>
+  </target>
+
+  <target name="AlertAppletJar" depends="copyWebFiles">
+    <jar destfile="${build.deploy}/jsp/common/${alert.jar}" basedir="${build.all}" includes="**/applet/*.class" />
+  </target>
+
+  <target name="DBUpdateJar">
+    <jar update="false" destfile="${build}/dbupdate.jar" manifest="utils/dbupdate/manifest.txt">
+      <fileset dir="${build.all}">
+        <include name="**/DatabaseUpdate.class" />
+        <include name="**/Password.class" />
+      </fileset>
+    </jar>
+  </target>
+
+  <target name="jspc" depends="copyWebFiles, buildWebXml">
+    <echo>Jasper working ...</echo>
+    <jspc verbose="9" package="com.centraview" webinc="${build}/jsp_java/web.inc" compiler="jasper41" srcdir="${build.deploy}" destdir="${build}/jsp_java" uriroot="${build.deploy}">
+      <classpath refid="jspc-tc4.classpath" />
+      <include name="**/*.jsp" />
+      <exclude name="jsp/index.jsp" />
+      <exclude name="**/ShowDailyViews.jsp" />
+      <exclude name="**/CalenderPageBar.jsp" />
+      <exclude name="**/report_search.jsp" />
+      <exclude name="**/report_search_header.inc" />
+      <exclude name="**/reports/leftnav_submenu.jsp" />
+    </jspc>
+    <echo>Compiling Jasper output.</echo>
+    <javac destdir="${build.all}" debug="${build.debug}" optimize="${build.optimize}" fork="true" memoryMaximumSize="512m" deprecation="${build.deprecation}">
+      <src path="${build}/jsp_java" />
+      <include name="**/*.java" />
+      <classpath refid="jspc-tc4.classpath" />
+    </javac>
+    <!-- delete the unecessary jsp files -->
+    <delete includeemptydirs="true">
+      <fileset dir="${build.deploy}">
+        <exclude name="jsp/index.jsp" />
+        <exclude name="jsp/common/${alert.jar}" />
+        <exclude name="jsp/mail/**/*.html" />
+        <exclude name="jsp/mail/**/*.css" />
+        <exclude name="jsp/mail/**/*.asp" />
+        <exclude name="jsp/mail/**/*.gif" />
+        <exclude name="jsp/mail/**/*.js" />
+        <exclude name="jsp/email/**/*.html" />
+        <exclude name="jsp/email/**/*.css" />
+        <exclude name="jsp/email/**/*.asp" />
+        <exclude name="jsp/email/**/*.gif" />
+        <exclude name="jsp/email/**/*.js" />
+        <include name="jsp/**" />
+      </fileset>
+    </delete>
+    <concat destfile="${build.inf}/web.xml">
+      <filelist dir="${src.struts}/config" files="web-header.xml" />
+      <filelist dir="${build}/jsp_java/" files="web.inc" />
+      <filelist dir="${src.struts}/config" files="web-footer.xml" />
+    </concat>
+  </target>
+  
+  <target name="jspc-tc5"> 
+    <taskdef classname="org.apache.jasper.JspC" name="jasper2" > 
+      <classpath refid="jspc.classpath" />
+    </taskdef> 
+    <echo>Jasper2 working ...</echo>
+    <jasper2 package="com.centraview" webXmlFragment="${build}/jsp_java/web.inc" outputdir="${build}/jsp_java" uriroot="${build.deploy}">
+    </jasper2>
+    <echo>Compiling Jasper2 output.</echo>
+    <javac destdir="${build.all}" debug="${build.debug}" optimize="${build.optimize}" fork="true" memoryMaximumSize="512m" deprecation="${build.deprecation}">
+      <src path="${build}/jsp_java" />
+      <include name="**/*.java" />
+      <classpath refid="jspc.classpath" />
+    </javac>
+    <!-- delete the unecessary jsp files -->
+    <delete includeemptydirs="true">
+      <fileset dir="${build.deploy}">
+        <exclude name="jsp/index.jsp" />
+        <exclude name="jsp/common/${alert.jar}" />
+        <exclude name="jsp/mail/**/*.html" />
+        <exclude name="jsp/mail/**/*.css" />
+        <exclude name="jsp/mail/**/*.asp" />
+        <exclude name="jsp/mail/**/*.gif" />
+        <exclude name="jsp/mail/**/*.js" />
+        <exclude name="jsp/email/**/*.html" />
+        <exclude name="jsp/email/**/*.css" />
+        <exclude name="jsp/email/**/*.asp" />
+        <exclude name="jsp/email/**/*.gif" />
+        <exclude name="jsp/email/**/*.js" />
+        <include name="jsp/**" />
+      </fileset>
+    </delete>
+    <concat destfile="${build.inf}/web.xml">
+      <filelist dir="${src.struts}/config" files="web-header.xml" />
+      <filelist dir="${build}/jsp_java/" files="web.inc" />
+      <filelist dir="${src.struts}/config" files="web-footer.xml" />
+    </concat>
+  </target> 
+  
+  <target name="buildWebXml" depends="copyWebFiles">
+    <concat destfile="${build.inf}/web.xml">
+      <filelist dir="${src.struts}/config" files="web-header.xml" />
+      <filelist dir="${src.struts}/config" files="web-footer.xml" />
+    </concat>
+  </target>
+
+  <target name="os-ear" depends="os-war">
+    <ear destfile="${build}/centraview.ear" appxml="${src}/os-application.xml">
+      <fileset dir="${build.ejb}" includes="*.jar" />
+      <fileset dir="${build}" includes="centraview.war" />
+      <zipfileset dir="${build.lib}" prefix="lib" />
+      <zipfileset dir="${libs}" prefix="lib">
+        <exclude name="jboss*" />
+        <exclude name="jnpserver.jar" />
+        <exclude name="javax.servlet.jar" />
+        <exclude name="javax.servlet.jsp.jar" />
+      </zipfileset>
+    </ear>
+  </target>
+
+  <target name="os-war" depends="copyWebFiles, ejbjar, buildWebXml, cvclient">
+    <war destfile="${build}/centraview.war" webxml="${build.inf}/web.xml" manifest="${src}/war-manifest.txt">
+      <fileset dir="${build.deploy}">
+        <exclude name="WEB-INF/**" />
+      </fileset>
+      <webinf dir="${build.inf}">
+        <exclude name="lib/**" />
+        <exclude name="classes/**" />
+        <exclude name="web.xml" />
+      </webinf>
+      <classes dir="${build.inf}/classes" />
+    </war>
+  </target>
+
+  <target name="e-ear" depends="e-war">
+    <!-- copy stuff into an ear hierarchy -->
+    <ear destfile="${build}/centraview.ear" appxml="${src}/os-application.xml">
+      <fileset dir="${build.ejb}" includes="*.jar" />
+      <fileset dir="${build}" includes="centraview.war" />
+      <zipfileset dir="${build.lib}" prefix="lib" />
+      <zipfileset dir="${libs}" prefix="lib">
+        <exclude name="jboss*" />
+        <exclude name="jnpserver.jar" />
+        <exclude name="servlet.jar" />
+      </zipfileset>
+    </ear>
+  </target>
+
+  <target name="e-war" depends="copyWebFiles, ejbjar, buildWebXml, cvclient">
+    <!-- copy stuff into a war hierarchy -->
+    <war destfile="${build}/centraview.war" webxml="${build.inf}/web.xml" manifest="${src}/war-manifest.txt">
+      <fileset dir="${build.deploy}">
+        <exclude name="WEB-INF/**" />
+      </fileset>
+      <webinf dir="${build.inf}">
+        <exclude name="lib/**" />
+        <exclude name="classes/**" />
+        <exclude name="web.xml" />
+      </webinf>
+      <classes dir="${build.inf}/classes" />
+    </war>
+  </target>
+</project>

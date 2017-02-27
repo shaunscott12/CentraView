@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" 
+          "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<!--
+ * $RCSfile: customer.xml,v $    $Revision: 1.8 $  $Date: 2005/09/27 19:23:48 $ - $Author: mcallist $
+ * 
+ * The contents of this file are subject to the Open Software License
+ * Version 2.1 ("the License"); you may not use this file except in
+ * compliance with the License. You may obtain a copy of the License at
+ * http://www.centraview.com/opensource/license.html
+ * 
+ * Software distributed under the License is distributed on an "AS IS"
+ * basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+ * License for the specific language governing rights and limitations
+ * under the License.
+ * 
+ * The Original Code is: CentraView Open Source. 
+ * 
+ * The developer of the Original Code is CentraView.  Portions of the
+ * Original Code created by CentraView are Copyright (c) 2004 CentraView,
+ * LLC; All Rights Reserved.  The terms "CentraView" and the CentraView
+ * logos are trademarks and service marks of CentraView, LLC.
+-->
+<struts-config>
+
+  <form-beans>
+    <form-bean name="customerLoginForm" type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="username" type="java.lang.String"/>
+      <form-property name="password" type="java.lang.String"/>
+      <form-property name="rememberMe" type="java.lang.String"/>
+      <form-property name="agreedTerms" type="java.lang.String" />
+      <form-property name="userType" type="java.lang.String" initial="CUSTOMER"/>
+    </form-bean>
+   
+    <!-- used for the Customer Profile tab (both show details and request changes) -->
+    <form-bean name="customerProfileForm" type="org.apache.struts.action.DynaActionForm">
+      <form-property name="entityName" type="java.lang.String" />
+      <form-property name="firstName" type="java.lang.String" />
+      <form-property name="middleName" type="java.lang.String" />
+      <form-property name="lastName" type="java.lang.String" />
+      <form-property name="title" type="java.lang.String" />
+      <form-property name="street1" type="java.lang.String" />
+      <form-property name="street2" type="java.lang.String" />
+      <form-property name="city" type="java.lang.String" />
+      <form-property name="zipCode" type="java.lang.String" />
+      <form-property name="website" type="java.lang.String" />
+      <form-property name="state" type="java.lang.String" />
+      <form-property name="country" type="java.lang.String" />
+      <form-property name="mocContent1" type="java.lang.String"/>
+      <form-property name="mocContent2" type="java.lang.String"/>
+      <form-property name="mocContent3" type="java.lang.String"/>
+      <form-property name="mocExt1" type="java.lang.String"/>
+      <form-property name="mocExt2" type="java.lang.String"/>
+      <form-property name="mocExt3" type="java.lang.String"/>
+      <form-property name="mocType1" type="java.lang.String" initial="4"/>
+      <form-property name="mocType2" type="java.lang.String" initial="2"/>
+      <form-property name="mocType3" type="java.lang.String" initial="3"/>
+      <form-property name="email" type="java.lang.String" initial=""/>      
+    </form-bean>
+   
+    <form-bean name="customerEmailForm" type="org.apache.struts.action.DynaActionForm">
+      <form-property name="emailID" type="java.lang.Integer" />
+      <form-property name="from" type="java.lang.String" />
+      <form-property name="toList" type="java.util.ArrayList" />
+      <form-property name="ccList" type="java.util.ArrayList" />
+      <form-property name="date" type="java.lang.String" />
+      <form-property name="subject" type="java.lang.String" />
+      <form-property name="body" type="java.lang.String" />
+    </form-bean>
+
+    <form-bean name="customerOrderForm" type="org.apache.struts.action.DynaActionForm">
+      <form-property name="orderID" type="java.lang.Integer" />
+      <form-property name="entityName" type="java.lang.String" />
+      <form-property name="billingAddress" type="java.lang.String" />
+      <form-property name="shippingAddress" type="java.lang.String" />
+      <form-property name="status" type="java.lang.String" />
+      <form-property name="date" type="java.lang.String" />
+      <form-property name="terms" type="java.lang.String" />
+      <form-property name="accountManager" type="java.lang.String" />
+      <form-property name="itemList" type="java.util.ArrayList" />
+      <form-property name="totalItems" type="java.lang.Integer" />
+      <form-property name="subTotal" type="java.lang.Float" />
+      <form-property name="tax" type="java.lang.Float" />
+      <form-property name="shipping" type="java.lang.Float" />
+      <form-property name="orderTotal" type="java.lang.Float" />
+    </form-bean>
+
+    <form-bean name="cvticketform" type="com.centraview.support.ticket.TicketForm"/>
+
+    <form-bean name="cvthreadform" type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="ticketnumber" type="java.lang.String" initial=""/>
+      <form-property name="ticketsubject" type="java.lang.String" initial=""/>
+      <form-property name="detail" type="java.lang.String" initial=""/>
+      <form-property name="selectstatus" type="java.lang.String" initial=""/>
+      <form-property name="selectpriority" type="java.lang.String" initial=""/>
+      <form-property name="mgrlookup" type="java.lang.String" initial=""/>
+      <form-property name="assignto" type="java.lang.String" initial=""/>
+      <form-property name="entityname" type="java.lang.String" initial=""/>
+      <form-property name="selectcontact" type="java.lang.String" initial=""/>
+      <form-property name="selectcategory" type="java.lang.String" initial=""/>
+      <form-property name="selecttype" type="java.lang.String" initial=""/>
+      <form-property name="selectclosedonfirstcall" type="java.lang.String" initial=""/>
+      <form-property name="title" type="java.lang.String" initial=""/>
+      <form-property name="threaddetail" type="java.lang.String" initial=""/>
+      <form-property name="priority" type="java.lang.String" initial=""/>
+      <form-property name="createdby" type="java.lang.String" initial=""/>
+      <form-property name="createdbyid" type="java.lang.String" initial=""/>
+      <form-property name="createddate" type="java.lang.String" initial=""/>
+      <form-property name="modifieddate" type="java.lang.String" initial=""/>
+      <form-property name="timesliptitle" type="java.lang.String" initial=""/>
+      <form-property name="ticketdetail" type="java.lang.String" initial=""/>
+      <form-property name="threadid" type="java.lang.String" initial=""/>
+      <form-property name="day" type="java.lang.String" initial=""/>
+      <form-property name="month" type="java.lang.String" initial=""/>
+      <form-property name="year" type="java.lang.String" initial=""/>
+      <form-property name="starttime" type="java.lang.String" initial=""/>
+      <form-property name="endtime" type="java.lang.String" initial=""/>
+      <form-property name="hours" type="java.lang.String" initial=""/>
+      <form-property name="minutes" type="java.lang.String" initial=""/>
+    </form-bean>
+
+    <form-bean name="customerFaqForm" type="org.apache.struts.action.DynaActionForm">
+      <form-property name="faqID" type="java.lang.Integer" />
+      <form-property name="title" type="java.lang.String" />
+      <form-property name="questionList" type="java.util.ArrayList" />
+    </form-bean>
+
+    <form-bean name="customerEventForm" type="org.apache.struts.action.DynaActionForm">
+      <form-property name="eventID" type="java.lang.Integer" />
+      <form-property name="eventName" type="java.lang.String" />
+      <form-property name="description" type="java.lang.String" />
+      <form-property name="startDate" type="java.util.Date" />
+      <form-property name="endDate" type="java.util.Date" />
+      <form-property name="whoAttends" type="java.lang.String" />
+      <form-property name="maxAttendees" type="java.lang.Integer" />
+      <form-property name="moderator" type="java.lang.String" />
+      <form-property name="fileList" type="java.util.ArrayList" />
+      <form-property name="isRegistered" type="java.lang.Boolean" />
+      <form-property name="registerAction" type="java.lang.Boolean" />
+    </form-bean>
+
+    <form-bean name="customerUserForm" type="org.apache.struts.action.DynaActionForm">
+      <form-property name="userID" type="java.lang.Integer" />
+      <form-property name="individualName" type="java.lang.String" />
+      <form-property name="title" type="java.lang.String" />
+      <form-property name="street1" type="java.lang.String" />
+      <form-property name="street2" type="java.lang.String" />
+      <form-property name="city" type="java.lang.String" />
+      <form-property name="state" type="java.lang.String" />
+      <form-property name="zipCode" type="java.lang.String" />
+      <form-property name="country" type="java.lang.String" />
+      <form-property name="mocContent1" type="java.lang.String"/>
+      <form-property name="mocContent2" type="java.lang.String"/>
+      <form-property name="mocContent3" type="java.lang.String"/>
+      <form-property name="mocExt1" type="java.lang.String"/>
+      <form-property name="mocExt2" type="java.lang.String"/>
+      <form-property name="mocExt3" type="java.lang.String"/>
+      <form-property name="mocType1" type="java.lang.String" initial="4"/>
+      <form-property name="mocType2" type="java.lang.String" initial="2"/>
+      <form-property name="mocType3" type="java.lang.String" initial="3"/>
+      <form-property name="email" type="java.lang.String" initial=""/>      
+      <form-property name="username" type="java.lang.String" />
+      <form-property name="oldPassword" type="java.lang.String" />
+      <form-property name="newPassword" type="java.lang.String" />
+      <form-property name="newPasswordConf" type="java.lang.String" />
+    </form-bean>
+
+
+  </form-beans>
+  
+  <action-mappings>
+  
+    <!-- show customer login page (not handler) -->
+    <action path="/CustomerLogin" type="org.apache.struts.actions.ForwardAction" name="customerLoginForm" parameter="/customer_login.do" />
+    <action path="/customer_login" type="com.centraview.customer.ShowLoginHandler" name="customerLoginForm" scope="request" validate="false">
+      <forward name=".view.customer.login" path=".view.customer.login" />
+    </action>
+
+    <!-- customer login handler -->
+    <action path="/customer/login" type="com.centraview.common.LoginHandler" name="customerLoginForm" scope="request" validate="true">
+      <forward name=".view.login.failure" path="/customer_login.do" redirect="true" />
+      <forward name=".view.customer.home" path="/customer/home.do" redirect="true"/>
+    </action>
+    
+    <!-- customer home page -->
+    <action path="/customer/home" type="com.centraview.customer.HomeHandler" scope="request" validate="false">
+      <forward name=".view.customer.home" path=".view.customer.home" />
+    </action>
+
+    <!-- show customer profile -->
+    <action path="/customer/profile" type="com.centraview.customer.profile.CustomerProfileHandler" name="customerProfileForm" scope="request" validate="false">
+      <forward name=".view.customer.profile" path=".view.customer.profile" />
+    </action>
+    
+    <!-- send email for profile change request and show confirmation -->
+    <action path="/customer/update_profile" type="com.centraview.customer.profile.UpdateProfileHandler" name="customerProfileForm" scope="request" validate="false">
+      <forward name=".view.customer.profile_confirm" path=".view.customer.profile_confirm" />
+      <forward name=".view.customer.profile" path=".view.customer.profile" />
+    </action>
+
+    <!-- Display customer view email list -->
+    <action path="/customer/email_list" type="com.centraview.customer.email.EmailListHandler">
+      <forward name=".view.customer.email_list" path=".view.customer.valuelist" />
+    </action>
+
+    <!-- Display email details in customer view -->
+    <action path="/customer/view_email" type="com.centraview.customer.email.ViewEmailHandler" name="customerEmailForm" scope="request" validate="false">
+      <forward name=".view.customer.view_email" path=".view.customer.view_email" />
+    </action>
+
+    <!-- Display customer view order list -->
+    <action path="/customer/order_list" type="com.centraview.customer.accounting.OrderListHandler">
+      <forward name=".view.customer.order_list" path=".view.customer.valuelist" />
+    </action>
+
+    <!-- Display customer view order details -->
+    <action path="/customer/view_order" type="com.centraview.customer.accounting.ViewOrderHandler" name="customerOrderForm" scope="request" validate="false">
+      <forward name=".view.customer.view_order" path=".view.customer.view_order" />
+    </action>
+
+    <!-- Display customer view invoice list -->
+    <action path="/customer/invoice_list" type="com.centraview.customer.accounting.InvoiceListHandler">
+      <forward name=".view.customer.invoice_list" path=".view.customer.valuelist" />
+      <!--forward name="customerInvoiceList" path=".view.customer.valuelist" /-->
+    </action>
+
+    <!-- Display customer view payments list -->
+    <action path="/customer/payment_list" type="com.centraview.customer.accounting.PaymentListHandler">
+      <forward name=".view.customer.payment_list" path=".view.customer.valuelist" />
+    </action>
+
+    <!-- Display customer view tickets list -->
+    <action path="/customer/ticket_list" type="com.centraview.customer.support.TicketListHandler">
+      <forward name=".view.customer.ticket_list" path=".view.customer.valuelist" />
+    </action>
+    
+    <!-- show new ticket screen -->
+    <action path="/customer/new_ticket" type="com.centraview.customer.support.NewTicketHandler" name="cvticketform" scope="request" validate="false">
+      <forward name=".view.customer.new_ticket" path=".view.customer.new_ticket" />
+    </action>
+
+    <!-- Display customer view ticket detail -->
+    <action path="/customer/view_ticket" type="com.centraview.customer.support.ViewTicketHandler" name="cvticketform" scope="request" validate="false">
+      <forward name=".view.customer.view_ticket" path=".view.customer.view_ticket" />
+      <forward name=".view.customer.ticket_list" path="/customer/ticket_list.do" redirect="true" />
+    </action>
+    
+    <!-- save existing ticket -->
+    <action path="/customer/save_ticket" type="com.centraview.customer.support.UpdateTicketHandler" name="cvticketform" scope="request" input=".view.customer.view_ticket" validate="true">
+      <forward name=".view.customer.ticket_list" path="/customer/ticket_list.do" redirect="true" />
+    </action>
+
+    <!-- save new ticket -->
+    <action path="/customer/save_new_ticket" name="cvticketform" type="com.centraview.customer.support.SaveTicketHandler" scope="request" validate="true" input="/customer/new_ticket.do">
+      <forward name=".forward.customer.ticket_list" path="/customer/ticket_list.do" redirect="true" />
+    </action>
+
+
+    <!-- view thread -->
+    <action path="/customer/view_thread" type="com.centraview.customer.support.ViewEditThreadHandler" name="cvthreadform" scope="request" validate="false" input=".view.customer.view_ticket">
+      <forward name=".view.customer.view_thread" path=".view.customer.view_thread" />
+    </action>  
+    
+    <!-- show new thread form -->
+    <action path="/customer/new_thread" type="com.centraview.customer.support.NewThreadHandler" name="cvticketform" scope="request" validate="false" input=".view.customer.view_thread">
+      <forward name=".view.customer.new_thread" path=".view.customer.new_thread" />
+    </action>
+
+    <!-- save new thread -->
+    <action path="/customer/save_thread" type="com.centraview.customer.support.SaveThreadHandler" name="cvthreadform" scope="request" validate="true" input="/customer/new_thread.do">
+      <forward name=".view.customer.view_ticket" path="/customer/view_ticket.do" />
+    </action>
+
+    <!-- Display customer view FAQ list -->
+    <action path="/customer/faq_list" type="com.centraview.customer.support.FAQListHandler">
+      <forward name=".view.customer.faq_list" path=".view.customer.valuelist" />
+    </action>
+
+    <!-- display faq detail -->
+    <action path="/customer/view_faq" type="com.centraview.customer.support.ViewFaqHandler" name="customerFaqForm" scope="request" validate="false">
+      <forward name=".view.customer.view_faq" path=".view.customer.view_faq" />
+    </action>
+
+    <!-- Display customer view KB list -->
+    <action path="/customer/kb_list" type="com.centraview.customer.support.KBListHandler" name="customerKBListForm" scope="request" validate="false">
+      <forward name="customerKBList" path="/jsp/customer/support/kb_list_c.jsp" />
+    </action>
+
+    <!-- Display customer view Events list -->
+    <action path="/customer/event_list" type="com.centraview.customer.events.EventListHandler">
+      <forward name=".view.customer.event_list" path=".view.customer.valuelist" />
+    </action>
+
+    <!-- Display customer view Event details -->
+    <action path="/customer/view_event" type="com.centraview.customer.events.ViewEventHandler" name="customerEventForm" scope="request" validate="false">
+      <forward name=".view.customer.view_event" path=".view.customer.view_event" />
+    </action>
+
+    <!-- Handle request when customer clicks "Register" button on event details screen-->
+    <action path="/customer/event_register" type="com.centraview.customer.events.EventRegisterHandler" name="customerEventForm" scope="request" validate="false">
+      <forward name="customerEventDetail" path="/customer/view_event.do" />
+    </action>
+
+    <!-- Display customer view Users list -->
+    <action path="/customer/user_list" type="com.centraview.customer.users.UserListHandler">
+      <forward name=".view.customer.user_list" path=".view.customer.valuelist" />
+    </action>
+
+    <!-- Display customer view Users details -->
+    <action path="/customer/view_user" type="com.centraview.customer.users.ViewUserHandler" name="customerUserForm" scope="request" validate="false">
+      <forward name=".view.customer.view_user" path=".view.customer.view_user" />
+    </action>
+
+    <action path="/customer/user_change_request" type="com.centraview.customer.users.UpdateUserHandler" name="customerUserForm" scope="request" validate="false">
+      <forward name=".view.customer.user_change_confirm" path=".view.customer.user_change_confirm" />
+      <forward name=".view.customer.view_user" path=".view.customer.view_user" />
+    </action>
+
+    <!-- Display customer view Files list -->
+    <action path="/customer/file_list" type="com.centraview.customer.files.FileListHandler">
+      <forward name=".view.customer.file_list" path=".view.customer.valuelist" />
+    </action>
+
+    <!-- Display customer view Contact Us JSP -->
+    <action path="/customer/contact_us" type="com.centraview.customer.contact.ContactUsHandler">
+      <forward name=".view.customer.contact_us" path=".view.customer.contact_us" />
+    </action>
+
+    <!-- Customer Logout -->
+    <action path="/customer/logout" type="com.centraview.customer.LogoutHandler" name="customerLoginForm" scope="request" validate="false">
+      <forward name="customerLogin" path="/customer_login.do" />
+    </action>
+    
+  </action-mappings>
+</struts-config>

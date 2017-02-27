@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" 
+          "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<!--
+ * $RCSfile: sales.xml,v $    $Revision: 1.5 $  $Date: 2005/09/02 20:14:50 $ - $Author: mcallist $
+ * 
+ * The contents of this file are subject to the Open Software License
+ * Version 2.1 ("the License"); you may not use this file except in
+ * compliance with the License. You may obtain a copy of the License at
+ * http://www.centraview.com/opensource/license.html
+ * 
+ * Software distributed under the License is distributed on an "AS IS"
+ * basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+ * License for the specific language governing rights and limitations
+ * under the License.
+ * 
+ * The Original Code is: CentraView Open Source. 
+ * 
+ * The developer of the Original Code is CentraView.  Portions of the
+ * Original Code created by CentraView are Copyright (c) 2004 CentraView,
+ * LLC; All Rights Reserved.  The terms "CentraView" and the CentraView
+ * logos are trademarks and service marks of CentraView, LLC.
+-->
+<struts-config>
+  <form-beans>
+  
+    <form-bean name="proposallistform" type="com.centraview.sale.proposal.ProposalListForm"/>
+    <form-bean name="opportunityform" type="com.centraview.sale.OpportunityForm"/>  
+    <form-bean name="fileformproposal" type="com.centraview.email.FileForm"/>
+
+  </form-beans>
+  
+  <action-mappings>
+    <!-- Sales lists -->
+    <action path="/sales/opportunity_list" type="com.centraview.sale.OpportunityValueListAction" scope="request" validate="false" parameter="action">
+      <forward name=".view.sales.opportunity.list" path=".view.valuelist"/>
+      <forward name=".view.sales.opportunity.list.my" path=".view.valuelist.my_opportunities"/>
+      <forward name=".view.sales.opportunity.list.all" path=".view.valuelist.all_opportunities"/>
+      <forward name="showLookup" path=".view.lookup"/>
+    </action>
+
+    <action path="/sales/proposal_list" type="com.centraview.sale.ProposalValueListAction" scope="request" validate="false">
+      <forward name=".view.sales.proposal.list" path=".view.valuelist"/>
+    </action>
+
+    <!--  delete the list of opportunity -->
+    <action path="/sales/delete_opportunitylist" type="com.centraview.sale.OpportunityListDeleteHandler">
+      <forward name="OpportunityList" path="/sales/opportunity_list.do" redirect="true"/>
+    </action>
+
+    <!-- show new opportunity screen -->
+    <action path="/sales/new_opportunity" type="com.centraview.sale.NewOpportunityHandler" scope="request" validate="false" parameter="action" name="opportunityform">
+      <forward name=".view.sales.new_opportunity" path=".view.sales.new_opportunity" />
+    </action>    
+
+    <!-- save opportunity handler -->
+    <action path="/sales/save_opportunity" type="com.centraview.sale.SaveOpportunityHandler" scope="request" validate="false" name="opportunityform">
+      <forward name=".forward.close_window" path="/jsp/pages/common/window_close.jsp?parentReload=true" />
+      <forward name=".view.sales.new_opportunity" path=".view.sales.new_opportunity" />
+    </action>
+    
+    <!-- view opportunity details -->
+    <action path="/sales/view_opportunity" type="com.centraview.sale.ViewOpportunityHandler" name="opportunityform" scope="request" validate="false">
+      <forward name=".view.sales.opportunity_details" path=".view.sales.opportunity_details" />
+      <forward name=".view.sales.new_opportunity" path=".view.sales.new_opportunity" />
+    </action>
+
+    <!-- save existing opportinuty -->
+    <action path="/sales/update_opportunity" type="com.centraview.sale.UpdateOpportunityHandler" name="opportunityform" scope="request" validate="true" input="/sales/view_opportunity.do">
+      <forward name=".forward.sales.view_opportunity" path="/sales/view_opportunity.do"/>
+      <forward name=".forward.close_window" path="/jsp/pages/common/window_close.jsp?parentReload=true" />
+    </action>
+
+    <action path="/sales/delete_opportunity" type="com.centraview.sale.DeleteOpportunityHandler" scope="request" validate="false" parameter="action" name="opportunityform">
+      <forward name="displayEditOpportunity" path="/jsp/pages/common/window_close.jsp?parentReload=true"/>
+      <forward name="viewOpportunity" path="/sales/view_opportunity.do"/>
+    </action>
+
+    <!--  View the list of Proposal -->
+    <action path="/sales/view_proposal" type="com.centraview.sale.proposal.ViewProposalHandler" scope="request" validate="false"  name="proposallistform">
+      <forward name=".view.proposal.editproposal" path=".view.proposal.edit.proposal"/>
+    </action>
+
+    <!--  delete the list of proposal -->
+    <action path="/sales/delete_proposallist" type="com.centraview.sale.ProposalListDeleteHandler" />
+
+    <action path="/DeleteProposal" type="com.centraview.sale.proposal.DeleteProposal" scope="request" validate="false" name="proposallistform">
+      <forward name=".view.proposal.deleteproposal" path="/sales/proposal_list.do"/>
+    </action>    
+
+    <!-- show new proposal screen -->
+    <action path="/sales/new_proposal" type="com.centraview.sale.proposal.NewProposalHandler" scope="request" validate="false" name="proposallistform">
+      <forward name=".view.proposal.new_proposal" path=".view.proposal.new_proposal"/>
+    </action>
+
+    <action path="/sales/duplicate_proposal" type="com.centraview.sale.proposal.DuplicateProposalHandler" scope="session" validate="false" name="proposallistform" input="/sales/new_proposal.do">
+      <forward name=".view.proposal.duplicateproposal" path=".view.proposal.new.proposal"/>
+    </action>
+
+    <action path="/sales/edit_proposal" type="com.centraview.sale.proposal.UpdateProposal" scope="request" validate="false" name="proposallistform" input="/sales/view_proposal.do">
+      <forward name=".view.proposal.newproposal" path="/sales/new_proposal.do"/>
+      <forward name=".view.proposal.editproposal" path="/sales/view_proposal.do"/>
+      <forward name=".view.accounting.ordergenerate" path="/sales/generate_order.do"/>
+    </action>
+    
+    <action path="/sales/generate_order" type="com.centraview.sale.proposal.AutoGenerateOrderHandler" scope="request" validate="false" name="proposallistform">
+      <forward name=".view.proposal.editproposal" path="/sales/view_proposal.do"/>
+    </action>
+
+    <action path="/sales/add_proposal" type="com.centraview.sale.proposal.AddProposal" name="proposallistform" scope="session" validate="true" input=".view.proposal.new_proposal">
+      <forward name=".view.proposal.newproposal" path=".view.proposal.new_proposal"/>
+      <forward name=".view.proposal.editproposal" path="/sales/view_proposal.do"/>
+    </action>
+
+    <action path="/sales/compose_proposal" type="com.centraview.sale.proposal.ComposeProposalHandler" scope="request" validate="false" name="composeMailForm">
+      <forward name="composeproposal" path="/email/compose.do" />
+    </action>
+
+    <action path="/sales/proposal_attach_file" type="com.centraview.sale.proposal.AttachFileHandler" name="fileformproposal">
+      <forward name="attach" path="/jsp/sale/proposal_attachment.jsp"/>
+    </action>
+    
+    <action path="/sales/edit_forecast" type="com.centraview.sale.proposal.UpdateForeCastAmtHandler" scope="request" validate="false" name="proposallistform" input="/sales/view_proposal.do">
+      <forward name=".view.proposal.editproposal" path="/sales/view_proposal.do"/>
+    </action>
+    
+    <action path="/sales/opportunity_lookup" type="org.apache.struts.actions.ForwardAction" scope="request" validate="false" parameter="/sales/opportunity_list.do?actionType=lookup"/>
+    <action path="/sales/sales_pie_chart" type="com.centraview.sale.SalesPieChartHandler" scope="request" validate="false" />
+    <action path="/sales/sales_bar_chart" type="com.centraview.sale.SalesBarChartHandler" scope="request" validate="false" />
+
+  </action-mappings>
+</struts-config>

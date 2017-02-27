@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" 
+          "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<!--
+ * $RCSfile: activity.xml,v $    $Revision: 1.6 $  $Date: 2005/09/07 21:57:11 $ - $Author: mcallist $
+ * 
+ * The contents of this file are subject to the Open Software License
+ * Version 2.1 ("the License"); you may not use this file except in
+ * compliance with the License. You may obtain a copy of the License at
+ * http://www.centraview.com/opensource/license.html
+ * 
+ * Software distributed under the License is distributed on an "AS IS"
+ * basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+ * License for the specific language governing rights and limitations
+ * under the License.
+ * 
+ * The Original Code is: CentraView Open Source. 
+ * 
+ * The developer of the Original Code is CentraView.  Portions of the
+ * Original Code created by CentraView are Copyright (c) 2004 CentraView,
+ * LLC; All Rights Reserved.  The terms "CentraView" and the CentraView
+ * logos are trademarks and service marks of CentraView, LLC.
+-->
+
+<struts-config>
+  <form-beans>
+
+    <form-bean name="activityform" type="com.centraview.activity.ActivityForm"/>
+
+  </form-beans>
+
+  <action-mappings>
+
+    <action path="/activities/activity_list" type="com.centraview.activity.ActivityValueListHandler">
+        <forward name=".view.activities.myactivitylist" path=".view.valuelist"/>
+        <forward name=".view.activities.myappointmentslist" path=".view.valuelist"/>
+        <forward name=".view.activities.mycallslist" path=".view.valuelist"/>
+        <forward name=".view.activities.myforecastsaleslist" path=".view.valuelist"/>
+        <forward name=".view.activities.myliteraturerequestslist" path=".view.valuelist"/>
+        <forward name=".view.activities.mymeetingslist" path=".view.valuelist"/>
+        <forward name=".view.activities.mynextactionslist" path=".view.valuelist"/>
+        <forward name=".view.activities.mytodoslist" path=".view.valuelist"/>
+        <forward name=".view.activities.mytaskslist" path=".view.valuelist"/>
+        <forward name=".view.activities.allactivitylist" path=".view.valuelist"/>
+        <forward name=".view.activities.allappointmentslist" path=".view.valuelist"/>
+        <forward name=".view.activities.allcallslist" path=".view.valuelist"/>
+        <forward name=".view.activities.allforecastsaleslist" path=".view.valuelist"/>
+        <forward name=".view.activities.allliteraturerequestslist" path=".view.valuelist"/>
+        <forward name=".view.activities.allmeetingslist" path=".view.valuelist"/>
+        <forward name=".view.activities.allnextactionslist" path=".view.valuelist"/>
+        <forward name=".view.activities.alltodoslist" path=".view.valuelist"/>
+        <forward name=".view.activities.alltaskslist" path=".view.valuelist"/>
+    </action>  
+
+    <!-- Activity Dispatch Handler -->
+    <action path="/activities/activity_dispatch" type="com.centraview.activity.ActivityHandler" scope="request" validate="false" name="activityform">
+      <forward name=".view.activities.new_activity" path=".view.activity.details"/>
+    </action>
+
+    <!-- open New Activity screen -->
+    <action path="/activities/new_activity" type="com.centraview.activity.ActivityNewDispatch" scope="request" validate="false"/>    
+
+    <!-- View Activity - This one calls the Dispatch -->
+    <action path="/activities/view_activity" type="com.centraview.activity.ActivityHandlerDispatch" scope="request" validate="false"/>
+
+    <!-- View Activity - This one calls the View handler directly -->
+    <action path="/activities/view_activity_detail" type="com.centraview.activity.ViewActivityHandler" scope="request"  validate="false" name="activityform">
+      <forward name=".view.activities.details" path=".view.activity.details"/>    
+    </action>
+
+
+	<action path="/activities/save_new_activity" type="com.centraview.activity.SaveActivityHandler" scope="request"	name="activityform" input=".view.activity.details" validate="true">
+		<forward name=".view.activities.details" path="/jsp/pages/common/window_close.jsp?parentReload=true"/>
+		<forward name=".view.activities.new_activity" path="/activities/activity_dispatch.do"/>
+	</action>
+		
+    <!-- Save/Edit Activity -->
+    <action path="/activities/edit_activity" type="com.centraview.activity.EditActivityHandler" scope="request" validate="true" name="activityform">
+      <forward name=".view.activities.details" path=".view.activity.details" />
+      <forward name=".view.activities.new_activity" path="/activities/activity_dispatch.do"/>
+    </action>
+
+    <!-- Show Details tab -->
+		<action path="/activities/view_activity_details" type="com.centraview.activity.DetailActivityHandler" validate="false" name="activityform">
+      <forward name=".view.activities.details" path=".view.activity.details" />
+			<!--forward name="detail" path="/jsp/activity/addedit_activity_c.jsp"/-->
+		</action>		
+
+    <!-- Show Attendees tab -->
+		<action path="/activities/view_activity_attendees" type="com.centraview.activity.AttendeeActivityHandler" validate="false" name="activityform">
+      <forward name=".view.activities.attendees" path=".view.activity.attendees" />
+		</action>		
+
+    <!-- Show Resources tab -->
+		<action path="/activities/view_activity_resources" type="com.centraview.activity.ResourceActivityHandler" validate="false" name="activityform">
+      <forward name=".view.activities.resources" path=".view.activity.resources" />
+		</action>		
+
+    <!-- Show Availability tab -->
+		<action path="/activities/view_activity_availability" type="com.centraview.activity.AvailabilityActivityHandler" validate="false" name="activityform">
+      <forward name=".view.activities.availability" path=".view.activity.availability" />
+		</action>
+    
+    <!-- Display Availability IFRAME -->
+    <action path="/activities/available_list" type="com.centraview.activity.AvailabilityHandler" scope="request" parameter="action" validate="false" name="activityform">
+      <forward name=".view.activities.availability" path="/jsp/pages/activity/avail_frame.jsp" />
+		</action>
+
+    <!-- Show Recurring tab -->
+		<action path="/activities/view_activity_recurring" type="com.centraview.activity.RecurringActivityHandler" validate="false" name="activityform">
+			<forward name=".view.activities.recurring" path=".view.activity.recurring"/>
+		</action>	
+
+		<!-- Show Attachments tab -->
+    <action path="/activities/view_activity_attachments" type="com.centraview.activity.AttachmentActivityHandler" scope="request"	validate="false" name="activityform">
+			<forward name=".view.activities.attachments" path=".view.activity.attachments"/>
+		</action>			
+
+    <!-- Attach file to activity (upload) -->
+		<action path="/activities/activity_file_attachment" type="com.centraview.activity.ActivityFileHandler" name="activityform" input="/jsp/activity/addedit_activity_c.jsp" validate="false">
+			<forward name=".view.activities.attachments" path=".view.activity.attachments"/>
+		</action>
+    
+    <!-- Remove file attachment from activity -->
+    <action path="/activities/activity_remove_file_attachment" type="com.centraview.activity.ActivityRemoveFileHandler" name="activityform" input="/jsp/activity/addedit_activity_c.jsp" validate="false">
+			<forward name=".view.activities.attachments" path=".view.activity.attachments"/>
+		</action>
+    
+    <action path="/activities/del_dup_activity" type="com.centraview.activity.ActivityDelAndDupDispatch" scope="request" validate="false"/>
+
+    <!-- Delete Literature Requests -->
+    <action path="/marketing/delete_literaturerequestlist" type="com.centraview.marketing.LiteratureListDeleteHandler"/>
+
+    <action path="/activities/delete_activitylist" type="com.centraview.activity.ActivityListDeleteHandler">
+      <forward name="MultiActivityList" path="/activities/activity_list.do" redirect="true"/>
+      <forward name="deletePopup" path="/jsp/pages/common/window_close.jsp?parentReload=true"/>
+    </action>
+
+    <action path="/activities/duplicate_activity" type="com.centraview.activity.DuplicateActivityHandler" scope="request"   validate="false" name="activityform">
+      <forward name="duplicate" path="/jsp/activity/addedit_activity_c.jsp"/>
+    </action>  
+    
+   </action-mappings>
+</struts-config>
+

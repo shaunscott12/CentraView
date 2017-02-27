@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" 
+          "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<!--
+ * $RCSfile: projects.xml,v $    $Revision: 1.5 $  $Date: 2005/09/08 20:38:19 $ - $Author: mcallist $
+ * 
+ * The contents of this file are subject to the Open Software License
+ * Version 2.1 ("the License"); you may not use this file except in
+ * compliance with the License. You may obtain a copy of the License at
+ * http://www.centraview.com/opensource/license.html
+ * 
+ * Software distributed under the License is distributed on an "AS IS"
+ * basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+ * License for the specific language governing rights and limitations
+ * under the License.
+ * 
+ * The Original Code is: CentraView Open Source. 
+ * 
+ * The developer of the Original Code is CentraView.  Portions of the
+ * Original Code created by CentraView are Copyright (c) 2004 CentraView,
+ * LLC; All Rights Reserved.  The terms "CentraView" and the CentraView
+ * logos are trademarks and service marks of CentraView, LLC.
+-->
+
+<struts-config>
+  <form-beans>
+    <form-bean name="timeSlipForm" type="com.centraview.projects.timeslip.TimeSlipForm">
+    </form-bean>
+    
+    <form-bean name="projectForm" type="com.centraview.projects.project.ProjectForm">
+    </form-bean>  
+
+    <form-bean name="taskForm" type="com.centraview.projects.task.TaskForm"/>
+    
+  </form-beans>
+  
+  <action-mappings>
+
+    <action path="/projects/project_list" type="com.centraview.projects.project.ProjectValueListAction">
+      <forward name=".view.projects.project.list" path=".view.valuelist"/>  
+      <forward name=".view.projects.projectlookup" path=".view.lookup"/>  
+    </action>
+
+    <action path="/projects/project_lookup" type="org.apache.struts.actions.ForwardAction" parameter="/projects/project_list.do?actionType=lookup"/>
+    <action path="/projects/task_lookup" type="org.apache.struts.actions.ForwardAction" parameter="/projects/task_list.do?actionType=lookup"/>
+
+
+    <action path="/projects/delete_projectlist" type="com.centraview.projects.project.ProjectListDeleteHandler">
+      <forward name=".forward.close_window" path="/jsp/pages/common/window_close.jsp?parentReload=true"/>      
+    </action>
+    
+    <action path="/projects/new_project" type="com.centraview.projects.project.NewProjectHandler" validate="false" name="projectForm">
+      <forward name=".view.projects.new.project" path=".view.projects.new.project"/>  
+    </action>
+
+    <action path="/projects/view_project" type="com.centraview.projects.project.ViewProjectDetailHandler" name="projectForm" scope="request" validate="false">
+      <forward name=".view.projects.edit.project" path=".view.projects.edit.project"/>
+    </action> 
+
+    <action path="/projects/timeslip_list" type="com.centraview.projects.timeslip.TimeslipsValueListAction">
+      <forward name=".view.projects.timeslip.list" path=".view.valuelist"/>     
+    </action>
+
+    <action path="/projects/new_timeslip" type="com.centraview.projects.timeslip.NewTimeSlipHandler"  scope="request" validate="false" input=".view.projects.new.timeslip" name="timeSlipForm">
+      <forward name=".view.projects.new.timeslip" path=".view.projects.new.timeslip"/>      
+    </action>
+
+    <action path="/projects/view_timeslip" type="com.centraview.projects.timeslip.ViewTimeSlipDetailHandler" name="timeSlipForm" input=".view.projects.edit.timeslip" scope="request" validate="false">
+      <forward name=".view.projects.edit.timeslip" path=".view.projects.edit.timeslip"/>
+    </action>
+
+
+    <action path="/projects/delete_timesliplist" type="com.centraview.projects.timeslip.TimeslipListDeleteHandler">
+    </action>
+
+    <action path="/projects/task_list" type="com.centraview.projects.task.TasksValueListAction">
+      <forward name=".view.projects.tasks.list" path=".view.valuelist"/>     
+      <forward name=".view.projects.tasklookup" path=".view.lookup"/>  
+    </action>
+
+    <action path="/projects/new_task" type="com.centraview.projects.task.NewProjectTaskHandler" name="taskForm" scope="request" validate="false" input=".view.projects.new.task" parameter="action">    
+      <forward name=".view.projects.new.task" path=".view.projects.new.task"/>  
+    </action> 
+
+    <action path="/projects/view_task" type="com.centraview.projects.task.ViewProjectTaskDetailHandler" scope="request" validate="false" name="taskForm">
+      <forward name=".view.projects.edit.task" path=".view.projects.edit.task"/>
+    </action>
+    
+    <action path="/projects/delete_tasklist" type="com.centraview.projects.task.TaskListDeleteHandler">
+      <forward name=".forward.close_window" path="/jsp/pages/common/window_close.jsp?parentReload=true"/>
+    </action>
+    
+
+    <action path="/projects/duplicate_timeslip" name="timeSlipForm" type="com.centraview.projects.timeslip.DuplicateTimeSlipHandler" scope="request" validate="false">
+      <forward name=".view.projects.new.timeslip" path=".view.projects.new.timeslip"/>
+    </action>
+
+    <action path="/projects/duplicate_task" name="taskForm" type="com.centraview.projects.task.DuplicateProjectsTaskHandler" scope="request" validate="false">
+      <forward name=".view.projects.new.task" path=".view.projects.new.task"/>
+    </action>
+
+    <action path="/projects/duplicate_project" name="projectForm" type="com.centraview.projects.project.DuplicateProjectHandler" scope="request" validate="false">
+      <forward name=".view.projects.new.project" path=".view.projects.new.project"/>
+    </action>   
+
+    <action path="/projects/save_new_project" type="com.centraview.projects.project.AddProjectHandler" name="projectForm" scope="request" validate="true" input=".view.projects.new.project" parameter="action">      
+      <forward name=".forward.close_window" path="/jsp/pages/common/window_close.jsp?parentReload=true"/>
+      <forward name=".view.projects.new.project" path="/projects/new_project.do" redirect="true"/>
+    </action>
+    
+    <action path="/projects/save_edit_project" type="com.centraview.projects.project.EditProjectHandler" name="projectForm" scope="request" input=".view.projects.edit.project" validate="true">
+      <forward name=".forward.close_window" path="/jsp/pages/common/window_close.jsp?parentReload=true"/>
+      <forward name=".view.projects.edit.project" path="/projects/view_project.do"/>
+      <forward name=".view.projects.new.project" path="/projects/new_project.do" redirect="true"/>
+    </action>
+
+    <action path="/projects/save_edit_task" type="com.centraview.projects.task.UpdateProjectTaskHandler" name="taskForm" scope="request" validate="true" input=".view.projects.edit.task" parameter="action">
+      <forward name=".forward.close_window" path="/jsp/pages/common/window_close.jsp?parentReload=true"/>
+      <forward name=".view.projects.new.task" path="/projects/new_task.do" redirect="true"/>
+    </action>   
+
+    <action path="/projects/save_new_task" type="com.centraview.projects.task.AddProjectTaskHandler" name="taskForm" scope="request" validate="true" input=".view.projects.new.task" parameter="action">      
+      <forward name=".forward.close_window" path="/jsp/pages/common/window_close.jsp?parentReload=true"/>  
+      <forward name=".view.projects.new.task" path="/projects/new_task.do" redirect="true"/>
+    </action>   
+
+    <action path="/projects/save_new_timeslip" type="com.centraview.projects.timeslip.AddTimeSlipHandler"  scope="request" validate="true" input=".view.projects.new.timeslip" name="timeSlipForm">
+      <forward name=".forward.close_window" path="/jsp/pages/common/window_close.jsp?parentReload=true"/>  
+      <forward name=".view.projects.new.timeslip" path="/projects/new_timeslip.do" redirect="true"/>
+    </action>
+    
+    <action path="/projects/save_edit_timeslip" type="com.centraview.projects.timeslip.EditTimeSlipHandler" name="timeSlipForm" scope="request" input=".view.projects.edit.timeslip" validate="true">
+      <forward name=".forward.close_window" path="/jsp/pages/common/window_close.jsp?parentReload=true"/>  
+      <forward name=".view.projects.new.timeslip" path="/projects/new_timeslip.do" redirect="true"/>
+    </action>
+    
+  </action-mappings>
+</struts-config>

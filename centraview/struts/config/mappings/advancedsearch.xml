@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+          "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<!--
+ * $RCSfile: advancedsearch.xml,v $    $Revision: 1.6 $  $Date: 2005/08/02 20:22:13 $ - $Author: mcallist $
+ *
+ * The contents of this file are subject to the Open Software License
+ * Version 2.1 ("the License"); you may not use this file except in
+ * compliance with the License. You may obtain a copy of the License at
+ * http://www.centraview.com/opensource/license.html
+ * 
+ * Software distributed under the License is distributed on an "AS IS"
+ * basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+ * License for the specific language governing rights and limitations
+ * under the License.
+ * 
+ * The Original Code is: CentraView Open Source. 
+ * 
+ * The developer of the Original Code is CentraView.  Portions of the
+ * Original Code created by CentraView are Copyright (c) 2004 CentraView,
+ * LLC; All Rights Reserved.  The terms "CentraView" and the CentraView
+ * logos are trademarks and service marks of CentraView, LLC.
+-->
+
+<struts-config>
+<!--  Form Beans -->
+  <form-beans>
+    <form-bean name="advancedSearchForm" type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="searchName" type="java.lang.String" initial="" />
+      <form-property name="searchCriteria" type="com.centraview.advancedsearch.SearchCriteriaVO[]" size="1"/>
+    <!-- Collections for dropdowns -->
+      <form-property name="tableList" type="java.util.ArrayList"/>
+      <form-property name="conditionList" type="java.util.ArrayList"/>
+    <!-- HashMap of allField dropdown collections -->
+      <form-property name="allFields" type="java.util.HashMap"/>
+    <!-- hidden -->
+      <form-property name="searchId" type="java.lang.String" initial="0" />
+      <form-property name="moduleId" type="java.lang.Integer" initial="14"/>
+      <form-property name="ownerId" type="java.lang.String" initial="0"/>
+      <form-property name="addRow" type="java.lang.String" initial="false" />
+      <form-property name="removeRow" type="java.lang.String" initial="false" />
+      <form-property name="saveSearch" type="java.lang.String" initial="false" />
+      <form-property name="applySearch" type="java.lang.String" initial="false" />
+      <form-property name="createNew" type="java.lang.String" initial="false" />
+      <form-property name="deleteSearch" type="java.lang.String" initial="false" />
+      <form-property name="valueList" type="java.lang.String" initial="false" />
+      <form-property name="listScope" type="java.lang.String" initial="" />
+    </form-bean>
+  </form-beans>
+  
+<!-- Action Mappings -->
+  <action-mappings>
+    <action path="/advancedsearch/dispatch" type="com.centraview.advancedsearch.AdvancedSearchDispatch"
+        name="advancedSearchForm" scope="session" validate="false">
+      <forward name="displaySearchForm" path="/advancedsearch/search_form.do" />
+      <forward name="saveSearch" path="/AdvancedSearchSave.do" />
+      <forward name="deleteSearch" path="/AdvancedSearchDelete.do" />
+    </action>
+
+    <action path="/advancedsearch/search_form" type="com.centraview.advancedsearch.DisplaySearchForm"
+        name="advancedSearchForm" scope="session" validate="false">
+      <forward name="searchForm" path=".view.advancedsearch"/>
+    </action>
+    
+    <action path="/AdvancedSearchSave" type="com.centraview.advancedsearch.AdvancedSearchSave"
+        name="advancedSearchForm" scope="session" validate="true"
+        input=".view.advancedsearch">
+      <forward name="displaySearchForm" path="/advancedsearch/dispatch.do?searchId=" />
+      <forward name="applySearch" path="/AdvancedSearchPerform.do?moduleId=" />
+    </action>
+    
+    <action path="/AdvancedSearchPerform" type="com.centraview.advancedsearch.AdvancedSearchPerform"
+        name="advancedSearchForm" scope="session" validate="false">
+      <!-- for debugging set debug="true" on the parameter line -->
+      <!-- Forwards for lists -->
+      <forward name="entityList" path="/contacts/entity_list.do" />
+      <forward name="individualList" path="/contacts/individual_list.do" />
+      <forward name="groupList" path="/contacts/group_list.do" />
+      <forward name="opportunityList" path="/sales/opportunity_list.do" />
+      <forward name="proposalList" path="/sales/proposal_list.do" />
+      <forward name="ticketList" path="/support/ticket_list.do" />
+      <forward name="faqList" path="/support/faq_list.do" />
+      <forward name="activityList" path="/activities/activity_list.do" />
+      <forward name="appointmentList" path="/activities/activity_list.do" />
+      <forward name="noteList" path="/notes/note_list.do" />
+      <forward name="email" path="/email/email_list.do" />
+      <forward name="rule" path="/email/rule_list.do" />
+      <forward name="projectList" path="/projects/project_list.do" />      
+      <forward name="taskList" path="/projects/task_list.do" />
+      <forward name="timeslipList" path="/projects/timeslip_list.do" />
+      <forward name="orderList" path="/accounting/order_list.do" />
+      <forward name="invoiceList" path="/accounting/invoice_list.do" />
+      <forward name="paymentList" path="/accounting/payment_list.do" />
+      <forward name="expenseList" path="/accounting/expense_list.do" />
+      <forward name="purchaseorderList" path="/accounting/purchaseorder_list.do" />
+      <forward name="itemList" path="/accounting/item_list.do" />
+      <forward name="glaccountList" path="/accounting/glaccount_list.do" />
+      <forward name="inventoryList" path="/accounting/inventory_list.do" />
+      <forward name="vendorList" path="/accounting/vendor_list.do" />
+      <forward name="hrExpenseList" path="/hr/expenseform_list.do" />
+      <forward name="timeSheetList" path="/hr/timesheet_list.do" />
+      <forward name="employeeHandbookList" path="/hr/employeehandbook_list.do" />
+      <forward name="employeeList" path="/hr/employeelist_list.do" />
+
+      <forward name="marketingList" path="/ListMarketing.do" />
+      <forward name="promotionList" path="/PromotionListHandler.do" />
+      <forward name="literatureFulfillmentList" path="/LiteratureFulfillmentListHandler.do" />
+      <forward name="eventList" path="/EventListHandler.do" />            
+      <forward name="file" path="/ListFile.do" />
+      <forward name="knowledgebaseList" path="/ListKnowledgebase.do" />
+    </action>
+
+    <action path="/AdvancedSearchDelete" type="com.centraview.advancedsearch.AdvancedSearchDelete"
+        name="advancedSearchForm" scope="session" validate="false">
+      <forward name="displaySearchForm" path="/advancedsearch/dispatch.do" redirect="true" />
+    </action>
+  </action-mappings>
+
+</struts-config>

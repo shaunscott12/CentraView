@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jboss>
+  <enterprise-beans>
+    <session>
+      <ejb-name>Mail</ejb-name>
+      <method-attributes>
+        <method>
+          <method-name>checkAllAccountsForUser</method-name>
+          <read-only>true</read-only>
+        </method>
+        <method>
+          <method-name>get*</method-name>
+          <read-only>true</read-only>
+        </method>
+        <method>
+          <method-name>setDataSource</method-name>
+          <read-only>true</read-only>
+        </method>
+      </method-attributes>
+      <jndi-name>Mail</jndi-name>
+      <local-jndi-name>local/Mail</local-jndi-name>
+    </session>
+    <session>
+      <ejb-name>MailImport</ejb-name>
+      <jndi-name>MailImport</jndi-name>
+      <local-jndi-name>local/MailImport</local-jndi-name>
+    </session>
+  </enterprise-beans>
+</jboss> 

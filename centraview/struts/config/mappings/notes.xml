@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" 
+          "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<!--
+ * $RCSfile: notes.xml,v $    $Revision: 1.4 $  $Date: 2005/07/31 04:17:36 $ - $Author: mcallist $
+ * 
+ * The contents of this file are subject to the Open Software License
+ * Version 2.1 ("the License"); you may not use this file except in
+ * compliance with the License. You may obtain a copy of the License at
+ * http://www.centraview.com/opensource/license.html
+ * 
+ * Software distributed under the License is distributed on an "AS IS"
+ * basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+ * License for the specific language governing rights and limitations
+ * under the License.
+ * 
+ * The Original Code is: CentraView Open Source. 
+ * 
+ * The developer of the Original Code is CentraView.  Portions of the
+ * Original Code created by CentraView are Copyright (c) 2004 CentraView,
+ * LLC; All Rights Reserved.  The terms "CentraView" and the CentraView
+ * logos are trademarks and service marks of CentraView, LLC.
+-->
+
+<struts-config>
+  <form-beans>
+    <form-bean name="noteform" type="com.centraview.note.NoteForm"/>
+  </form-beans>
+  
+  <action-mappings>
+    <!-- Notes list -->
+    <action path="/notes/note_list" type="com.centraview.note.NoteValueListAction" scope="request" validate="false" name="noteform">
+      <forward name=".view.notes.list.my" path=".view.valuelist"/>
+      <forward name=".view.notes.list.all" path=".view.valuelist"/>
+    </action>
+    
+    <!-- Delete note-->
+    <action path="/notes/delete_notelist" type="com.centraview.note.NoteListDeleteHandler" />
+
+    <!-- View note -->
+    <action path="/notes/view_note" type="com.centraview.note.ViewNoteHandler" scope="request"  validate="false" name="noteform">
+      <forward name=".view.notes.editnote.all" path=".view.notes.edit.notes"/>
+      <forward name=".view.notes.editnote.my" path=".view.notes.edit.notes"/>
+      <forward name=".view.notes.duplicatenote" path=".view.notes.new.notes"/>
+      <forward name=".view.notes.relatednote" path=".view.notes.relatedinfo.edit.notes" />
+    </action>
+
+    <!-- display new add window -->
+    <action path="/notes/new_note" type="com.centraview.note.DisplayNewNoteHandler" scope="request"  validate="false" name="noteform">
+      <forward name=".view.notes.newnote" path=".view.notes.new.notes"/>
+    </action>
+
+    <!-- add new note -->
+    <action path="/notes/save_new_note" type="com.centraview.note.SaveNewNoteHandler" scope="request" validate="true" name="noteform" input=".view.notes.new.notes">
+      <forward name=".view.notes.savenewnote" path=".view.notes.new.notes"/>
+      <forward name=".view.notes.relatednote" path="/relatedinfo/list.do" />
+    </action>
+
+    <!-- save edited note -->
+    <action path="/notes/save_edit_note" type="com.centraview.note.SaveEditNoteHandler" scope="request" validate="true" name="noteform" input="/notes/view_note.do">
+      <forward name=".view.notes.saveeditnote" path="/notes/view_note.do"/>
+      <forward name=".view.notes.notelist" path="/notes/note_list.do"/>
+      <forward name=".view.notes.relatednote" path="/relatedinfo/list.do" />
+    </action>
+
+  </action-mappings>
+</struts-config>

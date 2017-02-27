@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ejb-jar PUBLIC "-//Sun Microsystems, Inc.//DTD Enterprise JavaBeans 2.0//EN" "http://java.sun.com/dtd/ejb-jar_2_0.dtd">
+<ejb-jar>
+  <display-name>ejb</display-name>
+  <enterprise-beans>
+    <entity>
+      <display-name>Report</display-name>
+      <ejb-name>Report</ejb-name>
+      <home>com.centraview.report.ejb.entity.ReportHome</home>
+      <remote>com.centraview.report.ejb.entity.Report</remote>
+      <local-home>com.centraview.report.ejb.entity.ReportLocalHome</local-home>
+      <local>com.centraview.report.ejb.entity.ReportLocal</local>
+      <ejb-class>com.centraview.report.ejb.entity.ReportEJB</ejb-class>
+      <persistence-type>Bean</persistence-type>
+      <prim-key-class>com.centraview.report.ejb.entity.ReportPK</prim-key-class>
+      <transaction-type>Bean</transaction-type>
+      <reentrant>False</reentrant>
+    </entity>
+    <entity>
+      <display-name>ReportType</display-name>
+      <ejb-name>ReportType</ejb-name>
+      <home>com.centraview.report.ejb.entity.ReportTypeHome</home>
+      <remote>com.centraview.report.ejb.entity.ReportType</remote>
+      <local-home>com.centraview.report.ejb.entity.ReportTypeLocalHome</local-home>
+      <local>com.centraview.report.ejb.entity.ReportTypeLocal</local>
+      <ejb-class>com.centraview.report.ejb.entity.ReportTypeEJB</ejb-class>
+      <persistence-type>Bean</persistence-type>
+      <prim-key-class>com.centraview.report.ejb.entity.ReportTypePK</prim-key-class>
+      <transaction-type>Bean</transaction-type>
+      <reentrant>False</reentrant>
+    </entity>
+    <entity>
+      <display-name>ReportContent</display-name>
+      <ejb-name>ReportContent</ejb-name>
+      <home>com.centraview.report.ejb.entity.ReportContentHome</home>
+      <remote>com.centraview.report.ejb.entity.ReportContent</remote>
+      <local-home>com.centraview.report.ejb.entity.ReportContentLocalHome</local-home>
+      <local>com.centraview.report.ejb.entity.ReportContentLocal</local>
+      <ejb-class>com.centraview.report.ejb.entity.ReportContentEJB</ejb-class>
+      <persistence-type>Bean</persistence-type>
+      <prim-key-class>com.centraview.report.ejb.entity.ReportContentPK</prim-key-class>
+      <transaction-type>Bean</transaction-type>
+      <reentrant>False</reentrant>
+    </entity>
+    <session>
+      <display-name>ReportFacade</display-name>
+      <ejb-name>ReportFacade</ejb-name>
+      <home>com.centraview.report.ejb.session.ReportFacadeHome</home>
+      <remote>com.centraview.report.ejb.session.ReportFacade</remote>
+      <local-home>com.centraview.report.ejb.session.ReportFacadeLocalHome</local-home>
+      <local>com.centraview.report.ejb.session.ReportFacadeLocal</local>
+      <ejb-class>com.centraview.report.ejb.session.ReportFacadeEJB</ejb-class>
+      <session-type>Stateless</session-type>
+      <transaction-type>Bean</transaction-type>
+    </session>
+  </enterprise-beans>
+</ejb-jar>

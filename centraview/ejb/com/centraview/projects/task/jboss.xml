@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jboss>
+	<enterprise-beans>
+		<session>
+			<ejb-name>Task</ejb-name>
+
+         <method-attributes>
+           <method>
+             <method-name>get*</method-name>
+             <read-only>true</read-only>
+           </method>
+            <method>
+              <method-name>setDataSource</method-name>
+              <read-only>true</read-only>
+            </method>
+          </method-attributes>
+
+			<jndi-name>Task</jndi-name><local-jndi-name>local/Task</local-jndi-name>
+		</session>
+	</enterprise-beans>
+</jboss>

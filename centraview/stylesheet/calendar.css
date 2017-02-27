@@ -1,0 +1,376 @@
+/* Start Calendar CSS */
+TD.calendarHourOdd
+{
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 14pt;
+  color: #000000;
+  width: 1%;
+  text-align: right;
+  padding-right: 4px;
+}
+TD.calendarHourEven
+{
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 14pt;
+  color: #000000;
+  width: 1%;
+  text-align: right;
+  padding-right: 4px;
+  background-color: #e6e6e6;
+}
+TD.calendarHalfOddTop
+{
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 10pt;
+  color: #000000;
+  width: 1%;
+  padding-right: 4px;
+  background-color: #ffffff;
+  border-bottom: #cccccc 1px solid;
+}
+TD.calendarHalfOddBottom
+{
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 10pt;
+  color: #000000;
+  width: 1%;
+  padding-right: 4px;
+  background-color: #ffffff;
+}
+TD.calendarHalfEvenTop
+{
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 10pt;
+  color: #000000;
+  width: 1%;
+  padding-right: 4px;
+  background-color: #e6e6e6;
+  border-bottom: #cccccc 1px solid;
+}
+TD.calendarHalfEvenBottom
+{
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 10pt;
+  color: #000000;
+  width: 1%;
+  padding-right: 4px;
+  background-color: #e6e6e6;
+}
+TD.calendarOddTop
+{
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 10pt;
+  color: #000000;
+  background-color: #ffffff;
+  border-bottom: #cccccc 1px solid;
+}
+TD.calendarOddBottom
+{
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 10pt;
+  color: #000000;
+  background-color: #ffffff;
+}
+TD.calendarEvenTop
+{
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 10pt;
+  color: #000000;
+  background-color: #e6e6e6;
+  border-bottom: #cccccc 1px solid;
+}
+TD.calendarEvenBottom
+{
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 10pt;
+  color: #000000;
+  background-color: #e6e6e6;
+}
+
+
+
+
+TD.workingHourOdd
+{
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 14pt;
+  color: #000000;
+  width: 1%;
+  text-align: right;
+  padding-right: 4px;
+	background-color: #aadcff;
+}
+TD.workingHourEven
+{
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 14pt;
+  color: #000000;
+  width: 1%;
+  text-align: right;
+  padding-right: 4px;
+	background-color: #85cdff;
+}
+TD.workingHalfOddTop
+{
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 10pt;
+  color: #000000;
+  width: 1%;
+  padding-right: 4px;
+	background-color: #aadcff;
+  border-bottom: #81ccff 1px solid;
+}
+TD.workingHalfOddBottom
+{
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 10pt;
+  color: #000000;
+  width: 1%;
+  padding-right: 4px;
+	background-color: #aadcff;
+}
+TD.workingHalfEvenTop
+{
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 10pt;
+  color: #000000;
+  width: 1%;
+  padding-right: 4px;
+	background-color: #85cdff;
+  border-bottom: #58bbff 1px solid;
+}
+TD.workingHalfEvenBottom
+{
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 10pt;
+  color: #000000;
+  width: 1%;
+  padding-right: 4px;
+	background-color: #85cdff;
+}
+TD.workingOddTop
+{
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 10pt;
+  color: #000000;
+	background-color: #aadcff;
+  border-bottom: #81ccff 1px solid;
+}
+TD.workingOddBottom
+{
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 10pt;
+  color: #000000;
+	background-color: #aadcff;
+}
+TD.workingEvenTop
+{
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 10pt;
+  color: #000000;
+	background-color: #85cdff;
+  border-bottom: #58bbff 1px solid;
+}
+TD.workingEvenBottom
+{
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 10pt;
+  color: #000000;
+	background-color: #85cdff;
+}
+TABLE.calendarWeekly
+{
+  width: 100%;
+  background-color: #aeaeae;
+}
+TD.calendarWeeklyTime
+{
+  background-color: #cccccc;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 10pt;
+  color: #000000;
+  text-align: right;
+  padding-right: 9px;
+  width: 40px;
+  height: 15px;
+}
+TD.calendarWeeklyHead
+{
+  background-color: #aeaeae;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 10pt;
+  color: #000000;
+  text-align: center;
+  height: 16px;
+  vertical-align: bottom;
+}
+TD.calendarWeeklyNormal
+{
+  background-color: #ffffff;
+}
+TD.calendarWeeklyWorking
+{
+  background-color: #aadcff;
+}
+TABLE.calendarWeeklyDay
+{
+  border: #cccccc 1px solid;
+  min-height: 100px;
+  margin-bottom: 10px;
+}
+/* End Calendar CSS */
+
+/* Start Mini Calendar */
+TABLE.miniCalHeader
+{
+  width: 212px;
+  background-color: #aeaeae;
+  text-align: center;
+}
+TABLE.miniCalContainer
+{
+  width: 212px;
+  background-color: #cccccc;
+}
+TABLE.miniCalendar
+{
+  width: 212px;
+}
+TD.miniCalHeader
+{
+  background-color: #cccccc;
+  width: 28px;
+  height: 23px;
+  text-align: center;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 10pt;
+  color: #000000;
+}
+TD.miniCalHeadNav
+{
+  background-color: #cccccc;
+  height: 23px;
+  width: 16px;
+}
+TD.miniCalNav
+{
+  background-color: #ffffff;
+  height: 23px;
+  width: 16px;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 10pt;
+  color: #000000;
+  text-align: center;
+}
+
+TD.miniCalCurrentWeek
+{
+  background-color: #aadcff;
+  width: 28px;
+  height: 23px;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 10pt;
+  color: #000000;
+  text-align: center;
+}
+TD.miniCalCurrentDay
+{
+  background-color: #85cdff;
+  width: 28px;
+  height: 23px;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 10pt;
+  color: #000000;
+  text-align: center;
+}
+TD.miniCalNormalDay
+{
+  background-color: #ffffff;
+  width: 28px;
+  height: 23px;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 10pt;
+  color: #000000;
+  text-align: center;
+}
+TD.miniCalBlank
+{
+  background-color: #aeaeae;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 10pt;
+  color: #000000;
+  text-align: center;
+}
+/* End Mini Calendar */
+/* Monthly view Calendar */
+TD.bigCalHeader
+{
+  background-color: #cccccc;
+  width: 14%;
+  height: 19px;
+  text-align: center;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 10pt;
+  color: #000000;
+}
+TD.bigCalHeadNav
+{
+  background-color: #cccccc;
+  height: 19px;
+  width: 16px;
+}
+TD.bigCalNav
+{
+  background-color: #ffffff;
+  height: 85px;
+  width: 16px;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 10pt;
+  color: #000000;
+  text-align: center;
+}
+TD.bigCalNormalDay
+{
+  background-color: #ffffff;
+  height: 85px;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 10pt;
+  color: #000000;
+  vertical-align: top;
+}
+TD.bigCalCurrentDay
+{
+  background-color: #85cdff;
+  height: 85px;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 10pt;
+  color: #000000;
+  vertical-align: top;
+}
+TD.bigCalBlank
+{
+  background-color: #aeaeae;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 10pt;
+  color: #000000;
+  text-align: center;
+}
+DIV.bigCalDayNumber
+{
+  text-align: right;
+  padding-right: 5px;
+  padding-top: 5px;
+  padding-bottom: 3px;
+}
+DIV.bigCalDayNew
+{
+  text-align: left;
+  padding-left: 5px;
+  padding-top: 5px;
+  padding-bottom: 3px;
+}
+TABLE.bigCalDayTop
+{
+  background-color: #f7f7f7;
+  margin-bottom: 4px;
+}

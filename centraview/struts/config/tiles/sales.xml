@@ -1,0 +1,66 @@
+<!DOCTYPE tiles-definitions PUBLIC
+  "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+  "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+<!--
+ * $RCSfile: sales.xml,v $    $Revision: 1.2 $  $Date: 2005/07/25 13:07:52 $ - $Author: mcallist $
+ * 
+ * The contents of this file are subject to the Open Software License
+ * Version 2.1 ("the License"); you may not use this file except in
+ * compliance with the License. You may obtain a copy of the License at
+ * http://www.centraview.com/opensource/license.html
+ * 
+ * Software distributed under the License is distributed on an "AS IS"
+ * basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+ * License for the specific language governing rights and limitations
+ * under the License.
+ * 
+ * The Original Code is: CentraView Open Source. 
+ * 
+ * The developer of the Original Code is CentraView.  Portions of the
+ * Original Code created by CentraView are Copyright (c) 2004 CentraView,
+ * LLC; All Rights Reserved.  The terms "CentraView" and the CentraView
+ * logos are trademarks and service marks of CentraView, LLC.
+-->
+<tiles-definitions>
+
+  <definition name=".view.sales.new_opportunity" extends=".view.popup.default">
+    <put name="focus_element" value="title"/>
+    <put name="page_header" value="New Opportunity"/>
+    <put name="main_content" value="/jsp/pages/sales/new_opportunity.jsp" />
+  </definition>
+
+  <definition name=".view.proposal.new_proposal" extends=".view.popup.default">
+    <put name="focus_element" value="proposal"/>
+    <put name="page_header" value="New Proposal"/>
+    <put name="top_bar" value="/jsp/pages/blank.jsp"/>
+    <put name="main_content" value="/jsp/pages/sales/new_proposal.jsp"/>
+    <put name="bottom_bar" value="/jsp/pages/blank.jsp"/>
+  </definition>  
+  
+  <definition name=".view.proposal.edit.proposal" extends=".view.popup.default">
+    <put name="focus_element" value="proposal"/>
+    <put name="page_header" value="Proposal Details"/>
+    <put name="top_bar" value="/jsp/pages/blank.jsp"/>
+    <put name="main_content" value="/jsp/pages/sales/edit_proposal.jsp"/>
+    <put name="bottom_bar" value="/jsp/pages/blank.jsp"/>
+    <putList name="js_includes">
+      <add value="value_list_js.jsp" />
+    </putList>
+  </definition>  
+
+  <definition name=".view.sales.opportunity_details" path="/jsp/layouts/popup_frames_t.jsp">
+    <put name="js_includes" value="/jsp/pages/blank.jsp" />
+    <put name="focus_element" value="title" />
+    <put name="header" value="/jsp/tiles/contact_detail_header.jsp" />
+    <put name="detail" value="/jsp/pages/sales/opportunity_details.jsp" />
+  </definition>
+
+  <definition name=".view.valuelist.my_opportunities" extends=".view.valuelist">
+    <put name="folder_bar" value="/jsp/pages/sales/graphs.jsp" />
+  </definition>
+ 
+  <definition name=".view.valuelist.all_opportunities" extends=".view.valuelist">
+    <put name="folder_bar" value="/jsp/pages/sales/graphs.jsp" />
+  </definition>
+  
+</tiles-definitions>

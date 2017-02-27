@@ -1,0 +1,110 @@
+<!DOCTYPE tiles-definitions PUBLIC
+  "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+  "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+<!--
+ * $RCSfile: email.xml,v $    $Revision: 1.3 $  $Date: 2005/07/25 13:07:52 $ - $Author: mcallist $
+ * 
+ * The contents of this file are subject to the Open Software License
+ * Version 2.1 ("the License"); you may not use this file except in
+ * compliance with the License. You may obtain a copy of the License at
+ * http://www.centraview.com/opensource/license.html
+ * 
+ * Software distributed under the License is distributed on an "AS IS"
+ * basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+ * License for the specific language governing rights and limitations
+ * under the License.
+ * 
+ * The Original Code is: CentraView Open Source. 
+ * 
+ * The developer of the Original Code is CentraView.  Portions of the
+ * Original Code created by CentraView are Copyright (c) 2004 CentraView,
+ * LLC; All Rights Reserved.  The terms "CentraView" and the CentraView
+ * logos are trademarks and service marks of CentraView, LLC.
+-->
+<tiles-definitions>
+
+  <!-- Email List screen -->
+  <definition name=".view.email.valuelist" extends=".view.default.email">
+    <put name="left_nav" value="/jsp/pages/email/left_nav_folders.jsp" />
+    <put name="folder_bar" value="/jsp/pages/email/folder_bar.jsp" />
+    <put name="main_content" value="/jsp/tiles/value_list.jsp" />
+    <putList name="js_includes">
+      <add value="value_list_js.jsp" />
+    </putList>
+  </definition>
+  
+  <definition name=".view.email.rules.list" extends=".view.email.valuelist">
+    <put name="left_nav" value="/jsp/pages/email/left_nav_folders.jsp" />
+    <put name="main_content" value="/jsp/tiles/value_list.jsp" />
+    <putList name="js_includes">
+      <add value="value_list_js.jsp" />
+    </putList>
+  </definition>  
+
+  <definition name=".view.email.compose" extends=".view.popup.default">
+    <put name="focus_element" value=""/>
+    <put name="page_header" value="Compose Email"/>
+    <put name="top_bar" value="/jsp/pages/blank.jsp"/>
+    <put name="main_content" value="/jsp/pages/email/compose.jsp"/>
+    <put name="bottom_bar" value="/jsp/pages/blank.jsp"/>
+  </definition>
+
+  <definition name=".view.email.view_message" extends=".view.default.email">
+    <put name="left_nav" value="/jsp/pages/email/left_nav_folders.jsp" />
+    <put name="search_bar" value="/jsp/pages/blank.jsp" />
+    <put name="main_content" value="/jsp/pages/email/view_message.jsp" />
+  </definition>
+
+  <definition name=".view.email.attachmentlookup" extends=".view.popup.default">
+    <put name="focus_element" value=""/>
+    <put name="page_header" value="Attach Files" />
+    <put name="top_bar" value="/jsp/pages/blank.jsp"/>
+    <put name="main_content" value="/jsp/pages/email/attachments.jsp" />
+    <put name="bottom_bar" value="/jsp/pages/email/attach_button_bar.jsp"/>
+  </definition>
+
+  <definition name=".view.email.newfolder" extends=".view.popup.default">
+    <put name="focus_element" value=""/>
+    <put name="page_header" value="New Folder"/>
+    <put name="top_bar" value="/jsp/pages/blank.jsp"/>
+    <put name="main_content" value="/jsp/pages/email/new_folder.jsp"/>
+    <put name="bottom_bar" value="/jsp/pages/blank.jsp"/>
+  </definition>
+  
+  <definition name=".view.email.editfolder" extends=".view.popup.default">
+    <put name="focus_element" value=""/>
+    <put name="page_header" value="Edit Folder"/>
+    <put name="top_bar" value="/jsp/pages/blank.jsp"/>
+    <put name="main_content" value="/jsp/pages/email/view_folder.jsp"/>
+    <put name="bottom_bar" value="/jsp/pages/blank.jsp"/>
+  </definition>
+  
+  <definition name=".view.email.commoncompose" extends=".view.popup.default">
+	<put name="focus_element" value=""/>
+    <put name="page_header" value="Compose Message"/>
+    <put name="top_bar" value="/jsp/pages/blank.jsp"/>
+    <put name="main_content" value="/jsp/pages/email/common_compose.jsp"/>
+    <put name="bottom_bar" value="/jsp/pages/blank.jsp"/>
+  </definition>
+  
+  <definition name=".view.email.setup" extends=".view.default.email">
+    <put name="left_nav" value="/jsp/pages/blank.jsp" />
+    <put name="search_bar" value="/jsp/pages/blank.jsp" />
+    <put name="main_content" value="/jsp/pages/email/setup_account.jsp" />
+  </definition>
+
+  <definition name=".view.email.rules.new" extends=".view.default.email">
+    <put name="left_nav" value="/jsp/pages/email/left_nav_folders.jsp" />
+    <put name="search_bar" value="/jsp/pages/blank.jsp" />
+    <put name="main_content" value="/jsp/pages/email/new_rule.jsp" />
+
+  </definition>
+
+  <definition name=".view.email.rules.view" extends=".view.default.email">
+    <put name="left_nav" value="/jsp/pages/email/left_nav_folders.jsp" />
+    <put name="search_bar" value="/jsp/pages/blank.jsp" />
+    <put name="main_content" value="/jsp/pages/email/view_rule.jsp" />
+  </definition>
+
+
+</tiles-definitions>

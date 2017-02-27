@@ -1,0 +1,3 @@
+<%@ taglib uri="/WEB-INF/struts-html.tld" prefix="html" %>
+<%@ taglib uri="/WEB-INF/c.tld" prefix="c" %>
+<iframe src="<c:out value="${pageContext.request.contextPath}"/>/files/folder_list.do?frompage=True&folderId=<%=request.getAttribute("folderId")%>&fileTypeRequest=<%=(String)request.getAttribute("fileTypeRequest")%>" height="100" width="100%" frameborder="0" class="emailIframe"><bean:message key='label.value.iframenotsupported'/></iframe>

@@ -1,0 +1,218 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<indexdata>
+<key name="Adding" >
+  <topic name="Adding Activities to your Calendar" url="adding_activities_to_your_calendar.htm" />
+  <topic name="Adding Appointments" url="adding_appointments.htm" />
+  <topic name="Adding Calls" url="adding_calls.htm" />
+  <topic name="Adding Employee Handbook" url="adding_employee_handbook.htm" />
+  <topic name="Adding Employee List" url="adding_employee_list.htm" />
+  <topic name="Adding Entities" url="adding_entities.htm" />
+  <topic name="Adding Events" url="adding_events.htm" />
+  <topic name="Adding Expense Forms" url="adding_expense_forms.htm" />
+  <topic name="Adding Expenses" url="adding_expenses.htm" />
+  <topic name="Adding FAQs" url="adding_faqs.htm" />
+  <topic name="Adding File Folders" url="adding_file_folders.htm" />
+  <topic name="Adding Files" url="adding_files.htm" />
+  <topic name="Adding Forecast Sales" url="adding_forecast_sales.htm" />
+  <topic name="Adding Groups" url="adding_groups.htm" />
+  <topic name="Adding Individuals" url="adding_individuals.htm" />
+  <topic name="Adding Inventory" url="adding_inventory.htm" />
+  <topic name="Adding Invoice History" url="adding_invoice_history.htm" />
+  <topic name="Adding Items" url="adding_items.htm" />
+  <topic name="Adding Literature Fulfillment Requests" url="adding_literature_fulfillment_requests.htm" />
+  <topic name="Adding Literature Requests" url="adding_literature_requests.htm" />
+  <topic name="Adding Meetings" url="adding_meetings.htm" />
+  <topic name="Adding Next Actions" url="adding_next_actions.htm" />
+  <topic name="Adding Notes" url="adding_notes.htm" />
+  <topic name="Adding Order History" url="adding_order_history.htm" />
+  <topic name="Adding Payments" url="adding_payments.htm" />
+  <topic name="Adding Project Tasks" url="adding_project_tasks.htm" />
+  <topic name="Adding Projects" url="adding_projects.htm" />
+  <topic name="Adding Proposals" url="adding_proposals.htm" />
+  <topic name="Adding Purchase Orders" url="adding_purchase_orders.htm" />
+  <topic name="Adding Sales Opportunities" url="adding_sales_opportunities.htm" />
+  <topic name="Adding Tasks" url="adding_tasks.htm" />
+  <topic name="Adding Time Sheets" url="adding_time_sheets.htm" />
+  <topic name="Adding Timeslips" url="adding_timeslips.htm" />
+  <topic name="Adding to the Knowledge Base" url="adding_to_the_knowledge_base.htm" />
+  <topic name="Adding ToDos" url="adding_to_dos.htm" />
+  <topic name="Adding Trouble Tickets" url="adding_support_tickets.htm" />
+  <topic name="Adding Vendors" url="adding_vendors.htm" />
+  <topic name="Adding Volume Discounts" url="adding_volume_discounts.htm" />
+  <key name="activities" >
+    <topic name="Adding Activities to your Calendar" url="adding_activities_to_your_calendar.htm" />
+  </key>
+  <key name="appointments" >
+    <topic name="Adding Appointments" url="adding_appointments.htm" />
+  </key>
+  <key name="calls" >
+    <topic name="Adding Calls" url="adding_calls.htm" />
+  </key>
+  <key name="employee handbook" >
+    <topic name="Adding Employee Handbook" url="adding_employee_handbook.htm" />
+  </key>
+  <key name="employee list" >
+    <topic name="Adding Employee List" url="adding_employee_list.htm" />
+  </key>
+  <key name="entities" >
+    <topic name="Adding Entities" url="adding_entities.htm" />
+  </key>
+  <key name="events" >
+    <topic name="Adding Events" url="adding_events.htm" />
+  </key>
+  <key name="expense forms" >
+    <topic name="Adding Expense Forms" url="adding_expense_forms.htm" />
+  </key>
+  <key name="expenses" >
+    <topic name="Adding Expenses" url="adding_expenses.htm" />
+  </key>
+  <key name="FAQs" >
+    <topic name="Adding FAQs" url="adding_faqs.htm" />
+  </key>
+  <key name="file folders" >
+    <topic name="Adding File Folders" url="adding_file_folders.htm" />
+  </key>
+  <key name="files" >
+    <topic name="Adding Files" url="adding_files.htm" />
+  </key>
+  <key name="forecast sales" >
+    <topic name="Adding Forecast Sales" url="adding_forecast_sales.htm" />
+  </key>
+  <key name="groups" >
+    <topic name="Adding Groups" url="adding_groups.htm" />
+  </key>
+  <key name="individuals" >
+    <topic name="Adding Individuals" url="adding_individuals.htm" />
+  </key>
+  <key name="inventory" >
+    <topic name="Adding Inventory" url="adding_inventory.htm" />
+  </key>
+  <key name="invoice history" >
+    <topic name="Adding Invoice History" url="adding_invoice_history.htm" />
+  </key>
+  <key name="items" >
+    <topic name="Adding Items" url="adding_items.htm" />
+  </key>
+  <key name="knowledge base" >
+    <topic name="Adding to the Knowledge Base" url="adding_to_the_knowledge_base.htm" />
+  </key>
+  <key name="literature fulfillment requests" >
+    <topic name="Adding Literature Fulfillment Requests" url="adding_literature_fulfillment_requests.htm" />
+  </key>
+  <key name="literature requests" >
+    <topic name="Adding Literature Requests" url="adding_literature_requests.htm" />
+  </key>
+  <key name="meetings" >
+    <topic name="Adding Meetings" url="adding_meetings.htm" />
+  </key>
+  <key name="next actions" >
+    <topic name="Adding Next Actions" url="adding_next_actions.htm" />
+  </key>
+  <key name="notes" >
+    <topic name="Adding Notes" url="adding_notes.htm" />
+  </key>
+  <key name="order history" >
+    <topic name="Adding Order History" url="adding_order_history.htm" />
+  </key>
+  <key name="payments" >
+    <topic name="Adding Payments" url="adding_payments.htm" />
+  </key>
+  <key name="project tasks" >
+    <topic name="Adding Project Tasks" url="adding_project_tasks.htm" />
+  </key>
+  <key name="projects" >
+    <topic name="Adding Projects" url="adding_projects.htm" />
+  </key>
+  <key name="proposals" >
+    <topic name="Adding Proposals" url="adding_proposals.htm" />
+  </key>
+  <key name="purchase orders" >
+    <topic name="Adding Purchase Orders" url="adding_purchase_orders.htm" />
+  </key>
+  <key name="sales opportunities" >
+    <topic name="Adding Sales Opportunities" url="adding_sales_opportunities.htm" />
+  </key>
+  <key name="support tickets" >
+    <topic name="Adding Support Tickets" url="adding_support_tickets.htm" />
+  </key>
+  <key name="tasks" >
+    <topic name="Adding Tasks" url="adding_tasks.htm" />
+  </key>
+  <key name="time sheets" >
+    <topic name="Adding Time Sheets" url="adding_time_sheets.htm" />
+  </key>
+  <key name="time slips" >
+    <topic name="Adding Timeslips" url="adding_timeslips.htm" />
+  </key>
+  <key name="to dos" >
+    <topic name="Adding ToDos" url="adding_to_dos.htm" />
+  </key>
+  <key name="vendors" >
+    <topic name="Adding Vendors" url="adding_vendors.htm" />
+  </key>
+  <key name="volume discounts" >
+    <topic name="Adding Volume Discounts" url="adding_volume_discounts.htm" />
+  </key>
+</key>
+<key name="Appointments" >
+  <topic name="Adding Appointments" url="adding_appointments.htm" />
+  <topic name="Deleting Appointments" url="deleting_appointments.htm" />
+  <topic name="Duplicating Appointments" url="duplicating_appointments.htm" />
+  <topic name="Viewing Appointments" url="viewing_appointments.htm" />
+  <key name="adding" >
+    <topic name="Adding Appointments" url="adding_appointments.htm" />
+  </key>
+  <key name="deleting" >
+    <topic name="Deleting Appointments" url="deleting_appointments.htm" />
+  </key>
+  <key name="duplicating" >
+    <topic name="Duplicating Appointments" url="duplicating_appointments.htm" />
+  </key>
+  <key name="viewing" >
+    <topic name="Viewing Appointments" url="viewing_appointments.htm" />
+  </key>
+</key>
+<key name="Automatic" >
+  <topic name="About WebForm Import" url="about_webform_import.htm" />
+</key>
+<key name="Calendar" >
+  <topic name="Adding Activities to your Calendar" url="adding_activities_to_your_calendar.htm" />
+</key>
+<key name="Calls" >
+  <topic name="Adding Calls" url="adding_calls.htm" />
+  <topic name="Deleting Calls" url="deleting_calls.htm" />
+  <topic name="Duplicating Calls" url="duplicating_calls.htm" />
+  <topic name="Viewing Calls" url="viewing_calls.htm" />
+  <key name="adding" >
+    <topic name="Adding Calls" url="adding_calls.htm" />
+  </key>
+  <key name="deleting" >
+    <topic name="Deleting Calls" url="deleting_calls.htm" />
+  </key>
+  <key name="duplicating" >
+    <topic name="Duplicating Calls" url="duplicating_calls.htm" />
+  </key>
+  <key name="viewing" >
+    <topic name="Viewing Calls" url="viewing_calls.htm" />
+  </key>
+</key>
+<key name="Categorizing the knowledge base" >
+  <topic name="Categorizing the Knowledge Base" url="categorizing_the_knowledge_base.htm" />
+</key>
+<key name="CentraView" >
+  <topic name="Welcome to CentraView" url="welcome_to_centraview.htm" />
+  <key name="how to use" >
+    <topic name="How do I use CentraView?" url="how_do_i_use_centraview_.htm" />
+  </key>
+  <key name="welcome" >
+    <topic name="Welcome to CentraView" url="welcome_to_centraview.htm" />
+  </key>
+</key>
+<key name="Composing email" >
+  <topic name="Composing_Email" url="composing_email.htm" />
+</key>
+<key name="Creating email folders" >
+  <topic name="Creating Email Folders" url="creating_email_folders.htm" />
+</key>
+
+</indexdata>

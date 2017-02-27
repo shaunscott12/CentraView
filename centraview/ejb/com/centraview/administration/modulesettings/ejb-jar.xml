@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!-- 
+ * $RCSfile: ejb-jar.xml,v $    $Revision: 1.1.1.1 $  $Date: 2005/04/28 20:21:47 $ - $Author: mking_cv $
+ * 
+ * The contents of this file are subject to the Open Software License
+ * Version 2.1 ("the "License"); you may not use this file except in
+ * compliance with the License. You may obtain a copy of the License at
+ * http://www.centraview.com/opensource/license.html
+ * 
+ * Software distributed under the License is distributed on an "AS IS"
+ * basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+ * License for the specific language governing rights and limitations
+ * under the License.
+ * 
+ * The Original Code is: CentraView Open Source. 
+ * 
+ * The developer of the Original Code is CentraView.  Portions of the
+ * Original Code created by CentraView are Copyright (c) 2004 CentraView,
+ * LLC; All Rights Reserved.  The terms "CentraView" and the CentraView
+ * logos are trademarks and service marks of CentraView, LLC.
+-->
+
+<!DOCTYPE ejb-jar PUBLIC "-//Sun Microsystems, Inc.//DTD Enterprise JavaBeans 2.0//EN" "http://java.sun.com/dtd/ejb-jar_2_0.dtd">
+<ejb-jar>
+    <enterprise-beans>
+      <session>
+		<ejb-name>LiteratureAdmin</ejb-name>
+		
+		<home>com.centraview.administration.modulesettings.LiteratureHome</home>
+		<remote>com.centraview.administration.modulesettings.Literature</remote>
+		<ejb-class>com.centraview.administration.modulesettings.LiteratureEJB</ejb-class>
+		<local-home>com.centraview.administration.modulesettings.LiteratureLocalHome</local-home>
+		<local>com.centraview.administration.modulesettings.LiteratureLocal</local>
+		
+		<session-type>Stateless</session-type>
+		<transaction-type>Bean</transaction-type>
+       
+      </session>
+    </enterprise-beans>
+
+ </ejb-jar>

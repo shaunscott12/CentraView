@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE ejb-jar PUBLIC "-//Sun Microsystems, Inc.//DTD Enterprise JavaBeans 2.0//EN" "http://java.sun.com/dtd/ejb-jar_2_0.dtd">
+
+<ejb-jar>
+ <enterprise-beans>
+  <session>
+		<ejb-name>CustomField</ejb-name>
+		<home>com.centraview.customfield.CustomFieldHome</home>
+		<remote>com.centraview.customfield.CustomField</remote>
+		<local-home>com.centraview.customfield.CustomFieldLocalHome</local-home>
+		<local>com.centraview.customfield.CustomFieldLocal</local>
+		<ejb-class>com.centraview.customfield.CustomFieldEJB</ejb-class>
+
+		<session-type>Stateless</session-type>
+		<transaction-type>Bean</transaction-type>
+  </session>
+ </enterprise-beans>
+</ejb-jar>

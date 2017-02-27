@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+          "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<!--
+ * $RCSfile: relatedinfo.xml,v $    $Revision: 1.4 $  $Date: 2005/07/31 04:17:36 $ - $Author: mcallist $
+ * 
+ * The contents of this file are subject to the Open Software License
+ * Version 2.1 ("the License"); you may not use this file except in
+ * compliance with the License. You may obtain a copy of the License at
+ * http://www.centraview.com/opensource/license.html
+ * 
+ * Software distributed under the License is distributed on an "AS IS"
+ * basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+ * License for the specific language governing rights and limitations
+ * under the License.
+ * 
+ * The Original Code is: CentraView Open Source. 
+ * 
+ * The developer of the Original Code is CentraView.  Portions of the
+ * Original Code created by CentraView are Copyright (c) 2004 CentraView,
+ * LLC; All Rights Reserved.  The terms "CentraView" and the CentraView
+ * logos are trademarks and service marks of CentraView, LLC.
+-->
+
+<struts-config>
+
+  <form-beans>
+
+    <form-bean name="relatedInfoListForm" type="org.apache.struts.action.DynaActionForm">
+      <form-property name="riListType"   type="java.lang.String" initial="" />
+      <form-property name="listFor"    type="java.lang.String" initial="" />
+      <form-property name="recordId"   type="java.lang.Integer" initial="0" />
+      <form-property name="recordName" type="java.lang.String" initial="" />
+      <form-property name="parentId" type="java.lang.Integer" initial="0" />
+      <form-property name="parentName" type="java.lang.String" initial="" />
+      <form-property name="dropdownCollection" type="java.util.ArrayList" />
+    </form-bean>
+
+  </form-beans>
+
+  <action-mappings>
+
+    <action path="/relatedinfo/list" type="com.centraview.relatedinfo.RelatedInfoListHandler" 
+      name="relatedInfoListForm" scope="session">
+      <forward name="Individual" path="/RelatedIndividuals.do" />
+      <forward name="BottomIndividual" path="/RelatedIndividuals.do" />
+      <forward name="Address" path="/RelatedAddresses.do" />
+      <forward name="ContactMethod" path="/RelatedContactMethods.do" />
+      <forward name="CustomField" path="/RelatedCustomFields.do" />
+      <forward name="Activity" path="/RelatedActivities.do" />
+      <forward name="Note" path="/RelatedNotes.do" />
+      <forward name="File" path="/RelatedFiles.do" />
+      <forward name="Ticket" path="/RelatedTickets.do" />
+      <forward name="Proposal" path="/RelatedProposals.do" />
+      <forward name="Opportunity" path="/RelatedOpportunities.do" />
+      <forward name="Project" path="/RelatedProjects.do" />
+      <forward name="Order" path="/RelatedOrders.do" />
+      <forward name="Payment" path="/RelatedPayments.do" />
+      <forward name="Invoice" path="/RelatedInvoices.do" />
+      <forward name="History" path="/RelatedHistory.do" />  
+      <forward name="EmailHistory" path="/RelatedEmailHistory.do" />
+      <forward name="Expenses" path="/RelatedExpenses.do" />
+      <forward name="GroupMember" path="/RelatedGroupMembers.do" />
+      <forward name="CompletedActivity" path="/RelatedActivities.do" />
+      <forward name="Contact" path="/RelatedContacts.do" />
+      <forward name="Invoice" path="/RelatedInvoices.do" />
+      <forward name="Payment" path="/RelatedPayments.do" />
+      <forward name="Task" path="/RelatedTasks.do" />
+      <forward name="Timeslip" path="/RelatedTimeslips.do" />
+    </action>
+    
+  <action path="/RelatedContacts" type="com.centraview.relatedinfo.RelatedContactList" 
+    name="relatedInfoListForm" scope="session">
+      <forward name="relatedInfoBottom" path="/jsp/tiles/related_info.jsp" />
+    </action>
+    <action path="/RelatedInvoices" type="com.centraview.relatedinfo.RelatedInvoiceList" 
+      name="relatedInfoListForm" scope="session">
+      <forward name="relatedInfoBottom" path="/jsp/tiles/related_info.jsp" />
+    </action>
+    <action path="/RelatedPayments" type="com.centraview.relatedinfo.RelatedPaymentList" 
+      name="relatedInfoListForm" scope="session">
+      <forward name="relatedInfoBottom" path="/jsp/tiles/related_info.jsp" />
+    </action>
+    <action path="/RelatedTasks" type="com.centraview.relatedinfo.RelatedTaskList" 
+      name="relatedInfoListForm" scope="session">
+      <forward name="relatedInfoBottom" path="/jsp/tiles/related_info.jsp" />
+    </action>
+    <action path="/RelatedTimeslips" type="com.centraview.relatedinfo.RelatedTimeslipList" name="relatedInfoListForm" scope="session">
+      <forward name="relatedInfoBottom" path="/jsp/tiles/related_info.jsp" />
+    </action>
+
+    <action path="/RelatedIndividuals" type="com.centraview.relatedinfo.RelatedIndividualList" name="relatedInfoListForm" scope="session">
+      <forward name="relatedInfoBottom" path="/jsp/tiles/related_info.jsp" />
+    </action>
+
+    <action path="/RelatedAddresses" type="com.centraview.relatedinfo.RelatedAddressList" name="relatedInfoListForm" scope="session">
+      <forward name="relatedInfoBottom" path="/jsp/tiles/related_info.jsp" />
+    </action>
+    
+    <action path="/RelatedContactMethods" type="com.centraview.relatedinfo.ContactMethodList" name="relatedInfoListForm" scope="session">
+      <forward name="relatedInfoBottom" path="/jsp/tiles/related_info.jsp" />
+    </action>
+    
+    <action path="/RelatedCustomFields" type="com.centraview.relatedinfo.RelatedCustomFieldList" name="relatedInfoListForm" scope="session">
+      <forward name="relatedInfoBottom" path="/jsp/tiles/related_info.jsp" />
+    </action>
+    
+    <action path="/RelatedActivities" type="com.centraview.relatedinfo.RelatedActivityList" name="relatedInfoListForm" scope="session">
+      <forward name="relatedInfoBottom" path="/jsp/tiles/related_info.jsp" />
+    </action>
+    
+    <action path="/RelatedNotes" type="com.centraview.relatedinfo.RelatedNotesList" name="relatedInfoListForm" scope="session">
+      <forward name="relatedInfoBottom" path="/jsp/tiles/related_info.jsp" />
+    </action>
+    
+    <action path="/RelatedFiles" type="com.centraview.relatedinfo.RelatedFilesList" name="relatedInfoListForm" scope="session">
+      <forward name="relatedInfoBottom" path="/jsp/tiles/related_info.jsp" />
+    </action>
+    
+    <action path="/RelatedTickets" type="com.centraview.relatedinfo.RelatedTicketsList" name="relatedInfoListForm" scope="session">
+      <forward name="relatedInfoBottom" path="/jsp/tiles/related_info.jsp" />
+    </action>
+    
+    <action path="/RelatedProposals" type="com.centraview.relatedinfo.RelatedProposalList" name="relatedInfoListForm" scope="session">
+      <forward name="relatedInfoBottom" path="/jsp/tiles/related_info.jsp" />
+    </action>
+    
+    <action path="/RelatedOpportunities" type="com.centraview.relatedinfo.RelatedOpportunityList" name="relatedInfoListForm" scope="session">
+      <forward name="relatedInfoBottom" path="/jsp/tiles/related_info.jsp" />
+    </action>
+    
+    <action path="/RelatedProjects" type="com.centraview.relatedinfo.RelatedProjectList" name="relatedInfoListForm" scope="session">
+      <forward name="relatedInfoBottom" path="/jsp/tiles/related_info.jsp" />
+    </action>
+    
+    <action path="/RelatedOrders" type="com.centraview.relatedinfo.RelatedOrderList" name="relatedInfoListForm" scope="session">
+      <forward name="relatedInfoBottom" path="/jsp/tiles/related_info.jsp" />
+    </action>
+    
+    <action path="/RelatedInvoices" type="com.centraview.relatedinfo.RelatedInvoiceList" name="relatedInfoListForm" scope="session">
+      <forward name="relatedInfoBottom" path="/jsp/tiles/related_info.jsp" />
+    </action>
+    
+    <action path="/RelatedPayments" type="com.centraview.relatedinfo.RelatedPaymentList" name="relatedInfoListForm" scope="session">
+      <forward name="relatedInfoBottom" path="/jsp/tiles/related_info.jsp" />
+    </action>
+    
+    <action path="/RelatedHistory" type="com.centraview.relatedinfo.RelatedHistoryList" name="relatedInfoListForm" scope="session">
+      <forward name="relatedInfoBottom" path="/jsp/tiles/related_info.jsp" />
+    </action>
+
+    <action path="/RelatedEmailHistory" type="com.centraview.relatedinfo.RelatedEmailHistory" name="relatedInfoListForm" scope="session">
+      <forward name="relatedInfoBottom" path="/jsp/tiles/related_info.jsp" />
+    </action>
+    
+    <action path="/RelatedExpenses" type="com.centraview.relatedinfo.RelatedExpenseList" name="relatedInfoListForm" scope="session">
+      <forward name="relatedInfoBottom" path="/jsp/tiles/related_info.jsp" />
+    </action>
+    
+    <action path="/RelatedGroupMembers" type="com.centraview.relatedinfo.RelatedGroupMembersList" name="relatedInfoListForm" scope="session">
+      <forward name="relatedInfoBottom" path="/jsp/tiles/related_info.jsp" />
+    </action>
+
+  </action-mappings>
+
+</struts-config>

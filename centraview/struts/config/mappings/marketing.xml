@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" 
+"http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<!--
+* $RCSfile: marketing.xml,v $    $Revision: 1.4 $  $Date: 2005/07/31 04:17:36 $ - $Author: mcallist $
+* 
+* The contents of this file are subject to the Open Software License
+* Version 2.1 ("the License"); you may not use this file except in
+* compliance with the License. You may obtain a copy of the License at
+* http://www.centraview.com/opensource/license.html
+* 
+* Software distributed under the License is distributed on an "AS IS"
+* basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+* License for the specific language governing rights and limitations
+* under the License.
+* 
+* The Original Code is: CentraView Open Source. 
+* 
+* The developer of the Original Code is CentraView.  Portions of the
+* Original Code created by CentraView are Copyright (c) 2004 CentraView,
+* LLC; All Rights Reserved.  The terms "CentraView" and the CentraView
+* logos are trademarks and service marks of CentraView, LLC.
+-->
+
+<struts-config>
+  <form-beans>
+    <form-bean name="listFormBean" type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="masterlistid" type="java.lang.String" initial=""/>
+      <form-property name="listname" type="java.lang.String" initial=""/>
+      <form-property name="listdescription" type="java.lang.String" initial=""/>
+      <form-property name="listid" type="java.lang.String" initial="0"/>
+      <form-property name="create" type="java.lang.String" initial="0"/>
+      <form-property name="modify" type="java.lang.String" initial="0"/>
+      <form-property name="owner" type="java.lang.String" initial=""/>
+      <form-property name="ownername" type="java.lang.String" initial=""/>
+    </form-bean>
+
+    <form-bean name="importListForm" type="com.centraview.marketing.ListMemberForm"/>
+
+    <form-bean name="promotionlistform" type="com.centraview.marketing.PromotionDetailListForm"/>
+
+    <form-bean name="literatureform" type="com.centraview.marketing.LiteratureForm"/>
+
+    <form-bean name="eventform" type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="eventid" type="java.lang.String" initial="" />
+      <form-property name="individualids" type="java.lang.String" initial="" />
+      <form-property name="name" type="java.lang.String" initial=""/>
+      <form-property name="description" type="java.lang.String" initial=""/>
+      <form-property name="startmonth" type="java.lang.String" initial=""/>
+      <form-property name="startday" type="java.lang.String" initial=""/>
+      <form-property name="startyear" type="java.lang.String" initial=""/>
+      <form-property name="starttime" type="java.lang.String" initial=""/>
+      <form-property name="selstarttime" type="java.lang.String" initial=""/>
+      <form-property name="endmonth" type="java.lang.String" initial=""/>
+      <form-property name="endday" type="java.lang.String" initial=""/>
+      <form-property name="endyear" type="java.lang.String" initial=""/>
+      <form-property name="endtime" type="java.lang.String" initial=""/>
+      <form-property name="selendtime" type="java.lang.String" initial=""/>
+      <form-property name="whoshouldattend" type="java.lang.String" initial=""/>
+      <form-property name="maxattendees" type="java.lang.String" initial=""/>
+      <form-property name="moderatorid" type="java.lang.String" initial=""/>
+      <form-property name="moderatorname" type="java.lang.String" initial=""/>
+      <form-property name="attachfile" type="java.lang.String"/>
+      <form-property name="createddate" type="java.lang.String" initial=""/>
+      <form-property name="modifieddate" type="java.lang.String" initial=""/>
+      <form-property name="startdate" type="java.lang.String" initial=""/>
+      <form-property name="enddate" type="java.lang.String" initial=""/>
+      <form-property name="attachmentFiles" type="java.util.ArrayList" />
+    </form-bean>
+
+    <form-bean name="printtemplate" type="org.apache.struts.action.DynaActionForm">
+      <form-property name="templatesubject" type="java.lang.String" initial=""/>
+      <form-property name="templateName" type="java.lang.String" initial=""/>
+      <form-property name="id" type="java.lang.String" />
+      <form-property name="savedsearch" type="java.lang.String" />
+      <form-property name="templateData" type="java.lang.String" initial=""/>
+      <form-property name="file" type="java.lang.String"/>
+      <form-property name="radio" type="java.lang.String"/>
+      <form-property name="artifactname" type="java.lang.String"/>
+      <form-property name="categoryId" type="java.lang.String"/>
+      <form-property name="artifactid" type="java.lang.String"/>
+      <form-property name="individualId" type="java.lang.String"/>
+      <form-property name="individualSearchId" type="java.lang.String"/>
+      <form-property name="entityId" type="java.lang.String"/>
+      <form-property name="ename" type="java.lang.String"/>
+      <form-property name="selectedEntityId" type="java.lang.String"/>
+      <form-property name="individualName" type="java.lang.String"/>
+      <form-property name="mergetype" type="java.lang.String" initial="EMAIL"/>
+      <form-property name="savedsearch1" type="java.lang.String" />
+      <form-property name="entitysavedsearch" type="java.lang.String" />
+      <form-property name="specificentity" type="java.lang.String" />
+      <form-property name="accountList" type="java.util.ArrayList" />
+      <form-property name="templateList" type="java.util.Collection" />
+      <form-property name="templatefrom" type="java.lang.String" initial=""/>
+      <form-property name="templatereplyto" type="java.lang.String" initial=""/>
+      <form-property name="toPrint" type="java.util.ArrayList" />
+      <form-property name="emailList" type="java.util.ArrayList" />
+      <form-property name="toIndividuals" type="java.util.HashMap" />
+      <form-property name="cancelButton" type="java.lang.String" />
+      <form-property name="attachments" type="java.lang.String[]" />
+      <form-property name="attachmentList" type="java.util.ArrayList" />        
+    </form-bean>
+
+  </form-beans>
+
+  <action-mappings>
+    <!-- Marketing list -->
+    <action path="/marketing/listmanager_list" type="com.centraview.marketing.ListManagerValueListAction" scope="request" validate="false" parameter="action">
+      <forward name=".view.marketing.listmanager.list" path=".view.valuelist"/>
+    </action>
+
+    <!-- Promotions list -->
+    <action path="/marketing/promotions_list" type="com.centraview.marketing.PromotionValueListAction" scope="request" validate="false" parameter="action">
+      <forward name=".view.marketing.promotions.list" path=".view.valuelist"/>
+    </action>
+
+    <!-- Literature Fulfillment list -->
+    <action path="/marketing/literaturefulfillment_list" type="com.centraview.marketing.LitFulValueListAction" scope="request" validate="false" parameter="action">
+      <forward name=".view.marketing.literaturefulfillment.list" path=".view.valuelist"/>
+    </action>
+
+    <!-- Events list -->
+    <action path="/marketing/events_list" type="com.centraview.marketing.EventValueListAction" scope="request" validate="false" parameter="action">
+      <forward name=".view.marketing.events.list" path=".view.valuelist"/>
+    </action>
+
+    <!-- Mail Merge not sure about this one yet -->
+    <action path="/marketing/mailmerge" type="" scope="request" validate="false" parameter="action">
+      <forward name=".view.marketing.unknown" path=""/>
+    </action>
+
+    <!-- View Marketing List -->
+    <action path="/marketing/view_listmanager" type="com.centraview.marketing.ViewListHandler" name="listFormBean" scope="request" validate="false" >
+      <forward name=".view.marketing.editlistmanager" path=".view.marketing.edit.listmanager"/>
+    </action>
+
+    <!-- Delete Marketing List -->
+    <action path="/marketing/delete_listmanager" type="com.centraview.marketing.ListManagerDeleteHandler"/>
+
+    <!-- New Marketing List -->
+    <action path="/marketing/new_listmanager" type="com.centraview.marketing.NewListHandler" name="importListForm" scope="session" validate="false" >
+      <forward name=".view.marketing.newlistmanager" path=".view.marketing.new.listmanager"/>
+    </action>
+
+    <!-- Save New Marketing List -->
+    <action path="/marketing/save_new_listmanager" type="com.centraview.marketing.AddListHandler" name="importListForm" scope="session" validate="false" input=".view.marketing.new.listmanager">
+      <forward name=".view.marketing.newlistmanager" path="/marketing/import_listmanager_1.do"/>
+    </action>
+
+    <!-- Import Steps Marketing List -->
+    <action path="/marketing/import_listmanager_1" type="org.apache.struts.actions.ForwardAction" name="importListForm" scope="session" validate="false" parameter=".view.marketing.listmanager.import.1"/>
+    <action path="/marketing/import_listmanager_2" type="org.apache.struts.actions.ForwardAction" name="importListForm" scope="session" validate="false" parameter=".view.marketing.listmanager.import.2"/>
+    <action path="/marketing/import_listmanager_3" type="org.apache.struts.actions.ForwardAction" name="importListForm" scope="session" validate="false" parameter=".view.marketing.listmanager.import.3"/>
+
+    <!-- Import Criteria Marketing List -->
+    <action path="/marketing/import_criteria" type="com.centraview.marketing.ImportHandler" name="importListForm" scope="session" validate="false"> 
+      <forward name=".view.marketing.listmanager.import" path="/marketing/import_listmanager_2.do"/>
+    </action>
+
+    <!-- Import Member Mappings Marketing List -->
+    <action path="/marketing/import_members" type="com.centraview.marketing.ImportMembersHandler" name="importListForm" scope="session" validate="false"> 
+      <forward name=".view.marketing.listmanager.importmember" path="/marketing/import_listmanager_3.do"/>
+    </action>
+
+    <!-- Save Edit Marketing List -->
+    <action path="/marketing/save_edit_listmanager" type="com.centraview.marketing.UpdateListHandler" name="listFormBean" scope="request" validate="false" input=".view.marketing.edit.listmanager">
+      <forward name=".view.marketing.editlistmanager" path="/marketing/view_listmanager.do"/>
+      <forward name=".view.marketing.listmanager" path="/marketing/listmanager_list.do"/>
+    </action>
+
+    <!-- Save promotion List -->
+    <action path="/marketing/save_promotion" type="com.centraview.marketing.SavePromotionHandler" scope="request" validate="true" input="/marketing/new_promotion.do?TYPEOFOPERATION=ADDITEM" parameter="action" name="promotionlistform">
+      <forward name=".view.marketing.new.promotion" path="/marketing/new_promotion.do" redirect="true"/>
+      <forward name=".view.marketing.edit.promotion" path="/marketing/view_promotion.do"/>
+      <forward name=".view.marketing.promotions.list" path="/marketing/promotions_list.do"/>
+    </action>
+
+    <!-- View promotion -->
+    <action path="/marketing/view_promotion" type="com.centraview.marketing.ViewPromotionHandler" scope="request" validate="false" parameter="action" name="promotionlistform">
+      <forward name=".view.marketing.edit.promotion" path=".view.marketing.edit.promotion"/>
+    </action>
+
+    <!-- Delete promotion -->
+    <action path="/marketing/delete_promotionlist" type="com.centraview.marketing.PromotionsListDeleteHandler" scope="request" validate="false" parameter="action" name="promotionlistform"/>
+
+    <action path="/marketing/delete_promotion" type="com.centraview.marketing.DeletePromotionHandler" scope="request" validate="false" parameter="action" name="promotionlistform">
+      <forward name=".view.marketing.promotions.list" path="/marketing/promotions_list.do"/>
+    </action>
+
+    <!-- New promotion -->
+    <action path="/marketing/new_promotion" type="com.centraview.marketing.NewPromotionHandler" scope="request" validate="false" parameter="action" name="promotionlistform">
+      <forward name=".view.marketing.new.promotion" path=".view.marketing.new.promotion"/>
+      <forward name=".view.marketing.promotions.list" path="/marketing/promotions_list.do"/>
+    </action>
+
+    <!-- New Literature Fulfillment -->
+    <action path="/marketing/new_literaturefulfillment" type="com.centraview.marketing.NewLiteratureHandler" scope="request" validate="false" parameter="action" name="literatureform">
+      <forward name=".view.marketing.literaturefulfillment.detail" path=".view.marketing.literaturefulfillment.detail"/>
+    </action>
+
+    <!-- Delete Literature Fulfillment -->
+    <action path="/marketing/delete_literaturefulfillmentlist" type="com.centraview.marketing.LiteratureListDeleteHandler"/>
+
+    <!-- View Literature Fulfillment -->
+    <action path="/marketing/view_literaturefulfillment" type="com.centraview.marketing.GetLiteratureDetailsHandler" scope="request" validate="false" parameter="action" name="literatureform">
+      <forward name=".view.marketing.literaturefulfillment.detail" path=".view.marketing.literaturefulfillment.detail"/>
+    </action>
+
+    <action path="/marketing/save_literaturefulfillment" type="com.centraview.marketing.SaveNewLiteratureHandler" scope="request" validate="true" input=".view.marketing.literaturefulfillment.detail" parameter="action" name="literatureform">
+      <forward name=".view.marketing.literaturefulfillment.close" path="/jsp/pages/common/window_close.jsp"/>
+      <forward name=".view.marketing.literaturefulfillment.detail" path="/marketing/new_literaturefulfillment.do" redirect="true"/>
+    </action>
+
+    <action path="/marketing/literature_lookup" type="com.centraview.marketing.LiteratureLookupHandler" scope="request" validate="false" parameter="action">
+      <forward name=".view.marketing.literature.lookup" path=".view.marketing.literature.lookup"/>
+    </action>
+
+    <!-- Duplicate Promotion -->
+    <action path="/marketing/dup_promotion" type="com.centraview.marketing.DuplicatePromotionHandler" scope="request" validate="false" parameter="action" name="promotionlistform">
+      <forward name=".view.marketing.new.promotion" path=".view.marketing.new.promotion"/>
+    </action>
+
+    <!-- View Event -->
+    <action path="/marketing/view_event" name="eventform" type="com.centraview.marketing.ViewEventHandler" scope="request" validate="false">
+      <forward name=".view.marketing.edit.event" path=".view.marketing.edit.event"/>
+      <forward name=".view.marketing.new.event" path=".view.marketing.new.event"/>
+    </action>
+
+    <!-- New Event -->
+    <action path="/marketing/new_event" type="com.centraview.marketing.NewEventHandler" scope="request" validate="false" parameter="action" name="eventform">
+      <forward name=".view.marketing.new.event" path=".view.marketing.new.event"/>
+    </action>
+
+
+    <action path="/marketing/save_new_event" type="com.centraview.marketing.SaveNewEventHandler" scope="request" validate="true" input="/marketing/new_event.do" parameter="action" name="eventform">
+      <forward name=".view.marketing.edit.event" path="/marketing/view_event.do"/>
+      <forward name=".view.marketing.events.list" path="/marketing/events_list.do"/>
+      <forward name=".view.marketing.new.event" path="/marketing/new_event.do"/>
+    </action>   
+    
+    <action path="/marketing/save_edit_event" type="com.centraview.marketing.SaveEventHandler" scope="request" validate="true" input="/marketing/view_event.do" parameter="action" name="eventform">
+      <forward name=".view.marketing.edit.event" path="/marketing/view_event.do"/>
+      <forward name=".view.marketing.events.list" path="/marketing/events_list.do"/>
+      <forward name=".view.marketing.new.event" path="/marketing/new_event.do"/>
+    </action>
+
+    <action path="/marketing/save_event_attendee" type="com.centraview.marketing.SaveEventAttendeeHandler" scope="request" validate="false" parameter="action" name="eventform">
+     <forward name=".view.marketing.edit.event" path="/marketing/view_event.do"/>
+    </action>
+
+    <action path="/ComposeEvent" type="com.centraview.email.ComposeEmailHandler" scope="request" parameter="action" validate="true" name="composeEmailForm">
+    <forward name="displaycomposeemail" path="/jsp/marketing/compose_events_c.jsp"/>
+    </action>
+
+    <action path="/marketing/register_event" name="eventform" type="com.centraview.marketing.RegisterEventHandler" scope="request" validate="false">
+      <forward name=".view.marketing.edit.event" path="/marketing/view_event.do?TYPEOFOPERATION=EDIT"/>
+    </action>
+
+    <!-- Delete Event -->
+    <action path="/marketing/delete_eventlist" name="eventform" type="com.centraview.marketing.EventListDeleteHandler" scope="request" validate="false"/>
+
+    <action path="/marketing/delete_event" name="eventform" type="com.centraview.marketing.DeleteEventHandler" scope="request" validate="false">
+      <forward name=".view.marketing.events.list" path="/marketing/events_list.do"/>
+    </action>
+
+	<action path="/marketing/delete_event_attendees" type="com.centraview.marketing.DeleteEventAttendeesHandler" scope="request" validate="false" 	parameter="action">
+		<forward name=".view.marketing.edit.event" path="/marketing/view_event.do"/>
+	</action>
+
+    <!-- Mail Merge -->
+    
+    <action path="/marketing/mailmerge" type="com.centraview.printtemplate.PTEditHandler" name="printtemplate" scope="session">
+      <forward name=".view.marketing.mailmerge" path=".view.marketing.mailmerge"/>
+    </action>
+
+    <action path="/marketing/mailmerge_detail" type="com.centraview.printtemplate.PTListHandler" scope="session"  name="printtemplate">
+      <forward name=".view.marketing.mailmerge" path=".view.marketing.mailmerge.detail"/>
+    </action>  
+
+    <action path="/marketing/mailmerge_preview" type="com.centraview.printtemplate.PTViewHandler" scope="session" name="printtemplate">
+      <forward name=".view.marketing.mailmerge" path=".view.marketing.mailmerge.preview"/>
+    </action>  
+
+    <action path="/marketing/mailmerge_success" type="com.centraview.printtemplate.SucessPrintTemplateHandler" scope="session" name="printtemplate">
+      <forward name=".view.marketing.mailmerge" path=".view.marketing.mailmerge.success"/>
+    </action>
+
+  </action-mappings>
+</struts-config>

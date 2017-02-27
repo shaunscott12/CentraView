@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" 
+          "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<!--
+ * $RCSfile: contacts.xml,v $    $Revision: 1.6 $  $Date: 2005/09/07 14:34:54 $ - $Author: mcallist $
+ *
+ * The contents of this file are subject to the Open Software License
+ * Version 2.1 ("the License"); you may not use this file except in
+ * compliance with the License. You may obtain a copy of the License at
+ * http://www.centraview.com/opensource/license.html
+ * 
+ * Software distributed under the License is distributed on an "AS IS"
+ * basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+ * License for the specific language governing rights and limitations
+ * under the License.
+ * 
+ * The Original Code is: CentraView Open Source. 
+ * 
+ * The developer of the Original Code is CentraView.  Portions of the
+ * Original Code created by CentraView are Copyright (c) 2004 CentraView,
+ * LLC; All Rights Reserved.  The terms "CentraView" and the CentraView
+ * logos are trademarks and service marks of CentraView, LLC.
+-->         
+<struts-config>
+  <form-beans>
+  
+    <form-bean name="entityForm" type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="entityName" type="java.lang.String"/>
+      <form-property name="entityId" type="java.lang.Integer" initial="0"/>
+      <form-property name="id2" type="java.lang.String"/>
+      <form-property name="addressId" type="java.lang.Integer" initial="-1"/>
+      <form-property name="street1" type="java.lang.String" initial=""/>
+      <form-property name="street2" type="java.lang.String" initial=""/>
+      <form-property name="city" type="java.lang.String" initial=""/>
+      <form-property name="state" type="java.lang.String" initial=""/>
+      <form-property name="zip" type="java.lang.String" initial=""/>
+      <form-property name="country" type="java.lang.String" initial=""/>
+      <form-property name="website" type="java.lang.String" initial=""/>
+      <form-property name="sourceId" type="java.lang.Integer" initial="-1"/>
+      <form-property name="sourceName" type="java.lang.String"/>
+      <form-property name="accountManagerId" type="java.lang.Integer" initial="0"/>
+      <form-property name="accountManagerName" type="java.lang.String" initial=""/>
+      <form-property name="accountTeamId" type="java.lang.Integer" initial="0"/>
+      <form-property name="accountTeamName" type="java.lang.String" initial=""/>
+      <form-property name="created" type="java.lang.String"/>
+      <form-property name="modified" type="java.lang.String"/>
+      <form-property name="pcIndividualId" type="java.lang.Integer" initial="0"/>
+      <form-property name="pcFirstName" type="java.lang.String" initial=""/>
+      <form-property name="pcMiddleInitial" type="java.lang.String" initial=""/>
+      <form-property name="pcLastName" type="java.lang.String" initial=""/>
+      <form-property name="pcTitle" type="java.lang.String" initial=""/>
+      <form-property name="mocId1" type="java.lang.String" initial="0"/>
+      <form-property name="mocId2" type="java.lang.String" initial="0"/>
+      <form-property name="mocId3" type="java.lang.String" initial="0"/>
+      <form-property name="mocType1" type="java.lang.String" initial="4"/>
+      <form-property name="mocType2" type="java.lang.String" initial="2"/>
+      <form-property name="mocType3" type="java.lang.String" initial="3"/>
+      <form-property name="mocContent1" type="java.lang.String" initial=""/>
+      <form-property name="mocContent2" type="java.lang.String" initial=""/>
+      <form-property name="mocContent3" type="java.lang.String" initial=""/>      
+      <form-property name="mocExt1" type="java.lang.String" initial=""/>
+      <form-property name="mocExt2" type="java.lang.String" initial=""/>
+      <form-property name="mocExt3" type="java.lang.String" initial=""/>
+      <form-property name="email" type="java.lang.String" initial=""/>
+      <form-property name="emailId" type="java.lang.String" initial="0"/>
+      <form-property name="marketingListId" type="java.lang.Integer" initial="1"/>
+      <form-property name="mocTypeList" type="java.util.ArrayList"/>
+      <form-property name="customFields" type="com.centraview.contact.helper.CustomFieldVO[]" size="4"/>
+      <form-property name="closeWindow" type="java.lang.Boolean" size="false" />
+    </form-bean>
+
+    <form-bean name="individualForm" type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="firstName" type="java.lang.String" initial=""/>
+      <form-property name="middleInitial" type="java.lang.String" initial=""/>
+      <form-property name="lastName" type="java.lang.String" initial=""/>
+      <form-property name="title" type="java.lang.String" initial=""/>
+      <form-property name="individualId" type="java.lang.Integer" initial="0"/>
+      <form-property name="id2" type="java.lang.String" initial=""/>
+      <form-property name="entityId" type="java.lang.Integer" initial="0"/>
+      <form-property name="entityName" type="java.lang.String" initial=""/>
+      <form-property name="addressId" type="java.lang.Integer" initial="0"/>
+      <form-property name="street1" type="java.lang.String" initial=""/>
+      <form-property name="street2" type="java.lang.String" initial=""/>
+      <form-property name="city" type="java.lang.String" initial=""/>
+      <form-property name="state" type="java.lang.String" initial=""/>
+      <form-property name="zip" type="java.lang.String" initial=""/>
+      <form-property name="country" type="java.lang.String" initial=""/>
+      <form-property name="website" type="java.lang.String" initial=""/>
+      <form-property name="sourceId" type="java.lang.Integer" initial="-1"/>
+      <form-property name="sourceName" type="java.lang.String" initial=""/>
+      <form-property name="created" type="java.lang.String"/>
+      <form-property name="modified" type="java.lang.String"/>
+      <form-property name="mocId1" type="java.lang.String" initial="0"/>
+      <form-property name="mocId2" type="java.lang.String" initial="0"/>
+      <form-property name="mocId3" type="java.lang.String" initial="0"/>
+      <form-property name="mocType1" type="java.lang.String" initial="4"/>
+      <form-property name="mocType2" type="java.lang.String" initial="2"/>
+      <form-property name="mocType3" type="java.lang.String" initial="3"/>
+      <form-property name="mocContent1" type="java.lang.String" initial=""/>
+      <form-property name="mocContent2" type="java.lang.String" initial=""/>
+      <form-property name="mocContent3" type="java.lang.String" initial=""/>      
+      <form-property name="mocExt1" type="java.lang.String" initial=""/>
+      <form-property name="mocExt2" type="java.lang.String" initial=""/>
+      <form-property name="mocExt3" type="java.lang.String" initial=""/>
+      <form-property name="email" type="java.lang.String" initial=""/>
+      <form-property name="emailId" type="java.lang.String" initial="0"/>
+      <form-property name="marketingListId" type="java.lang.Integer"/>
+      <form-property name="mocTypeList" type="java.util.ArrayList"/>
+      <form-property name="customFields" type="com.centraview.contact.helper.CustomFieldVO[]" size="8"/>
+      <form-property name="closeWindow" type="java.lang.Boolean" size="false" />
+      <form-property name="userName" type="java.lang.String" initial=""/>
+      <form-property name="oldpassword" type="java.lang.String" initial=""/>
+      <form-property name="newpassword" type="java.lang.String" initial=""/>
+      <form-property name="confirmpassword" type="java.lang.String" initial=""/>            
+    </form-bean>
+
+    <form-bean name="groupForm" type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="groupname" type="java.lang.String"/>
+      <form-property name="groupdescription" type="java.lang.String"/>
+      <form-property name="groupid" type="java.lang.String" initial="0"/>
+      <form-property name="create" type="java.lang.String" initial="0"/>
+      <form-property name="modify" type="java.lang.String" initial="0"/>
+      <form-property name="owner" type="java.lang.String" initial=""/>
+      <form-property name="ownerName" type="java.lang.String" initial=""/>
+    </form-bean>
+
+    <form-bean name="addressForm" type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="state" type="java.lang.String" initial=""/>
+      <form-property name="country" type="java.lang.String" initial=""/>
+      <form-property name="zipcode" type="java.lang.String" initial=""/>
+      <form-property name="city" type="java.lang.String" initial=""/>
+      <form-property name="street2" type="java.lang.String" initial=""/>
+      <form-property name="street1" type="java.lang.String" initial=""/>
+      <form-property name="addressid" type="java.lang.String" initial=""/>
+      <form-property name="isPrimary" type="java.lang.String" initial="NO"/>
+      <form-property name="jurisdictionID" type="java.lang.String" initial="0"/>
+      <form-property name="jurisdictionVec" type="java.util.Vector" />      
+      <form-property name="operation" type="java.lang.String" initial="edit" />
+      <form-property name="select" type="java.lang.String" initial=""/>
+      <form-property name="recordID" type="java.lang.String" initial=""/>
+      <form-property name="recordName" type="java.lang.String" initial=""/>
+      <form-property name="listType" type="java.lang.String" initial=""/>
+      <form-property name="listFor" type="java.lang.String" initial=""/>
+      <form-property name="saveandclose" type="java.lang.String" initial=""/>
+      <form-property name="saveandnew" type="java.lang.String" initial=""/>
+      <form-property name="Cancel" type="java.lang.String" initial=""/>
+    </form-bean>
+
+    <!--
+      Note that three of the properties of this form bean have worthless names.
+      The only reason they have not been changed is because these same property
+      names are reflected by the MethodOfContactVOX in the *EJB LAYER*, which
+      this form gets passed to in order to create a MethodOfContactVO. This will
+      need to be fixed, but not at this time.
+    -->
+    <form-bean name="mocForm" type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="mocid" type="java.lang.String" initial="" />
+      <form-property name="syncas" type="java.lang.String" initial="" />
+      <form-property name="operation" type="java.lang.String" initial="edit" />
+      <form-property name="recordID" type="java.lang.String" initial="" />
+      <form-property name="recordName" type="java.lang.String" initial="" />
+      <form-property name="listFor" type="java.lang.String" initial="" />
+      <form-property name="listType" type="java.lang.String" initial="" />
+      <form-property name="select" type="java.lang.String" initial="" /><!-- "type" field -->
+      <form-property name="text3" type="java.lang.String" initial="" /><!-- "content" field -->
+      <form-property name="text4" type="java.lang.String" initial="" /><!-- "notes" field -->
+      <form-property name="saveandclose" type="java.lang.String" initial="" />
+      <form-property name="saveandnew" type="java.lang.String" initial="" />
+      <form-property name="cancel" type="java.lang.String" initial="" />
+    </form-bean>
+
+    <form-bean name="customFieldForm" type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="operation" type="java.lang.String" initial="edit" />
+      <form-property name="recordID" type="java.lang.String" initial="" />
+      <form-property name="recordName" type="java.lang.String" initial="" />
+      <form-property name="listFor" type="java.lang.String" initial="" />
+      <form-property name="listType" type="java.lang.String" initial="" />
+      <form-property name="select" type="java.lang.String" initial="" />
+      <form-property name="text4" type="java.lang.String" initial="" />
+      <form-property name="text3" type="java.lang.String" initial="" />
+      <form-property name="button22" type="java.lang.String" initial="" />
+      <form-property name="button2" type="java.lang.String" initial="" />
+      <form-property name="button23" type="java.lang.String" initial="" />
+    </form-bean>
+
+    <form-bean name="groupMemberForm" type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="contactid" type="java.lang.String"/>
+      <form-property name="grpid" type="java.lang.String"/>
+    </form-bean>
+
+    <form-bean name="changeMOCForm" type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String"/>
+      <form-property name="EntityType" type="java.lang.String"/>
+      <form-property name="ContactID" type="java.lang.String" initial="0"/>
+      <form-property name="phoneMOCOrder" type="java.util.Collection"/>
+      <form-property name="emailMOCOrder" type="java.util.Collection"/>
+      <form-property name="primaryEmailAddress" type="java.lang.String[]"/>
+      <form-property name="primaryPhoneNumbers" type="java.lang.String[]"/>
+    </form-bean>
+
+  </form-beans>
+  
+  <action-mappings>
+      <!-- Entity Value List screen -->
+      <action path="/contacts/entity_list" type="com.centraview.contacts.entity.EntityValueListHandler">
+        <forward name=".view.contacts.entitylist" path=".view.valuelist"/>
+        <forward name=".view.contacts.entitylookup" path=".view.lookup"/>
+      </action>
+      
+      <!-- Individual Value List screen -->
+      <action path="/contacts/individual_list" type="com.centraview.contacts.individual.IndividualValueListHandler">
+        <forward name=".view.contacts.individuallist" path=".view.valuelist"/>
+        <forward name="showlookup" path=".view.lookup"/>
+        <forward name="showlookupEmployee" path=".view.lookup"/>
+        <forward name="showlookup_attendee" path=".view.lookup"/>
+      </action>
+
+      <!-- Group Value List screen -->
+      <action path="/contacts/group_list" type="com.centraview.contacts.group.GroupValueListHandler">
+        <forward name=".view.contacts.grouplist" path=".view.valuelist"/>
+      </action>
+      
+      <!-- Contact Lookup Actions -->
+      <action path="/contacts/entity_lookup" type="org.apache.struts.actions.ForwardAction" parameter="/contacts/entity_list.do?actionType=lookup"/>
+      <action path="/contacts/individual_lookup" type="org.apache.struts.actions.ForwardAction" parameter="/contacts/individual_list.do?actionType=lookup"/>
+      <action path="/contacts/employee_lookup" type="org.apache.struts.actions.ForwardAction" parameter="/contacts/individual_list.do?actionType=lookupEmployee"/>
+      <action path="/contacts/attendee_lookup" type="org.apache.struts.actions.ForwardAction" parameter="/contacts/individual_list.do?actionType=lookup_attendee"/>
+      <action path="/contacts/group_lookup" type="com.centraview.contacts.group.GroupLookupHandler" name="" scope="request" validate="false">
+        <forward name=".view.lookup" path=".view.lookup"/>
+      </action>
+
+      <!-- To open a new individual form -->
+      <action path="/contacts/new_individual" type="com.centraview.contacts.individual.IndividualNewHandler" name="individualForm" scope="request" validate="false">
+        <forward name=".view.contact.new_individual" path=".view.contact.new_individual" />
+      </action>
+
+      <!-- To open a new Group form -->
+      <action path="/contacts/new_group" type="com.centraview.contacts.group.NewGroupHandler" name="groupForm" scope="request" validate="false">
+        <forward name=".view.contact.group_detail" path=".view.contact.group_detail" />
+      </action>
+
+      <action path="/contacts/save_group" type="com.centraview.contacts.group.AddGroupHandler" name="groupForm" scope="request" validate="false">
+        <forward name="success1" path="/contacts/new_group.do" redirect="true"/>
+        <forward name="success2" path="/contacts/group_list.do" redirect="true"/>
+        <forward name="addmember" path="/contacts/view_group.do" redirect="true"/>
+      </action>
+
+      <action path="/contacts/add_group_member" type="com.centraview.contacts.group.AddMemberHandler" name="groupMemberForm" scope="request" validate="false">
+        <forward name="viewGroup" path="/contacts/view_group.do?rowId=" />
+      </action>
+      
+      <action path="/contacts/remove_group_member" type="com.centraview.contacts.group.RemoveGroupMemberHandler" name="groupMemberForm" scope="request" validate="false">
+        <forward name="viewGroup" path="/contacts/view_group.do?rowId=" />
+      </action>
+
+      <!-- To open a new entity form -->
+      <action path="/contacts/new_entity" type="com.centraview.contacts.entity.NewEntityHandler" name="entityForm" scope="request" validate="false">
+        <forward name=".view.contact.new_entity" path=".view.contact.new_entity" />
+      </action>
+
+      <!-- View Handler for Contacts module like (Entity/Individual/Groups) -->
+      <action path="/contacts/view_entity" type="com.centraview.contacts.entity.ViewEntityHandler" name="entityForm" scope="request" validate="false">
+        <forward name=".view.contact.entitydetails" path=".view.contact.entitydetails"/>
+        <forward name=".view.contact.copyto" path=".view.contact.entity.copyto"/>
+      </action>
+      
+      <action path="/contacts/view_individual" type="com.centraview.contacts.individual.ViewIndividualHandler" name="individualForm" scope="request" validate="false">
+        <forward name=".view.contact.individualdetails" path=".view.contact.individualdetails"/>
+        <forward name=".view.contact.copyto" path=".view.contact.individual.copyto"/>
+      </action>
+
+      <action path="/contacts/view_group" type="com.centraview.contacts.group.ViewGroupHandler" name="groupForm" scope="request" validate="false">
+        <forward name=".view.contact.group_detail" path=".view.contact.group_detail"/>
+      </action>
+      
+      <!-- save Handlers for Contacts -->
+      <action path="/contacts/save_individual" type="com.centraview.contacts.individual.EditIndividualHandler" name="individualForm" scope="request" validate="false">
+        <forward name="viewIndividual" path="/contacts/view_individual.do?rowId=" redirect="true"/>
+        <forward name="newIndividual" path="/contacts/new_individual.do?marketingListId=" redirect="true"/>
+      </action>
+      <action path="/contacts/save_entity" type="com.centraview.contacts.entity.UpdateEntityHandler" name="entityForm" scope="request" validate="false">
+        <forward name="viewEntity" path="/contacts/view_entity.do?rowId=" redirect="true"/>
+        <forward name="newEntity" path="/contacts/new_entity.do?marketingListId=" redirect="true"/>
+        <forward name=".view.contact.new_entity" path="/contacts/new_entity.do" />
+      </action>
+      
+      <!-- move Handler for Entity -->
+      <action path="/contacts/move_entity" type="com.centraview.contacts.entity.EntityMoveHandler" name="entityForm" scope="request" validate="false">
+        <forward name="success" path="/contacts/entity_list.do"/>
+      </action>
+
+
+      <!-- Delete Handler for Contacts module like (Entity/Individual/Groups) -->
+      <action path="/contacts/delete_entitylist" type="com.centraview.contacts.entity.EntityListDeleteHandler">
+        <forward name="entityList" path="/contacts/entity_list.do" redirect="true"/>
+      </action>
+      
+      <action path="/contacts/delete_individuallist" type="com.centraview.contacts.entity.IndividualListDeleteHandler">
+        <forward name="IndividualList" path="/contacts/individual_list.do" redirect="true"/>
+      </action>
+      
+      <action path="/contacts/delete_grouplist" type="com.centraview.contacts.group.GroupListDeleteHandler">
+        <forward name="GroupList" path="/contacts/group_list.do" redirect="true"/>
+      </action>
+      
+      <action path="/contacts/delete_entity" type="com.centraview.contacts.entity.DeleteEntityHandler" scope="request">
+        <forward name="deletesuccess" path="/jsp/pages/common/window_close.jsp?parentReload=true"/>
+      </action>
+
+      <action path="/contacts/delete_individual" type="com.centraview.contacts.individual.DeleteIndividualHandler" scope="request">
+        <forward name="deletesuccess" path="/jsp/pages/common/window_close.jsp?parentReload=true"/>
+      </action>
+      
+      <action path="/contacts/view_related_address" name="addressForm" type="com.centraview.contacts.common.ViewAddressHandler" scope="request" validate="false">  
+        <forward name=".view.contacts.view_related_address" path=".view.contacts.view_related_address" />
+      </action>
+
+      <!-- Dispatch that calls /contacts/edit_related_address or /contacts/add_related_address -->
+      <action path="/contacts/save_related_address" type="com.centraview.contacts.common.SaveAddressHandler" name="addressForm" scope="request" validate="false">
+        <forward name="edit_related_address" path="/contacts/edit_related_address.do" />
+        <forward name="add_related_address" path="/contacts/add_related_address.do" />
+      </action>
+     
+      <action path="/contacts/edit_related_address" type="com.centraview.contacts.common.EditAddressHandler" name="addressForm" scope="request" validate="true" input="/jsp/contacts/bottom_edit_address.jsp" parameter="action">
+        <forward name="saveandclose" path="/relatedinfo/list.do"/>
+        <forward name="saveandnew" path=".view.contacts.new_related_address"/>
+        <forward name="cancel" path="/relatedinfo/list.do"/>
+      </action>
+      
+      <action path="/contacts/new_related_address" type="com.centraview.contacts.common.NewAddressHandler" name="addressForm" scope="request" validate="false" parameter="action">
+        <forward name=".view.contacts.view_related_address" path=".view.contacts.view_related_address" />
+      </action>
+      
+      <action path="/contacts/add_related_address" type="com.centraview.contacts.common.AddAddressHandler" name="addressForm" scope="request" validate="true" parameter="action">
+        <forward name="saveandclose" path="/relatedinfo/list.do"/>
+        <forward name="saveandnew" path="/contacts/new_related_address.do"/>
+        <forward name="cancel" path="/relatedinfo/list.do"/>
+      </action>
+
+      <action path="/contacts/new_contact_method" type="com.centraview.contacts.common.NewContactMethodHandler" name="mocForm" validate="false" scope="request">
+        <forward name=".view.contacts.new_contact_method" path=".view.contacts.contact_method" />
+      </action>
+
+      <action path="/contacts/save_contact_method" type="com.centraview.contacts.common.SaveContactMethodHandler" name="mocForm" validate="false" scope="request">
+        <forward name="edit_contact_method" path="/contacts/edit_contact_method.do" />
+        <forward name="add_contact_method" path="/contacts/add_contact_method.do" />
+      </action>
+      
+      <action path="/contacts/add_contact_method" type="com.centraview.contacts.common.AddContactMethodHandler" name="mocForm" scope="request" validate="false">
+        <forward name="success" path="/jsp/contacts/success.jsp"/>
+        <forward name="saveandclose" path="/relatedinfo/list.do"/>
+        <forward name="saveandnew" path="/jsp/contacts/bottom_new_contact_method.jsp"/>
+        <forward name="cancel" path="/relatedinfo/list.do"/>
+      </action>
+      
+      <action path="/contacts/view_contact_method" type="com.centraview.contacts.entity.ViewMOCHandler" name="mocForm" scope="request" validate="false">
+        <forward name=".view.contacts.new_contact_method" path=".view.contacts.contact_method" />
+      </action>
+      
+      <action path="/contacts/edit_contact_method" type="com.centraview.contacts.common.EditContactMethodHandler" name="mocForm" scope="request" validate="false">
+        <forward name="saveandclose" path="/relatedinfo/list.do"/>
+        <forward name="saveandnew" path="/contacts/new_contact_method.do"/>
+        <forward name="cancel" path="/relatedinfo/list.do"/>
+      </action>
+
+      <!-- Changing the primary MOC screen -->
+      <action path="/contacts/change_moc" type="com.centraview.contacts.common.ViewContactChangeMOCHandler" name="changeMOCForm" scope="request" validate="false">
+        <forward name=".view.contact.change_moc" path=".view.contact.change_moc"/>
+      </action>
+      <action path="/contacts/save_change_moc" type="com.centraview.contacts.common.UpdateContactChangeMOCHandler" name="changeMOCForm" scope="request" validate="false">
+        <forward name="viewEntity" path="/contacts/view_entity.do" redirect="true"/>
+        <forward name="viewIndividual" path="/contacts/view_individual.do" redirect="true"/>
+      </action>
+      
+      <!-- make sure the following work with the new "new" screens-->
+      <action path="/contacts/duplicate_entity" name="entityForm" type="com.centraview.contacts.entity.DuplicateEntityHandler" scope="request" validate="false">
+        <forward name="success" path="/contacts/new_entity.do"/>
+      </action>
+      <action path="/contacts/duplicate_individual" name="individualForm" scope="request" validate="false" type="com.centraview.contacts.individual.DuplicateIndividualHandler">
+        <forward name="success" path="/contacts/new_individual.do"/>
+      </action>
+
+      <action path="/contacts/view_custom_field" type="com.centraview.contacts.common.ViewCustomFieldHandler" name="customFieldForm" scope="request" validate="false">  
+        <forward name=".view.contacts.view_custom_field" path=".view.contacts.custom_field" />
+      </action>
+      
+      <action path="/contacts/save_custom_field" name="customFieldForm" type="com.centraview.contacts.common.UpdateCustomFieldHandler" scope="request" validate="false">
+        <forward name="saveandclose" path="/relatedinfo/list.do"/>
+        <forward name="cancel" path="/relatedinfo/list.do"/>
+      </action>
+
+      <action path="/contacts/delete_contact_methods" type="com.centraview.contacts.common.DeleteContactMethodsHandler" scope="request" validate="false">
+        <forward name=".forward.contacts.related_contact_methods" path="/relatedinfo/list.do?riListType=ContactMethod" redirect="true" />
+      </action>
+
+   </action-mappings>
+  
+</struts-config>

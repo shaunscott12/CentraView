@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" 
+          "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<!--
+ * $RCSfile: email.xml,v $    $Revision: 1.10 $  $Date: 2005/09/06 16:04:55 $ - $Author: mcallist $
+ * 
+ * The contents of this file are subject to the Open Software License
+ * Version 2.1 ("the License"); you may not use this file except in
+ * compliance with the License. You may obtain a copy of the License at
+ * http://www.centraview.com/opensource/license.html
+ * 
+ * Software distributed under the License is distributed on an "AS IS"
+ * basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+ * License for the specific language governing rights and limitations
+ * under the License.
+ * 
+ * The Original Code is: CentraView Open Source. 
+ * 
+ * The developer of the Original Code is CentraView.  Portions of the
+ * Original Code created by CentraView are Copyright (c) 2004 CentraView,
+ * LLC; All Rights Reserved.  The terms "CentraView" and the CentraView
+ * logos are trademarks and service marks of CentraView, LLC.
+-->
+     
+<struts-config>
+  <form-beans>
+
+    <form-bean name="emailListForm" type="org.apache.struts.action.DynaActionForm">
+      <form-property name="accountID" type="java.lang.Integer" />
+      <form-property name="accountType" type="java.lang.String" />
+      <form-property name="folderID" type="java.lang.Integer" />
+      <form-property name="folderPathList" type="java.util.ArrayList" />
+      <form-property name="folderList" type="java.util.HashMap" />
+      <form-property name="folderType" type="java.lang.String" />
+    </form-bean>
+
+    <form-bean name="ruleForm" type="org.apache.struts.action.DynaActionForm">
+      <form-property name="ruleID" type="java.lang.Integer" />
+      <form-property name="accountID" type="java.lang.Integer" />
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="description" type="java.lang.String" />
+      <form-property name="enabled" type="java.lang.Boolean" initial="true" />
+      <form-property name="searchCriteria" type="com.centraview.advancedsearch.SearchCriteriaVO[]" size="1"/>
+      <form-property name="conditionList" type="java.util.ArrayList"/>
+      <form-property name="fieldList" type="java.util.ArrayList"/>
+      <form-property name="addRow" type="java.lang.String" initial="false" />
+      <form-property name="removeRow" type="java.lang.String" initial="false" />
+      <form-property name="moveMessage" type="java.lang.Boolean" initial="false" />
+      <form-property name="folderID" type="java.lang.Integer" />
+      <form-property name="folderList" type="java.util.HashMap" />
+      <form-property name="markMessageRead" type="java.lang.Boolean" initial="false" />
+      <form-property name="deleteMessage" type="java.lang.Boolean" initial="false" />
+    </form-bean>    
+
+    <form-bean name="composeMailForm" type="org.apache.struts.action.DynaActionForm">
+      <form-property name="accountID" type="java.lang.Integer" />
+      <form-property name="accountList" type="java.util.ArrayList" />
+      <form-property name="messageID" type="java.lang.Integer" />
+      <form-property name="to" type="java.lang.String" />
+      <form-property name="cc" type="java.lang.String" />
+      <form-property name="bcc" type="java.lang.String" />
+      <form-property name="subject" type="java.lang.String" />
+      <form-property name="body" type="java.lang.String" />
+      <form-property name="attachments" type="java.lang.String[]" />
+      <form-property name="attachmentList" type="java.util.ArrayList" />
+      <form-property name="composeInHTML" type="java.lang.Boolean" />
+      <form-property name="replyToAll" type="java.lang.Boolean" />
+      <form-property name="replyTo" type="java.lang.String" />
+      <form-property name="from" type="java.lang.String" />
+      <form-property name="savedDraftID" type="java.lang.Integer" initial="0" />
+      <form-property name="templateID" type="java.lang.Integer" initial="0"/>
+      <form-property name="templateList" type="java.util.ArrayList" />
+      <form-property name="loadTemplate" type="java.lang.Integer" initial="-1"/>
+    </form-bean>    
+
+    <form-bean name="emailMessageForm" type="org.apache.struts.action.DynaActionForm">
+      <form-property name="messageID" type="java.lang.Integer" />
+      <form-property name="accountID" type="java.lang.Integer" />
+      <form-property name="folderID" type="java.lang.Integer" />
+      <form-property name="from" type="javax.mail.Address" />
+      <form-property name="toList" type="java.util.ArrayList" />
+      <form-property name="ccList" type="java.util.ArrayList" />
+      <form-property name="bccList" type="java.util.ArrayList" />
+      <form-property name="messageDate" type="java.util.Date" />
+      <form-property name="subject" type="java.lang.String" />
+      <form-property name="attachmentList" type="java.util.ArrayList" />
+      <form-property name="body" type="java.lang.String" />
+      <form-property name="private" type="java.lang.String"/>
+      <form-property name="folderList" type="java.util.HashMap" />
+      <form-property name="previousMessage" type="java.lang.Integer" />
+      <form-property name="nextMessage" type="java.lang.Integer" />
+      <form-property name="showImportContactButton" type="java.lang.Boolean" />
+    </form-bean>
+
+    <form-bean name="markReadForm" type="org.apache.struts.action.DynaActionForm">
+      <form-property name="folderID" type="java.lang.Integer"/>
+      <form-property name="messageIDs" type="java.lang.String" />
+      <form-property name="status" type="java.lang.String" />
+    </form-bean>
+
+    <form-bean name="moveMessageForm" type="org.apache.struts.action.DynaActionForm">
+      <form-property name="folderID" type="java.lang.Integer"/>
+      <form-property name="newFolderID" type="java.lang.Integer"/>
+      <form-property name="messageIDs" type="java.lang.String" />
+    </form-bean>    
+
+    <form-bean name="mailFolderForm" type="org.apache.struts.action.DynaActionForm">
+      <form-property name="folderID" type="java.lang.Integer"/>
+      <form-property name="folderName" type="java.lang.String"/>
+      <form-property name="parentID" type="java.lang.Integer"/>
+      <form-property name="fullPath" type="java.lang.String" />
+      <form-property name="folderType" type="java.lang.String" />
+      <form-property name="totalMessages" type="java.lang.Integer" />
+      <form-property name="hasSubFolders" type="java.lang.Boolean" />
+      <form-property name="closeWindow" type="java.lang.Boolean" initial="false" />
+      <form-property name="folderDeleted" type="java.lang.Boolean" initial="false" />
+      <form-property name="accountID" type="java.lang.Integer"/>
+      <form-property name="parentName" type="java.lang.String"/>
+    </form-bean>
+    
+    <form-bean name="attachFileForm" type="com.centraview.mail.FileForm"/>
+    
+    <!-- used by webform import functionality -->
+    <form-bean name="webformImportForm" type="org.apache.struts.action.DynaActionForm">
+      <form-property name="messageID" type="java.lang.Integer" />
+      <form-property name="importType" type="java.lang.String" />
+      <form-property name="importFields" type="java.util.ArrayList" />
+    </form-bean>
+    
+  </form-beans>
+  
+  <action-mappings>
+  
+    <!-- Email value list -->
+    <action path="/email/email_list" type="com.centraview.mail.EmailValueListHandler" name="emailListForm" scope="request" validate="false">
+      <forward name=".view.email.valuelist" path=".view.email.valuelist"/>
+      <forward name=".view.email.setup" path=".view.email.setup"/>
+    </action>
+    
+    <!-- checking the folder -->
+    <action path="/email/check_mail" type="com.centraview.mail.CheckMailHandler" name="emailListForm" scope="request" validate="false">
+      <forward name="emailList" path="/email/email_list.do" />
+    </action>
+
+    <!-- creating new rule -->
+    <action path="/email/new_rule" type="com.centraview.mail.NewRuleHandler" name="ruleForm" scope="session" validate="false">
+      <forward name=".view.email.rules.new" path=".view.email.rules.new"/>
+    </action>
+    
+    <!-- composing new email -->    
+    <action path="/email/compose" type="com.centraview.mail.ComposeHandler" name="composeMailForm" scope="request" validate="false">
+      <forward name=".view.email.compose" path=".view.email.compose"/>
+    </action>
+
+    <!-- viewing template -->
+    <action path="/email/view_template" type="com.centraview.mail.TemplateComposeHandler" name="composeMailForm" scope="request" validate="false">
+      <forward name="editDraft" path="/email/view_draft.do" />
+    </action>    
+
+    <!-- viewing Draft -->
+    <action path="/email/view_draft" type="com.centraview.mail.EditDraftHandler" name="composeMailForm" scope="request" validate="false">
+      <forward name="displayComposeForm" path="/email/compose.do" />
+    </action>    
+
+    <!-- Viewing message -->
+    <action path="/email/view_message" type="com.centraview.mail.ViewMessageHandler" name="emailMessageForm" scope="request" validate="true">
+      <forward name=".view.email.view_message" path=".view.email.view_message"/>
+    </action>    
+    
+    <!-- common view message handler we can't perform any action we can only view the message -->
+    <action path="/email/common_view_message" type="com.centraview.mail.common.CommonViewMessageHandler" name="emailMessageForm" scope="request" validate="true">
+      <forward name="displayMessage" path="/jsp/mail/common/common_view_message.jsp"/>
+    </action>    
+
+    <!-- Delete Message-->
+    <action path="/email/delete_message" type="com.centraview.mail.DeleteMessage">
+      <forward name="emailList" path="/email/email_list.do" redirect="true"/>
+       </action>
+
+    <!-- Rule List Action -->
+    <action path="/email/rules_list" type="com.centraview.mail.RulesValueListHandler" name="rulesListForm" scope="request" validate="false">
+      <forward name=".view.email.rules.list" path=".view.email.rules.list"/>
+    </action>  
+
+    <!-- Delete Rule Action -->
+    <action path="/email/delete_rule" type="com.centraview.mail.DeleteRuleHandler">
+      <forward name="rulesList" path="/email/rules_list.do" redirect="true"/>
+    </action>
+
+    <!-- Enable Rule Action -->
+    <action path="/email/enable_rule" type="com.centraview.mail.EnableRuleHandler" name="ruleDeleteForm" scope="request" validate="false">
+      <forward name="showRulesList" path="/email/rules_list.do" redirect="true" />
+    </action>
+
+    <!-- View Rule Action -->
+    <action path="/email/view_rule" type="com.centraview.mail.ViewRuleHandler" name="ruleForm" scope="session" validate="false">
+      <forward name=".view.email.rules.view" path=".view.email.rules.view" />
+    </action>
+
+    <!-- Edit Rule -->
+    <action path="/email/edit_rule" type="com.centraview.mail.EditRuleHandler" name="ruleForm" scope="session" validate="false">
+      <forward name="errorOccurred" path=".view.email.rules.view" />
+      <forward name="showRulesList" path="/email/rules_list.do" redirect="true" />
+    </action>
+    
+    <!-- marking some message as private -->
+    <action path="/email/private_message" type="com.centraview.mail.PrivateMessageHandler" scope="request" validate="false">
+      <forward name="emailList" path="/email/email_list.do" redirect="true" />
+      <forward name="viewMessage" path="/email/view_message.do"  />      
+    </action>    
+
+    <!-- marking some message as read or unread -->
+    <action path="/email/read_message" type="com.centraview.mail.MarkReadHandler" name="markReadForm" scope="request" validate="false">
+      <forward name="mailList" path="/email/email_list.do" redirect="true" />
+    </action>
+
+    <!-- moving message from one folder to another -->
+    <action path="/email/move_message" type="com.centraview.mail.MoveMessageHandler" name="moveMessageForm" scope="request" validate="false">
+      <forward name="mailList" path="/email/email_list.do" redirect="true" />
+    </action>
+
+    <!-- create New Folder -->
+    <action path="/email/new_folder" type="com.centraview.mail.NewFolderHandler" name="mailFolderForm" scope="request" validate="false">
+      <forward name=".view.email.newfolder" path=".view.email.newfolder"/>
+    </action>
+
+    <action path="/email/view_folder" type="com.centraview.mail.ViewFolderHandler" name="mailFolderForm" scope="request" validate="false">
+      <forward name=".view.email.editfolder" path=".view.email.editfolder" />
+    </action>
+
+    <action path="/email/edit_folder" type="com.centraview.mail.EditFolderHandler" name="mailFolderForm" scope="request" validate="false">
+      <forward name="showFolderDetails" path="/jsp/mail/view_folder.jsp" />
+    </action>
+    
+    <action path="/email/delete_folder" type="com.centraview.mail.DeleteFolderHandler" name="mailFolderForm" scope="request" validate="false">
+      <forward name="closeWindow" path="/jsp/mail/view_folder.jsp" />
+    </action>
+
+    <action path="/email/folder_list" type="com.centraview.mail.FolderListHandler" scope="request" validate="false">
+      <forward name=".view.email.folder_list" path="/jsp/pages/email/folder_list.jsp" />
+    </action>
+
+    <action path="/email/template_save" type="com.centraview.mail.SaveTemplateHandler" name="composeMailForm" scope="request" validate="false">
+      <forward name="saveDraft" path="/email/draft_save.do" />
+    </action>
+    
+    <action path="/email/draft_save" type="com.centraview.mail.SaveDraftHandler" name="composeMailForm" scope="request" validate="false">
+      <forward name="displayComposeForm" path="/email/compose.do" />
+    </action>
+    
+    <action path="/email/send" type="com.centraview.mail.SendHandler" name="composeMailForm" scope="request" validate="false">
+      <forward name="closeWindow" path="/jsp/pages/common/window_close.jsp" />
+      <forward name="errorOccurred" path="/email/compose.do" />
+    </action>
+    
+    <action path="/email/reply" type="com.centraview.mail.ReplyHandler" name="composeMailForm" scope="request" validate="false">
+      <forward name="displayComposeForm" path="/email/compose.do"/>
+      <forward name="errorOccurred" path="/jsp/mail/compose_mail.jsp" />
+    </action>
+    
+    <action path="/email/forward" type="com.centraview.mail.ForwardHandler" name="composeMailForm" scope="request" validate="false">
+      <forward name="displayComposeForm" path="/email/compose.do"/>
+      <forward name="errorOccurred" path="/jsp/mail/compose_mail.jsp" />
+    </action>
+    
+    <action path="/email/address_lookup" type="com.centraview.mail.EmailLookupValueListAction" scope="request" validate="true" parameter="action">
+      <forward name=".view.email.lookup.list" path=".view.lookup"/>
+    </action>
+    
+    <action path="/email/attachment_lookup" type="com.centraview.mail.AttachFileHandler" name="attachFileForm" scope="request">
+      <forward name=".view.email.attachmentlookup" path=".view.email.attachmentlookup"/>
+    </action>
+    
+    <action path="/email/save_new_folder" type="com.centraview.mail.SaveNewFolderHandler" name="mailFolderForm" scope="request" validate="true">
+      <forward name="closeWindow" path=".view.email.newfolder"/>
+      <forward name="errorOccurred" path=".view.email.newfolder"/>
+    </action>
+    
+    <action path="/email/common_compose" type="com.centraview.mail.common.CommonComposeHandler" scope="request" parameter="action" validate="true" name="composeMailForm">
+      <forward name=".view.email.commoncompose" path=".view.email.commoncompose"/>
+    </action>
+    
+    <action path="/email/common_send" type="com.centraview.mail.common.CommonSendHandler" name="composeMailForm" scope="request" validate="false">
+      <forward name="closeWindow" path="/jsp/pages/common/window_close.jsp" />
+      <forward name="errorOccurred" path="/email/common_compose.do" />
+      <forward name="errorPage" path="/jsp/mail/common/EmailErrorPage.jsp" />
+    </action>
+    
+    <action path="/email/save_new_rule" type="com.centraview.mail.SaveNewRuleHandler" name="ruleForm" scope="session" validate="false">
+      <forward name="showRulesList" path="/email/rules_list.do" redirect="true" />
+      <forward name="errorOccurred" path=".view.email.rules.new" />
+    </action>
+ 
+     <action path="/mail/webimport/Import" type="com.centraview.mail.webimport.ImportHandler" name="webformImportForm" scope="request" validate="false">
+      <forward name="showImportForm" path="/jsp/mail/webimport/webform_import_c.jsp" />
+    </action>
+
+    <action path="/mail/webimport/SaveContact" type="com.centraview.mail.webimport.SaveContactHandler" name="webformImportForm" scope="request" validate="false">
+      <forward name="showContactDetails" path="/ViewIndividualDetail.do?rowId=" />
+      <forward name="errorOccurred" path="/jsp/mail/webimport/webform_import_c.jsp" />
+    </action>
+
+  </action-mappings>
+</struts-config>

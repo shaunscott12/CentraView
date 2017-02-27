@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<config>
+<SalesOrPurchase>
+<Desc get="getItemDesc">none</Desc>
+<Price get="getPrice" type="double" set="setPrice">none</Price> 
+<AccountRef get="getGlAccountId" type="int" set="setGlAccountId" table="GLAccount" cvtoaa="getEXIDFromID" aatocv="getIDFromEXID">none</AccountRef>
+</SalesOrPurchase>
+</config>

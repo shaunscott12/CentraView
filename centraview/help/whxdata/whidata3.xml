@@ -1,0 +1,293 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<indexdata>
+<key name="Employee handbook" >
+  <topic name="Adding Employee Handbook" url="adding_employee_handbook.htm" />
+  <key name="adding" >
+    <topic name="Adding Employee Handbook" url="adding_employee_handbook.htm" />
+  </key>
+</key>
+<key name="Employee list" >
+  <topic name="Adding Employee List" url="adding_employee_list.htm" />
+  <key name="adding" >
+    <topic name="Adding Employee List" url="adding_employee_list.htm" />
+  </key>
+</key>
+<key name="Entities" >
+  <topic name="Adding Entities" url="adding_entities.htm" />
+  <topic name="Deleting Entities" url="deleting_entities.htm" />
+  <topic name="Duplicating Entities" url="duplicating_entities.htm" />
+  <topic name="Viewing Entities" url="viewing_entities.htm" />
+  <key name="adding" >
+    <topic name="Adding Entities" url="adding_entities.htm" />
+  </key>
+  <key name="deleting" >
+    <topic name="Deleting Entities" url="deleting_entities.htm" />
+  </key>
+  <key name="duplicating" >
+    <topic name="Duplicating Entities" url="duplicating_entities.htm" />
+  </key>
+  <key name="viewing" >
+    <topic name="Viewing Entities" url="viewing_entities.htm" />
+  </key>
+</key>
+<key name="Events" >
+  <topic name="Adding Events" url="adding_events.htm" />
+  <topic name="Deleting Events" url="deleting_events.htm" />
+  <topic name="Duplicating Events" url="duplicating_events.htm" />
+  <topic name="Viewing Events" url="viewing_events.htm" />
+  <key name="adding" >
+    <topic name="Adding Events" url="adding_events.htm" />
+  </key>
+  <key name="deleting" >
+    <topic name="Deleting Events" url="deleting_events.htm" />
+  </key>
+  <key name="duplicating" >
+    <topic name="Duplicating Events" url="duplicating_events.htm" />
+  </key>
+  <key name="viewing" >
+    <topic name="Viewing Events" url="viewing_events.htm" />
+  </key>
+</key>
+<key name="Expense forms" >
+  <topic name="Adding Expense Forms" url="adding_expense_forms.htm" />
+  <key name="adding" >
+    <topic name="Adding Expense Forms" url="adding_expense_forms.htm" />
+  </key>
+</key>
+<key name="Expenses" >
+  <topic name="Adding Expenses" url="adding_expenses.htm" />
+  <topic name="Deleting Expenses" url="deleting_expenses.htm" />
+  <topic name="Viewing Expenses" url="viewing_expenses.htm" />
+  <key name="adding" >
+    <topic name="Adding Expenses" url="adding_expenses.htm" />
+  </key>
+  <key name="deleting" >
+    <topic name="Deleting Expenses" url="deleting_expenses.htm" />
+  </key>
+  <key name="viewing" >
+    <topic name="Viewing Expenses" url="viewing_expenses.htm" />
+  </key>
+</key>
+<key name="FAQs" >
+  <topic name="Adding FAQs" url="adding_faqs.htm" />
+  <topic name="Deleting FAQs" url="deleting_faqs.htm" />
+  <topic name="Duplicating FAQs" url="duplicating_faqs.htm" />
+  <topic name="Viewing FAQs" url="viewing_faqs.htm" />
+  <key name="adding" >
+    <topic name="Adding FAQs" url="adding_faqs.htm" />
+  </key>
+  <key name="deleting" >
+    <topic name="Deleting FAQs" url="deleting_faqs.htm" />
+  </key>
+  <key name="duplicating" >
+    <topic name="Duplicating FAQs" url="duplicating_faqs.htm" />
+  </key>
+  <key name="viewing" >
+    <topic name="Viewing FAQs" url="viewing_faqs.htm" />
+  </key>
+</key>
+<key name="File folders" >
+  <topic name="Adding File Folders" url="adding_file_folders.htm" />
+  <key name="adding" >
+    <topic name="Adding File Folders" url="adding_file_folders.htm" />
+  </key>
+</key>
+<key name="Files" >
+  <topic name="Adding Files" url="adding_files.htm" />
+  <topic name="Deleting Files" url="deleting_files.htm" />
+  <topic name="Duplicating Files" url="duplicating_files.htm" />
+  <topic name="Viewing Files" url="viewing_files.htm" />
+  <key name="adding" >
+    <topic name="Adding Files" url="adding_files.htm" />
+  </key>
+  <key name="deleting" >
+    <topic name="Deleting Files" url="deleting_files.htm" />
+  </key>
+  <key name="duplicating" >
+    <topic name="Duplicating Files" url="duplicating_files.htm" />
+  </key>
+  <key name="viewing" >
+    <topic name="Viewing Files" url="viewing_files.htm" />
+  </key>
+</key>
+<key name="Forecast sales" >
+  <topic name="Adding Forecast Sales" url="adding_forecast_sales.htm" />
+  <topic name="Deleting Forecast Sales" url="deleting_forecast_sales.htm" />
+  <topic name="Duplicating Forecast Sales" url="duplicating_forecast_sales.htm" />
+  <topic name="Viewing Forecast Sales" url="viewing_forecast_sales.htm" />
+  <key name="adding" >
+    <topic name="Adding Forecast Sales" url="adding_forecast_sales.htm" />
+  </key>
+  <key name="deleting" >
+    <topic name="Deleting Forecast Sales" url="deleting_forecast_sales.htm" />
+  </key>
+  <key name="duplicating" >
+    <topic name="Duplicating Forecast Sales" url="duplicating_forecast_sales.htm" />
+  </key>
+  <key name="viewing" >
+    <topic name="Viewing Forecast Sales" url="viewing_forecast_sales.htm" />
+  </key>
+</key>
+<key name="Groups" >
+  <topic name="Adding Groups" url="adding_groups.htm" />
+  <topic name="Deleting Groups" url="deleting_groups.htm" />
+  <topic name="Duplicating Groups" url="duplicating_groups.htm" />
+  <topic name="Viewing Groups" url="viewing_groups.htm" />
+  <key name="adding" >
+    <topic name="Adding Groups" url="adding_groups.htm" />
+  </key>
+  <key name="deleting" >
+    <topic name="Deleting Groups" url="deleting_groups.htm" />
+  </key>
+  <key name="duplicating" >
+    <topic name="Duplicating Groups" url="duplicating_groups.htm" />
+  </key>
+  <key name="viewing" >
+    <topic name="Viewing Groups" url="viewing_groups.htm" />
+  </key>
+</key>
+<key name="Import" >
+  <topic name="About WebForm Import" url="about_webform_import.htm" />
+</key>
+<key name="Importing" >
+  <topic name="Importing a Marketing List" url="importing_a_marketing_list.htm" />
+  <key name="marketing list" >
+    <topic name="Importing a Marketing List" url="importing_a_marketing_list.htm" />
+  </key>
+</key>
+<key name="Individuals" >
+  <topic name="Adding Individuals" url="adding_individuals.htm" />
+  <topic name="Deleting Individuals" url="deleting_individuals.htm" />
+  <topic name="Duplicating Individuals" url="duplicating_individuals.htm" />
+  <topic name="Viewing Individuals" url="viewing_individuals.htm" />
+  <key name="adding" >
+    <topic name="Adding Individuals" url="adding_individuals.htm" />
+  </key>
+  <key name="deleting" >
+    <topic name="Deleting Individuals" url="deleting_individuals.htm" />
+  </key>
+  <key name="duplicating" >
+    <topic name="Duplicating Individuals" url="duplicating_individuals.htm" />
+  </key>
+  <key name="viewing" >
+    <topic name="Viewing Individuals" url="viewing_individuals.htm" />
+  </key>
+</key>
+<key name="Inventory" >
+  <topic name="Adding Inventory" url="adding_inventory.htm" />
+  <topic name="Deleting Inventory" url="deleting_inventory.htm" />
+  <topic name="Viewing Inventory" url="viewing_inventory.htm" />
+  <key name="adding" >
+    <topic name="Adding Inventory" url="adding_inventory.htm" />
+  </key>
+  <key name="deleting" >
+    <topic name="Deleting Inventory" url="deleting_inventory.htm" />
+  </key>
+  <key name="viewing" >
+    <topic name="Viewing Inventory" url="viewing_inventory.htm" />
+  </key>
+</key>
+<key name="Invoice history" >
+  <topic name="Adding Invoice History" url="adding_invoice_history.htm" />
+  <topic name="Deleting Invoice History" url="deleting_invoice_history.htm" />
+  <topic name="Viewing Invoice History" url="viewing_invoice_history.htm" />
+  <key name="adding" >
+    <topic name="Adding Invoice History" url="adding_invoice_history.htm" />
+  </key>
+  <key name="deleting" >
+    <topic name="Deleting Invoice History" url="deleting_invoice_history.htm" />
+  </key>
+  <key name="viewing" >
+    <topic name="Viewing Invoice History" url="viewing_invoice_history.htm" />
+  </key>
+</key>
+<key name="Items" >
+  <topic name="Adding Items" url="adding_items.htm" />
+  <topic name="Deleting Items" url="deleting_items.htm" />
+  <topic name="Duplicating Items in the Knowledge Base" url="duplicating_items_in_the_knowledge_base.htm" />
+  <topic name="Viewing Items" url="viewing_items.htm" />
+  <key name="adding" >
+    <topic name="Adding Items" url="adding_items.htm" />
+  </key>
+  <key name="deleting" >
+    <topic name="Deleting Items" url="deleting_items.htm" />
+  </key>
+  <key name="duplicating" >
+    <topic name="Duplicating Items in the Knowledge Base" url="duplicating_items_in_the_knowledge_base.htm" />
+  </key>
+  <key name="viewing" >
+    <topic name="Viewing Items" url="viewing_items.htm" />
+  </key>
+</key>
+<key name="Knowledge base" >
+  <topic name="Adding to the Knowledge Base" url="adding_to_the_knowledge_base.htm" />
+  <topic name="Categorizing the Knowledge Base" url="categorizing_the_knowledge_base.htm" />
+  <topic name="Deleting from the Knowledge Base" url="deleting_from_the_knowledge_base.htm" />
+  <topic name="Duplicating Items in the Knowledge Base" url="duplicating_items_in_the_knowledge_base.htm" />
+  <topic name="Viewing the Knowledge Base" url="viewing_the_knowledge_base.htm" />
+  <key name="adding" >
+    <topic name="Adding to the Knowledge Base" url="adding_to_the_knowledge_base.htm" />
+  </key>
+  <key name="categorizing" >
+    <topic name="Categorizing the Knowledge Base" url="categorizing_the_knowledge_base.htm" />
+  </key>
+  <key name="viewing" >
+    <topic name="Viewing the Knowledge Base" url="viewing_the_knowledge_base.htm" />
+  </key>
+</key>
+<key name="Literature fulfillment request" >
+  <topic name="Adding Literature Fulfillment Requests" url="adding_literature_fulfillment_requests.htm" />
+  <topic name="Deleting a Literature Fulfillment Request" url="deleting_a_literature_fulfillment_request.htm" />
+  <topic name="Duplicating a Literature Fulfillment Request" url="duplicating_a_literature_fulfillment_request.htm" />
+  <topic name="Viewing a Literature Fulfillment Request" url="viewing_a_literature_fulfillment_request.htm" />
+  <key name="adding" >
+    <topic name="Adding Literature Fulfillment Requests" url="adding_literature_fulfillment_requests.htm" />
+  </key>
+  <key name="deleting" >
+    <topic name="Deleting a Literature Fulfillment Request" url="deleting_a_literature_fulfillment_request.htm" />
+  </key>
+  <key name="duplicating" >
+    <topic name="Duplicating a Literature Fulfillment Request" url="duplicating_a_literature_fulfillment_request.htm" />
+  </key>
+  <key name="viewing" >
+    <topic name="Viewing a Literature Fulfillment Request" url="viewing_a_literature_fulfillment_request.htm" />
+  </key>
+</key>
+<key name="Literature requests" >
+  <topic name="Adding Literature Requests" url="adding_literature_requests.htm" />
+  <topic name="Deleting Literature Requests" url="deleting_literature_requests.htm" />
+  <topic name="Duplicating Literature Requests" url="duplicating_literature_requests.htm" />
+  <topic name="Viewing Literature Requests" url="viewing_literature_requests.htm" />
+  <key name="adding" >
+    <topic name="Adding Literature Requests" url="adding_literature_requests.htm" />
+  </key>
+  <key name="deleting" >
+    <topic name="Deleting Literature Requests" url="deleting_literature_requests.htm" />
+  </key>
+  <key name="duplicating" >
+    <topic name="Duplicating Literature Requests" url="duplicating_literature_requests.htm" />
+  </key>
+  <key name="viewing" >
+    <topic name="Viewing Literature Requests" url="viewing_literature_requests.htm" />
+  </key>
+</key>
+<key name="Marketing list" >
+  <topic name="Deleting a Marketing List" url="deleting_a_marketing_list.htm" />
+  <topic name="Duplicating a Marketing List" url="duplicating_a_marketing_list.htm" />
+  <topic name="Importing a Marketing List" url="importing_a_marketing_list.htm" />
+  <topic name="Viewing a Marketing List" url="viewing_a_marketing_list.htm" />
+  <key name="deleting" >
+    <topic name="Deleting a Marketing List" url="deleting_a_marketing_list.htm" />
+  </key>
+  <key name="duplicating" >
+    <topic name="Duplicating a Marketing List" url="duplicating_a_marketing_list.htm" />
+  </key>
+  <key name="importing" >
+    <topic name="Importing a Marketing List" url="importing_a_marketing_list.htm" />
+  </key>
+  <key name="viewing" >
+    <topic name="Viewing a Marketing List" url="viewing_a_marketing_list.htm" />
+  </key>
+</key>
+
+</indexdata>

@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<config>
+<SalesOrPurchaseMod>
+<Desc get="getItemDesc">none</Desc>
+<Price get="getPrice" type="double" set="setPrice">none</Price> 
+</SalesOrPurchaseMod>
+</config>

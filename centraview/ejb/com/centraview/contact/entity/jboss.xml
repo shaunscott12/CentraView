@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jboss>
+  <enterprise-beans>
+    <entity>
+      <ejb-name>Entity</ejb-name>
+      <method-attributes>
+        <method>
+          <method-name>get*</method-name>
+          <read-only>true</read-only>
+        </method>
+        <method>
+          <method-name>setDataSource</method-name>
+          <read-only>true</read-only>
+        </method>
+      </method-attributes>
+      <jndi-name>Entity</jndi-name><local-jndi-name>local/Entity</local-jndi-name>
+    </entity>
+  </enterprise-beans>
+</jboss>
+  

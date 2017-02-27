@@ -1,0 +1,87 @@
+<!DOCTYPE tiles-definitions PUBLIC
+  "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+  "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+<!--
+ * $RCSfile: calendar.xml,v $    $Revision: 1.2 $  $Date: 2005/07/25 13:07:52 $ - $Author: mcallist $
+ * 
+ * The contents of this file are subject to the Open Software License
+ * Version 2.1 ("the License"); you may not use this file except in
+ * compliance with the License. You may obtain a copy of the License at
+ * http://www.centraview.com/opensource/license.html
+ * 
+ * Software distributed under the License is distributed on an "AS IS"
+ * basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+ * License for the specific language governing rights and limitations
+ * under the License.
+ * 
+ * The Original Code is: CentraView Open Source. 
+ * 
+ * The developer of the Original Code is CentraView.  Portions of the
+ * Original Code created by CentraView are Copyright (c) 2004 CentraView,
+ * LLC; All Rights Reserved.  The terms "CentraView" and the CentraView
+ * logos are trademarks and service marks of CentraView, LLC.
+-->
+<tiles-definitions>
+
+  <!-- Base page for all Calendar screens, must be extended -->
+  <definition name=".view.calendar.default" path="/jsp/layouts/calendar_t.jsp">
+    <put name="focus_element" value="searchTextBox" />
+    <put name="header" value="/jsp/tiles/header.jsp" />
+    <put name="main_nav" value="/jsp/tiles/main_nav_tabs.jsp" />
+    <put name="left_nav" value="/jsp/tiles/left_nav.jsp" />
+    <put name="search_bar" value="loadController.searchbar" />
+    <put name="date_bar" value="/jsp/tiles/calendar/date_bar.jsp" />
+    <put name="cal_nav_bar" value="/jsp/tiles/calendar/calendar_nav_bar.jsp" />
+    <put name="main_content" value="/jsp/pages/blank.jsp" />
+    <put name="mini_calendar" value="/jsp/tiles/calendar/mini_calendar.jsp" />
+    <put name="non_calendar_activities" value="/jsp/tiles/calendar/non_calendar_activities.jsp" />
+    <put name="footer" value="/jsp/tiles/footer.jsp" />
+    <putList name="js_includes">
+      <add value="calendar_js.jsp" />
+    </putList>    
+  </definition>
+
+  <definition name=".view.calendar.daily" extends=".view.calendar.default">
+    <put name="main_content" value="/jsp/pages/calendar/daily.jsp" />
+  </definition>
+
+  <definition name=".view.calendar.weekly" extends=".view.calendar.default">
+    <put name="main_content" value="/jsp/pages/calendar/weekly.jsp" />
+  </definition>
+
+  <definition name=".view.calendar.weekly.columns" extends=".view.calendar.default">
+    <put name="main_content" value="/jsp/pages/calendar/weekly_columns.jsp" />
+  </definition>
+
+  <definition name=".view.calendar.monthly" extends=".view.calendar.default">
+    <put name="main_content" value="/jsp/pages/calendar/monthly.jsp" />
+    <put name="mini_calendar" value="/jsp/pages/blank.jsp" />
+    <put name="non_calendar_activities" value="/jsp/pages/blank.jsp" />        
+  </definition>
+  
+  <definition name=".view.calendar.yearly" extends=".view.calendar.default">
+    <put name="main_content" value="/jsp/pages/calendar/yearly.jsp" />
+    <put name="mini_calendar" value="/jsp/pages/blank.jsp" />
+    <put name="non_calendar_activities" value="/jsp/pages/blank.jsp" />    
+  </definition>
+  
+  <definition name=".view.calendar.popup.datetime" extends=".view.popup.default">
+    <put name="focus_element" value=""/>
+    <put name="page_header" value="Select Date and Time"/>
+    <put name="top_bar" value="/jsp/pages/blank.jsp"/>
+    <put name="main_content" value="/jsp/pages/calendar/select_date_time.jsp"/>
+    <put name="bottom_bar" value="/jsp/pages/blank.jsp"/>
+  </definition>
+
+  <definition name=".view.calendar.popup.calendar" extends=".view.popup.default">
+    <put name="focus_element" value=""/>
+    <put name="page_header" value="Select Date"/>
+    <put name="top_bar" value="/jsp/pages/blank.jsp"/>
+    <put name="main_content" value="/jsp/pages/calendar/popup_calendar.jsp"/>
+    <put name="bottom_bar" value="/jsp/pages/blank.jsp"/>
+    <putList name="js_includes">
+      <add value="calendar_js.jsp" />
+    </putList>    
+  </definition>  
+
+</tiles-definitions>

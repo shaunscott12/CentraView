@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" 
+          "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<!--
+ * $RCSfile: accounting.xml,v $    $Revision: 1.4 $  $Date: 2005/07/31 04:17:36 $ - $Author: mcallist $
+ * 
+ * The contents of this file are subject to the Open Software License
+ * Version 2.1 ("the License"); you may not use this file except in
+ * compliance with the License. You may obtain a copy of the License at
+ * http://www.centraview.com/opensource/license.html
+ * 
+ * Software distributed under the License is distributed on an "AS IS"
+ * basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+ * License for the specific language governing rights and limitations
+ * under the License.
+ * 
+ * The Original Code is: CentraView Open Source. 
+ * 
+ * The developer of the Original Code is CentraView.  Portions of the
+ * Original Code created by CentraView are Copyright (c) 2004 CentraView,
+ * LLC; All Rights Reserved.  The terms "CentraView" and the CentraView
+ * logos are trademarks and service marks of CentraView, LLC.
+-->
+<struts-config>
+
+  <form-beans>
+
+    <!-- item form -->
+    <form-bean name="itemform" type="com.centraview.account.item.ItemForm"/>
+
+    <!-- order form -->
+    <form-bean name="orderform" type="com.centraview.account.order.OrderForm"/>
+
+    <!-- invoice form -->
+    <form-bean name="invoiceform" type="com.centraview.account.invoice.InvoiceForm"/>
+
+    <!-- item form -->
+    <form-bean name="ItemLookupForm" type="com.centraview.account.item.ItemForm"/>
+
+    <!-- Inventory Item form -->
+    <form-bean name="inventoryform" type="com.centraview.account.inventory.InventoryForm"/>
+
+    <!-- Expense form -->
+    <form-bean name="expenseform" type="com.centraview.account.expense.ExpenseForm"/>
+
+    <!-- purchase order form -->
+    <form-bean name="purchaseForm" type="com.centraview.account.purchaseorder.PurchaseOrderForm"/>
+
+    <!-- payment form bean -->
+    <form-bean name="paymentForm" type="com.centraview.account.payment.PaymentForm"/>
+    
+  </form-beans>
+  
+  <action-mappings>
+
+    <!-- Order List Action -->  
+    <action path="/accounting/order_list" type="com.centraview.account.order.OrderValueListAction">
+      <forward name=".view.accounting.orderlist" path=".view.valuelist"/>
+      <forward name=".view.accounting.orderlookup" path=".view.lookup"/>
+    </action> 
+
+    <action path="/accounting/order_lookup" type="org.apache.struts.actions.ForwardAction" parameter="/accounting/order_list.do?actionType=lookup"/>
+    
+    <!-- Invoice List Action -->  
+    <action path="/accounting/invoice_list" type="com.centraview.account.invoice.InvoiceValueListAction">
+      <forward name=".view.accounting.invoicelist" path=".view.valuelist"/>
+    </action> 
+
+    <!-- Payment List Action -->  
+    <action path="/accounting/payment_list" type="com.centraview.account.payment.PaymentValueListAction">
+      <forward name=".view.accounting.paymentlist" path=".view.valuelist"/>
+    </action> 
+
+    <!-- Expense List Action -->  
+    <action path="/accounting/expense_list" type="com.centraview.account.expense.ExpenseValueListAction">
+      <forward name=".view.accounting.expenselist" path=".view.valuelist"/>
+    </action> 
+    
+    <!-- Purchase Order List Action --> 
+    <action path="/accounting/purchaseorder_list" type="com.centraview.account.purchaseorder.PurchaseOrderValueListAction">
+      <forward name=".view.accounting.purchaseorderlist" path=".view.valuelist"/>
+    </action> 
+    
+    <!-- Item List Action --> 
+    <action path="/accounting/item_list" type="com.centraview.account.item.ItemValueListAction">
+      <forward name=".view.accounting.itemlist" path=".view.valuelist"/>
+      <forward name=".view.accounting.itemlookup" path=".view.lookup"/>
+    </action>
+    
+    <action path="/accounting/item_lookup" type="org.apache.struts.actions.ForwardAction" parameter="/accounting/item_list.do?actionType=lookup"/>
+    <action path="/accounting/sub_item_lookup" type="org.apache.struts.actions.ForwardAction" parameter="/accounting/item_list.do?actionType=lookupSubItem"/>
+    
+    <!-- GLAccount List Action -->  
+    <action path="/accounting/glaccount_list" type="com.centraview.account.glaccount.GLAccountValueListAction">
+      <forward name=".view.accounting.glaccountlist" path=".view.valuelist"/>
+    </action>
+    
+    <!-- Inventory List Action -->  
+    <action path="/accounting/inventory_list" type="com.centraview.account.inventory.InventoryValueListAction">
+      <forward name=".view.accounting.inventorylist" path=".view.valuelist"/>
+    </action>   
+
+    <!-- Vendor List Action --> 
+    <action path="/accounting/vendor_list" type="com.centraview.account.vendor.VendorValueListAction">
+        <forward name=".view.accounting.vendorlist" path=".view.vendor.valuelist"/>
+        <forward name=".view.accounting.vendorlookup" path=".view.lookup"/>
+    </action>           
+
+    <action path="/accounting/vendor_lookup" type="org.apache.struts.actions.ForwardAction" parameter="/accounting/vendor_list.do?actionType=lookup"/>
+
+    <!-- Delete Handler for Expense module  -->   
+    <action path="/accounting/delete_expenselist" type="com.centraview.account.expense.ExpenseListDeleteHandler">
+    </action>   
+
+    <!-- Delete Handler for Inventory module  -->   
+    <action path="/accounting/delete_inventorylist" type="com.centraview.account.inventory.InventoryListDeleteHandler">
+      <forward name=".view.accounting.inventorylist" path="/accounting/inventory_list.do"/>
+    </action>   
+
+    <!-- Delete Handler for Invoice module  -->   
+    <action path="/accounting/delete_invoicelist" type="com.centraview.account.invoice.InvoiceListDeleteHandler">
+    </action>   
+
+    <!-- Delete Handler for Order module  -->   
+    <action path="/accounting/delete_orderlist" type="com.centraview.account.order.OrderListDeleteHandler">
+    </action>   
+
+    <!-- Delete Handler for Payment module  -->   
+    <action path="/accounting/delete_paymentlist" type="com.centraview.account.payment.PaymentListDeleteHandler">
+    </action>   
+
+    <!-- Delete Handler for Purchase Order module  -->    
+    <action path="/accounting/delete_purchaseorderlist" type="com.centraview.account.purchaseorder.PurchaseOrderListDeleteHandler">
+    </action>   
+
+    <!-- Delete Handler for Item module  -->    
+    <action path="/accounting/delete_itemlist" type="com.centraview.account.item.ItemListDeleteHandler">
+      <forward name=".view.accounting.itemlist" path="/accounting/item_list.do"/>
+    </action>   
+
+    <!-- Delete Handler for Vendor module  -->    
+    <action path="/accounting/delete_vendorlist" type="com.centraview.account.vendor.VenderListDeleteHandler">
+    </action>   
+
+    <!-- show new order screen  -->   
+    <action path="/accounting/new_order" type="com.centraview.account.order.DisplayNewOrderHandler" scope="request" validate="false" name="orderform" >
+      <forward name=".view.accounting.new_order" path=".view.accounting.new_order" />
+    </action>   
+
+    <!-- save new order -->
+    <action path="/accounting/save_new_order" type="com.centraview.account.order.SaveNewOrderHandler" scope="request" validate="true" name="orderform" input="/accounting/new_order.do">
+      <forward name="savenew" path="/accounting/new_order.do" redirect="true" />
+      <forward name="save" path="/accounting/view_order.do"/>
+      <forward name="saveclose" path="/accounting/order_list.do" redirect="true" />
+    </action>
+
+    <!-- view order screen -->  
+    <action path="/accounting/view_order" type="com.centraview.account.order.DisplayEditOrderHandler" scope="request" validate="false" name="orderform">
+      <forward name=".view.accounting.view_order" path=".view.accounting.view_order" />
+      <forward name="editorderpopup" path="/jsp/account/order/EditOrder.jsp"/>
+    </action>
+
+    <!-- save existing order -->
+    <action path="/accounting/save_edit_order" type="com.centraview.account.order.SaveEditOrderHandler" scope="request" validate="true" name="orderform" input="/accounting/view_order.do">
+      <forward name=".forward.accounting.new_order" path="/accounting/new_order.do" redirect="true" />
+      <forward name=".view.accounting.view_order" path="/accounting/view_order.do"/>
+      <forward name=".forward.accounting.order_list" path="/accounting/order_list.do" redirect="true" />
+    </action>
+
+    <!-- delete existing -->
+    <action path="/accounting/delete_order" type="com.centraview.account.order.DeleteOrderHandler" validate="false" name="orderform">
+      <forward name=".forward.accounting.order_list" path="/accounting/order_list.do" redirect="true" />
+    </action>
+
+    <!-- populate new invoice form with details of existing order -->
+    <action path="/accounting/auto_generate_invoice" type="com.centraview.account.order.AutoGenerateInvoiceHandler" scope="request" validate="false" name="invoiceform">
+      <forward name=".view.accounting.new_invoice" path=".view.accounting.new_invoice"/>
+    </action>
+
+
+
+    <!-- New Handler for Item module  -->   
+    <action path="/accounting/new_item" type="com.centraview.account.item.DisplayNewItemHandler" scope="request" validate="false" name="itemform">
+      <forward name=".view.accounting.item_detail" path=".view.accounting.item_detail"/>
+    </action>
+    
+    <!-- New Handler for Invoice module  -->    
+    <action path="/accounting/new_invoice" type="com.centraview.account.invoice.DisplayNewInvoiceHandler" scope="request" validate="false" name="invoiceform">
+      <forward name=".view.accounting.new_invoice" path=".view.accounting.new_invoice"/>
+    </action>
+    
+    <!-- New Handler for Payment module  -->    
+    <action path="/accounting/new_payment" type="com.centraview.account.payment.DisplayNewPaymentHandler" scope="request" validate="false" name="paymentForm">
+      <forward name=".view.accounting.new_payment" path=".view.accounting.new_payment"/>
+    </action>
+    
+    <!-- New Handler for Purchase Order module  -->   
+    <action path="/accounting/new_purchaseorder" type="com.centraview.account.purchaseorder.DisplayNewPurchaseOrderHandler" scope="request" validate="false" name="purchaseForm">
+      <forward name=".view.accounting.purchaseorder.new" path=".view.accounting.purchaseorder.new"/>
+    </action>   
+
+    <!-- New Handler for Vendor module  -->   
+    <action path="/accounting/save_vendor" type="com.centraview.account.vendor.AddVendorHandler" scope="request" validate="false" name="vendor">
+      <forward name="showvendorlist" path="/accounting/vendor_list.do"/>
+    </action>   
+    
+    <!-- New Handler for Order module  -->  
+    <action path="/accounting/new_inventory" type="com.centraview.account.inventory.NewInventoryHandler" scope="request" validate="false" name="inventoryform">
+      <forward name=".view.accounting.inventory_detail" path=".view.accounting.inventory_detail"/>
+    </action>   
+
+		<!-- New Handler for Expense module  -->		
+    <action path="/accounting/new_expense" type="com.centraview.account.expense.NewExpenseHandler" scope="request" validate="false" name="expenseform">
+			<forward name=".view.accounting.expenses.new" path=".view.accounting.expenses.new"/>
+    </action>
+
+    <!-- Duplicate Handler for Order module  -->    
+    <action path="/accounting/duplicate_order" type="com.centraview.account.order.DisplayDuplicateOrderHandler" scope="request" validate="false" name="orderform">
+      <forward name=".view.accounting.new_order" path=".view.accounting.new_order"/>
+    </action>
+
+    <!-- Duplicate Handler for Invoice module  -->    
+    <action path="/accounting/duplicate_invoice" type="com.centraview.account.invoice.DisplayDuplicateInvoiceHandler" scope="request" validate="false" name="invoiceform">
+      <forward name=".view.accounting.new_invoice" path=".view.accounting.new_invoice"/>
+    </action>
+
+    <!-- Duplicate Handler for Expense module  -->    
+    <action path="/accounting/duplicate_expense" type="com.centraview.account.expense.DuplicateExpenseHandler" scope="request" validate="false" name="expenseform">
+      <forward name="ExpenseDetails" path="/jsp/account/expense/showlist_expense_c.jsp"/>
+    </action>   
+
+    <!-- Duplicate Handler for Inventory module  -->  
+    <action path="/accounting/duplicate_inventory" type="com.centraview.account.inventory.DuplicateInventoryHandler" scope="request" validate="false" name="inventoryform">
+      <forward name=".view.accounting.inventory_detail" path=".view.accounting.inventory_detail"/>
+    </action>
+    
+
+    <!-- Duplicate Handler for Purchase Order module  --> 
+    <action path="/accounting/duplicate_purchaseorder" type="com.centraview.account.purchaseorder.DuplicatePurchaseOrderHandler" scope="request" validate="false" name="purchaseForm">
+      <forward name="duplicatepurchase" path="/jsp/account/purchaseorder/showlist_purchaseorder_c.jsp"/>
+    </action>
+    
+    <!-- Duplicate Handler for Payment module  -->  
+    <action path="/accounting/duplicate_payment" type="com.centraview.account.payment.DuplicatePaymentHandler" scope="request" validate="false" name="paymentForm">
+      <forward name=".view.accounting.new_payment" path=".view.accounting.new_payment"/>
+    </action>
+    
+    <!-- View Handler for Item module  -->  
+    <action path="/accounting/view_item" type="com.centraview.account.item.DisplayEditItemHandler" scope="request" validate="false" name="itemform">
+      <forward name=".view.accounting.item_detail" path=".view.accounting.item_detail"/>
+    </action>
+    
+    <!-- View Handler for Invoice module  --> 
+    <action path="/accounting/view_invoice" type="com.centraview.account.invoice.DisplayEditInvoiceHandler" validate="false"  scope="request" name="invoiceform">
+      <forward name=".view.accounting.view_invoice" path=".view.accounting.view_invoice"/>
+    </action>   
+    
+    <!-- View Handler for Payment module  --> 
+    <action path="/accounting/view_payment" type="com.centraview.account.payment.DisplayEditPaymentHandler" scope="request" validate="false"  name="paymentForm">
+      <forward name=".view.accounting.view_payment" path=".view.accounting.view_payment"/>
+    </action>
+    
+    <!-- View Handler for Purchase Order module  -->      
+    <action path="/accounting/view_purchaseorder" type="com.centraview.account.purchaseorder.DisplayEditPurchaseOrderHandler" validate="false"  scope="request" name="purchaseForm">
+      <forward name=".view.accounting.purchaseorder.edit" path=".view.accounting.purchaseorder.edit"/>
+    </action>
+    
+    <!-- View Handler for Expense module  --> 
+    <action path="/accounting/view_expense" type="com.centraview.account.expense.DisplayExpenseHandler" scope="request" validate="false" name="expenseform">
+			<forward name=".view.accounting.expenses.edit" path=".view.accounting.expenses.edit"/>
+    </action>   
+    
+    <!-- View Handler for Expense module  -->     
+    <action path="/accounting/view_inventory" type="com.centraview.account.inventory.DisplayInventoryHandler" scope="request" validate="false" name="inventoryform">
+      <forward name=".view.accounting.inventory_detail" path=".view.accounting.inventory_detail"/>
+    </action>   
+
+    <action path="/accounting/save_new_invoice" type="com.centraview.account.invoice.SaveNewInvoiceHandler" validate="true" name="invoiceform" input="/accounting/new_invoice.do?actionType=error">
+      <forward name=".view.accounting.view_invoice" path="/accounting/view_invoice.do"/>
+      <forward name=".view.accounting.new_invoice" path="/accounting/new_invoice.do"/>
+      <forward name=".view.accounting.invoicelist" path="/accounting/invoice_list.do"/>
+    </action>
+    <action path="/accounting/save_edit_invoice" type="com.centraview.account.invoice.SaveEditInvoiceHandler" validate="true" name="invoiceform" input="/accounting/view_invoice.do">
+      <forward name=".view.accounting.view_invoice" path="/accounting/view_invoice.do"/>
+      <forward name=".view.accounting.new_invoice" path="/accounting/new_invoice.do"/>
+      <forward name=".view.accounting.invoicelist" path="/accounting/invoice_list.do"/>
+    </action>
+
+		<action path="/accounting/save_new_expense" type="com.centraview.account.expense.SaveNewExpenseHandler" scope="request" validate="true" name="expenseform" input=".view.accounting.expenses.new">
+			<forward name="save" path="/accounting/new_expense.do"/>
+			<forward name="savenew" path="/accounting/new_expense.do"/>
+			<forward name="saveclose" path="/accounting/expense_list.do"/>
+		</action>
+		
+		<action path="/accounting/save_expense" type="com.centraview.account.expense.SaveExpenseHandler" scope="request" validate="true" name="expenseform" input=".view.accounting.expenses.edit">
+			<forward name="save" path="/accounting/view_expense.do"/>
+			<forward name="savenew" path="/accounting/new_expense.do" redirect="true"/>
+			<forward name="saveclose" path="/accounting/expense_list.do"/>
+		</action>
+
+		<action path="/accounting/save_new_purchaseorder" type="com.centraview.account.purchaseorder.SaveNewPurchaseOrderHandler" validate="true" name="purchaseForm" input=".view.accounting.purchaseorder.new">
+			<forward name="save" path="/accounting/view_purchaseorder.do"/>
+			<forward name="savenew" path="/accounting/new_purchaseorder.do"/>
+			<forward name="saveclose" path="/accounting/purchaseorder_list.do"/>
+		</action>
+
+    <action path="/accounting/save_new_payment" type="com.centraview.account.payment.SaveNewPaymentHandler" validate="true" name="paymentForm" input="/accounting/new_payment.do?actionType=error">
+      <forward name=".view.accounting.view_payment" path="/accounting/view_payment.do"/>
+      <forward name=".view.accounting.new_payment" path="/accounting/new_payment.do"/>
+      <forward name=".view.accounting.paymentlist" path="/accounting/payment_list.do"/>
+    </action>
+    
+    <action path="/accounting/save_edit_payment" type="com.centraview.account.payment.SaveEditPaymentHandler" validate="true" name="paymentForm" input="/accounting/view_payment.do">
+      <forward name=".view.accounting.view_payment" path="/accounting/view_payment.do"/>
+      <forward name=".view.accounting.new_payment" path="/accounting/new_payment.do"/>
+      <forward name=".view.accounting.paymentlist" path="/accounting/payment_list.do"/>
+    </action>
+
+	<action path="/accounting/save_edit_purchaseorder" type="com.centraview.account.purchaseorder.SaveEditPurchaseOrderHandler" validate="true" name="purchaseForm" input=".view.accounting.purchaseorder.edit">
+		<forward name="save" path="/accounting/view_purchaseorder.do"/>
+		<forward name="savenew" path="/accounting/new_purchaseorder.do"/>
+		<forward name="saveclose" path="/accounting/purchaseorder_list.do"/>
+		<forward name="delete" path="/accounting/purchaseorder_list.do"/>
+	</action>
+
+    <action path="/accounting/save_new_item" type="com.centraview.account.item.SaveNewItemHandler" scope="request" validate="true" name="itemform" input="/accounting/new_item.do?actionType=error">
+      <forward name=".view.accounting.item.save" path="/accounting/view_item.do"/>
+      <forward name=".view.accounting.item.savenew" path="/accounting/new_item.do" redirect="true"/>
+      <forward name=".view.accounting.item.saveclose" path="/accounting/item_list.do"/>
+    </action>
+
+    <action path="/accounting/save_edit_item" type="com.centraview.account.item.SaveEditItemHandler" scope="request" validate="true" name="itemform" input="/accounting/view_item.do">
+      <forward name=".view.accounting.item.save" path="/accounting/view_item.do"/>
+      <forward name=".view.accounting.item.savenew" path="/accounting/new_item.do" redirect="true"/>
+      <forward name=".view.accounting.item.saveclose" path="/accounting/item_list.do"/>
+    </action>
+
+    <action path="/accounting/save_inventory" type="com.centraview.account.inventory.SaveInventoryHandler" scope="request" validate="false" name="inventoryform">
+      <forward name=".view.accounting.save" path="/accounting/view_inventory.do"/>
+      <forward name=".view.accounting.savenew" path="/accounting/new_inventory.do"/>
+      <forward name=".view.accounting.saveclose" path="/accounting/inventory_list.do"/>
+    </action>    
+
+		<action path="/accounting/auto_generate_order" type="com.centraview.sale.proposal.AutoGenerateOrderHandler" scope="request" validate="false" name="proposallistform">
+			<forward name="viewProposal" path="/sales/view_proposal.do"/>
+		</action>
+
+  </action-mappings>
+</struts-config>
+

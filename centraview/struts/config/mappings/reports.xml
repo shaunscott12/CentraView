@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<!--
+ * $RCSfile: reports.xml,v $ $Revision: 1.4 $ $Date: 2005/07/31 04:17:36 $ - $Author: mcallist $
+ * 
+ * The contents of this file are subject to the Open Software License
+ * Version 2.1 ("the License"); you may not use this file except in
+ * compliance with the License. You may obtain a copy of the License at
+ * http://www.centraview.com/opensource/license.html
+ * 
+ * Software distributed under the License is distributed on an "AS IS"
+ * basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+ * License for the specific language governing rights and limitations
+ * under the License.
+ * 
+ * The Original Code is: CentraView Open Source. 
+ * 
+ * The developer of the Original Code is CentraView. Portions of the
+ * Original Code created by CentraView are Copyright (c) 2004 CentraView,
+ * LLC; All Rights Reserved. The terms "CentraView" and the CentraView
+ * logos are trademarks and service marks of CentraView, LLC.
+-->
+<struts-config>
+  <form-beans>
+    <form-bean name="standardreportform" type="org.apache.struts.validator.DynaValidatorForm">            
+      <form-property name="selectedTopFields" type="java.lang.String[]" size="1"/>
+      <form-property name="contentFields" type="java.lang.String" initial="" />
+      <form-property name="contentOrders" type="java.lang.String" initial="" />
+      <form-property name="contentFieldNames" type="java.lang.String" initial="" />
+    <!-- report -->
+      <form-property name="name" type="java.lang.String" initial="" />
+      <form-property name="description" type="java.lang.String" initial="" />
+      <form-property name="startday" type="java.lang.String" initial="" />
+      <form-property name="startmonth" type="java.lang.String" initial="" />
+      <form-property name="startyear" type="java.lang.String" initial="" />
+      <form-property name="endday" type="java.lang.String" initial="" />
+      <form-property name="endmonth" type="java.lang.String" initial="" />
+      <form-property name="endyear" type="java.lang.String" initial="" />
+      <form-property name="searchFields" type="java.lang.String" initial="" />
+      <form-property name="copy" type="java.lang.Boolean" initial="" />
+      <form-property name="reportId" type="java.lang.Integer" initial="0"/>      
+    <!-- end of report -->
+      <form-property name="searchName" type="java.lang.String" initial="" />
+      <form-property name="searchCriteria" type="com.centraview.advancedsearch.SearchCriteriaVO[]" size="1"/>
+    <!-- Collections for dropdowns -->
+      <form-property name="tableList" type="java.util.ArrayList"/>
+      <form-property name="conditionList" type="java.util.ArrayList"/>
+    <!-- HashMap of allField dropdown collections -->
+      <form-property name="allFields" type="java.util.HashMap"/>
+    <!-- hidden -->
+      <form-property name="searchId" type="java.lang.String" initial="0" />
+      <form-property name="moduleId" type="java.lang.Integer" initial="14"/>
+      <form-property name="ownerId" type="java.lang.String" initial="0"/>
+      <form-property name="addRow" type="java.lang.String" initial="false" />
+      <form-property name="removeRow" type="java.lang.String" initial="false" />
+      <form-property name="saveSearch" type="java.lang.String" initial="false" />
+      <form-property name="applySearch" type="java.lang.String" initial="false" />
+      <form-property name="showFields" type="java.lang.String" initial="false" />
+      <form-property name="createNew" type="java.lang.String" initial="true" />
+      <form-property name="deleteSearch" type="java.lang.String" initial="false" />
+    </form-bean>
+    
+    <form-bean name="adhocreportform" type="org.apache.struts.validator.DynaValidatorForm">      
+      <form-property name="selectedTopFields" type="java.lang.String[]" size="1"/>
+      <form-property name="contentFields" type="java.lang.String" initial="" />
+      <form-property name="contentOrders" type="java.lang.String" initial="" />
+      <form-property name="contentFieldNames" type="java.lang.String" initial="" />
+    <!-- report -->
+      <form-property name="name" type="java.lang.String" initial="" />
+      <form-property name="description" type="java.lang.String" initial="" />
+      <form-property name="searchFields" type="java.lang.String" initial="" />
+      <form-property name="copy" type="java.lang.Boolean" initial="" />
+      <form-property name="reportId" type="java.lang.Integer" initial="0"/>      
+    <!-- end of report -->
+      <form-property name="searchName" type="java.lang.String" initial="" />
+      <form-property name="searchCriteria" type="com.centraview.advancedsearch.SearchCriteriaVO[]" size="1"/>
+    <!-- Collections for dropdowns -->
+      <form-property name="tableList" type="java.util.ArrayList"/>
+      <form-property name="conditionList" type="java.util.ArrayList"/>
+    <!-- HashMap of allField dropdown collections -->
+      <form-property name="allFields" type="java.util.HashMap"/>
+    <!-- hidden -->
+      <form-property name="searchId" type="java.lang.String" initial="0" />
+      <form-property name="moduleId" type="java.lang.Integer" initial="14"/>
+      <form-property name="ownerId" type="java.lang.String" initial="0"/>
+      <form-property name="addRow" type="java.lang.String" initial="false" />
+      <form-property name="removeRow" type="java.lang.String" initial="false" />
+      <form-property name="saveSearch" type="java.lang.String" initial="false" />
+      <form-property name="applySearch" type="java.lang.String" initial="false" />
+      <form-property name="showFields" type="java.lang.String" initial="false" />
+      <form-property name="createNew" type="java.lang.String" initial="true" />
+      <form-property name="deleteSearch" type="java.lang.String" initial="false" />
+    </form-bean>
+  </form-beans>
+  
+  <action-mappings>
+  
+    <action path="/reports/standard_list" type="com.centraview.report.web.StandardReportListHandler">
+      <forward name="valuelist" path=".view.valuelist.nosearch"/> <!-- The handler sets the forwardname for the UIAttributes to be set appropriately -->
+    </action>
+    
+    <action path="/reports/standard_report" type="com.centraview.report.web.EditStandardReportHandler" scope="session" validate="false" name="standardreportform">
+      <forward name="editStandard" path=".view.reports.edit_standard"/> <!-- The handler sets the forwardname for the UIAttributes to be set appropriately -->
+      <forward name="showstandardreportlist" path="/reports/standard_list.do"/>
+      <forward name="showstandardreportresult" path=".view.reports.view_standard"/>
+      <forward name="csvstandardreportresult" path="/jsp/pages/reports/csv_standard_report.jsp"/>
+      <forward name="printstandardreportresult" path=".view.reports.standard.print"/>
+    </action>
+
+    <action path="/reports/adhoc_list" type="com.centraview.report.web.AdHocReportListHandler" scope="session" validate="false" name="reportform">
+      <forward name="valuelist" path=".view.valuelist.nosearch"/> <!-- The handler sets the forwardname for the UIAttributes to be set appropriately -->
+    </action>
+
+    <action path="/reports/new_adhoc" type="com.centraview.report.web.NewAdHocReportHandler" scope="session" validate="false" name="adhocreportform">
+      <forward name="shownewadhocreport" path=".view.reports.add.adhoc"/>
+    </action>
+
+    <action path="/reports/add_adhoc" type="com.centraview.report.web.AddAdHocReportHandler" scope="session"  validate="false" input="/jsp/reports/add_adhoc_report_c.jsp" name="adhocreportform">
+      <forward name="newaddhocreport" path="/reports/new_adhoc.do" redirect="true"/>
+      <forward name="addadhocreport" path=".view.reports.add.adhoc"/>
+      <forward name="showadhocreportlist" path="/reports/adhoc_list.do" redirect="true"/>
+      <forward name="showadhocreportresult" path="/reports/view_adhoc.do"/>
+    </action>
+
+    <action path="/reports/adhoc_report" type="com.centraview.report.web.EditAdHocReportHandler" scope="session" validate="false" name="adhocreportform">
+      <forward name="editadhocreport" path=".view.reports.edit.adhoc"/>
+      <forward name="showadhocreportlist" path="/reports/adhoc_list.do"/>
+      <forward name="showadhocreportresult" path="/reports/view_adhoc.do"/>
+    </action>
+
+    <action path="/reports/view_adhoc" type="com.centraview.report.web.ViewAdHocReportHandler" scope="session" validate="false" name="adhocreportform">
+      <forward name="showadhocreportresult" path=".view.reports.view.adhoc"/>
+      <forward name="csvadhocreportresult" path="/jsp/pages/reports/csv_adhoc_report.jsp"/>
+      <forward name="printadhocreportresult" path=".view.reports.adhoc.print"/>
+    </action>
+
+    <action path="/reports/delete_adhoc" type="com.centraview.report.web.DeleteReportHandler" scope="session" validate="false" name="adhocreportform">
+      <forward name="showadhocreportlist" path="/reports/adhoc_list.do?moduleId=" redirect="true"/>
+    </action>
+    
+  </action-mappings>
+</struts-config>

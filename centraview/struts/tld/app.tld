@@ -1,0 +1,1864 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE taglib
+  PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.1//EN"
+  "http://java.sun.com/j2ee/dtds/web-jsptaglibrary_1_1.dtd">
+<taglib>
+  <tlibversion>1.0</tlibversion>
+  <jspversion>1.2</jspversion>
+  <shortname>app</shortname>
+  <uri>http://centraview.com/taglibs/app</uri>
+  <info>
+    This tag library contains functionality specific to the CentraView Application.
+  </info>
+  <tag>
+    <name>valuelist</name>
+    <tagclass>com.centraview.udt.ValueListTag</tagclass>
+    <bodycontent>empty</bodycontent>
+    <info>Generate a HTML table from a ValueListVO.</info>
+    <attribute>
+      <name>listObjectName</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>	
+  <tag>
+    <name>TitleWindow</name>
+    <tagclass>com.centraview.udt.TitleWindowTag</tagclass>
+    <info>Generate a title to be displayed in browser window.</info>
+    <attribute>
+      <name>moduleName</name>
+      <required>true</required>
+      <rtexprvalue>false</rtexprvalue>
+    </attribute>
+  </tag>
+  <tag>
+    <name>StatusWindow</name>
+    <tagclass>com.centraview.tag.StatusWindowTag</tagclass>
+    <info>Generate a status to be displayed in browser window.</info>
+    <attribute>
+      <name>status</name>
+      <required>true</required>
+      <rtexprvalue>false</rtexprvalue>
+    </attribute>
+  </tag>
+
+<tag>
+	<name>cvbutton</name>
+	<tagclass>com.centraview.udt.CVButtonTag</tagclass>
+		<attribute>
+			<name>buttonoperationtype</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>statuswindow</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>statuswindowarg</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>tooltip</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+
+		<attribute>
+		<name>accesskey</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>alt</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>altKey</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>disabled</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>indexed</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onblur</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onchange</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onclick</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>ondblclick</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onfocus</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onkeydown</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onkeypress</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onkeyup</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onmousedown</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onmousemove</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onmouseout</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onmouseover</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onmouseup</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>property</name>
+		<required>true</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>style</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>styleClass</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>styleId</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>tabindex</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>title</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>titleKey</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>value</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+		<name>fieldname</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		
+		<attribute>
+		<name>recordID</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>modulename</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+</tag>
+
+<tag>
+	<name>cvcancel</name>
+	<tagclass>com.centraview.udt.CVCancelTag</tagclass>
+		<attribute>
+			<name>statuswindow</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>statuswindowarg</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>tooltip</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+
+		<attribute>
+		<name>accesskey</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>alt</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>altKey</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>disabled</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onblur</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onchange</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onclick</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>ondblclick</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onfocus</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onkeydown</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onkeypress</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onkeyup</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onmousedown</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onmousemove</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onmouseout</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onmouseover</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onmouseup</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>property</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>style</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>styleClass</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>styleId</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>tabindex</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>title</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>titleKey</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>value</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+</tag>
+
+<tag>
+	<name>cvlink</name>
+	<tagclass>com.centraview.udt.CVLinkTag</tagclass>
+		<attribute>
+			<name>statuswindow</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>statuswindowarg</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>tooltip</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+
+		<attribute>
+		<name>accesskey</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>action</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>anchor</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>forward</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>href</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>indexed</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>indexId</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>linkName</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>name</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onblur</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onclick</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>ondblclick</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onfocus</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onkeydown</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onkeypress</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onkeyup</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onmousedown</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onmousemove</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onmouseout</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onmouseover</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onmouseup</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>page</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>paramId</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>paramName</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>paramProperty</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>paramScope</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>property</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>scope</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>style</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>styleClass</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>styleId</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>tabindex</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>target</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>title</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>titleKey</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>transaction</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+</tag>
+
+<tag>
+	<name>cvreset</name>
+	<tagclass>com.centraview.udt.CVResetTag</tagclass>
+		<attribute>
+			<name>statuswindow</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>statuswindowarg</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>tooltip</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+
+		<attribute>
+		<name>accesskey</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>alt</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>altKey</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>disabled</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onblur</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onchange</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onclick</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>ondblclick</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onfocus</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onkeydown</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onkeypress</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onkeyup</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onmousedown</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onmousemove</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onmouseout</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onmouseover</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onmouseup</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>property</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>style</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>styleClass</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>styleId</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>tabindex</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>title</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>titleKey</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>value</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+</tag>
+
+<tag>
+	<name>cvsubmit</name>
+	<tagclass>com.centraview.udt.CVSubmitTag</tagclass>
+		<attribute>
+			<name>buttonoperationtype</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>statuswindow</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>statuswindowarg</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>tooltip</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+
+		<attribute>
+		<name>accesskey</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>alt</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>altKey</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>disabled</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>indexed</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onblur</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onchange</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onclick</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>ondblclick</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onfocus</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onkeydown</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onkeypress</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onkeyup</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onmousedown</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onmousemove</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onmouseout</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onmouseover</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onmouseup</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>property</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>style</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>styleClass</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>styleId</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>tabindex</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>title</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>titleKey</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>value</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>recordID</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>modulename</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+</tag>
+
+<tag>
+	<name>cvtext</name>
+	<tagclass>com.centraview.udt.CVTextTag</tagclass>
+	<attribute>
+	<name>accesskey</name>
+	<required>false</required>
+	<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+	<name>alt</name>
+	<required>false</required>
+	<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+	<name>altKey</name>
+	<required>false</required>
+	<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+	<name>disabled</name>
+	<required>false</required>
+	<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+	<name>indexed</name>
+	<required>false</required>
+	<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+	<name>maxlength</name>
+	<required>false</required>
+	<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+	<name>name</name>
+	<required>false</required>
+	<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+	<name>onblur</name>
+	<required>false</required>
+	<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+	<name>onchange</name>
+	<required>false</required>
+	<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+	<name>onclick</name>
+	<required>false</required>
+	<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+	<name>ondblclick</name>
+	<required>false</required>
+	<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+	<name>onfocus</name>
+	<required>false</required>
+	<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+	<name>onkeydown</name>
+	<required>false</required>
+	<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+	<name>onkeypress</name>
+	<required>false</required>
+	<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+	<name>onkeyup</name>
+	<required>false</required>
+	<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+	<name>onmousedown</name>
+	<required>false</required>
+	<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+	<name>onmousemove</name>
+	<required>false</required>
+	<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+	<name>onmouseout</name>
+	<required>false</required>
+	<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+	<name>onmouseover</name>
+	<required>false</required>
+	<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+	<name>onmouseup</name>
+	<required>false</required>
+	<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+	<name>property</name>
+	<required>true</required>
+	<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+	<name>readonly</name>
+	<required>false</required>
+	<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+	<name>size</name>
+	<required>false</required>
+	<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+	<name>style</name>
+	<required>false</required>
+	<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+	<name>styleClass</name>
+	<required>false</required>
+	<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+	<name>styleId</name>
+	<required>false</required>
+	<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+	<name>tabindex</name>
+	<required>false</required>
+	<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+	<name>title</name>
+	<required>false</required>
+	<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+	<name>titleKey</name>
+	<required>false</required>
+	<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+	<name>value</name>
+	<required>false</required>
+	<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+	<name>fieldname</name>
+	<required>false</required>
+	<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+	<name>modulename</name>
+	<required>false</required>
+	<rtexprvalue>true</rtexprvalue>
+	</attribute>
+</tag>
+
+<tag>
+	<name>cvtextarea</name>
+	<tagclass>com.centraview.udt.CVTextAreaTag</tagclass>
+	<attribute>
+	<name>accesskey</name>
+	<required>false</required>
+	<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+	<name>alt</name>
+	<required>false</required>
+	<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+	<name>altKey</name>
+	<required>false</required>
+	<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+	<name>cols</name>
+	<required>false</required>
+	<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+	<name>disabled</name>
+	<required>false</required>
+	<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+	<name>indexed</name>
+	<required>false</required>
+	<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+	<name>name</name>
+	<required>false</required>
+	<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+	<name>onblur</name>
+	<required>false</required>
+	<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+	<name>onchange</name>
+	<required>false</required>
+	<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+	<name>onclick</name>
+	<required>false</required>
+	<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+	<name>ondblclick</name>
+	<required>false</required>
+	<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+	<name>onfocus</name>
+	<required>false</required>
+	<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+	<name>onkeydown</name>
+	<required>false</required>
+	<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+	<name>onkeypress</name>
+	<required>false</required>
+	<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+	<name>onkeyup</name>
+	<required>false</required>
+	<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+	<name>onmousedown</name>
+	<required>false</required>
+	<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+	<name>onmousemove</name>
+	<required>false</required>
+	<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+	<name>onmouseout</name>
+	<required>false</required>
+	<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+	<name>onmouseover</name>
+	<required>false</required>
+	<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+	<name>onmouseup</name>
+	<required>false</required>
+	<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+	<name>property</name>
+	<required>true</required>
+	<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+	<name>readonly</name>
+	<required>false</required>
+	<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+	<name>rows</name>
+	<required>false</required>
+	<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+	<name>style</name>
+	<required>false</required>
+	<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+	<name>styleClass</name>
+	<required>false</required>
+	<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+	<name>styleId</name>
+	<required>false</required>
+	<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+	<name>tabindex</name>
+	<required>false</required>
+	<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+	<name>title</name>
+	<required>false</required>
+	<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+	<name>titleKey</name>
+	<required>false</required>
+	<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+	<name>value</name>
+	<required>false</required>
+	<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+	<name>fieldname</name>
+	<required>false</required>
+	<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+	<name>modulename</name>
+	<required>false</required>
+	<rtexprvalue>true</rtexprvalue>
+	</attribute>
+</tag>
+
+
+<tag>
+	<name>cvradio</name>
+	<tagclass>com.centraview.udt.CVRadioTag</tagclass>
+		<attribute>
+			<name>statuswindow</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>statuswindowarg</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>tooltip</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>accesskey</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>alt</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>altKey</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>disabled</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>indexed</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onblur</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onchange</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onclick</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>ondblclick</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onfocus</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onkeydown</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onkeypress</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onkeyup</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onmousedown</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onmousemove</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onmouseout</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onmouseover</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onmouseup</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>property</name>
+		<required>true</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>style</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>styleClass</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>styleId</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>tabindex</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>title</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>titleKey</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>value</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+		<name>fieldname</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>modulename</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+</tag>
+<tag>
+	<name>cvcheckbox</name>
+	<tagclass>com.centraview.udt.CVCheckboxTag</tagclass>
+		<attribute>
+			<name>statuswindow</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>statuswindowarg</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>tooltip</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>accesskey</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>alt</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>altKey</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>disabled</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>indexed</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onblur</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onchange</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onclick</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>ondblclick</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onfocus</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onkeydown</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onkeypress</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onkeyup</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onmousedown</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onmousemove</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onmouseout</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onmouseover</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onmouseup</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>property</name>
+		<required>true</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>style</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>styleClass</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>styleId</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>tabindex</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>title</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>titleKey</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>value</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+		<name>fieldname</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>modulename</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+</tag>
+<tag>
+	<name>cvselect</name>
+	<tagclass>com.centraview.udt.CVSelectTag</tagclass>
+		<attribute>
+			<name>statuswindow</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>statuswindowarg</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>tooltip</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>accesskey</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>alt</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>altKey</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>disabled</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>indexed</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onblur</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onchange</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onclick</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>ondblclick</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onfocus</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onkeydown</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onkeypress</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onkeyup</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onmousedown</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onmousemove</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onmouseout</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onmouseover</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>onmouseup</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>property</name>
+		<required>true</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>style</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>styleClass</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>styleId</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>tabindex</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>title</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>titleKey</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>value</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+		<name>multiple</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>size</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+		<name>fieldname</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		<name>modulename</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+</tag>
+
+<tag>
+<name>cvoption</name>
+<tagclass>com.centraview.udt.CVOptionTag</tagclass>
+<attribute>
+<name>bundle</name>
+<required>false</required>
+<rtexprvalue>true</rtexprvalue>
+</attribute>
+<attribute>
+<name>disabled</name>
+<required>false</required>
+<rtexprvalue>true</rtexprvalue>
+</attribute>
+<attribute>
+<name>key</name>
+<required>false</required>
+<rtexprvalue>true</rtexprvalue>
+</attribute>
+<attribute>
+<name>locale</name>
+<required>false</required>
+<rtexprvalue>true</rtexprvalue>
+</attribute>
+<attribute>
+<name>style</name>
+<required>false</required>
+<rtexprvalue>true</rtexprvalue>
+</attribute>
+<attribute>
+<name>styleId</name>
+<required>false</required>
+<rtexprvalue>true</rtexprvalue>
+</attribute>
+<attribute>
+<name>styleClass</name>
+<required>false</required>
+<rtexprvalue>true</rtexprvalue>
+</attribute>
+<attribute>
+<name>value</name>
+<required>true</required>
+<rtexprvalue>true</rtexprvalue>
+</attribute>
+<attribute>
+<name>fieldname</name>
+<required>false</required>
+<rtexprvalue>true</rtexprvalue>
+</attribute>
+<attribute>
+<name>modulename</name>
+<required>false</required>
+<rtexprvalue>true</rtexprvalue>
+</attribute>
+
+</tag>
+<tag>
+<name>cvoptions</name>
+<tagclass>com.centraview.udt.CVOptionsTag</tagclass>
+<bodycontent>empty</bodycontent>
+<attribute>
+<name>collection</name>
+<required>false</required>
+<rtexprvalue>true</rtexprvalue>
+</attribute>
+<attribute>
+<name>filter</name>
+<required>false</required>
+<rtexprvalue>true</rtexprvalue>
+</attribute>
+<attribute>
+<name>labelName</name>
+<required>false</required>
+<rtexprvalue>true</rtexprvalue>
+</attribute>
+<attribute>
+<name>labelProperty</name>
+<required>false</required>
+<rtexprvalue>true</rtexprvalue>
+</attribute>
+<attribute>
+<name>name</name>
+<required>false</required>
+<rtexprvalue>true</rtexprvalue>
+</attribute>
+<attribute>
+<name>property</name>
+<required>false</required>
+<rtexprvalue>true</rtexprvalue>
+</attribute>
+<attribute>
+<name>style</name>
+<required>false</required>
+<rtexprvalue>true</rtexprvalue>
+</attribute>
+<attribute>
+<name>styleClass</name>
+<required>false</required>
+<rtexprvalue>true</rtexprvalue>
+</attribute>
+<attribute>
+<name>fieldname</name>
+<required>false</required>
+<rtexprvalue>true</rtexprvalue>
+</attribute>
+<attribute>
+<name>modulename</name>
+<required>false</required>
+<rtexprvalue>true</rtexprvalue>
+</attribute>
+</tag>
+<tag>
+<name>cvoptionsCollection</name>
+<tagclass>com.centraview.udt.CVOptionsCollectionTag</tagclass>
+<bodycontent>empty</bodycontent>
+<attribute>
+<name>filter</name>
+<required>false</required>
+<rtexprvalue>true</rtexprvalue>
+</attribute>
+<attribute>
+<name>label</name>
+<required>false</required>
+<rtexprvalue>true</rtexprvalue>
+</attribute>
+<attribute>
+<name>name</name>
+<required>false</required>
+<rtexprvalue>true</rtexprvalue>
+</attribute>
+<attribute>
+<name>property</name>
+<required>true</required>
+<rtexprvalue>true</rtexprvalue>
+</attribute>
+<attribute>
+<name>style</name>
+<required>false</required>
+<rtexprvalue>true</rtexprvalue>
+</attribute>
+<attribute>
+<name>styleClass</name>
+<required>false</required>
+<rtexprvalue>true</rtexprvalue>
+</attribute>
+<attribute>
+<name>value</name>
+<required>false</required>
+<rtexprvalue>true</rtexprvalue>
+</attribute>
+<attribute>
+<name>fieldname</name>
+<required>false</required>
+<rtexprvalue>true</rtexprvalue>
+</attribute>
+<attribute>
+<name>modulename</name>
+<required>false</required>
+<rtexprvalue>true</rtexprvalue>
+</attribute>
+</tag>
+
+</taglib>

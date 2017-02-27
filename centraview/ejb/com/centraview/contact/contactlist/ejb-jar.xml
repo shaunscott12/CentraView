@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE ejb-jar PUBLIC "-//Sun Microsystems, Inc.//DTD Enterprise JavaBeans 2.0//EN" "http://java.sun.com/dtd/ejb-jar_2_0.dtd">
+
+<ejb-jar>
+ <enterprise-beans>
+  <session>
+   <ejb-name>ContactList</ejb-name>
+   
+   <home>com.centraview.contact.contactlist.ContactListHome</home> 
+   <remote>com.centraview.contact.contactlist.ContactList</remote> 
+   
+   <local-home>com.centraview.contact.contactlist.ContactListLocalHome</local-home>
+   <local>com.centraview.contact.contactlist.ContactListLocal</local>
+   
+   <ejb-class>com.centraview.contact.contactlist.ContactListEJB</ejb-class>
+   
+   <session-type>Stateless</session-type>
+   <transaction-type>Bean</transaction-type>
+  </session>
+ </enterprise-beans>
+ <!-- 
+ <assembly-descriptor>
+  <container-transaction>
+   <method>
+    <ejb-name>ContactList</ejb-name>
+	<method-intf>Remote</method-intf>
+	<method-name>*</method-name>
+   </method>
+   <trans-attribute>Supports</trans-attribute>
+  </container-transaction>
+ </assembly-descriptor>
+ -->
+</ejb-jar>

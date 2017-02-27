@@ -1,0 +1,33 @@
+The greatly simplified CentraView bundled with JBoss and MySQL
+connector/j install.
+
+1. Setup the Filesystem
+   Unzip the fs.zip where you want the CentraView files to be.
+
+2. Set up your database.
+   mysqladmin -u root -p create cvdb
+   mysql -u root -p cvdb < cvdb.sql
+   mysql -u root -p cvdb
+   Then at the MySQL prompt tell it where you put the filesystem in
+   step 1:
+   UPDATE cvfolderlocation SET Detail = '/Path/to/fs/';
+   exit
+
+3. Edit the mysql-ds.xml file, changing the <user-name> and <password>
+   entries to a MySQL user that has rights over the cvdb database.
+
+4. If you have the Sun Java JDK installed and set up you should simply
+   be able to execute jboss-4.0.2/bin/run.sh or on Windows
+   jboss-4.0.2/bin/run.bat.
+
+   If you don't have it installed you need to download it from
+   http://java.sun.com/j2se/1.4.2/download.html and make
+   sure your JAVA_HOME environment variable set.
+
+Now we agree this process could be easier, so we have plans to make
+it so, maybe we will even get gutsy enough to ship the Sun JRE 
+with it ;-)
+
+If you have problems with this, post to our forum on
+http://sf.net/projects/centraview or join the centraview-users mailing
+list and ask a question there.

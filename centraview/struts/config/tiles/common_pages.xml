@@ -1,0 +1,155 @@
+ <!DOCTYPE tiles-definitions PUBLIC
+  "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+  "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+<!--
+ * $RCSfile: common_pages.xml,v $    $Revision: 1.6 $  $Date: 2005/08/22 15:14:43 $ - $Author: mcallist $
+ * 
+ * The contents of this file are subject to the Open Software License
+ * Version 2.1 ("the License"); you may not use this file except in
+ * compliance with the License. You may obtain a copy of the License at
+ * http://www.centraview.com/opensource/
+ * 
+ * Software distributed under the License is distributed on an "AS IS"
+ * basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+ * License for the specific language governing rights and limitations
+ * under the License.
+ * 
+ * The Original Code is: CentraView Open Source. 
+ * 
+ * The developer of the Original Code is CentraView.  Portions of the
+ * Original Code created by CentraView are Copyright (c) 2004 CentraView,
+ * LLC; All Rights Reserved.  The terms "CentraView" and the CentraView
+ * logos are trademarks and service marks of CentraView, LLC.
+-->  
+<tiles-definitions>
+  <!-- Login screen -->
+  <definition name=".view.login" path="/jsp/layouts/main_t.jsp">
+    <put name="focus_element" value="username" />
+    <put name="header" value="/jsp/tiles/header_login.jsp" />
+    <put name="main_nav" value="/jsp/tiles/login_nav_tabs.jsp" />
+    <put name="left_nav" value="/jsp/tiles/left_nav.jsp" />
+    <put name="search_bar" value="/jsp/pages/blank.jsp" />
+    <put name="folder_bar" value="/jsp/pages/blank.jsp" />
+    <put name="main_content" value="/jsp/pages/login.jsp" />
+    <put name="footer" value="/jsp/tiles/footer.jsp" />
+    <putList name="js_includes">
+      <add value="value_list_js.jsp" />
+    </putList>
+  </definition>
+
+  <!-- Default main-application screen layout -->
+  <definition name=".view.default" path="/jsp/layouts/main_t.jsp">
+    <put name="focus_element" value="searchTextBox" />
+    <put name="header" value="/jsp/tiles/header.jsp" />
+    <put name="js_includes" value="/jsp/pages/blank.jsp"/>
+    <put name="main_nav" value="/jsp/tiles/main_nav_tabs.jsp" />
+    <put name="left_nav" value="/jsp/tiles/left_nav.jsp" />
+    <put name="search_bar" value="loadController.searchbar" />
+    <put name="folder_bar" value="/jsp/pages/blank.jsp" />
+    <put name="main_content" value="/jsp/pages/blank.jsp" />
+    <put name="footer" value="/jsp/tiles/footer.jsp" />
+  </definition>
+
+  <!-- Default email screen layout -->
+  <definition name=".view.default.email" path="/jsp/layouts/main_email_t.jsp">
+    <put name="js_includes" value="/jsp/pages/blank.jsp"/>
+    <put name="focus_element" value="searchTextBox" />
+    <put name="header" value="/jsp/tiles/header.jsp" />
+    <put name="main_nav" value="/jsp/tiles/main_nav_tabs.jsp" />
+    <put name="left_nav" value="/jsp/tiles/left_nav.jsp" />
+    <put name="search_bar" value="loadController.searchbar" />
+    <put name="folder_bar" value="/jsp/pages/blank.jsp" />
+    <put name="main_content" value="/jsp/pages/blank.jsp" />
+    <put name="footer" value="/jsp/tiles/footer.jsp" />
+  </definition>
+  
+  <!-- Printer friendly layout -->
+  <definition name=".view.default.print" path="/jsp/layouts/popup_t.jsp">
+    <put name="focus_element" value="" />
+    <put name="js_includes" value="/jsp/pages/blank.jsp" />
+    <put name="page_header" value="/jsp/pages/blank.jsp" />
+    <put name="top_bar" value="/jsp/pages/blank.jsp" />
+    <put name="main_content" value="/jsp/pages/blank.jsp" />
+    <put name="bottom_bar" value="/jsp/pages/blank.jsp" />
+  </definition>
+  
+  <!-- General ValueList screens (extends .view.default) -->
+  <definition name=".view.valuelist" extends=".view.default">
+    <put name="main_content" value="/jsp/tiles/value_list.jsp" />
+    <putList name="js_includes">
+      <add value="value_list_js.jsp" />
+    </putList>
+  </definition>
+
+  <!-- Home Page -->
+  <definition name=".view.home" extends=".view.default">
+    <put name="main_content" value="/jsp/pages/home.jsp" />
+  </definition>
+
+  <!-- Lookup Screen -->
+  <definition name=".view.lookup" path="/jsp/layouts/popup_t.jsp">
+    <put name="focus_element" value="searchTextBox" />
+    <put name="page_header" value="/jsp/pages/blank.jsp"/>
+    <put name="top_bar" value="/jsp/pages/blank.jsp"/>
+    <put name="main_content" value="/jsp/tiles/lookup.jsp" />
+    <put name="bottom_bar" value="/jsp/pages/blank.jsp"/>
+    <putList name="js_includes">
+      <add value="lookup.js" />
+      <add value="value_list_js.jsp" />
+    </putList>
+  </definition>
+
+  <!-- Base layout for all popup windows. MUST BE EXTENDED -->
+  <definition name=".view.popup.default" path="/jsp/layouts/popup_t.jsp">
+    <put name="focus_element" value=""/>
+    <put name="page_header" value="/jsp/pages/blank.jsp"/>
+    <put name="top_bar" value="/jsp/pages/blank.jsp"/>
+    <put name="bottom_bar" value="/jsp/pages/blank.jsp"/>
+    <put name="js_includes" value="/jsp/pages/blank.jsp"/>
+  </definition>
+  
+  <!-- Error Page -->
+  <definition name=".view.error" extends=".view.default">
+    <put name="focus_element" value="" />
+    <put name="search_bar" value="/jsp/pages/blank.jsp" />
+    <put name="main_content" value="/jsp/pages/error_page.jsp" />
+  </definition>
+
+  <definition name=".view.common.folder.lookup" extends=".view.popup.default">
+    <put name="focus_element" value=""/>
+    <put name="page_header" value="Lookup Folder"/>
+    <put name="main_content" value="/jsp/pages/common/folder_lookup.jsp"/>
+  </definition>
+  
+  <!-- Search Bar Controller -->
+  <definition name="loadController.searchbar" path="/jsp/tiles/search_bar.jsp" controllerClass="com.centraview.struts.LoadSearchBarTilesController"/>
+
+  <!-- Permission screen -->
+  <definition name=".view.permission" extends=".view.popup.default">
+    <put name="focus_element" value="publicCheck"/>
+    <put name="page_header" value="Record: Permissions"/>
+    <put name="top_bar" value="/jsp/tiles/permission_head.jsp"/>
+    <put name="main_content" value="/jsp/tiles/permission_body.jsp"/>
+    <putList name="js_includes">
+      <add value="detail.js" />
+    </putList>
+  </definition>
+
+  <!-- No Search ValueList screen (extends .view.valuelist) -->
+  <definition name=".view.valuelist.nosearch" extends=".view.valuelist">
+    <put name="search_bar" value="/jsp/pages/blank.jsp" />
+  </definition>
+  
+  <!-- Forgot password screen -->
+  <definition name=".view.forgot" extends=".view.login">
+    <put name="focus_element" value="" />
+    <put name="main_content" value="/jsp/pages/forgot_password.jsp" />
+  </definition>
+
+  <definition name=".view.common.viewdetail" extends=".view.default">
+    <put name="focus_element" value="" />
+    <put name="search_bar" value="/jsp/pages/blank.jsp" />
+    <put name="main_content" value="/jsp/pages/view/details.jsp" />
+    <put name="left_nav" value="/jsp/tiles/alternate_left_nav.jsp" />
+  </definition>
+</tiles-definitions>

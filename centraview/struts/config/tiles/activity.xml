@@ -1,0 +1,84 @@
+<!DOCTYPE tiles-definitions PUBLIC
+  "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+  "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+<!--
+ * $RCSfile: activity.xml,v $    $Revision: 1.3 $  $Date: 2005/09/21 16:32:51 $ - $Author: mcallist $
+ * 
+ * The contents of this file are subject to the Open Software License
+ * Version 2.1 ("the License"); you may not use this file except in
+ * compliance with the License. You may obtain a copy of the License at
+ * http://www.centraview.com/opensource/license.html
+ * 
+ * Software distributed under the License is distributed on an "AS IS"
+ * basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+ * License for the specific language governing rights and limitations
+ * under the License.
+ * 
+ * The Original Code is: CentraView Open Source. 
+ * 
+ * The developer of the Original Code is CentraView.  Portions of the
+ * Original Code created by CentraView are Copyright (c) 2004 CentraView,
+ * LLC; All Rights Reserved.  The terms "CentraView" and the CentraView
+ * logos are trademarks and service marks of CentraView, LLC.
+-->
+<tiles-definitions>
+
+  <definition name=".view.activity.default" path="/jsp/layouts/activity_t.jsp">
+    <put name="focus_element" value="" />
+    <put name="header" value="/jsp/tiles/activity/tabs.jsp" />
+    <put name="subtitle" value="Schedule an Activity" />
+    <put name="main_content" value="/jsp/pages/blank.jsp" />
+    <put name="footer" value="/jsp/tiles/activity/footer.jsp" />
+  </definition>
+
+  <definition name=".view.activity.details" extends=".view.activity.default">
+    <put name="focus_element" value="activityTitle" />
+    <put name="subtitle" value="Schedule an Activity" />
+    <put name="main_content" value="/jsp/pages/activity/details.jsp" />
+    <putList name="js_includes">
+      <add value="activity.jsp" />
+    </putList>
+  </definition>
+
+  <definition name=".view.activity.attendees" extends=".view.activity.default">
+    <put name="focus_element" value="activityAttendeeSearch" />
+    <put name="subtitle" value="Select Attendees" />
+    <put name="main_content" value="/jsp/pages/activity/attendees.jsp" />
+    <putList name="js_includes">
+      <add value="activity.jsp" />
+    </putList>
+  </definition>
+
+  <definition name=".view.activity.resources" extends=".view.activity.default">
+    <put name="subtitle" value="Select Resources" />
+    <put name="main_content" value="/jsp/pages/activity/resources.jsp" />
+    <putList name="js_includes">
+      <add value="activity.jsp" />
+    </putList>
+  </definition>
+
+  <definition name=".view.activity.availability" extends=".view.activity.default">
+    <put name="subtitle" value="View Availability" />
+    <put name="main_content" value="/jsp/pages/activity/availability.jsp" />
+    <putList name="js_includes">
+      <add value="activity.jsp" />
+    </putList>
+  </definition>
+
+  <definition name=".view.activity.recurring" extends=".view.activity.default">
+    <put name="subtitle" value="Select Recurrence" />
+    <put name="main_content" value="/jsp/pages/activity/recurring.jsp" />
+    <putList name="js_includes">
+      <add value="activity.jsp" />
+    </putList>
+  </definition>
+
+  <definition name=".view.activity.attachments" extends=".view.activity.default">
+    <put name="subtitle" value="Attach Files" />
+    <put name="main_content" value="/jsp/pages/activity/attachments.jsp" />
+    <putList name="js_includes">
+      <add value="activity.jsp" />
+    </putList>
+  </definition>
+  
+</tiles-definitions>

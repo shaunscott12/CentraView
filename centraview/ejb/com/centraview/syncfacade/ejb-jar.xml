@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE ejb-jar PUBLIC "-//Sun Microsystems, Inc.//DTD Enterprise JavaBeans 2.0//EN" "http://java.sun.com/dtd/ejb-jar_2_0.dtd">
+<ejb-jar>
+	<enterprise-beans>
+		<session>
+			<ejb-name>SyncFacade</ejb-name>
+ 			<home>com.centraview.syncfacade.SyncFacadeHome</home>
+			<remote>com.centraview.syncfacade.SyncFacade</remote>
+			<local-home>com.centraview.syncfacade.SyncFacadeLocalHome</local-home>
+			<local>com.centraview.syncfacade.SyncFacadeLocal</local>
+			<ejb-class>com.centraview.syncfacade.SyncFacadeEJB</ejb-class>
+			<session-type>Stateless</session-type>
+			<transaction-type>Container</transaction-type>
+		</session>
+	</enterprise-beans>
+</ejb-jar>
+

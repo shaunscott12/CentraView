@@ -1,0 +1,124 @@
+<!DOCTYPE tiles-definitions PUBLIC
+  "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+  "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+<!--
+ * $RCSfile: customer.xml,v $    $Revision: 1.3 $  $Date: 2005/07/31 02:49:58 $ - $Author: mcallist $
+ * 
+ * The contents of this file are subject to the Open Software License
+ * Version 2.1 ("the License"); you may not use this file except in
+ * compliance with the License. You may obtain a copy of the License at
+ * http://www.centraview.com/opensource/license.html
+ * 
+ * Software distributed under the License is distributed on an "AS IS"
+ * basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+ * License for the specific language governing rights and limitations
+ * under the License.
+ * 
+ * The Original Code is: CentraView Open Source. 
+ * 
+ * The developer of the Original Code is CentraView.  Portions of the
+ * Original Code created by CentraView are Copyright (c) 2004 CentraView,
+ * LLC; All Rights Reserved.  The terms "CentraView" and the CentraView
+ * logos are trademarks and service marks of CentraView, LLC.
+-->
+<tiles-definitions>
+
+  <!-- Login screen -->
+  <definition name=".view.customer.login" path="/jsp/customer/layouts/main_t.jsp">
+    <put name="header" value="/jsp/customer/tiles/header_login.jsp" />
+    <put name="main_nav" value="/jsp/customer/tiles/login_nav_tabs.jsp" />
+    <put name="left_nav" value="/jsp/customer/tiles/left_nav.jsp" />
+    <put name="main_content" value="/jsp/customer/pages/login.jsp" />
+    <put name="footer" value="/jsp/customer/tiles/footer.jsp" />
+    <put name="js_includes" value="/jsp/pages/blank.jsp" />
+  </definition>
+
+  <!-- default layout - MUST be extended -->
+  <definition name=".view.customer.default" path="/jsp/customer/layouts/main_t.jsp">
+    <put name="header" value="/jsp/customer/tiles/header.jsp" />
+    <put name="main_nav" value="/jsp/customer/tiles/main_nav_tabs.jsp" />
+    <put name="left_nav" value="/jsp/customer/tiles/left_nav.jsp" />
+    <put name="main_content" value="/jsp/pages/blank.jsp" />
+    <put name="footer" value="/jsp/customer/tiles/footer.jsp" />
+    <put name="js_includes" value="/jsp/pages/blank.jsp" />
+  </definition>
+
+  <!-- Customer ValueList screens -->
+  <definition name=".view.customer.valuelist" extends=".view.customer.default">
+    <put name="main_content" value="/jsp/tiles/value_list.jsp" />
+    <putList name="js_includes">
+      <add value="value_list_js.jsp" />
+    </putList>
+  </definition>
+
+  <!-- customer home page -->
+  <definition name=".view.customer.home" extends=".view.customer.default">
+    <put name="main_content" value="/jsp/customer/pages/home.jsp" />
+  </definition>
+  
+  <!-- customer profile page -->
+  <definition name=".view.customer.profile" extends=".view.customer.default">
+    <put name="main_content" value="/jsp/customer/pages/profile.jsp" />
+  </definition>
+
+  <!-- customer profile confirmation page -->
+  <definition name=".view.customer.profile_confirm" extends=".view.customer.default">
+    <put name="main_content" value="/jsp/customer/pages/profile_confirm.jsp" />
+  </definition>
+
+  <!-- customer email details page -->
+  <definition name=".view.customer.view_email" extends=".view.customer.default">
+    <put name="main_content" value="/jsp/customer/pages/email/view_email.jsp" />
+  </definition>
+
+  <!-- customer order details page -->
+  <definition name=".view.customer.view_order" extends=".view.customer.default">
+    <put name="main_content" value="/jsp/customer/pages/accounting/view_order.jsp" />
+  </definition>
+  
+  <!-- customer ticket details page -->
+  <definition name=".view.customer.view_ticket" extends=".view.customer.default">
+    <put name="main_content" value="/jsp/customer/pages/support/view_ticket.jsp" />
+  </definition>
+
+  <!-- show new ticket page -->
+  <definition name=".view.customer.new_ticket" extends=".view.customer.default">
+    <put name="main_content" value="/jsp/customer/pages/support/new_ticket.jsp" />
+  </definition>
+
+  <!-- customer thread details page -->
+  <definition name=".view.customer.view_thread" extends=".view.customer.default">
+    <put name="main_content" value="/jsp/customer/pages/support/view_thread.jsp" />
+  </definition>
+
+  <!-- customer thread details page -->
+  <definition name=".view.customer.new_thread" extends=".view.customer.default">
+    <put name="main_content" value="/jsp/customer/pages/support/new_thread.jsp" />
+  </definition>
+  
+  <!-- customer faq details page -->
+  <definition name=".view.customer.view_faq" extends=".view.customer.default">
+    <put name="main_content" value="/jsp/customer/pages/support/view_faq.jsp" />
+  </definition>
+
+  <!-- customer event details page -->
+  <definition name=".view.customer.view_event" extends=".view.customer.default">
+    <put name="main_content" value="/jsp/customer/pages/events/view_event.jsp" />
+  </definition>
+
+  <!-- customer event details page -->
+  <definition name=".view.customer.view_user" extends=".view.customer.default">
+    <put name="main_content" value="/jsp/customer/pages/users/view_user.jsp" />
+  </definition>
+
+  <!-- customer user chaneg request confirm page -->
+  <definition name=".view.customer.user_change_confirm" extends=".view.customer.default">
+    <put name="main_content" value="/jsp/customer/pages/users/change_confirm.jsp" />
+  </definition>
+
+  <!-- customer user chaneg request confirm page -->
+  <definition name=".view.customer.contact_us" extends=".view.customer.default">
+    <put name="main_content" value="/jsp/customer/pages/contact_us.jsp" />
+  </definition>
+
+</tiles-definitions>

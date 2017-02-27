@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<ftstdata>
+<topic name="About Accounting" url="about_accounting.htm" />
+<topic name="About Activities" url="about_activities.htm" />
+<topic name="About Administration" url="about_administration.htm" />
+<topic name="About Appointments" url="about_appointments.htm" />
+<topic name="About Calendar" url="about_calendar.htm" />
+<topic name="About Calls" url="about_calls.htm" />
+<topic name="About Contact Lists" url="about_contact_lists.htm" />
+<topic name="About Contacts" url="about_contacts.htm" />
+<topic name="About Email" url="about_email.htm" />
+<topic name="About Employee Handbook" url="about_employee_handbook.htm" />
+<topic name="About Employee List" url="about_employee_list.htm" />
+<topic name="About Entities" url="about_entities.htm" />
+<topic name="About Events" url="about_events.htm" />
+<topic name="About Expense Forms" url="about_expense_forms.htm" />
+<topic name="About Expenses" url="about_expenses.htm" />
+<topic name="About FAQs" url="about_faqs.htm" />
+<topic name="About Files" url="about_files.htm" />
+<topic name="About Forecast Sales" url="about_forecast_sales.htm" />
+<topic name="About GL Accounts" url="about_gl_accounts.htm" />
+<topic name="About Groups" url="about_groups.htm" />
+<topic name="About Help" url="about_help.htm" />
+<topic name="About HR" url="about_hr.htm" />
+<topic name="About Individuals" url="about_individuals.htm" />
+<topic name="About Inventory" url="about_inventory.htm" />
+<topic name="About Invoice History" url="about_invoice_history.htm" />
+<topic name="About Items" url="about_items.htm" />
+<topic name="About Knowledge Base" url="about_knowledge_base.htm" />
+<topic name="About List Manager" url="about_list_manager.htm" />
+<topic name="About Literature Fulfillment" url="about_literature_fulfillment.htm" />
+<topic name="About Literature Requests" url="about_literature_requests.htm" />
+<topic name="About Marketing" url="about_marketing.htm" />
+<topic name="About Meetings" url="about_meetings.htm" />
+<topic name="About Next Actions" url="about_next_actions.htm" />
+<topic name="About Notes" url="about_notes.htm" />
+<topic name="About Opportunity" url="about_opportunity.htm" />
+<topic name="About Order History" url="about_order_history.htm" />
+<topic name="About Payments" url="about_payments.htm" />
+<topic name="About Preferences" url="about_preferences.htm" />
+<topic name="About Print Templates" url="about_print_templates.htm" />
+<topic name="About Project Tasks" url="about_project_tasks.htm" />
+<topic name="About Projects" url="about_projects.htm" />
+<topic name="About Proposals" url="about_proposals.htm" />
+<topic name="About Purchase Orders" url="about_purchase_orders.htm" />
+<topic name="About Reports" url="about_reports.htm" />
+<topic name="About Sales" url="about_sales.htm" />
+<topic name="About Suggestion Box" url="about_suggestion_box.htm" />
+<topic name="About Support" url="about_support.htm" />
+<topic name="About Support Tickets" url="about_support_tickets.htm" />
+<topic name="About Tasks" url="about_tasks.htm" />
+<topic name="About Time Sheets" url="about_time_sheets.htm" />
+<topic name="About Timeslips" url="about_timeslips.htm" />
+<topic name="About To Dos" url="about_to_dos.htm" />
+<topic name="About Vendors" url="about_vendors.htm" />
+<topic name="About Volume Discounts" url="about_volume_discounts.htm" />
+<topic name="About WebForm Import" url="about_webform_import.htm" />
+<topic name="Accounting and Human Resources" url="accounting_and_human_resources.htm" />
+<topic name="Adding Activities to your Calendar" url="adding_activities_to_your_calendar.htm" />
+<topic name="Adding Appointments" url="adding_appointments.htm" />
+<topic name="Adding Calls" url="adding_calls.htm" />
+<topic name="Adding Employee Handbook" url="adding_employee_handbook.htm" />
+<topic name="Adding Employee List" url="adding_employee_list.htm" />
+<topic name="Adding Entities" url="adding_entities.htm" />
+<topic name="Adding Events" url="adding_events.htm" />
+<topic name="Adding Expense Forms" url="adding_expense_forms.htm" />
+<topic name="Adding Expenses" url="adding_expenses.htm" />
+<topic name="Adding FAQs" url="adding_faqs.htm" />
+<topic name="Adding File Folders" url="adding_file_folders.htm" />
+<topic name="Adding Files" url="adding_files.htm" />
+<topic name="Adding Forecast Sales" url="adding_forecast_sales.htm" />
+<topic name="Adding Groups" url="adding_groups.htm" />
+<topic name="Adding Individuals" url="adding_individuals.htm" />
+<topic name="Adding Inventory" url="adding_inventory.htm" />
+<topic name="Adding Invoice History" url="adding_invoice_history.htm" />
+<topic name="Adding Items" url="adding_items.htm" />
+<topic name="Adding Literature Fulfillment Requests" url="adding_literature_fulfillment_requests.htm" />
+<topic name="Adding Literature Requests" url="adding_literature_requests.htm" />
+<topic name="Adding Meetings" url="adding_meetings.htm" />
+<topic name="Adding Next Actions" url="adding_next_actions.htm" />
+<topic name="Adding Notes" url="adding_notes.htm" />
+<topic name="Adding Order History" url="adding_order_history.htm" />
+<topic name="Adding Payments" url="adding_payments.htm" />
+<topic name="Adding Project Tasks" url="adding_project_tasks.htm" />
+<topic name="Adding Projects" url="adding_projects.htm" />
+<topic name="Adding Proposals" url="adding_proposals.htm" />
+<topic name="Adding Purchase Orders" url="adding_purchase_orders.htm" />
+<topic name="Adding Sales Opportunities" url="adding_sales_opportunities.htm" />
+<topic name="Adding Support Tickets" url="adding_support_tickets.htm" />
+<topic name="Adding Tasks" url="adding_tasks.htm" />
+<topic name="Adding Time Sheets" url="adding_time_sheets.htm" />
+<topic name="Adding Timeslips" url="adding_timeslips.htm" />
+<topic name="Adding To Dos" url="adding_to_dos.htm" />
+<topic name="Adding to the Knowledge Base" url="adding_to_the_knowledge_base.htm" />
+<topic name="Adding Vendors" url="adding_vendors.htm" />
+<topic name="Adding Volume Discounts" url="adding_volume_discounts.htm" />
+<topic name="Administering Attic" url="administering_attic.htm" />
+<topic name="Administering Custom Fields" url="administering_custom_fields.htm" />
+<topic name="Administering Email Settings" url="administering_email_settings.htm" />
+<topic name="Administering Garbage" url="administering_garbage.htm" />
+<topic name="Administering Global Replace" url="administering_global_replace.htm" />
+<topic name="Administering History" url="administering_history.htm" />
+<topic name="Administering License Settings" url="administering_license_settings.htm" />
+<topic name="Administering Merge/Purge" url="administering_merge_purge.htm" />
+<topic name="Administering Modules" url="administering_modules.htm" />
+<topic name="Administering New Users" url="administering_new_users.htm" />
+<topic name="Administering Security Profiles" url="administering_security_profiles.htm" />
+<topic name="Administering Server Settings" url="administering_server_settings.htm" />
+<topic name="Administering System Data" url="administering_system_data.htm" />
+<topic name="Administering the Customer Logo" url="administering_the_customer_logo.htm" />
+<topic name="Categorizing the Knowledge Base" url="categorizing_the_knowledge_base.htm" />
+<topic name="Composing Email" url="composing_email.htm" />
+<topic name="Creating Email Folders" url="creating_email_folders.htm" />
+<topic name="Deleting a Literature Fulfillment Request" url="deleting_a_literature_fulfillment_request.htm" />
+<topic name="Deleting a Marketing List" url="deleting_a_marketing_list.htm" />
+<topic name="Deleting Appointments" url="deleting_appointments.htm" />
+<topic name="Deleting Calls" url="deleting_calls.htm" />
+<topic name="Deleting Email" url="deleting_email.htm" />
+<topic name="Deleting Entities" url="deleting_entities.htm" />
+<topic name="Deleting Events" url="deleting_events.htm" />
+<topic name="Deleting Expenses" url="deleting_expenses.htm" />
+<topic name="Deleting FAQs" url="deleting_faqs.htm" />
+<topic name="Deleting Files" url="deleting_files.htm" />
+<topic name="Deleting Forecast Sales" url="deleting_forecast_sales.htm" />
+<topic name="Deleting from the Knowledge Base" url="deleting_from_the_knowledge_base.htm" />
+<topic name="Deleting Groups" url="deleting_groups.htm" />
+<topic name="Deleting Individuals" url="deleting_individuals.htm" />
+<topic name="Deleting Inventory" url="deleting_inventory.htm" />
+<topic name="Deleting Invoice History" url="deleting_invoice_history.htm" />
+<topic name="Deleting Items" url="deleting_items.htm" />
+<topic name="Deleting Literature Requests" url="deleting_literature_requests.htm" />
+<topic name="Deleting Meetings" url="deleting_meetings.htm" />
+<topic name="Deleting Next Actions" url="deleting_next_actions.htm" />
+<topic name="Deleting Notes" url="deleting_notes.htm" />
+<topic name="Deleting Order History" url="deleting_order_history.htm" />
+<topic name="Deleting Payments" url="deleting_payments.htm" />
+<topic name="Deleting Project Tasks" url="deleting_project_tasks.htm" />
+<topic name="Deleting Projects" url="deleting_projects.htm" />
+<topic name="Deleting Proposals" url="deleting_proposals.htm" />
+<topic name="Deleting Purchase Orders" url="deleting_purchase_orders.htm" />
+<topic name="Deleting Sales Opportunities" url="deleting_sales_opportunities.htm" />
+
+</ftstdata>  

@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<tocdata>
+<book name="Getting Started for Administrators" url="getting_started_for_administrators.htm" >
+  <item name="Administering Server Settings" url="administering_server_settings.htm" />
+  <item name="Administering Security Profiles" url="administering_security_profiles.htm" />
+  <item name="Administering New Users" url="administering_new_users.htm" />
+  <item name="Setting Default Privileges" url="setting_default_privileges.htm" />
+  <item name="Setting Email Account Preferences" url="setting_email_account_preferences.htm" />
+  <item name="Administering Modules" url="administering_modules.htm" />
+  <item name="Administering Custom Fields" url="administering_custom_fields.htm" />
+  <item name="Importing a Marketing List" url="importing_a_marketing_list.htm" />
+  <item name="Setting up Saved Searches" url="setting_up_saved_searches.htm" />
+  <item name="Searching Information in CentraView" url="searching_information_in_centraview.htm" />
+  <item name="Setting Up Synchronization" url="setting_up_synchronization.htm" />
+  <item name="Template Management" url="template_management.htm" />
+  <item name="Merging Data with Templates" url="merging_data_with_print_templates.htm" />
+</book>
+<book name="General Administration" >
+  <book name="User Administration" >
+    <item name="Administering New Users" url="administering_new_users.htm" />
+    <item name="Administering Security Profiles" url="administering_security_profiles.htm" />
+  </book>
+  <book name="Configuration" >
+    <item name="Administering Server Settings" url="administering_server_settings.htm" />
+    <item name="Administering License Settings" url="administering_license_settings.htm" />
+    <item name="Administering Email Settings" url="administering_email_settings.htm" />
+    <item name="Administering the Customer Logo" url="administering_the_customer_logo.htm" />
+  </book>
+  <book name="Data Administration" url="administering_system_data.htm" >
+    <item name="Administering Garbage" url="administering_garbage.htm" />
+    <item name="Administering Attic" url="administering_attic.htm" />
+    <item name="Administering Merge/Purge" url="administering_merge_purge.htm" />
+    <item name="Administering Global Replace" url="administering_global_replace.htm" />
+    <item name="Administering History" url="administering_history.htm" />
+  </book>
+  <book name="Module Settings" >
+    <item name="Administering Modules" url="administering_modules.htm" />
+    <item name="Setting up Available Literature" url="setting_up_available_literature.htm" />
+    <item name="Setting up Custom Fields" url="administering_custom_fields.htm" />
+    <item name="Setting up Default Views" url="setting_up_default_views.htm" />
+    <item name="Setting up Custom Views" url="setting_up_custom_views.htm" />
+    <item name="Setting up Invoice Status" url="setting_up_invoice_status.htm" />
+    <item name="Setting up Locations" url="setting_up_locations.htm" />
+    <item name="Setting up Order Status" url="setting_up_order_status.htm" />
+    <item name="Setting up Project Status" url="setting_up_project_status.htm" />
+    <item name="Setting up Resources" url="setting_up_resources.htm" />
+    <item name="Setting up Sales Types" url="setting_up_sales_types.htm" />
+    <item name="Setting up Sales Stages" url="setting_up_sales_stages.htm" />
+    <item name="Setting up Sources" url="setting_up_sources.htm" />
+    <item name="Setting up the Suggestion Box" url="setting_up_the_suggestion_box.htm" />
+    <item name="Setting up the Support Inbox" url="setting_up_the_support_inbox.htm" />
+    <item name="Setting up Terms" url="setting_up_terms.htm" />
+    <item name="Setting up Working Hours" url="setting_up_working_hours.htm" />
+    <item name="Template Management" url="template_management.htm" />
+  </book>
+</book>
+<book name="Synchronization" url="setting_up_synchronization.htm" >
+  <item name="Setting Up Synchronization" url="setting_up_synchronization.htm" />
+</book>
+<book name="Preferences" url="about_preferences.htm" >
+  <item name="Setting User Profile Preferences" url="setting_user_profile_preferences.htm" />
+  <item name="Setting Up Synchronization" url="setting_up_synchronization.htm" />
+  <item name="Setting Homepage Preferences" url="setting_homepage_preferences.htm" />
+  <item name="Setting Email Account Preferences" url="setting_email_account_preferences.htm" />
+  <item name="Setting Email Composition Preferences" url="setting_email_composition_preferences.htm" />
+  <item name="Setting Automatic Email Checking Preferences" url="setting_automatic_email_checking_preferences.htm" />
+  <item name="Setting General Calendar Preferences" url="setting_general_calendar_preferences.htm" />
+  <item name="Setting Up Synchronization" url="setting_up_synchronization.htm" />
+  <item name="Setting Delegation Calendar Preferences" url="setting_delegation_calendar_preferences.htm" />
+  <item name="Setting Homepage Preferences" url="setting_homepage_preferences.htm" />
+  <item name="Setting General Calendar Preferences" url="setting_general_calendar_preferences.htm" />
+  <item name="Setting Email Account Preferences" url="setting_email_account_preferences.htm" />
+  <item name="Setting Email Rules" url="setting_email_rules.htm" />
+  <item name="Setting Email Composition Preferences" url="setting_email_composition_preferences.htm" />
+</book>
+<book name="Reports" url="about_reports.htm" >
+  <item name="About Reports" url="about_reports.htm" />
+</book>
+
+</tocdata>

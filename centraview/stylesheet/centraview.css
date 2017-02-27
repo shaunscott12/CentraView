@@ -1,0 +1,2898 @@
+BODY
+{
+    SCROLLBAR-FACE-COLOR: #ffffff;
+    SCROLLBAR-HIGHLIGHT-COLOR: #7c91b2;
+    SCROLLBAR-SHADOW-COLOR: #7c91b2;
+    SCROLLBAR-ARROW-COLOR: #345788;
+    SCROLLBAR-DARKSHADOW-COLOR: #ffffff;
+    SCROLLBAR-BASE-COLOR: #ffffff;
+    height: 100%;
+    margin: 0;
+}
+html
+{
+  height: 100%;
+  margin: 0;
+}
+FORM
+{
+    PADDING-RIGHT: 0px;
+    PADDING-LEFT: 0px;
+    PADDING-BOTTOM: 0px;
+    PADDING-TOP: 0px
+}
+TABLE.mainBGColor
+{
+    BACKGROUND-COLOR: #d8dfea
+}
+.logoTile
+{
+    BACKGROUND-IMAGE: url(/centraview/images/logo_tile.gif)
+}
+.headerTopTile
+{
+    BACKGROUND-IMAGE: url(/centraview/images/top_tile.gif)
+}
+.headerTopGradient
+{
+    BACKGROUND-IMAGE: url(/centraview/images/top_gradient.gif)
+}
+.headerTopLeftGradient
+{
+    BACKGROUND-IMAGE: url(/centraview/images/top_left_gradient.gif)
+}
+.headerTopRightGradient
+{
+    BACKGROUND-IMAGE: url(/centraview/images/top_right_gradient.gif)
+}
+.headerMiddle
+{
+    BACKGROUND-IMAGE: url(/centraview/images/middle_gradient_tile.gif)
+}
+.headerBottomTile
+{
+    BACKGROUND-IMAGE: url(/centraview/images/bottom_tile.gif)
+}
+.headerBottomGradient
+{
+    BACKGROUND-IMAGE: url(/centraview/images/bottom_gradient.gif)
+}
+.headerDivider
+{
+    BACKGROUND-IMAGE: url(/centraview/images/tab_tile.gif)
+}
+.headerText
+{
+    FONT-SIZE: 65%;
+    COLOR: #9fbed0;
+    font-family: verdana, arial, sans-serif
+}
+.headerTextBold
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 65%;
+    COLOR: #9fbed0;
+    font-family: verdana, arial, sans-serif
+}
+.alertMtgText
+{
+    FONT-SIZE: 65%;
+    COLOR: #bfae6d;
+    text-decoration:          none;
+    font-family: verdana, arial, sans-serif
+}
+.alertMailText
+{
+    FONT-SIZE: 65%;
+    COLOR: #8ca0ae;
+    font-family: verdana, arial, sans-serif
+}
+.alertMailTextBold
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 65%;
+    COLOR: #b4cddc;
+    font-family: verdana, arial, sans-serif
+}
+.logoutButton
+{
+    BORDER-RIGHT: #5a8ea8 1px solid;
+    BORDER-TOP: #5a8ea8 1px solid;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #5a8ea8 1px solid;
+    CURSOR: pointer;
+    COLOR: #9fbed0;
+    BORDER-BOTTOM: #5a8ea8 1px solid;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 16px;
+    BACKGROUND-COLOR: #244961
+}
+TD.defaultView
+{
+    BORDER-RIGHT: #264878 1px solid;
+    BORDER-TOP: #264878 1px solid;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #264878 1px solid;
+    WIDTH: 100px;
+    CURSOR: pointer;
+    COLOR: #4a6e9f;
+    BORDER-BOTTOM: #264878 1px solid;
+    font-family: verdana, arial, sans-serif;
+    BACKGROUND-COLOR: #d8dfea
+}
+TD.tabsOff
+{
+    FONT-SIZE: 65%;
+    COLOR: #a2b3bf;
+    BORDER-BOTTOM: #abc4d7 1px solid;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 20px;
+    BACKGROUND-COLOR: #17283c;
+    TEXT-ALIGN: left
+}
+TD.tabsOffBorder
+{
+    BORDER-RIGHT: #4f788e 1px solid;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #4f788e 1px solid;
+    COLOR: #a2b3bf;
+    BORDER-BOTTOM: #abc4d7 1px solid;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 20px;
+    BACKGROUND-COLOR: #17283c;
+    TEXT-ALIGN: left
+}
+A.tabsOff
+{
+    COLOR: #a2b3bf;
+    TEXT-DECORATION: none
+}
+A.fileNavOff
+{
+    COLOR: #334a60;
+    font-style:normal;
+		FONT-SIZE: 65%;
+    TEXT-DECORATION: none;
+    VALIGN: top;
+}
+.tabsOn
+{
+    BORDER-RIGHT: #abc4d7 1px solid;
+    BORDER-TOP: #abc4d7 1px solid;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 65%;
+    PADDING-BOTTOM: 3px;
+    BORDER-LEFT: #abc4d7 1px solid;
+    CURSOR: default;
+    COLOR: #abc4d7;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 20px;
+    BACKGROUND-COLOR: #345788;
+    TEXT-ALIGN: left
+}
+.tabsDivider
+{
+    BACKGROUND-COLOR: #4f788e
+}
+TABLE.dropdownMenu
+{
+    BORDER-TOP: #4f788e 1px solid
+}
+TD.dropdownMenu
+{
+    BORDER-RIGHT: #4f788e 1px solid;
+    PADDING-LEFT: 9px;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #4f788e 1px solid;
+    CURSOR: pointer;
+    COLOR: #a2b3bf;
+    BORDER-BOTTOM: #4f788e 1px solid;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 16px;
+    BACKGROUND-COLOR: #17283c;
+    TEXT-ALIGN: left
+}
+DIV.dropdownMenu
+{
+    BORDER-RIGHT: #4f788e 1px solid;
+    PADDING-LEFT: 9px;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #4f788e 1px solid;
+    CURSOR: pointer;
+    COLOR: #a2b3bf;
+    BORDER-BOTTOM: #4f788e 1px solid;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 16px;
+    BACKGROUND-COLOR: #17283c;
+    TEXT-ALIGN: left
+}
+SPAN.dropdownMenu
+{
+    DISPLAY: none;
+    Z-INDEX: 5;
+    LEFT: -1px;
+    WIDTH: 88px;
+    POSITION: absolute;
+    TOP: 15px
+}
+TD.dropdownMenu2
+{
+    BORDER-RIGHT: #264878 1px solid;
+    PADDING-LEFT: 9px;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #264878 1px solid;
+    CURSOR: pointer;
+    COLOR: #4a6e9f;
+    BORDER-BOTTOM: #264878 1px solid;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 16px;
+    BACKGROUND-COLOR: #d8dfea;
+    TEXT-ALIGN: left
+}
+SPAN.dropdownMenu2
+{
+    DISPLAY: none;
+    Z-INDEX: 4;
+    LEFT: -1px;
+    WIDTH: 100px;
+    POSITION: absolute;
+    TOP: 18px
+}
+TD.dropdownMenuEntities
+{
+    BORDER-RIGHT: #264878 1px solid;
+    PADDING-LEFT: 9px;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #264878 1px solid;
+    CURSOR: pointer;
+    COLOR: #4a6e9f;
+    BORDER-BOTTOM: #264878 1px solid;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 16px;
+    BACKGROUND-COLOR: #c3d4ea;
+    TEXT-ALIGN: left
+}
+TD.dropdownMenu3
+{
+    BORDER-RIGHT: #937810 1px solid;
+    PADDING-LEFT: 9px;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #937810 1px solid;
+    CURSOR: pointer;
+    COLOR: #937810;
+    BORDER-BOTTOM: #937810 1px solid;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 16px;
+    BACKGROUND-COLOR: #fff8c5;
+    TEXT-ALIGN: left
+}
+SPAN.dropdownMenu3
+{
+    DISPLAY: none;
+    Z-INDEX: 3;
+    LEFT: -1px;
+    WIDTH: 51px;
+    POSITION: absolute;
+    TOP: 17px
+}
+SPAN.dropdownMenuNS
+{
+    DISPLAY: none;
+    Z-INDEX: 5;
+    WIDTH: 88px;
+    POSITION: absolute
+}
+.mainTableBG
+{
+    BACKGROUND-COLOR: #345788
+}
+.leftNavTopBG
+{
+    BACKGROUND-COLOR: #a0b3cb
+}
+.leftNavTitle
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 85%;
+    PADDING-BOTTOM: 11px;
+    COLOR: #345788;
+    PADDING-TOP: 11px;
+    font-family: verdana, arial, sans-serif
+}
+.secNavOnLeft
+{
+    PADDING-LEFT: 5px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #d8dfea 2px solid;
+    WIDTH: 12px;
+    COLOR: #345788;
+    font-family: verdana, arial, sans-serif;
+    BACKGROUND-COLOR: #d8dfea;
+    TEXT-ALIGN: left
+}
+.secNavOn
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 65%;
+    CURSOR: default;
+    COLOR: #345788;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 21px;
+    BACKGROUND-COLOR: #d8dfea
+}
+.secNavOnBottom
+{
+    HEIGHT: 2px;
+    BACKGROUND-COLOR: #d8dfea
+}
+.secNavOff
+{
+    BORDER-RIGHT: #ffe994 1px solid;
+    BORDER-TOP: #ffe994 1px solid;
+    BORDER-LEFT: #ffe994 1px solid;
+    BORDER-BOTTOM: #ffe994 1px solid;
+    HEIGHT: 21px
+}
+.secNavOffLeft
+{
+    PADDING-LEFT: 5px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 65%;
+    WIDTH: 14px;
+    COLOR: #0b2953;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 21px;
+    BACKGROUND-COLOR: #7c91b2;
+    TEXT-ALIGN: left
+}
+.secNavOffRight
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 65%;
+    WIDTH: 155px;
+    CURSOR: pointer;
+    COLOR: #0b2953;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 21px;
+    BACKGROUND-COLOR: #7c91b2
+}
+.secNavOffLink
+{
+    CURSOR: pointer;
+    COLOR: #0b2953;
+    TEXT-DECORATION: none
+}
+.secNavOnLink
+{
+    CURSOR: pointer;
+    COLOR: #345788;
+    TEXT-DECORATION: none
+}
+.terNavOffLeft
+{
+    BORDER-LEFT: #d8dfea 2px solid;
+    BACKGROUND-COLOR: #a0b3cb
+}
+.terNavOnLeft
+{
+    BORDER-LEFT: #d8dfea 2px solid;
+    BACKGROUND-COLOR: #a0b3cb;
+    FONT-SIZE: 65%;
+    FONT-WEIGHT: bold;
+    CURSOR: pointer;
+    COLOR: #334a60;
+    font-family: verdana, arial, sans-serif;
+	align: right;	
+}
+.terNavOffBottom
+{
+    BACKGROUND-IMAGE: url(/centraview/images/ter_nav_off_tile.gif)
+}
+TD.terNavOn
+{
+    FONT-SIZE: 65%;
+    FONT-WEIGHT: bold;
+    CURSOR: pointer;
+    COLOR: #334a60;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 21px;
+    BACKGROUND-COLOR: #a0b3cb
+}
+TD.terNavOff
+{
+    FONT-SIZE: 65%;
+    CURSOR: pointer;
+    COLOR: #334a60;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 21px;
+    BACKGROUND-COLOR: #a0b3cb
+}
+SPAN.terNavOff
+{
+    FONT-SIZE: 65%;
+    CURSOR: pointer;
+    COLOR: #334a60;
+    font-family: verdana, arial, sans-serif;
+    BACKGROUND-COLOR: #a0b3cb
+}
+A.terNavOff
+{
+    COLOR: #334a60;
+    TEXT-DECORATION: none;
+    VALIGN: top;
+}
+.navDropDown
+{
+    FONT-SIZE: 65%;
+    WIDTH: 137px;
+    COLOR: #334a60;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 18px;
+    BACKGROUND-COLOR: #c3d4ea
+}
+.navHelp
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 65%;
+    COLOR: #345788;
+    font-family: verdana, arial, sans-serif;
+    POSITION: relative;
+    TOP: -2px
+}
+.leftNavDivider
+{
+    BACKGROUND-IMAGE: url(/centraview/images/left_nav_divider_tile.gif)
+}
+.leftNavBottomBG
+{
+    BACKGROUND-COLOR: #b8cae1
+}
+.searchBar
+{
+    BORDER-RIGHT: #7c91b2 1px solid;
+    BORDER-TOP: #7c91b2 1px solid;
+    BORDER-LEFT: #7c91b2 1px solid;
+    BORDER-BOTTOM: #7c91b2 1px solid;
+    HEIGHT: 31px;
+    BACKGROUND-COLOR: #ffffff
+}
+.searchButton
+{
+    BORDER-RIGHT: #264878 1px solid;
+    BORDER-TOP: #264878 1px solid;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #264878 1px solid;
+    CURSOR: pointer;
+    COLOR: #4a6e9f;
+    BORDER-BOTTOM: #264878 1px solid;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: #d8dfea
+}
+.searchTextBox
+{
+    BORDER-RIGHT: #a0b3cb 1px solid;
+    BORDER-TOP: #a0b3cb 1px solid;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #a0b3cb 1px solid;
+    WIDTH: 109px;
+    COLOR: #264878;
+    BORDER-BOTTOM: #a0b3cb 1px solid;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 17px
+}
+.searchText
+{
+    FONT-SIZE: 65%;
+    COLOR: #4a6e9f;
+    font-family: verdana, arial, sans-serif
+}
+.searchTextLink
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 65%;
+    COLOR: #4a6e9f;
+    font-family: verdana, arial, sans-serif
+}
+.searchDropDown
+{
+    FONT-SIZE: 65%;
+    WIDTH: 140px;
+    COLOR: #334a60;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 18px;
+    BACKGROUND-COLOR: #ffffff
+}
+.leftAmberColor
+{
+    BORDER-RIGHT: #7d93b2 1px solid;
+    BORDER-LEFT: #937810 1px solid;
+    BACKGROUND-COLOR: #ffe994
+}
+.rightAmberColor
+{
+    BORDER-RIGHT: #937810 1px solid;
+    BORDER-LEFT: #7d93b2 1px solid;
+    BACKGROUND-COLOR: #ffe994
+}
+.topPagingBar
+{
+    BORDER-RIGHT: #937810 1px solid;
+    BORDER-TOP: #937810 1px solid;
+    BORDER-LEFT: #937810 1px solid;
+    BACKGROUND-COLOR: #ffe994
+}
+.bottomPagingBar
+{
+    BORDER-RIGHT: #937810 1px solid;
+    BORDER-LEFT: #937810 1px solid;
+    BORDER-BOTTOM: #937810 1px solid;
+    BACKGROUND-COLOR: #ffe994
+}
+.pagingButton
+{
+  border: #937810 1px solid;
+  background-color: #fff8c5;
+  font-family: verdana, arial, sans-serif;
+  font-weight: bold;
+  font-size: 65%;
+  color: #937810;
+  cursor: pointer;
+  height: 17px;
+}
+.globalReplaceButton
+{
+    BORDER-RIGHT: #937810 1px solid;
+    BORDER-TOP: #937810 1px solid;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #937810 1px solid;
+    WIDTH: 93px;
+    CURSOR: pointer;
+    COLOR: #937810;
+    BORDER-BOTTOM: #937810 1px solid;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: #fff8c5
+}
+.pagingAmberTextBold
+{
+  padding-right: 3px;
+  padding-left: 0px;
+  font-weight: bold;
+  font-size: 55%;
+  color: #937810;
+  font-family: verdana, arial, sans-serif
+}
+.pagingAmberText
+{
+  padding-right: 3px;
+  padding-left: 0px;
+  font-size: 55%;
+  color: #937810;
+  font-family: verdana, arial, sans-serif
+}
+.pagingBlueTextBold
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 55%;
+    COLOR: #334a60;
+    font-family: verdana, arial, sans-serif
+}
+.pagingBlueText
+{
+    FONT-SIZE: 55%;
+    COLOR: #334a60;
+    font-family: verdana, arial, sans-serif
+}
+.pagingDropdown
+{
+    FONT-SIZE: 50%;
+    WIDTH: 41px;
+    COLOR: #334a60;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 18px;
+    BACKGROUND-COLOR: #fff8c5
+}
+TD.pagingDrop
+{
+    BORDER-RIGHT: #937810 1px solid;
+    BORDER-TOP: #937810 1px solid;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #937810 1px solid;
+    WIDTH: 100px;
+    CURSOR: pointer;
+    COLOR: #937810;
+    BORDER-BOTTOM: #937810 1px solid;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 18px;
+    BACKGROUND-COLOR: #fff8c5
+}
+TD.contactTableHead
+{
+    BORDER-RIGHT: #7d93b2 1px solid;
+    BORDER-TOP: #7d93b2 1px solid;
+    BORDER-LEFT: #7d93b2 1px solid;
+    BORDER-BOTTOM: #7d93b2 1px solid;
+    BACKGROUND-COLOR: #9ebed1
+}
+.contactTableHeadShadow
+{
+    BACKGROUND-COLOR: #7d93b2
+}
+.contactTableHeadShadowLt
+{
+    BACKGROUND-COLOR: #b1d0dc
+}
+.contactTableHeadCheck
+{
+    BORDER-RIGHT: #7d93b2 1px solid;
+    BORDER-BOTTOM: #a0bbdb 1px solid;
+    BACKGROUND-COLOR: #9ebed1
+}
+TD.contactTableHeadText
+{
+    PADDING-RIGHT: 2px;
+    PADDING-LEFT: 2px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 65%;
+    COLOR: #334a60;
+    font-family: verdana, arial, sans-serif;
+    BACKGROUND-COLOR: #9ebed1;
+}
+.calendarTableHeadText
+{
+    PADDING-RIGHT: 2px;
+    PADDING-LEFT: 2px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 100%;
+    COLOR: #ffffff;
+    font-family: verdana, arial, sans-serif;
+}
+A.contactTableHeadText
+{
+  color: #334a60;
+  text-decoration: none;
+  cursor: pointer;				
+}
+
+A.contactTableHeadText:hover
+{
+    COLOR: #146ea3;
+    TEXT-DECORATION: underline
+}
+.contactTableHeadBottom
+{
+    BACKGROUND-COLOR: #7d93b2
+}
+.contactTableCheck
+{
+    BORDER-RIGHT: #7d93b2 1px solid;
+    BORDER-BOTTOM: #a0bbdb 1px solid;
+    BACKGROUND-COLOR: #fff8c5;
+    width: 20px;
+	text-align: center;
+}
+.contactTableCheckSelected
+{
+    BORDER-RIGHT: #7d93b2 1px solid;
+    BORDER-BOTTOM: #a0bbdb 1px solid;
+    BACKGROUND-COLOR: #ffeba0;
+	text-align: center;
+	width: 20px;
+}
+.contactTableCheckBottom
+{
+  border-right: #7d93b2 1px solid;
+  background-color: #fff8c5;
+  text-align: center;				
+}
+.contactTableCheckBottomSelected
+{
+  border-right: #7d93b2 1px solid;
+  background-color: #ffeba0;
+  text-align: center;				
+}
+.contactTableIconOdd
+{
+    BORDER-RIGHT: #a0bbdb 1px solid;
+    TEXT-ALIGN: center;
+}
+.contactTableIconEven
+{
+    BORDER-RIGHT: #a0bbdb 1px solid;
+    TEXT-ALIGN: center;
+}
+.contactTableRowOdd
+{
+    BACKGROUND-COLOR: #e4eaf3
+}
+.emailRowUnreadOdd
+{
+    BACKGROUND-COLOR: #e4eaf3;
+		font-weight: bold;
+}
+.emailRowUnreadEven
+{
+    BACKGROUND-COLOR: #f8fafc;
+		font-weight: bold;
+}
+.contactTableOdd
+{
+    BORDER-RIGHT: #a0bbdb 1px solid;
+    PADDING-RIGHT: 5px;
+    PADDING-LEFT: 5px;
+    FONT-SIZE: 65%;
+    COLOR: #334a60;
+    font-family: verdana, arial, sans-serif
+}
+.emailTableOdd
+{
+    PADDING-RIGHT: 0px;
+    PADDING-LEFT: 5px;
+    FONT-SIZE: 65%;
+    COLOR: #334a60;
+    font-family: verdana, arial, sans-serif
+}
+.contactTableOddEnd
+{
+    PADDING-RIGHT: 5px;
+    PADDING-LEFT: 5px;
+    FONT-SIZE: 65%;
+    COLOR: #334a60;
+    font-family: verdana, arial, sans-serif
+}
+.HomeTableOdd
+{
+    BORDER-RIGHT: #7d93b2 1px solid;
+    PADDING-RIGHT: 5px;
+    BORDER-TOP: 1px;
+    PADDING-LEFT: 5px;
+    FONT-SIZE: 65%;
+    PADDING-BOTTOM: 3px;
+    BORDER-LEFT: #7d93b2 1px solid;
+    COLOR: #334a60;
+    PADDING-TOP: 3px;
+    BORDER-BOTTOM: #7d93b2 1px solid;
+    font-family: verdana, arial, sans-serif
+}
+.contactTableRowEven
+{
+    BACKGROUND-COLOR: #f8fafc
+}
+.contactTableEven
+{
+    BORDER-RIGHT: #a0bbdb 1px solid;
+    PADDING-RIGHT: 5px;
+    PADDING-LEFT: 5px;
+    FONT-SIZE: 65%;
+    COLOR: #334a60;
+    font-family: verdana, arial, sans-serif
+}
+.contactTableEvenEnd
+{
+    PADDING-RIGHT: 5px;
+    PADDING-LEFT: 5px;
+    FONT-SIZE: 65%;
+    COLOR: #334a60;
+    font-family: verdana, arial, sans-serif
+}
+.contactTableRowSelected
+{
+    BACKGROUND-COLOR: #ffeba0
+}
+A.contactTableLink
+{
+    COLOR: #334a60
+}
+A.contactTableLink:hover
+{
+    COLOR: #146ea3
+}
+A.contactTableLink:visited
+{
+    COLOR: #937810
+}
+A.popupLink
+{
+  color: #334a60;
+  text-decoration: underline;
+  cursor: pointer;
+}
+A.popupLink:hover
+{
+  color: #146ea3;
+  text-decoration: underline;
+  cursor: pointer;	
+}
+A.popupLink:visited
+{
+  color: #937810;
+  text-decoration: underline;
+  cursor: pointer;	
+}
+.footerDivider
+{
+    BACKGROUND-IMAGE: url(/centraview/images/footer_tile.gif)
+}
+.footerBG
+{
+    PADDING-RIGHT: 7px;
+    PADDING-LEFT: 7px;
+    BACKGROUND-COLOR: #334a60
+}
+.footerLeftText
+{
+    FONT-SIZE: 65%;
+    COLOR: #9fbed0;
+    font-family: verdana, arial, sans-serif;
+    POSITION: relative;
+    TOP: -2px;
+    TEXT-ALIGN: left
+}
+.footerLeftTextBold
+{
+    FONT-WEIGHT: bold
+}
+.footerRightText
+{
+    FONT-SIZE: 65%;
+    COLOR: #75a2bc;
+    font-family: verdana, arial, sans-serif;
+    POSITION: relative;
+    TOP: -2px;
+    TEXT-ALIGN: right
+}
+.footerRightTextBold
+{
+    FONT-WEIGHT: bold
+}
+.popupHeadText
+{
+    FONT-SIZE: 65%;
+    COLOR: #759ab0;
+    font-family: verdana, arial, sans-serif
+}
+.popupHead
+{
+    FONT-SIZE: 65%;
+    COLOR: #a2b3bf;
+    font-family: verdana, arial, sans-serif;
+    BACKGROUND-COLOR: #17283c;
+    TEXT-ALIGN: left
+}
+.popupHeadTextBold
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 65%;
+    COLOR: #9ebed1;
+    font-family: verdana, arial, sans-serif
+}
+.popupTableHead
+{
+    BORDER-TOP: #b7d4d1 1px solid;
+    BORDER-BOTTOM: #7d93b2 1px solid;
+    BACKGROUND-COLOR: #9ebed1
+}
+.HomeTableHead
+{
+    BORDER-RIGHT: #7d93b2 1px solid;
+    BORDER-TOP: #7d93b2 1px solid;
+    BORDER-LEFT: #7d93b2 1px solid;
+    BORDER-BOTTOM: #7d93b2 1px solid;
+    BACKGROUND-COLOR: #9ebed1
+}
+.popupEntTableHeadShadow
+{
+    BACKGROUND-IMAGE: url(/centraview/images/popup_ent_shadow.gif)
+}
+.popupTableHeadShadow
+{
+    BACKGROUND-IMAGE: url(/centraview/images/popup_shadow.gif)
+}
+.popupTableHeadBottom
+{
+    BACKGROUND-COLOR: #7d93b2
+}
+.popupTableHeadText
+{
+    PADDING-RIGHT: 2px;
+    PADDING-LEFT: 2px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 65%;
+    COLOR: #334a60;
+    font-family: verdana, arial, sans-serif
+}
+.popupTableRow
+{
+    BACKGROUND-COLOR: #d8dfea
+}
+.popupTableDivider
+{
+    BACKGROUND-COLOR: #6f86a7
+}
+.popupTableTD
+{
+    BORDER-RIGHT: #6f86a7 1px solid
+}
+.popupTableText
+{
+    FONT-SIZE: 65%;
+    COLOR: #334a60;
+    font-family: verdana, arial, sans-serif
+}
+.popupTableTextBold
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 65%;
+    COLOR: #334a60;
+    font-family: verdana, arial, sans-serif
+}
+.popupTableInstructionText
+{
+    PADDING-RIGHT: 3px;
+    FONT-SIZE: 65%;
+    COLOR: #334a60;
+    font-family: verdana, arial, sans-serif
+}
+.popupTableInstructionTextBold
+{
+    PADDING-RIGHT: 3px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 65%;
+    COLOR: #334a60;
+    font-family: verdana, arial, sans-serif
+}
+.popupTableStarText
+{
+    PADDING-RIGHT: 2px;
+    PADDING-LEFT: 2px;
+    FONT-SIZE: 65%;
+    COLOR: #937810;
+    font-family: verdana, arial, sans-serif
+}
+.popupTextBox
+{
+    BORDER-RIGHT: #a0b3cb 1px solid;
+    BORDER-TOP: #a0b3cb 1px solid;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #a0b3cb 1px solid;
+    WIDTH: 170px;
+    COLOR: #264878;
+    BORDER-BOTTOM: #a0b3cb 1px solid;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: #e7ecf3
+}
+.emailAccountSelect
+{
+    BORDER-RIGHT: #a0b3cb 1px solid;
+    BORDER-TOP: #a0b3cb 1px solid;
+    FONT-SIZE: 100%;
+    BORDER-LEFT: #a0b3cb 1px solid;
+    /*WIDTH: 170px;*/
+    COLOR: #264878;
+    BORDER-BOTTOM: #a0b3cb 1px solid;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: #e7ecf3
+}
+.fileBrowseButton
+{
+    BORDER-RIGHT: #265c78 1px solid;
+    BORDER-TOP: #265c78 1px solid;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 75%;
+    BORDER-LEFT: #265c78 1px solid;
+    CURSOR: pointer;
+    COLOR: #334a60;
+    BORDER-BOTTOM: #265c78 1px solid;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: #e7ecf3
+}
+.popupTextArea
+{
+    BORDER-RIGHT: #a0b3cb 1px solid;
+    BORDER-TOP: #a0b3cb 1px solid;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #a0b3cb 1px solid;
+    WIDTH: 170px;
+    COLOR: #264878;
+    BORDER-BOTTOM: #a0b3cb 1px solid;
+    font-family: verdana, arial, sans-serif;
+    BACKGROUND-COLOR: #e7ecf3
+}
+select.svdSrchTextAreaNew
+{
+    BORDER-RIGHT: #a0b3cb 1px solid;
+    BORDER-TOP: #a0b3cb 1px solid;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #a0b3cb 1px solid;
+    WIDTH: 170px;
+    HEIGHT: 90px;
+    COLOR: #264878;
+    BORDER-BOTTOM: #a0b3cb 1px solid;
+    font-family: verdana, arial, sans-serif;
+    BACKGROUND-COLOR: #e7ecf3
+}
+.svdSrchTextArea
+{
+    BORDER-RIGHT: #a0b3cb 1px solid;
+    BORDER-TOP: #a0b3cb 1px solid;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #a0b3cb 1px solid;
+    WIDTH: 170px;
+    HEIGHT: 50px;
+    COLOR: #264878;
+    BORDER-BOTTOM: #a0b3cb 1px solid;
+    font-family: verdana, arial, sans-serif;
+    BACKGROUND-COLOR: #e7ecf3
+}
+.powerEditTextArea
+{
+    BORDER-RIGHT: #a0b3cb 1px solid;
+    BORDER-TOP: #a0b3cb 1px solid;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #a0b3cb 1px solid;
+    WIDTH: 400px;
+    HEIGHT: 50px;
+    COLOR: #264878;
+    BORDER-BOTTOM: #a0b3cb 1px solid;
+    font-family: verdana, arial, sans-serif;
+    BACKGROUND-COLOR: #e7ecf3
+}
+.popupDateBox
+{
+    BORDER-RIGHT: #a0b3cb 1px solid;
+    BORDER-TOP: #a0b3cb 1px solid;
+    BORDER-LEFT: #a0b3cb 1px solid;
+    WIDTH: 20px;
+    BORDER-BOTTOM: #a0b3cb 1px solid;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: #e7ecf3;
+    FONT-SIZE: 65%;
+    font-family: verdana, arial, sans-serif;
+    COLOR: #334a60;
+}
+.popupDarkTD
+{
+    BACKGROUND-COLOR: #a0b3cb
+}
+.popupMediumTD
+{
+    PADDING-RIGHT: 2px;
+    PADDING-LEFT: 2px;
+    BACKGROUND-COLOR: #b8cae1
+}
+.popupButton
+{
+    BORDER-RIGHT: #265c78 1px solid;
+    BORDER-TOP: #265c78 1px solid;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #265c78 1px solid;
+    CURSOR: pointer;
+    COLOR: #334a60;
+    BORDER-BOTTOM: #265c78 1px solid;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: #a0becb
+}
+td.searchBuilder
+{
+	COLOR: #FFFFFF;
+    font-family: verdana, arial, sans-serif;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 65%;
+    PADDING-LEFT: 3px;
+    BACKGROUND-COLOR: #7c91b2;
+}
+.saveChangesBtn
+{
+    BORDER-RIGHT: #265c78 1px solid;
+    BORDER-TOP: #265c78 1px solid;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #265c78 1px solid;
+    WIDTH: 90px;
+    CURSOR: pointer;
+    COLOR: #334a60;
+    BORDER-BOTTOM: #265c78 1px solid;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: #a0becb
+}
+.saveCloseBtn
+{
+    BORDER-RIGHT: #265c78 1px solid;
+    BORDER-TOP: #265c78 1px solid;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #265c78 1px solid;
+    WIDTH: 95px;
+    CURSOR: pointer;
+    COLOR: #334a60;
+    BORDER-BOTTOM: #265c78 1px solid;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: #a0becb
+}
+.saveCreateNewBtn
+{
+    BORDER-RIGHT: #265c78 1px solid;
+    BORDER-TOP: #265c78 1px solid;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #265c78 1px solid;
+    CURSOR: pointer;
+    COLOR: #334a60;
+    BORDER-BOTTOM: #265c78 1px solid;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: #a0becb;
+    WIDTH: 125px;
+}
+.saveNewBtn
+{
+    BORDER-RIGHT: #265c78 1px solid;
+    BORDER-TOP: #265c78 1px solid;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #265c78 1px solid;
+    WIDTH: 90px;
+    CURSOR: pointer;
+    COLOR: #334a60;
+    BORDER-BOTTOM: #265c78 1px solid;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: #a0becb
+}
+.resetFieldsBtn
+{
+    BORDER-RIGHT: #265c78 1px solid;
+    BORDER-TOP: #265c78 1px solid;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #265c78 1px solid;
+    WIDTH: 79px;
+    CURSOR: pointer;
+    COLOR: #334a60;
+    BORDER-BOTTOM: #265c78 1px solid;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: #a0becb
+}
+.lookupButton
+{
+    BORDER-RIGHT: #4f7b91 1px solid;
+    BORDER-TOP: #4f7b91 1px solid;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #4f7b91 1px solid;
+    CURSOR: pointer;
+    COLOR: #4f7b91;
+    BORDER-BOTTOM: #4f7b91 1px solid;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: #b2cad5
+}
+.addNewBtn
+{
+    BORDER-RIGHT: #4f7b91 1px solid;
+    BORDER-TOP: #4f7b91 1px solid;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #4f7b91 1px solid;
+    CURSOR: pointer;
+    COLOR: #4f7b91;
+    BORDER-BOTTOM: #4f7b91 1px solid;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: #b2cad5;
+    WIDTH: 55px;
+}
+.addRemoveBtn
+{
+    BORDER-RIGHT: #4f7b91 1px solid;
+    BORDER-TOP: #4f7b91 1px solid;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #4f7b91 1px solid;
+    CURSOR: pointer;
+    COLOR: #4f7b91;
+    BORDER-BOTTOM: #4f7b91 1px solid;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: #b2cad5;
+    WIDTH: 75px;
+}
+.addRowBtn
+{
+    BORDER-RIGHT: #4f7b91 1px solid;
+    BORDER-TOP: #4f7b91 1px solid;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 85%;
+    BORDER-LEFT: #4f7b91 1px solid;
+    CURSOR: pointer;
+    COLOR: #4f7b91;
+    BORDER-BOTTOM: #4f7b91 1px solid;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: #b2cad5;
+    WIDTH: 55px;
+}
+.removeRowBtn
+{
+    BORDER-RIGHT: #4f7b91 1px solid;
+    BORDER-TOP: #4f7b91 1px solid;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 85%;
+    BORDER-LEFT: #4f7b91 1px solid;
+    CURSOR: pointer;
+    COLOR: #4f7b91;
+    BORDER-BOTTOM: #4f7b91 1px solid;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: #b2cad5;
+    WIDTH: 75px;
+}
+.moveDownBtn
+{
+    BORDER-RIGHT: #4f7b91 1px solid;
+    BORDER-TOP: #4f7b91 1px solid;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 85%;
+    BORDER-LEFT: #4f7b91 1px solid;
+    CURSOR: pointer;
+    COLOR: #4f7b91;
+    BORDER-BOTTOM: #4f7b91 1px solid;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: #b2cad5;
+    WIDTH: 65px;
+}
+.moveUpBtn
+{
+    BORDER-RIGHT: #4f7b91 1px solid;
+    BORDER-TOP: #4f7b91 1px solid;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 85%;
+    BORDER-LEFT: #4f7b91 1px solid;
+    CURSOR: pointer;
+    COLOR: #4f7b91;
+    BORDER-BOTTOM: #4f7b91 1px solid;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: #b2cad5;
+    WIDTH: 50px;
+}
+.svdSrchInsBtn
+{
+    BORDER-RIGHT: #264878 1px solid;
+    BORDER-TOP: #264878 1px solid;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #264878 1px solid;
+    CURSOR: pointer;
+    COLOR: #4a6e9f;
+    BORDER-BOTTOM: #264878 1px solid;
+    font-family: verdana, arial, sans-serif;
+    BACKGROUND-COLOR: #c3d4ea;
+    WIDTH: 120px;
+}
+.activityDropdown
+{
+    FONT-SIZE: 65%;
+    /*WIDTH: 104px;*/
+    COLOR: #17283c;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 18px;
+    BACKGROUND-COLOR: #a0b3cb
+}
+.activityDivider
+{
+    BACKGROUND-IMAGE: url(/centraview/images/activity_horiz_tile.gif)
+}
+.timeDropdown
+{
+    FONT-SIZE: 65%;
+    WIDTH: 45px;
+    COLOR: #17283c;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 18px;
+    BACKGROUND-COLOR: #e7ecf3
+}
+.timeDropdownWide
+{
+    FONT-SIZE: 65%;
+    WIDTH: 74px;
+    COLOR: #17283c;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 18px;
+    BACKGROUND-COLOR: #e7ecf3
+}
+.entityTitlebar
+{
+    BORDER-TOP: #17283c 1px solid;
+    BORDER-BOTTOM: #264878 1px solid;
+    HEIGHT: 20px;
+    BACKGROUND-COLOR: #345788
+}
+.entityTitlebarShadow
+{
+    BACKGROUND-COLOR: #17283c
+}
+.entityTitlebarBlueText
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 65%;
+    COLOR: #c3d4ea;
+    font-family: verdana, arial, sans-serif
+}
+.entityTitlebarWhiteText
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 65%;
+    COLOR: #ffffff;
+    font-family: verdana, arial, sans-serif
+}
+.minMaxButton
+{
+    BORDER-RIGHT: #d8dfea 1px solid;
+    BORDER-TOP: #d8dfea 1px solid;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 55%;
+    BORDER-LEFT: #d8dfea 1px solid;
+    WIDTH: 63px;
+    CURSOR: pointer;
+    COLOR: #ffffff;
+    BORDER-BOTTOM: #d8dfea 1px solid;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 14px;
+    BACKGROUND-COLOR: #7c91b2
+}
+.newWindowButton
+{
+    BORDER-RIGHT: #d8dfea 1px solid;
+    BORDER-TOP: #d8dfea 1px solid;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 55%;
+    BORDER-LEFT: #d8dfea 1px solid;
+    WIDTH: 79px;
+    CURSOR: pointer;
+    COLOR: #ffffff;
+    BORDER-BOTTOM: #d8dfea 1px solid;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 14px;
+    BACKGROUND-COLOR: #7c91b2
+}
+.entityListBorder
+{
+    BORDER-RIGHT: #264878 1px solid;
+    BORDER-BOTTOM: #264878 1px solid
+}
+.entitySearchBG
+{
+    BACKGROUND-COLOR: #7c91b2
+}
+.entitySearchWhiteText
+{
+    FONT-SIZE: 55%;
+    COLOR: #ffffff;
+    font-family: verdana, arial, sans-serif
+}
+.entitySearchWhiteTextBold
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 65%;
+    COLOR: #ffffff;
+    font-family: verdana, arial, sans-serif
+}
+.entitySearchBlueTextBold
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 65%;
+    COLOR: #c3d4ea;
+    font-family: verdana, arial, sans-serif
+}
+.entityDarkBlueText
+{
+    FONT-SIZE: 65%;
+    COLOR: #030f20;
+    font-family: verdana, arial, sans-serif
+}
+.entitySearchTextBox
+{
+    BORDER-RIGHT: #264878 1px solid;
+    BORDER-TOP: #264878 1px solid;
+    BORDER-LEFT: #264878 1px solid;
+    WIDTH: 95px;
+    BORDER-BOTTOM: #264878 1px solid;
+    HEIGHT: 17px
+}
+.entitySearchButton
+{
+    BORDER-RIGHT: #264878 1px solid;
+    BORDER-TOP: #264878 1px solid;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #264878 1px solid;
+    CURSOR: pointer;
+    COLOR: #4a6e9f;
+    BORDER-BOTTOM: #264878 1px solid;
+    font-family: verdana, arial, sans-serif;
+    BACKGROUND-COLOR: #c3d4ea
+}
+.entityDuplicateButton
+{
+    BORDER-RIGHT: #264878 1px solid;
+    BORDER-TOP: #264878 1px solid;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #264878 1px solid;
+    WIDTH: 79px;
+    CURSOR: pointer;
+    COLOR: #4a6e9f;
+    BORDER-BOTTOM: #264878 1px solid;
+    font-family: verdana, arial, sans-serif;
+    BACKGROUND-COLOR: #c3d4ea
+}
+TD.entityDefaultView
+{
+    BORDER-RIGHT: #264878 1px solid;
+    BORDER-TOP: #264878 1px solid;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #264878 1px solid;
+    CURSOR: pointer;
+    COLOR: #4a6e9f;
+    BORDER-BOTTOM: #264878 1px solid;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 15px;
+    BACKGROUND-COLOR: #c3d4ea
+}
+.entitySearchHorizDivider
+{
+    BACKGROUND-IMAGE: url(/centraview/images/entity_search_horiz_tile.gif)
+}
+.entityListRow
+{
+    BACKGROUND-COLOR: #a0b3cb
+}
+TD.entityListText
+{
+    FONT-SIZE: 65%;
+    COLOR: #334a60;
+    font-family: verdana, arial, sans-serif
+}
+A.entityListText
+{
+    COLOR: #334a60;
+    TEXT-DECORATION: none
+}
+A.entityListText:hover
+{
+    COLOR: #334a60;
+    TEXT-DECORATION: underline
+}
+.entityListItemBottom
+{
+    BACKGROUND-IMAGE: url(/centraview/images/entity_list_tile.gif)
+}
+.relInfoTop
+{
+    BACKGROUND-COLOR: #264878
+}
+.relInfoBG
+{
+    BACKGROUND-COLOR: #3F608D
+}
+
+.relInfoBG_OLD
+{
+    BACKGROUND-COLOR: #7c91b2
+}
+
+.relInfoDropdown
+{
+    FONT-SIZE: 65%;
+    WIDTH: 140px;
+    COLOR: #334a60;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 18px;
+    BACKGROUND-COLOR: #c3d4ea
+}
+.relInfoTextBox
+{
+    BORDER-RIGHT: #264878 1px solid;
+    BORDER-TOP: #264878 1px solid;
+    BORDER-LEFT: #264878 1px solid;
+    WIDTH: 92px;
+    BORDER-BOTTOM: #264878 1px solid;
+    HEIGHT: 17px
+}
+.entityListSelected
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 65%;
+    COLOR: #ffffff;
+    FONT-FAMILY: verdana, arial, sans-serif;
+    BACKGROUND-COLOR: #355787
+}
+.entitySearchDropdown
+{
+    FONT-SIZE: 65%;
+    WIDTH: 99px;
+    COLOR: #334a60;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 18px;
+    BACKGROUND-COLOR: #c3d4ea
+}
+.entityAlertRow
+{
+    BORDER-RIGHT: #ff7d39 1px solid;
+    BORDER-TOP: #ff7d39 1px solid;
+    BORDER-LEFT: #ff7d39 1px solid;
+    BORDER-BOTTOM: #ff7d39 1px solid;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: #ffefe7
+}
+.entityAlertText
+{
+    FONT-SIZE: 65%;
+    COLOR: #cd4800;
+    font-family: verdana, arial, sans-serif
+}
+.entityViewAllBtn
+{
+    BORDER-RIGHT: #4f7b91 1px solid;
+    BORDER-TOP: #4f7b91 1px solid;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 55%;
+    BORDER-LEFT: #4f7b91 1px solid;
+    COLOR: #4f7b91;
+    BORDER-BOTTOM: #4f7b91 1px solid;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 14px;
+    BACKGROUND-COLOR: #b2cad5
+}
+.homePageBtn
+{
+    BORDER-RIGHT: #4f7b91 1px solid;
+    BORDER-TOP: #4f7b91 1px solid;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 55%;
+    BORDER-LEFT: #4f7b91 1px solid;
+    COLOR: #4f7b91;
+    BORDER-BOTTOM: #4f7b91 1px solid;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 16px;
+    BACKGROUND-COLOR: #b2cad5
+}
+.entityLongBox
+{
+    BORDER-RIGHT: #a0b3cb 1px solid;
+    BORDER-TOP: #a0b3cb 1px solid;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #a0b3cb 1px solid;
+    WIDTH: 190px;
+    COLOR: #334a60;
+    BORDER-BOTTOM: #a0b3cb 1px solid;
+    FONT-FAMILY: verdana, arial, sans-serif;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: #ffffff
+}
+.entityExLongBox
+{
+    BORDER-RIGHT: #a0b3cb 1px solid;
+    BORDER-TOP: #a0b3cb 1px solid;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #a0b3cb 1px solid;
+    WIDTH: 174px;
+    COLOR: #334a60;
+    BORDER-BOTTOM: #a0b3cb 1px solid;
+    FONT-FAMILY: verdana, arial, sans-serif;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: #ffffff
+}
+.entityShortBox
+{
+    BORDER-RIGHT: #a0b3cb 1px solid;
+    BORDER-TOP: #a0b3cb 1px solid;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #a0b3cb 1px solid;
+    WIDTH: 55px;
+    COLOR: #334a60;
+    BORDER-BOTTOM: #a0b3cb 1px solid;
+    FONT-FAMILY: verdana, arial, sans-serif;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: #ffffff
+}
+.entityTextArea
+{
+    BORDER-RIGHT: #a0b3cb 1px solid;
+    BORDER-TOP: #a0b3cb 1px solid;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #a0b3cb 1px solid;
+    WIDTH: 190px;
+    COLOR: #334a60;
+    BORDER-BOTTOM: #a0b3cb 1px solid;
+    FONT-FAMILY: verdana, arial, sans-serif;
+    HEIGHT: 38px;
+}
+.entityShortDrp
+{
+    FONT-SIZE: 65%;
+    WIDTH: 49px;
+    COLOR: #334a60;
+    FONT-FAMILY: verdana, arial, sans-serif;
+    HEIGHT: 18px;
+    BACKGROUND-COLOR: #ffffff
+}
+.entityLongDrp
+{
+    FONT-SIZE: 65%;
+    WIDTH: 190px;
+    COLOR: #334a60;
+    FONT-FAMILY: verdana, arial, sans-serif;
+    HEIGHT: 18px;
+    BACKGROUND-COLOR: #ffffff
+}
+.entityCommShortDrp
+{
+    FONT-SIZE: 65%;
+    WIDTH: 70px;
+    COLOR: #334a60;
+    FONT-FAMILY: verdana, arial, sans-serif;
+    HEIGHT: 18px;
+    BACKGROUND-COLOR: #ffffff
+}
+.entityCommLongDrp
+{
+    FONT-SIZE: 65%;
+    WIDTH: 174px;
+    COLOR: #334a60;
+    FONT-FAMILY: verdana, arial, sans-serif;
+    HEIGHT: 18px;
+    BACKGROUND-COLOR: #ffffff
+}
+.entityWebsiteBox
+{
+    BORDER-RIGHT: #a0b3cb 1px solid;
+    BORDER-TOP: #a0b3cb 1px solid;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #a0b3cb 1px solid;
+    WIDTH: 167px;
+    COLOR: #334a60;
+    BORDER-BOTTOM: #a0b3cb 1px solid;
+    FONT-FAMILY: verdana, arial, sans-serif;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: #ffffff
+}
+.entityFNameBox
+{
+    BORDER-RIGHT: #a0b3cb 1px solid;
+    BORDER-TOP: #a0b3cb 1px solid;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #a0b3cb 1px solid;
+    WIDTH: 127px;
+    COLOR: #334a60;
+    BORDER-BOTTOM: #a0b3cb 1px solid;
+    FONT-FAMILY: verdana, arial, sans-serif;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: #ffffff
+}
+
+.individualFNameBox
+{
+    BORDER-RIGHT: #a0b3cb 1px solid;
+    BORDER-TOP: #a0b3cb 1px solid;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #a0b3cb 1px solid;
+    WIDTH: 130px;
+    COLOR: #334a60;
+    BORDER-BOTTOM: #a0b3cb 1px solid;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: #e7ecf3
+}
+
+
+.entityMInitialBox
+{
+    BORDER-RIGHT: #a0b3cb 1px solid;
+    BORDER-TOP: #a0b3cb 1px solid;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #a0b3cb 1px solid;
+    WIDTH: 25px;
+    COLOR: #334a60;
+    BORDER-BOTTOM: #a0b3cb 1px solid;
+    FONT-FAMILY: verdana, arial, sans-serif;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: #ffffff
+}
+.entityCommMidBox
+{
+    BORDER-RIGHT: #a0b3cb 1px solid;
+    BORDER-TOP: #a0b3cb 1px solid;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #a0b3cb 1px solid;
+    WIDTH: 100px;
+    COLOR: #334a60;
+    BORDER-BOTTOM: #a0b3cb 1px solid;
+    FONT-FAMILY: verdana, arial, sans-serif;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: #ffffff
+}
+.entityCommShortBox
+{
+    BORDER-RIGHT: #a0b3cb 1px solid;
+    BORDER-TOP: #a0b3cb 1px solid;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #a0b3cb 1px solid;
+    WIDTH: 45px;
+    COLOR: #334a60;
+    BORDER-BOTTOM: #a0b3cb 1px solid;
+    FONT-FAMILY: verdana, arial, sans-serif;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: #ffffff
+}
+.entityCommLongBox
+{
+    BORDER-RIGHT: #a0b3cb 1px solid;
+    BORDER-TOP: #a0b3cb 1px solid;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #a0b3cb 1px solid;
+    WIDTH: 194px;
+    COLOR: #334a60;
+    BORDER-BOTTOM: #a0b3cb 1px solid;
+    FONT-FAMILY: verdana, arial, sans-serif;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: #ffffff
+}
+.entityCommEmailBox
+{
+    BORDER-RIGHT: #a0b3cb 1px solid;
+    BORDER-TOP: #a0b3cb 1px solid;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #a0b3cb 1px solid;
+    WIDTH: 153px;
+    COLOR: #334a60;
+    BORDER-BOTTOM: #a0b3cb 1px solid;
+    FONT-FAMILY: verdana, arial, sans-serif;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: #ffffff
+}.entityLeftBorder
+{
+    BACKGROUND-COLOR: #6f86a7
+}
+.entityHeadLeftBorder
+{
+    BORDER-TOP: #d8dfea 1px solid;
+    BORDER-LEFT: #6f86a7 1px solid;
+    BORDER-BOTTOM: #7d93b2 1px solid;
+    BACKGROUND-COLOR: #9ebed1
+}
+.homeTableHeadLight
+{
+    BACKGROUND-COLOR: #b7d4d1
+}
+.svdSrchAndDrp
+{
+    FONT-SIZE: 95%;
+    WIDTH: 50px;
+    COLOR: #334a60;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 18px
+}
+.svdSrchColsDrp
+{
+    FONT-SIZE: 95%;
+    WIDTH: 90px;
+    COLOR: #334a60;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 18px
+}
+.svdSrchCondDrp
+{
+    FONT-SIZE: 95%;
+    WIDTH: 100px;
+    COLOR: #334a60;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 18px
+}
+.svdSrchCriteriaTextBox
+{
+    BORDER-RIGHT: #a0b3cb 1px solid;
+    BORDER-TOP: #a0b3cb 1px solid;
+    FONT-SIZE: 95%;
+    BORDER-LEFT: #a0b3cb 1px solid;
+    COLOR: #264878;
+    BORDER-BOTTOM: #a0b3cb 1px solid;
+    font-family: verdana, arial, sans-serif;
+    WIDTH: 85px;
+}
+.svdSrchTableOddBegin
+{
+    BORDER-RIGHT: #a0bbdb 1px solid;
+    PADDING-RIGHT: 5px;
+    PADDING-LEFT: 5px;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #a0bbdb 1px solid;
+    COLOR: #334a60;
+    font-family: verdana, arial, sans-serif
+}
+.svdSrchTableEvenBegin
+{
+    BORDER-RIGHT: #a0bbdb 1px solid;
+    PADDING-RIGHT: 5px;
+    PADDING-LEFT: 5px;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #a0bbdb 1px solid;
+    COLOR: #334a60;
+    font-family: verdana, arial, sans-serif
+}
+.emailsecNavOffLeft
+{
+    PADDING-LEFT: 5px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 65%;
+    WIDTH: 14px;
+    COLOR: #0b2953;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 21px;
+    BACKGROUND-COLOR: #7c91b2;
+    TEXT-ALIGN: left
+}
+.emailsecNavOffRight
+{
+    BORDER-RIGHT: #ffe994 1px solid;
+    PADDING-RIGHT: 5px;
+    BORDER-TOP: #ffe994 1px solid;
+    PADDING-LEFT: 5px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #ffe994 1px solid;
+    WIDTH: 132px;
+    CURSOR: pointer;
+    COLOR: #0b2953;
+    PADDING-TOP: 3px;
+    BORDER-BOTTOM: #ffe994 1px solid;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 21px;
+    BACKGROUND-COLOR: #7c91b2;
+}
+.emailsecNavOffLink
+{
+    CURSOR: pointer;
+    COLOR: #0b2953;
+    TEXT-DECORATION: none
+}
+.emailsecNavOff
+{
+    BORDER-RIGHT: #ffe994 1px solid;
+    BORDER-TOP: #ffe994 1px solid;
+    BORDER-LEFT: #ffe994 1px solid;
+    BORDER-BOTTOM: #ffe994 1px solid;
+    HEIGHT: 21px
+}
+.emailsecNavOn
+{
+    PADDING-RIGHT: 5px;
+    PADDING-LEFT: 6px;
+    WIDTH: 132px;
+    PADDING-TOP: 4px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 65%;
+    CURSOR: default;
+    COLOR: #345788;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 21px;
+    BACKGROUND-COLOR: #d8dfea
+}
+.foldertree
+{
+    PADDING-TOP: 5px;
+}
+.level2
+{
+    PADDING-LEFT: 20px;
+}
+.level3
+{
+    PADDING-LEFT: 16px;
+    PADDING-TOP: 4px;
+}
+.composeButton
+{
+    BORDER-RIGHT: #264878 1px solid;
+    BORDER-TOP: #264878 1px solid;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #264878 1px solid;
+    CURSOR: pointer;
+    COLOR: #4a6e9f;
+    BORDER-BOTTOM: #264878 1px solid;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 17px;
+    Width: 60px;
+    BACKGROUND-COLOR: #d8dfea
+}
+.ViewInWinButton
+{
+    BORDER-RIGHT: #264878 1px solid;
+    BORDER-TOP: #264878 1px solid;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #264878 1px solid;
+    CURSOR: pointer;
+    COLOR: #4a6e9f;
+    BORDER-BOTTOM: #264878 1px solid;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 17px;
+    Width: 130px;
+    BACKGROUND-COLOR: #d8dfea
+}
+.folderButton
+{
+    BORDER-RIGHT: #264878 1px solid;
+    BORDER-TOP: #264878 1px solid;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #264878 1px solid;
+    CURSOR: pointer;
+    WIdth: 132px;
+    COLOR: #4a6e9f;
+    BORDER-BOTTOM: #264878 1px solid;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: #d8dfea
+}
+.InboxDropDown
+{
+    FONT-SIZE: 65%;
+    WIDTH: 90px;
+    COLOR: #334a60;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 18px;
+    BACKGROUND-COLOR: #ffffff
+}
+.markReadButton
+{
+    BORDER-RIGHT: #937810 1px solid;
+    BORDER-TOP: #937810 1px solid;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #937810 1px solid;
+    CURSOR: pointer;
+    COLOR: #937810;
+    Width: 70px;
+    BORDER-BOTTOM: #937810 1px solid;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: #fff8c5
+}
+.markUnReadButton
+{
+    BORDER-RIGHT: #937810 1px solid;
+    BORDER-TOP: #937810 1px solid;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #937810 1px solid;
+    CURSOR: pointer;
+    COLOR: #937810;
+    Width: 80px;
+    BORDER-BOTTOM: #937810 1px solid;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: #fff8c5
+}
+.blueButton
+{
+    BORDER-RIGHT: #264878 1px solid;
+    BORDER-TOP: #264878 1px solid;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #264878 1px solid;
+    CURSOR: pointer;
+    COLOR: #4a6e9f;
+    BORDER-BOTTOM: #264878 1px solid;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: #d8dfea
+}
+.blueTextOnWhite
+{
+    FONT-SIZE: 65%; 
+    COLOR: #334a60;
+    font-family: verdana, arial, sans-serif
+}
+.newRecordPopupTitle
+{
+    font-weight: bold;
+	font-size: 120%;
+	color: #FFFFFF;
+	font-family: verdana, arial, sans-serif;
+	text-decoration: underline;
+}
+.blueTextBold
+{
+   font-family: verdana, arial, sans-serif;
+   font-size: 65%;
+   font-weight: bold;
+   color: #334a60;
+}
+.calendarSelectedTD
+{
+  background-color: #ffefe7;
+  border-right: #a0bbdb 1px solid;
+  border-bottom: #a0bbdb 1px solid;
+  PADDING-RIGHT: 5px;
+  PADDING-LEFT: 5px;
+  FONT-SIZE: 65%;
+  COLOR: #334a60;
+  font-family: verdana, arial, sans-serif;
+}
+
+.calendarTD
+{
+  background-color: #e7ecf3;
+  border-right: #a0bbdb 1px solid;
+  border-bottom: #a0bbdb 1px solid;
+  PADDING-RIGHT: 5px;
+  PADDING-LEFT: 5px;
+  FONT-SIZE: 65%;
+  COLOR: #334a60;
+  font-family: verdana, arial, sans-serif;
+}
+.calendarWorkdayTD
+{
+  background-color: #ffffff;
+  border-right: #a0bbdb 1px solid;
+  border-bottom: #a0bbdb 1px solid;
+    PADDING-RIGHT: 5px;
+    PADDING-LEFT: 5px;
+    FONT-SIZE: 65%;
+    COLOR: #334a60;
+    font-family: verdana, arial, sans-serif    
+}
+.calendarTDRowHeader
+{
+  background-color: #d8dfea; /*#b4cddc;*/
+  border-right: #a0bbdb 1px solid;
+  border-bottom: #a0bbdb 1px solid;
+  border-left: #a0bbdb 1px solid;
+
+    PADDING-RIGHT: 5px;
+    PADDING-LEFT: 5px;
+    FONT-SIZE: 65%;
+    COLOR: #334a60;
+    font-family: verdana, arial, sans-serif  
+}
+.calendarYearlyMonthHead
+{
+  /*background-color: #ffffff;*/
+  font-size: 65%;
+  font-weight: bold;
+  color: #334a60;
+  font-family: verdana, arial, sans-serif;
+}
+.calendarDropdown
+{
+    BORDER-RIGHT: #a0b3cb 1px solid;
+    BORDER-TOP: #a0b3cb 1px solid;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #a0b3cb 1px solid;
+    COLOR: #264878;
+    BORDER-BOTTOM: #a0b3cb 1px solid;
+    font-family: verdana, arial, sans-serif;
+    BACKGROUND-COLOR: #e7ecf3
+}
+
+TABLE.dropdownMenu4
+{
+    BORDER-TOP: #4f788e 1px solid
+}
+TD.dropdownMenu4
+{
+    BORDER-RIGHT: #4f788e 1px solid;
+    PADDING-LEFT: 9px;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #4f788e 1px solid;
+    CURSOR: pointer;
+    COLOR: #a2b3bf;
+    BORDER-BOTTOM: #4f788e 1px solid;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 16px;
+    BACKGROUND-COLOR: #345788;
+    TEXT-ALIGN: left
+}
+DIV.dropdownMenu4
+{
+    BORDER-RIGHT: #4f788e 1px solid;
+    PADDING-LEFT: 9px;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #4f788e 1px solid;
+    CURSOR: pointer;
+    COLOR: #a2b3bf;
+    BORDER-BOTTOM: #4f788e 1px solid;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 16px;
+    BACKGROUND-COLOR: #17283c;
+    TEXT-ALIGN: left
+}
+SPAN.dropdownMenu4
+{
+    DISPLAY: none;
+    Z-INDEX: 5;
+    LEFT: -1px;
+    WIDTH: 96px;
+    POSITION: absolute;
+    TOP: 15px
+}
+
+
+TABLE.dropdownMenu5
+{
+  BORDER-TOP: #4f788e 1px solid
+}
+td.emailMoveTo
+{
+  BORDER-RIGHT: #264878 1px solid;
+  BORDER-TOP: #264878 1px solid;
+  FONT-WEIGHT: bold;
+  FONT-SIZE: 65%;
+  BORDER-LEFT: #264878 1px solid;
+  WIDTH: 100px;
+  CURSOR: pointer;
+  COLOR: #334a60;
+  BORDER-BOTTOM: #264878 1px solid;
+  font-family: verdana, arial, sans-serif;
+  BACKGROUND-COLOR: #a0becb;
+}
+TD.dropdownMenu5
+{
+  BORDER-RIGHT: #4f788e 1px solid;
+  PADDING-LEFT: 9px;
+  FONT-SIZE: 65%;
+  BORDER-LEFT: #4f788e 1px solid;
+  COLOR: #334a60;
+  BORDER-BOTTOM: #4f788e 1px solid;
+  font-family: verdana, arial, sans-serif;
+  HEIGHT: 16px;
+  BACKGROUND-COLOR: #a0becb;
+  TEXT-ALIGN: left
+}
+DIV.dropdownMenu5
+{
+  BORDER-RIGHT: #4f788e 1px solid;
+  PADDING-LEFT: 9px;
+  FONT-SIZE: 65%;
+  BORDER-LEFT: #4f788e 1px solid;
+  COLOR: #334a60;
+  BORDER-BOTTOM: #4f788e 1px solid;
+  font-family: verdana, arial, sans-serif;
+  HEIGHT: 16px;
+  BACKGROUND-COLOR: #a0becb;
+  TEXT-ALIGN: left
+}
+SPAN.dropdownMenu5
+{
+    DISPLAY: none;
+    Z-INDEX: 5;
+    LEFT: -1px;
+    WIDTH: 96px;
+    POSITION: absolute;
+    TOP: 15px
+}
+
+
+
+
+.textBoxWhiteBlueBorder
+{
+    BORDER-RIGHT: #a0b3cb 1px solid;
+    BORDER-TOP: #a0b3cb 1px solid;
+    FONT-SIZE: 95%;
+    BORDER-LEFT: #a0b3cb 1px solid;
+    COLOR: #264878;
+    BORDER-BOTTOM: #a0b3cb 1px solid;
+    font-family: verdana, arial, sans-serif;
+		padding-left:4px;
+}
+.errorDisplay
+{
+	FONT-SIZE: 70%;
+	COLOR: #FFFFFF;
+	FONT-FAMILY: verdana, arial, sans-serif;
+}
+.day
+{
+    BORDER-RIGHT: #a0b3cb 1px solid;
+    BORDER-TOP: #a0b3cb 1px solid;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #a0b3cb 1px solid;
+    WIDTH: 20px;
+    COLOR: #334a60;
+    BORDER-BOTTOM: #a0b3cb 1px solid;
+    FONT-FAMILY: verdana, arial, sans-serif;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: #e7ecf3
+}
+.year
+{
+    BORDER-RIGHT: #a0b3cb 1px solid;
+    BORDER-TOP: #a0b3cb 1px solid;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #a0b3cb 1px solid;
+    WIDTH: 40px;
+    COLOR: #334a60;
+    BORDER-BOTTOM: #a0b3cb 1px solid;
+    FONT-FAMILY: verdana, arial, sans-serif;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: #e7ecf3
+}
+.activityTextArea
+{
+    BORDER-RIGHT: #a0b3cb 1px solid;
+    BORDER-TOP: #a0b3cb 1px solid;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #a0b3cb 1px solid;
+    WIDTH: 170px;
+    COLOR: #334a60;
+    BORDER-BOTTOM: #a0b3cb 1px solid;
+    FONT-FAMILY: verdana, arial, sans-serif;
+    HEIGHT: 38px;
+    BACKGROUND-COLOR: #e7ecf3
+}
+
+.attachmentTextArea
+{
+    BORDER-RIGHT: #a0b3cb 1px solid;
+    BORDER-TOP: #a0b3cb 1px solid;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #a0b3cb 1px solid;
+    WIDTH: 170px;
+    COLOR: #334a60;
+    BORDER-BOTTOM: #a0b3cb 1px solid;
+    FONT-FAMILY: verdana, arial, sans-serif;
+    HEIGHT: 108px;
+    BACKGROUND-COLOR: #e7ecf3
+}
+.activitydetailDropDown
+{
+    FONT-SIZE: 90%;
+    WIDTH: 75px;
+    COLOR: #334a60;
+    FONT-FAMILY: verdana, arial, sans-serif;
+    HEIGHT: 25px;    
+	BACKGROUND-COLOR: #e7ecf3
+}
+
+.activitydetailShortBox
+{
+    BORDER-RIGHT: #a0b3cb 1px solid;
+    BORDER-TOP: #a0b3cb 1px solid;
+    FONT-SIZE: 90%;
+    BORDER-LEFT: #a0b3cb 1px solid;
+    WIDTH: 55px;
+    COLOR: #334a60;
+    BORDER-BOTTOM: #a0b3cb 1px solid;
+    FONT-FAMILY: verdana, arial, sans-serif;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: #e7ecf3
+}
+
+
+.HomeTableOddEnd
+{
+    BORDER-RIGHT: #7d93b2 1px solid;
+    PADDING-RIGHT: 5px;
+    BORDER-TOP: 1px;
+    PADDING-LEFT: 5px;
+    FONT-SIZE: 65%;
+    PADDING-BOTTOM: 3px;
+    COLOR: #334a60;
+    PADDING-TOP: 3px;
+    BORDER-BOTTOM: #7d93b2 1px solid;
+    FONT-FAMILY: verdana, arial, sans-serif
+}
+.HomeText
+{
+    
+    PADDING-RIGHT: 5px;
+    PADDING-LEFT: 5px;
+    FONT-SIZE: 65%;
+    PADDING-BOTTOM: 3px;
+    COLOR: #334a60;
+    PADDING-TOP: 3px;
+    FONT-FAMILY: verdana, arial, sans-serif
+}
+.popupTableHead2
+{
+    BORDER-TOP: #b7d4d1 0px solid;
+    BORDER-BOTTOM: #7d93b2 0px solid;
+    BACKGROUND-COLOR: #9ebed1
+}
+.popupTableHeadText2
+{
+    PADDING-RIGHT: 0px;
+    PADDING-LEFT: 0px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 10;
+    COLOR: #334a60;
+    FONT-FAMILY: verdana, arial, sans-serif
+}
+.popupTableHeadTextW
+{
+  padding-right: 2px;
+  padding-left: 2px;
+  font-weight: bold;
+  font-size: 85%;
+  color: #ffffff;
+  font-family: verdana, arial, sans-serif;
+  text-decoration: underline;
+}
+.showErrorBtn
+{
+  border: #cd4800 1px solid;
+  font-weight: bold;
+  font-size: 65%;
+  width: 90px;
+  cursor: pointer;
+  color: #cd4800;
+  font-family: verdana, arial, sans-serif;
+  height: 17px;
+  background-color: #ffefe7;
+}
+.lookupButtonBig
+{
+  border:  #265c78 1px solid;
+  font-weight: bold;
+  font-size: 100%;
+  font-family: verdana, arial, sans-serif;
+  cursor: pointer;
+  color: #334a60;
+  height: 17px;
+  background-color: #a0becb;
+}
+.entityViewAllBtn2
+{
+    BORDER-RIGHT: #4f7b91 1px solid;
+    BORDER-TOP: #4f7b91 1px solid;
+	PADDING-TOP: 0px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 9px;
+    BORDER-LEFT: #4f7b91 1px solid;
+    COLOR: #4f7b91;
+    BORDER-BOTTOM: #4f7b91 1px solid;
+    FONT-FAMILY: verdana, arial, sans-serif;
+    HEIGHT: 16px;
+    BACKGROUND-COLOR: #b2cad5
+}
+.entityLongBoxBold
+{
+	BORDER-RIGHT: #a0b3cb 1px solid;
+	BORDER-TOP: #a0b3cb 1px solid;
+	FONT-SIZE: 65%;
+	BORDER-LEFT: #a0b3cb 1px solid;
+	WIDTH: 190px;
+	COLOR: #334a60;
+	BORDER-BOTTOM: #a0b3cb 1px solid;
+	FONT-FAMILY: verdana, arial, sans-serif;
+	HEIGHT: 17px;
+	BACKGROUND-COLOR: #ffffff;
+	font-weight: bold;
+}
+.entityExLongBox2
+{
+    BORDER-RIGHT: #a0b3cb 1px solid;
+    BORDER-TOP: #a0b3cb 1px solid;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #a0b3cb 1px solid;
+    WIDTH: 175px;
+    COLOR: #334a60;
+    BORDER-BOTTOM: #a0b3cb 1px solid;
+    FONT-FAMILY: verdana, arial, sans-serif;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: #ffffff
+}
+.entityExLongBox3
+{
+    BORDER-RIGHT: #a0b3cb 1px solid;
+    BORDER-TOP: #a0b3cb 1px solid;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #a0b3cb 1px solid;
+    WIDTH: 186px;
+    COLOR: #334a60;
+    BORDER-BOTTOM: #a0b3cb 1px solid;
+    FONT-FAMILY: verdana, arial, sans-serif;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: #ffffff
+}
+.entityExLongBox3Bold
+{
+    BORDER-RIGHT: #a0b3cb 1px solid;
+    BORDER-TOP: #a0b3cb 1px solid;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #a0b3cb 1px solid;
+    WIDTH: 186px;
+	FONT-WEIGHT: BOLD;
+    COLOR: #334a60;
+    BORDER-BOTTOM: #a0b3cb 1px solid;
+    FONT-FAMILY: verdana, arial, sans-serif;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: #ffffff
+}
+.entityFNameBoxBold
+{
+    BORDER-RIGHT: #a0b3cb 1px solid;
+    BORDER-TOP: #a0b3cb 1px solid;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #a0b3cb 1px solid;
+    WIDTH: 127px;
+    COLOR: #334a60;
+    BORDER-BOTTOM: #a0b3cb 1px solid;
+	FONT-WEIGHT: BOLD;
+    FONT-FAMILY: verdana, arial, sans-serif;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: #ffffff
+}
+.entityMInitialBoxBold
+{
+    BORDER-RIGHT: #a0b3cb 1px solid;
+    BORDER-TOP: #a0b3cb 1px solid;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #a0b3cb 1px solid;
+    WIDTH: 25px;
+    COLOR: #334a60;
+    BORDER-BOTTOM: #a0b3cb 1px solid;
+    FONT-FAMILY: verdana, arial, sans-serif;
+	FONT-WEIGHT: BOLD;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: #ffffff
+}
+.entityCommShortBox2
+{
+    BORDER-RIGHT: #a0b3cb 1px solid;
+    BORDER-TOP: #a0b3cb 1px solid;
+    FONT-SIZE: 65%;
+    BORDER-LEFT: #a0b3cb 1px solid;
+    WIDTH: 44px;
+    COLOR: #334a60;
+    BORDER-BOTTOM: #a0b3cb 1px solid;
+    FONT-FAMILY: verdana, arial, sans-serif;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: #ffffff
+}
+.textInputWhiteBlueBorder
+{
+  border: #a0b3cb 1px solid;
+  color: #264878;
+  font-size: 95%;
+  font-family: verdana, arial, sans-serif;
+  padding-left:3px;
+  height: 17px;
+}
+span.crumbsBarTitle
+{
+	font-family: verdana, arial, sans-serif;
+	font-weight: bold;
+	font-size: 65%;
+	color:#334a60;		
+}
+span.crumbsBarCrumbs
+{
+	font-family: verdana, arial, sans-serif;
+	font-size: 65%;
+	color:#334a60;		
+}
+a.crumbsBar
+{
+	font-family: verdana, arial, sans-serif;
+	color:#334a60;				
+}
+option.availableAccepted
+{
+  background-color: #70cc70;
+}
+option.availableTentative
+{
+  background-color: #ffff99;
+}
+option.availableDeclined
+{
+  background-color: #ff7070;
+}
+.errorLabelText
+{
+  font-family: verdana, arial, lucidia, sans-serif;
+  font-size: 65%;
+  font-weight: bold;
+  color: #cd4800;
+  text-decoration: underline;
+}
+
+TD.terNavOffBOLD
+{
+	FONT-WEIGHT: bold;
+    FONT-SIZE: 65%;
+    CURSOR: pointer;
+    COLOR: #334a60;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 21px;
+    BACKGROUND-COLOR: #a0b3cb
+}
+.recurringShortBox
+{
+    BORDER-RIGHT: #a0b3cb 1px solid;
+    BORDER-TOP: #a0b3cb 1px solid;
+    FONT-SIZE: 85%;
+    BORDER-LEFT: #a0b3cb 1px solid;
+    WIDTH: 55px;
+    COLOR: #334a60;
+    BORDER-BOTTOM: #a0b3cb 1px solid;
+    FONT-FAMILY: verdana, arial, sans-serif;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: #ffffff
+}
+
+/**
+project
+**/
+.projectDescriptionTextArea
+{
+    BORDER-RIGHT: #a0b3cb 1px solid;
+    BORDER-TOP: #a0b3cb 1px solid;
+    FONT-SIZE: 95%;
+    BORDER-LEFT: #a0b3cb 1px solid;
+    WIDTH: 265px;
+    COLOR: #334a60;
+    BORDER-BOTTOM: #a0b3cb 1px solid;
+    FONT-FAMILY: verdana, arial, sans-serif;
+    HEIGHT: 125px;
+    BACKGROUND-COLOR: #ffffff
+}
+.projectTitleTextBox
+{
+    BORDER-RIGHT: #a0b3cb 1px solid;
+    BORDER-TOP: #a0b3cb 1px solid;
+    FONT-SIZE: 95%;
+    BORDER-LEFT: #a0b3cb 1px solid;
+    WIDTH: 265px;
+    COLOR: #334a60;
+    BORDER-BOTTOM: #a0b3cb 1px solid;
+    FONT-FAMILY: verdana, arial, sans-serif;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: #ffffff
+}
+.projectECMTTextBox
+{
+    BORDER-RIGHT: #a0b3cb 1px solid;
+    BORDER-TOP: #a0b3cb 1px solid;
+    FONT-SIZE: 95%;
+    BORDER-LEFT: #a0b3cb 1px solid;
+    WIDTH: 190px;
+    COLOR: #334a60;
+    BORDER-BOTTOM: #a0b3cb 1px solid;
+    FONT-FAMILY: verdana, arial, sans-serif;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: #ffffff
+}
+.statusDropdown
+{
+    FONT-SIZE: 65%;
+    WIDTH: 140px;
+    COLOR: #334a60;
+    font-family: verdana, arial, sans-serif;
+    HEIGHT: 18px;
+    BACKGROUND-COLOR: #ffffff
+}
+.newprojectyear
+{
+    BORDER-RIGHT: #a0b3cb 1px solid;
+    BORDER-TOP: #a0b3cb 1px solid;
+    FONT-SIZE: 95%;
+    BORDER-LEFT: #a0b3cb 1px solid;
+    WIDTH: 40px;
+    COLOR: #334a60;
+    BORDER-BOTTOM: #a0b3cb 1px solid;
+    FONT-FAMILY: verdana, arial, sans-serif;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: #ffffff
+}
+.newprojectday
+{
+    BORDER-RIGHT: #a0b3cb 1px solid;
+    BORDER-TOP: #a0b3cb 1px solid;
+    FONT-SIZE: 95%;
+    BORDER-LEFT: #a0b3cb 1px solid;
+    WIDTH: 25px;
+    COLOR: #334a60;
+    BORDER-BOTTOM: #a0b3cb 1px solid;
+    FONT-FAMILY: verdana, arial, sans-serif;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: #ffffff
+}
+.projectAssignedToSelect
+{
+    BORDER-RIGHT: #a0b3cb 1px solid;
+    BORDER-TOP: #a0b3cb 1px solid;
+    BORDER-LEFT: #a0b3cb 1px solid;
+    BORDER-BOTTOM: #a0b3cb 1px solid;
+    FONT-SIZE: 95%;    
+    WIDTH: 195px;
+    COLOR: #264878;    
+    FONT-FAMILY: verdana, arial, sans-serif;
+    HEIGHT: 75px;
+    BACKGROUND-COLOR: #ffffff
+    padding-left:0px;
+} 
+.projectSendToSelect
+{
+    BORDER-RIGHT: #a0b3cb 1px solid;
+    BORDER-TOP: #a0b3cb 1px solid;
+    BORDER-LEFT: #a0b3cb 1px solid;
+    BORDER-BOTTOM: #a0b3cb 1px solid;
+    FONT-SIZE: 95%;    
+    WIDTH: 115px;
+    COLOR: #264878;    
+    FONT-FAMILY: verdana, arial, sans-serif;
+    HEIGHT: 55px;
+    BACKGROUND-COLOR: #ffffff
+    padding-left:0px;
+} 
+.projectTaskTextBox
+{
+    BORDER-RIGHT: #a0b3cb 1px solid;
+    BORDER-TOP: #a0b3cb 1px solid;
+    FONT-SIZE: 95%;
+    BORDER-LEFT: #a0b3cb 1px solid;
+    WIDTH: 155px;
+    COLOR: #334a60;
+    BORDER-BOTTOM: #a0b3cb 1px solid;
+    FONT-FAMILY: verdana, arial, sans-serif;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: #ffffff
+}
+.projectTaskTitleTextBox
+{
+    BORDER-RIGHT: #a0b3cb 1px solid;
+    BORDER-TOP: #a0b3cb 1px solid;
+    FONT-SIZE: 95%;
+    BORDER-LEFT: #a0b3cb 1px solid;
+    WIDTH: 240px;
+    COLOR: #334a60;
+    BORDER-BOTTOM: #a0b3cb 1px solid;
+    FONT-FAMILY: verdana, arial, sans-serif;
+    HEIGHT: 20px;
+    BACKGROUND-COLOR: #ffffff
+}
+.projectTaskDescriptionTextArea
+{
+    BORDER-RIGHT: #a0b3cb 1px solid;
+    BORDER-TOP: #a0b3cb 1px solid;
+    FONT-SIZE: 95%;
+    BORDER-LEFT: #a0b3cb 1px solid;
+    WIDTH: 240px;
+    COLOR: #334a60;
+    BORDER-BOTTOM: #a0b3cb 1px solid;
+    FONT-FAMILY: verdana, arial, sans-serif;
+    HEIGHT: 65px;
+    BACKGROUND-COLOR: #ffffff
+}
+.projectTaskProjectTextBox
+{
+    BORDER-RIGHT: #a0b3cb 1px solid;
+    BORDER-TOP: #a0b3cb 1px solid;
+    FONT-SIZE: 95%;
+    BORDER-LEFT: #a0b3cb 1px solid;
+    WIDTH: 180px;
+    COLOR: #334a60;
+    BORDER-BOTTOM: #a0b3cb 1px solid;
+    FONT-FAMILY: verdana, arial, sans-serif;
+    HEIGHT: 17px;
+    BACKGROUND-COLOR: #ffffff
+}
+.lookupTaskProjectlookupButtonBig
+{
+  border:  #265c78 1px solid;
+  font-weight: bold;
+  width: 60px;
+  font-size: 100%;
+  font-family: verdana, arial, sans-serif;
+  cursor: pointer;
+  color: #334a60;
+  height: 17px;
+  background-color: #a0becb;
+}
+.lookupTaskAddContactButtonBig
+{
+   BORDER-RIGHT: #4f7b91 1px solid;
+   BORDER-TOP: #4f7b91 1px solid;
+   FONT-WEIGHT: bold;
+   WIDTH: 80px;
+   FONT-SIZE: 65%;
+   BORDER-LEFT: #4f7b91 1px solid;
+   CURSOR: pointer;
+   COLOR: #4f7b91;
+   BORDER-BOTTOM: #4f7b91 1px solid;
+   font-family: verdana, arial, sans-serif;
+   HEIGHT: 17px;
+   BACKGROUND-COLOR: #b2cad5
+}
+.popupTableTitleBg
+{
+  background-color: #a2b1c8;
+}
+TD.contactTableHeadTitle
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 100%;
+    COLOR: #b1d0dc;
+    font-family: verdana, arial, sans-serif;
+    BACKGROUND-COLOR: 
+}
+
+.errorMessageBox
+{
+  padding: 2px;
+  color: #cd4800;
+  background-color: #ffefe7;
+  border: #cd4800 1px solid;
+  font-family: verdana, arial, sans-serif;
+  font-size: 65%;
+}
+
+.errorMessageHeader
+{
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.nowrap { white-space:nowrap; }
+
+.clickableInputBox
+{
+  border: #a0b3cb 1px solid;
+  text-decoration: underline;
+  color: #264878;
+  font-size: 95%;
+  font-family: verdana, arial, sans-serif;
+  padding-left:3px;
+  height: 17px;
+  cursor: pointer;
+}
+
+.clickableInputBox:hover
+{
+  color: #146ea3;
+}
+
+span.completedActivity
+{
+  text-decoration: line-through;
+}
+
+a.alertText
+{
+  font-family: verdana, arial, sans-serif;
+  font-size: 65%;
+  color: #ccccff;
+  text-decoration: underline;
+}
+
+.valueListTable
+{
+  width: 100%;
+  PADDING-RIGHT: 0px;
+  PADDING-LEFT: 0px;
+  PADDING-BOTTOM: 0px;
+  PADDING-TOP: 0px;
+  border-collapse: collapse;
+  BORDER-LEFT: #7d93b2 1px solid;
+  BORDER-RIGHT: #7d93b2 1px solid;
+  BORDER-TOP: #7d93b2 1px solid;
+  BORDER-BOTTOM: #7d93b2 1px solid;
+}
+
+.valueListHeadCheck
+{
+  border-right: #7d93b2 1px solid;
+  border-bottom: #a0bbdb 1px solid;
+  padding-left: 2px;
+  padding-right: 2px;
+  cursor: pointer;
+  width: 20px;
+  white-space: nowrap;
+}
+
+.valueListHeadText
+{
+  padding-right: 2px;
+  padding-left: 2px;
+  font-weight: bold;
+  font-size: 65%;
+  color: #334a60;
+  font-family: verdana, arial, sans-serif;
+  background-color: #9ebed1;
+}
+.valueListIcon
+{
+  BORDER-RIGHT: #a0bbdb 1px solid;
+  TEXT-ALIGN: center;
+}
+.valueListHeadCell
+{
+  padding-left: 5px;
+  padding-right: 5px;
+  white-space: nowrap;
+}
+.valueListCell
+{
+  BORDER-RIGHT: #a0bbdb 1px solid;
+  PADDING-RIGHT: 5px;
+  PADDING-LEFT: 5px;
+}
+.valueListContent
+{
+  width: 100%;
+  FONT-SIZE: 65%;
+  COLOR: #334a60;
+  font-family: verdana, arial, sans-serif;
+}
+TABLE.pagingBar
+{
+	width: 100%;
+	height: 27px;
+  PADDING-RIGHT: 0px;
+  PADDING-LEFT: 0px;
+  PADDING-BOTTOM: 0px;
+  PADDING-TOP: 0px;
+  border-collapse: collapse;
+  BORDER-RIGHT: #937810 1px solid;
+  BORDER-LEFT: #937810 1px solid;
+  BORDER-TOP: #937810 1px solid;
+  BORDER-BOTTOM: #937810 1px solid;
+  BACKGROUND-COLOR: #ffe994;
+}
+TD.pagingBar
+{
+  padding-right: 3px;
+  padding-left: 0px;
+  color: #937810;
+  font-family: verdana, arial, sans-serif
+}
+.lookupPagingBar
+{
+	width: 100%;
+	height: 27px;
+    PADDING-RIGHT: 0px;
+    PADDING-LEFT: 0px;
+    PADDING-BOTTOM: 0px;
+    PADDING-TOP: 0px;
+	border-collapse: collapse;
+}
+.lookupPagingAmberText
+{
+    FONT-SIZE: 55%;
+    COLOR: #334a60;
+    font-family: verdana, arial, sans-serif;
+}
+.valueListBorder
+{
+  width: 4px;
+}
+.valueListCellBold
+{
+  BORDER-RIGHT: #a0bbdb 1px solid;
+  PADDING-RIGHT: 5px;
+  PADDING-LEFT: 5px;
+  font-weight: bold;
+}

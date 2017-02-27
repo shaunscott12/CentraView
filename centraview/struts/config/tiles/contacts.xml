@@ -1,0 +1,108 @@
+<!DOCTYPE tiles-definitions PUBLIC
+  "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+  "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+<!--
+ * $RCSfile: contacts.xml,v $    $Revision: 1.4 $  $Date: 2005/09/13 22:00:54 $ - $Author: mcallist $
+ * 
+ * The contents of this file are subject to the Open Software License
+ * Version 2.1 ("the License"); you may not use this file except in
+ * compliance with the License. You may obtain a copy of the License at
+ * http://www.centraview.com/opensource/license.html
+ * 
+ * Software distributed under the License is distributed on an "AS IS"
+ * basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+ * License for the specific language governing rights and limitations
+ * under the License.
+ * 
+ * The Original Code is: CentraView Open Source. 
+ * 
+ * The developer of the Original Code is CentraView.  Portions of the
+ * Original Code created by CentraView are Copyright (c) 2004 CentraView,
+ * LLC; All Rights Reserved.  The terms "CentraView" and the CentraView
+ * logos are trademarks and service marks of CentraView, LLC.
+-->
+<tiles-definitions>
+
+  <!-- Contact Detail -->
+  <definition name=".view.contact.details" path="/jsp/layouts/contact_detail_t.jsp">
+    <put name="focus_element" value="" />
+    <put name="header" value="/jsp/tiles/contact_detail_header.jsp"/>
+    <put name="top_buttons" value="/jsp/tiles/contact_top_buttons.jsp"/>
+    <put name="detail" value="/jsp/pages/blank.jsp"/>
+    <put name="bottom_buttons" value="/jsp/tiles/contact_bottom_buttons.jsp"/>
+    <putList name="js_includes">
+      <add value="detail.js" />
+    </putList>    
+  </definition>
+
+  <!-- Individual Detail -->
+  <definition name=".view.contact.individualdetails" extends=".view.contact.details">
+    <put name="focus_element" value="firstName" />
+    <put name="detail" value="/jsp/pages/contacts/individual_detail.jsp"/>
+  </definition>
+  
+  <!-- Entity Detail -->
+  <definition name=".view.contact.entitydetails" extends=".view.contact.details">
+    <put name="focus_element" value="entityName" />
+    <put name="detail" value="/jsp/pages/contacts/entity_detail.jsp"/>
+  </definition>
+
+  <definition name=".view.contacts.view_related_address" path="/jsp/layouts/related_info_t.jsp">
+    <put name="title" value="Edit Address" />
+    <put name="main_content" value="/jsp/pages/contacts/related_address.jsp" />
+  </definition>
+  
+  <definition name=".view.contacts.new_related_address" path="/jsp/layouts/related_info_t.jsp">
+    <put name="title" value="New Address" />
+    <put name="main_content" value="/jsp/pages/contacts/related_address.jsp" />
+  </definition>
+
+  <definition name=".view.contacts.contact_method" path="/jsp/layouts/related_info_t.jsp">
+    <put name="title" value="Contact Method" />
+    <put name="main_content" value="/jsp/pages/contacts/bottom_contact_method.jsp" />
+  </definition>
+
+  <definition name=".view.contacts.custom_field" path="/jsp/layouts/related_info_t.jsp">
+    <put name="title" value="Custom Field" />
+    <put name="main_content" value="/jsp/pages/contacts/bottom_custom_field.jsp" />
+  </definition>
+
+  <definition name=".view.contact.entity.copyto" extends=".view.popup.default">
+    <put name="page_header" value="Copy To: Entity"/>
+    <put name="main_content" value="/jsp/pages/contacts/copyto_entity.jsp" />
+  </definition>
+  
+  <definition name=".view.contact.individual.copyto" extends=".view.popup.default">
+    <put name="page_header" value="Copy To: Individual"/>
+    <put name="main_content" value="/jsp/pages/contacts/copyto_individual.jsp" />
+  </definition>
+
+  <definition name=".view.contact.new_entity" extends=".view.popup.default">
+    <put name="page_header" value="New Entity"/>
+    <put name="main_content" value="/jsp/pages/contacts/new_entity.jsp" />
+    <putList name="js_includes">
+      <add value="detail.js" />
+    </putList>
+  </definition>
+
+  <definition name=".view.contact.new_individual" extends=".view.popup.default">
+    <put name="page_header" value="New Individual"/>
+    <put name="main_content" value="/jsp/pages/contacts/new_individual.jsp" />
+  </definition>
+  
+  <definition name=".view.contact.group_detail" extends=".view.default">
+    <put name="search_bar" value="/jsp/pages/blank.jsp" />
+    <put name="folder_bar" value="/jsp/pages/blank.jsp" />
+    <put name="main_content" value="/jsp/pages/contacts/group_detail.jsp" />
+    <putList name="js_includes">
+      <add value="valuelist.js" />
+    </putList>
+  </definition>
+
+  <definition name=".view.contact.change_moc" extends=".view.contact.details">
+    <put name="focus_element" value="" />
+    <put name="detail" value="/jsp/pages/contacts/change_moc.jsp"/>
+    <put name="bottom_buttons" value="/jsp/pages/blank.jsp"/>
+  </definition>
+
+</tiles-definitions>

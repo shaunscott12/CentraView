@@ -1,0 +1,953 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" 
+          "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<!--
+ * $RCSfile: administration.xml,v $    $Revision: 1.12 $  $Date: 2005/09/23 11:08:05 $ - $Author: mcallist $
+ *
+ * The contents of this file are subject to the Open Software License
+ * Version 2.1 ("the License"); you may not use this file except in
+ * compliance with the License. You may obtain a copy of the License at
+ * http://www.centraview.com/opensource/license.html
+ * 
+ * Software distributed under the License is distributed on an "AS IS"
+ * basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+ * License for the specific language governing rights and limitations
+ * under the License.
+ * 
+ * The Original Code is: CentraView Open Source. 
+ * 
+ * The developer of the Original Code is CentraView.  Portions of the
+ * Original Code created by CentraView are Copyright (c) 2004 CentraView,
+ * LLC; All Rights Reserved.  The terms "CentraView" and the CentraView
+ * logos are trademarks and service marks of CentraView, LLC.
+-->
+<struts-config>
+  <form-beans>
+    <form-bean name="userform" type="com.centraview.administration.user.UserSettingsForm"/>  
+    
+    <form-bean name="serverSettingsForm" type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="hostName" type="java.lang.String"/>
+      <form-property name="sessionTimeout" type="java.lang.String"/>
+      <form-property name="selStartTime" type="java.lang.String"/>
+      <form-property name="detailStartTime" type="java.lang.String"/>
+      <form-property name="selEndTime" type="java.lang.String"/>
+      <form-property name="detailEndTime" type="java.lang.String"/>
+      <form-property name="emailCheckInterval" type="java.lang.String" />
+      <form-property name="fileSystemStoragePath" type="java.lang.String"/>
+      <form-property name="defaultTimeZone" type="java.lang.String"/>
+    </form-bean>
+    
+    <form-bean name="emailSettingsForm" type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="smtpserver" type="java.lang.String"/>
+      <form-property name="username" type="java.lang.String"/>
+      <form-property name="password" type="java.lang.String"/>
+      <form-property name="authentication" type="java.lang.Boolean"/>
+      <form-property name="port" type="java.lang.Integer"/>
+      <form-property name="emailTemplateList" type="java.util.ArrayList"/>
+      <form-property name="templateID" type="java.lang.String"/>
+      <form-property name="name" type="java.lang.String"/>
+      <form-property name="description" type="java.lang.String"/>
+    </form-bean>
+    
+    <form-bean name="emailTemplateForm" type="com.centraview.administration.emailsettings.EmailTemplateForm" />
+    
+    <form-bean name="CustomerLogo" type="com.centraview.administration.configuration.CustomerLogoForm"/>
+    
+    <form-bean name="masterdataform" type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="newvalue" type="java.lang.String"/>
+      <form-property name="to" type="java.lang.String"/>
+      <form-property name="from" type="java.lang.String"/> 
+      <form-property name="valueList" type="java.lang.String[]"  />  
+      <form-property name="valueIds" type="java.lang.String[]"  />  
+      <form-property name="contactsEntityList" type="java.lang.String"/>  
+      <form-property name="contactsIndividualList" type="java.lang.String"/>
+      <form-property name="activitiesAllActivity" type="java.lang.String"/>  
+      <form-property name="activitiesAppointment" type="java.lang.String"/>
+      <form-property name="activitiesCalls" type="java.lang.String"/>  
+      <form-property name="activitiesMeetings" type="java.lang.String"/>
+      <form-property name="activitiesToDos" type="java.lang.String"/>  
+      <form-property name="activitiesNextActions" type="java.lang.String"/>  
+      <form-property name="notes" type="java.lang.String"/>
+      <form-property name="files" type="java.lang.String"/>
+      <form-property name="salesOpportunity" type="java.lang.String"/>  
+      <form-property name="salesProposal" type="java.lang.String"/>  
+      <form-property name="marketings" type="java.lang.String"/>
+      <form-property name="marketingsPromotions" type="java.lang.String"/>
+      <form-property name="marketingsLiteraturefulfillment" type="java.lang.String"/>  
+      <form-property name="marketingsEvents" type="java.lang.String"/>
+      <form-property name="projectsProject" type="java.lang.String"/>
+      <form-property name="projectsTask" type="java.lang.String"/>  
+      <form-property name="projectsTimeSlips" type="java.lang.String"/>
+      <form-property name="supportTicket" type="java.lang.String"/>  
+      <form-property name="supportFaq" type="java.lang.String"/>
+      <form-property name="supportKnowledgebase" type="java.lang.String"/>
+      <form-property name="supportContracts" type="java.lang.String" />
+      <form-property name="accountingsOrderHistory" type="java.lang.String"/>  
+      <form-property name="accountingsInvoiceHistory" type="java.lang.String"/>
+      <form-property name="accountingsPayments" type="java.lang.String"/>  
+      <form-property name="accountingsExpenses" type="java.lang.String"/>
+      <form-property name="accountingsPurchaseOrder" type="java.lang.String"/>
+      <form-property name="accountingsItems" type="java.lang.String"/>
+      <form-property name="accountingsGLAccounting" type="java.lang.String"/>  
+      <form-property name="accountingsInventory" type="java.lang.String"  />  
+      <form-property name="accountingsVolumeDiscount" type="java.lang.String"/>
+      <form-property name="accountingsVendors" type="java.lang.String"/>
+      <form-property name="hrExpensesForm" type="java.lang.String"/>  
+      <form-property name="hrTimeSheets" type="java.lang.String"/>
+      <form-property name="hrEmployeeHandbook" type="java.lang.String"/>
+      <form-property name="hrEmployee" type="java.lang.String"/>
+      <form-property name="hrSuggestionBox" type="java.lang.String"/>  
+      <form-property name="entityListVec" type="java.util.Vector"/>  
+      <form-property name="individualListVec" type="java.util.Vector"/>
+      <form-property name="multiActivityVec" type="java.util.Vector"/>  
+      <form-property name="appointmentVec" type="java.util.Vector"/>
+      <form-property name="callsVec" type="java.util.Vector"/>  
+      <form-property name="meetingsVec" type="java.util.Vector"/>
+      <form-property name="toDosVec" type="java.util.Vector"/>  
+      <form-property name="nextActionsVec" type="java.util.Vector"/>  
+      <form-property name="notesVec" type="java.util.Vector"/>
+      <form-property name="filesVec" type="java.util.Vector"/>
+      <form-property name="opportunityVec" type="java.util.Vector"/>  
+      <form-property name="proposalVec" type="java.util.Vector"/>  
+      <form-property name="marketingsVec" type="java.util.Vector"/>
+      <form-property name="promotionsVec" type="java.util.Vector"/>
+      <form-property name="literaturefulfillmentVec" type="java.util.Vector"/>  
+      <form-property name="eventsVec" type="java.util.Vector"/>
+      <form-property name="projectVec" type="java.util.Vector"/>
+      <form-property name="taskVec" type="java.util.Vector"/>  
+      <form-property name="timeSlipsVec" type="java.util.Vector"/>
+      <form-property name="ticketVec" type="java.util.Vector"/>  
+      <form-property name="faqVec" type="java.util.Vector"/>
+      <form-property name="knowledgebaseVec" type="java.util.Vector"/>
+      <form-property name="contractsVec" type="java.util.Vector" />
+      <form-property name="orderHistoryVec" type="java.util.Vector"/>  
+      <form-property name="invoiceHistoryVec" type="java.util.Vector"/>
+      <form-property name="paymentsVec" type="java.util.Vector"/>  
+      <form-property name="expensesVec" type="java.util.Vector"/>
+      <form-property name="purchaseOrderVec" type="java.util.Vector"/>
+      <form-property name="itemsVec" type="java.util.Vector"/>
+      <form-property name="gLAccountingVec" type="java.util.Vector"/>  
+      <form-property name="inventoryVec" type="java.util.Vector"  />  
+      <form-property name="volumeDiscountVec" type="java.util.Vector"/>
+      <form-property name="vendorsVec" type="java.util.Vector"/>
+      <form-property name="expensesFormVec" type="java.util.Vector"/>  
+      <form-property name="timeSheetsVec" type="java.util.Vector"/>
+      <form-property name="employeeHandbookVec" type="java.util.Vector"/>
+      <form-property name="employeeVec" type="java.util.Vector"/>
+      <form-property name="suggestionBoxVec" type="java.util.Vector"/>  
+      <form-property name="ps" type="java.lang.String"/>
+      <form-property name="lastChanged" type="java.lang.String"/>
+      <form-property name="removeRow" type="java.lang.String"/>
+      <form-property name="addRow" type="java.lang.String"/>
+      <form-property name="update" type="java.lang.String"/>
+      <form-property name="saveCloseBtn" type="java.lang.String"/>
+      <form-property name="saveCreateNewBtn" type="java.lang.String"/>
+      <form-property name="access" type="java.lang.String[]"/>
+      <form-property name="selectuser" type="java.lang.String[]"/>
+      <form-property name="Reset Fields" type="java.lang.String"/>
+      <form-property name="recordtype" type="java.lang.String"/>
+      <form-property name="search" type="java.lang.String"/>  
+      <form-property name="viewsend" type="java.lang.String[]"/>
+      <form-property name="emailaccountlist" type="java.lang.String[]"/>
+      <form-property name="supportTicketMessage" type="java.lang.String"/>
+      <form-property name="supportThreadMessage" type="java.lang.String"/>
+      <form-property name="supportInvalidMessage" type="java.lang.String"/>
+      <form-property name="startTime" type="java.lang.String"/>  
+      <form-property name="selStartTime" type="java.lang.String"/>
+      <form-property name="endTime" type="java.lang.String"/>  
+      <form-property name="selEndTime" type="java.lang.String"/>
+      <form-property name="workingdays" type="java.lang.String"/>
+      <form-property name="emailCheckInterval" type="java.lang.Integer" />
+      <form-property name="taxJurisdictions" type="java.lang.String[]"/>  
+      <form-property name="taxClass" type="java.lang.String[]" />  
+      <form-property name="taxJurisdictionsID" type="java.lang.String" initial=""/>  
+      <form-property name="taxClassID" type="java.lang.String" initial=""/>      
+      <form-property name="taxJurisdictionsValue" type="java.lang.String" initial=""/>  
+      <form-property name="taxClassValue" type="java.lang.String" initial=""/>  
+      <form-property name="taxClassVec" type="java.util.Vector"/>  
+      <form-property name="taxJurisdictionsVec" type="java.util.Vector" />  
+      <form-property name="taxMatrix" type="java.util.HashMap"  />  
+    </form-bean>
+
+    <form-bean name="customViewForm" type="org.apache.struts.action.DynaActionForm">
+      <form-property name="viewId" type="java.lang.Integer" />  
+      <form-property name="viewName" type="java.lang.String" />  
+      <form-property name="moduleName" type="java.lang.String" />  
+      <form-property name="recordType" type="java.lang.String" />  
+      <form-property name="allFields" type="java.util.ArrayList" />
+      <form-property name="availableFields" type="java.util.ArrayList" />
+      <form-property name="availableFieldsValue" type="java.lang.String" />  
+      <form-property name="selectedFields" type="java.util.ArrayList" />  
+      <form-property name="selectedFieldsValue" type="java.lang.String" />  
+      <form-property name="sortColumn" type="java.lang.String" />  
+      <form-property name="sortDirection" type="java.lang.String" />  
+      <form-property name="recordsPerPage" type="java.lang.Integer" />  
+      <form-property name="defaultSearch" type="java.lang.Integer" />  
+      <form-property name="searchList" type="java.util.ArrayList" />  
+      <form-property name="defaultSystemView" type="java.lang.String" />  
+    </form-bean>
+
+    <form-bean name="customfield" type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="fieldname" type="java.lang.String"/>
+      <form-property name="module" type="java.lang.String"/>
+      <form-property name="newValue" type="java.lang.String" />
+      <form-property name="recordtype" type="java.lang.String"/>
+      <form-property name="valuelist" type="java.lang.String[]"  />
+      <form-property name="layerSwitch" type="java.lang.String" initial="SCALAR"/>
+      <form-property name="fieldid" type="java.lang.Integer"/>
+      <form-property name="resetfields" type="java.lang.String"/>
+      <form-property name="recordTypeId" type="java.lang.Integer" />
+    </form-bean>
+    
+    <form-bean name="newliteratureformadmin" type="com.centraview.administration.modulesettings.NewLiteratureFormAdmin"/>  
+    
+    <form-bean name="printTemplateForm" type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="categoryId" type="java.lang.Integer" initial="1" />
+      <form-property name="isDefault" type="java.lang.String" initial="NO" />
+      <form-property name="templateData" type="java.lang.String" initial="" />
+      <form-property name="templateName" type="java.lang.String" initial="" />
+      <form-property name="userId" type="java.lang.Integer" initial="0" />
+      <form-property name="artifactId" type="java.lang.Integer" initial="0" />
+      <form-property name="subject" type="java.lang.String" initial="" />
+      <form-property name="id" type="java.lang.Integer" initial="0" />
+      <form-property name="typeList" type="java.util.Collection"/>
+      <form-property name="cancelButton" type="java.lang.String"/>
+    </form-bean>
+    
+    <!--
+      mergeSearchForm is used for the first screen of Merge and Purge
+      It relies on the browser keeping the arrays in the rows straight
+    -->
+    <form-bean name="mergeSearchForm" type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="mergeType" type="java.lang.String"/>
+      <form-property name="searchDomain" type="java.lang.String" />
+      <form-property name="threshhold" type="java.lang.String" initial="100"/>
+      <form-property name="criteriaLine" type="com.centraview.administration.merge.SearchCriteriaLine[]" size="1"/>
+      <form-property name="addRow" type="java.lang.String" initial="false"/>
+      <!-- Collections for dropdowns -->
+      <form-property name="mergeTypeCollection" type="java.util.ArrayList"/>
+      <form-property name="searchDomainCollection" type="java.util.ArrayList"/>
+      <form-property name="fieldListCollection" type="java.util.ArrayList"/>
+      <form-property name="searchTypeCollection" type="java.util.ArrayList"/>
+    </form-bean>
+    
+    <form-bean name="mergeEntityDetails" type="org.apache.struts.validator.DynaValidatorForm">
+      <!-- Radio buttons, Checkboxes and Select results -->
+      <form-property name="nameRadio" type="java.lang.String" initial="0"/>
+      <form-property name="marketingListSelect" type="java.lang.String"/>
+      <form-property name="idSelect" type="java.lang.String"/>
+      <form-property name="id2Radio" type="java.lang.String"/>
+      <form-property name="primaryContactSelect" type="java.lang.String"/>
+      <form-property name="accountManagerRadio" type="java.lang.String"/>
+      <form-property name="accountTeamRadio" type="java.lang.String"/>
+      <form-property name="sourceRadio" type="java.lang.String"/>
+      <form-property name="addressCheckBox" type="java.lang.String[]"/>
+      <form-property name="methodOfContactCheckBox" type="java.lang.String[]"/>
+      <!-- Custom text values  only needed when "custom" set in corresponding radio-->
+      <form-property name="customName" type="java.lang.String"/>
+      <form-property name="customId2" type="java.lang.String"/>
+      <form-property name="customSourceName" type="java.lang.String"/>
+      <form-property name="customAccountManagerName" type="java.lang.String"/>
+      <form-property name="customAccountTeamName" type="java.lang.String"/>
+      <!-- Collections for showing the alternatives in radios and checkboxes -->
+      <form-property name="nameCollection" type="java.util.ArrayList"/>
+      <form-property name="idCollection" type="java.util.ArrayList"/>
+      <form-property name="id2Collection" type="java.util.ArrayList"/>
+      <form-property name="individualNameCollection" type="java.util.ArrayList"/>
+      <form-property name="accountManagerCollection" type="java.util.ArrayList"/>
+      <form-property name="accountTeamCollection" type="java.util.ArrayList"/>
+      <form-property name="sourceCollection" type="java.util.ArrayList"/>
+      <form-property name="addressCollection" type="java.util.ArrayList"/>
+      <form-property name="methodOfContactCollection" type="java.util.ArrayList"/>
+      <form-property name="marketingListCollection" type="java.util.ArrayList" />
+      <!-- VO collections -->
+      <form-property name="entityVOs" type="java.util.ArrayList"/>
+      <form-property name="individualVOs" type="java.util.ArrayList"/>
+      <form-property name="addressVOs" type="java.util.ArrayList"/>
+      <form-property name="methodOfContactVOs" type="java.util.ArrayList"/>
+    </form-bean>
+    
+    <form-bean name="mergeIndividualDetails" type="org.apache.struts.validator.DynaValidatorForm">
+      <!-- Radio buttons, Checkboxes and Select results -->
+      <form-property name="nameRadio" type="java.lang.String" initial="0"/>
+      <form-property name="marketingListSelect" type="java.lang.String"/>
+      <form-property name="idSelect" type="java.lang.String"/>
+      <form-property name="id2Radio" type="java.lang.String"/>
+      <form-property name="entitySelect" type="java.lang.String"/>
+      <form-property name="sourceRadio" type="java.lang.String"/>
+      <form-property name="addressCheckBox" type="java.lang.String[]"/>
+      <form-property name="methodOfContactCheckBox" type="java.lang.String[]"/>
+      <!-- Custom text values  only needed when "custom" set in corresponding radio-->
+      <form-property name="customFirst" type="java.lang.String"/>
+      <form-property name="customMiddle" type="java.lang.String"/>
+      <form-property name="customLast" type="java.lang.String"/>      
+      <form-property name="customId2" type="java.lang.String"/>
+      <form-property name="customSourceName" type="java.lang.String"/>
+      <!-- Collections for showing the alternatives in radios and checkboxes -->
+      <form-property name="nameCollection" type="java.util.ArrayList"/>
+      <form-property name="idCollection" type="java.util.ArrayList"/>
+      <form-property name="id2Collection" type="java.util.ArrayList"/>
+      <form-property name="entityNameCollection" type="java.util.ArrayList"/>
+      <form-property name="sourceCollection" type="java.util.ArrayList"/>
+      <form-property name="addressCollection" type="java.util.ArrayList"/>
+      <form-property name="methodOfContactCollection" type="java.util.ArrayList"/>
+      <form-property name="marketingListCollection" type="java.util.ArrayList" />
+      <!-- VO collections -->
+      <form-property name="entityVOs" type="java.util.ArrayList"/>
+      <form-property name="individualVOs" type="java.util.ArrayList"/>
+      <form-property name="addressVOs" type="java.util.ArrayList"/>
+      <form-property name="methodOfContactVOs" type="java.util.ArrayList"/>
+    </form-bean>
+    
+    <form-bean name="globalReplaceForm" type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="replaceTableID" type="java.lang.String"/>
+      <form-property name="listID" type="java.lang.String"/>
+      <form-property name="savedSearchID" type="java.lang.String"/>
+      <form-property name="replaceFieldID" type="java.lang.String"/>
+      <form-property name="replaceTableVec" type="java.util.Vector"/>
+      <form-property name="listVec" type="java.util.Vector"/>
+      <form-property name="savedSearchVec" type="java.util.Vector"/>
+      <form-property name="replaceFieldVec" type="java.util.Vector"/>
+      <form-property name="searchType" type="java.lang.String" />
+      <form-property name="replaceValue" type="java.lang.String"/>
+      <form-property name="replaceID" type="java.lang.String" initial="0"/>
+      <form-property name="replaceVec" type="java.util.Vector"/>
+      <form-property name="replaceExt" type="java.lang.String"/>
+      <form-property name="fieldType" type="java.lang.String"/>
+      <form-property name="tableName" type="java.lang.String"/>
+      <form-property name="fieldName" type="java.lang.String"/>
+      <form-property name="searchRadio" type="java.lang.String" initial="New Search"/>
+      <form-property name="actualValue" type="java.lang.String"/>
+      <form-property name="actionType" type="java.lang.String"/>
+      <form-property name="searchCriteria" type="com.centraview.advancedsearch.SearchCriteriaVO[]" size="1"/>
+      <form-property name="tableList" type="java.util.ArrayList"/>
+      <form-property name="conditionList" type="java.util.ArrayList"/>
+      <form-property name="allFields" type="java.util.HashMap"/>
+      <form-property name="searchId" type="java.lang.String" initial="0" />
+      <form-property name="moduleId" type="java.lang.Integer" initial="14"/>
+      <form-property name="addRow" type="java.lang.String" initial="false" />
+      <form-property name="removeRow" type="java.lang.String" initial="false" />
+      <form-property name="createNew" type="java.lang.String" initial="false" />
+      <form-property name="deleteSearch" type="java.lang.String" initial="false" />
+      <form-property name="failureOrSuccess" type="java.lang.String"/>
+    </form-bean>
+    
+    <form-bean name="securityprofile" type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="profilename" type="java.lang.String"  />
+      <form-property name="profileid" type="java.lang.String"  />
+      <form-property name="ModuleName_FieldName" type="java.lang.String" />
+      <form-property name="Activities_priority" type="java.lang.String" />
+      <form-property name="Activities_title" type="java.lang.String" />
+      <form-property name="Activities_completeddate" type="java.lang.String" />
+      <form-property name="Activities_creator" type="java.lang.String" />
+      <form-property name="Activities_modifiedby" type="java.lang.String" />
+      <form-property name="Activities_created" type="java.lang.String" />
+      <form-property name="Activities_end" type="java.lang.String" />
+      <form-property name="Activities_visibility" type="java.lang.String" />
+      <form-property name="Activities_calltype" type="java.lang.String" />
+      <form-property name="Activities_type" type="java.lang.String" />
+      <form-property name="Activities_status" type="java.lang.String" />
+      <form-property name="Activities_duedate" type="java.lang.String" />
+      <form-property name="Activities_details" type="java.lang.String" />
+      <form-property name="Activities_owner" type="java.lang.String" />
+      <form-property name="Activities_modified" type="java.lang.String" />
+      <form-property name="Activities_start" type="java.lang.String" />
+      <form-property name="Activities_location" type="java.lang.String" />
+      <form-property name="Activities_notes" type="java.lang.String" />
+      <form-property name="Appointments_activityDetails" type="java.lang.String" />
+      <form-property name="Appointments_entityVO" type="java.lang.String" />
+      <form-property name="Appointments_opportunityID" type="java.lang.String" />
+      <form-property name="Appointments_status" type="java.lang.String" />
+      <form-property name="Appointments_activityStartDate" type="java.lang.String" />
+      <form-property name="Appointments_owner" type="java.lang.String" />
+      <form-property name="Appointments_individualVO" type="java.lang.String" />
+      <form-property name="Appointments_projectID" type="java.lang.String" />
+      <form-property name="Appointments_notes" type="java.lang.String" />
+      <form-property name="Appointments_activityEndDate" type="java.lang.String" />
+      <form-property name="Calls_activityDetails" type="java.lang.String" />
+      <form-property name="Calls_opportunityID" type="java.lang.String" />
+      <form-property name="Calls_owner" type="java.lang.String" />
+      <form-property name="Calls_notes" type="java.lang.String" />
+      <form-property name="Calls_activityEndDate" type="java.lang.String" />
+      <form-property name="Calls_entityVO" type="java.lang.String" />
+      <form-property name="Calls_individualVO" type="java.lang.String" />
+      <form-property name="Calls_projectID" type="java.lang.String" />
+      <form-property name="Calls_status" type="java.lang.String" />
+      <form-property name="Calls_activityStartDate" type="java.lang.String" />
+      <form-property name="EmployeeHandbook_description" type="java.lang.String" />
+      <form-property name="EmployeeHandbook_authorname" type="java.lang.String" />
+      <form-property name="EmployeeHandbook_individualname" type="java.lang.String" />
+      <form-property name="EmployeeHandbook_fileversion" type="java.lang.String" />
+      <form-property name="EmployeeHandbook_entityname" type="java.lang.String" />
+      <form-property name="Entity_firstname" type="java.lang.String" />
+      <form-property name="Entity_lastname" type="java.lang.String" />
+      <form-property name="Entity_name" type="java.lang.String" />
+      <form-property name="Entity_address" type="java.lang.String" />
+      <form-property name="Entity_website" type="java.lang.String" />
+      <form-property name="Entity_acctmanager" type="java.lang.String" />
+      <form-property name="Entity_contactmethod" type="java.lang.String" />
+      <form-property name="Entity_middlename" type="java.lang.String" />
+      <form-property name="Entity_id1" type="java.lang.String" />
+      <form-property name="Entity_id2" type="java.lang.String" />
+      <form-property name="Entity_title" type="java.lang.String" />
+      <form-property name="Entity_source" type="java.lang.String" />
+      <form-property name="Entity_acctteam" type="java.lang.String" />
+      <form-property name="Entity_customfield" type="java.lang.String" />
+      <form-property name="Events_moderatorname" type="java.lang.String" />
+      <form-property name="Events_attachfile" type="java.lang.String" />
+      <form-property name="Events_description" type="java.lang.String" />
+      <form-property name="Events_masterlistid" type="java.lang.String" />
+      <form-property name="Events_maxattendees" type="java.lang.String" />
+      <form-property name="Expense_notes" type="java.lang.String" />
+      <form-property name="Expense_expenseDescription" type="java.lang.String" />
+      <form-property name="Expense_statusIDValue" type="java.lang.String" />
+      <form-property name="ExpenseForms_linestatus" type="java.lang.String" />
+      <form-property name="ExpenseForms_expenseId" type="java.lang.String" />
+      <form-property name="ExpenseForms_notes" type="java.lang.String" />
+      <form-property name="ExpenseForms_formDescription" type="java.lang.String" />
+      <form-property name="File_description" type="java.lang.String" />
+      <form-property name="File_version" type="java.lang.String" />
+      <form-property name="File_individual" type="java.lang.String" />
+      <form-property name="File_authorId" type="java.lang.String" />
+      <form-property name="File_entity" type="java.lang.String" />
+      <form-property name="Group_description" type="java.lang.String" />
+      <form-property name="Group_memberlist" type="java.lang.String" />
+      <form-property name="Group_groupname" type="java.lang.String" />
+      <form-property name="Group_owner" type="java.lang.String" />
+      <form-property name="Group_groupdescription" type="java.lang.String" />
+      <form-property name="Individual_contactmethod" type="java.lang.String" />
+      <form-property name="Individual_lastname" type="java.lang.String" />
+      <form-property name="Individual_id1" type="java.lang.String" />
+      <form-property name="Individual_address" type="java.lang.String" />
+      <form-property name="Individual_customfield" type="java.lang.String" />
+      <form-property name="Individual_entity" type="java.lang.String" />
+      <form-property name="Individual_firstname" type="java.lang.String" />
+      <form-property name="Individual_middlename" type="java.lang.String" />
+      <form-property name="Individual_title" type="java.lang.String" />
+      <form-property name="Individual_id2" type="java.lang.String" />
+      <form-property name="Individual_source" type="java.lang.String" />
+      <form-property name="Inventory_intLocationID" type="java.lang.String" />
+      <form-property name="Inventory_vendorVO" type="java.lang.String" />
+      <form-property name="Inventory_intStatusID" type="java.lang.String" />
+      <form-property name="Inventory_customFieldsVec" type="java.lang.String" />
+      <form-property name="Inventory_strIdentifier" type="java.lang.String" />
+      <form-property name="Inventory_manufacturerVO" type="java.lang.String" />
+      <form-property name="Inventory_strDescription" type="java.lang.String" />
+      <form-property name="Inventory_soldToVo" type="java.lang.String" />
+      <form-property name="InvoiceHistory_accountManagerId" type="java.lang.String" />
+      <form-property name="InvoiceHistory_po" type="java.lang.String" />
+      <form-property name="InvoiceHistory_statusId" type="java.lang.String" />
+      <form-property name="InvoiceHistory_termId" type="java.lang.String" />
+      <form-property name="InvoiceHistory_projectId" type="java.lang.String" />
+      <form-property name="Item_glAccountId" type="java.lang.String" />
+      <form-property name="Item_subItemOfId" type="java.lang.String" />
+      <form-property name="Item_cost" type="java.lang.String" />
+      <form-property name="Item_qtyOnHand" type="java.lang.String" />
+      <form-property name="Item_qtyOnBackOrder" type="java.lang.String" />
+      <form-property name="Item_item" type="java.lang.String" />
+      <form-property name="Item_itemDesc" type="java.lang.String" />
+      <form-property name="Item_taxClassId" type="java.lang.String" />
+      <form-property name="Item_price" type="java.lang.String" />
+      <form-property name="Item_linkToInventory" type="java.lang.String" />
+      <form-property name="Item_qtyOnOrder" type="java.lang.String" />
+      <form-property name="ListManager_listdescription" type="java.lang.String" />
+      <form-property name="LiteratureFulfilment_individualname" type="java.lang.String" />
+      <form-property name="LiteratureFulfilment_assignedtoname" type="java.lang.String" />
+      <form-property name="LiteratureFulfilment_deliverymethodname" type="java.lang.String" />
+      <form-property name="LiteratureFulfilment_duebyday" type="java.lang.String" />
+      <form-property name="LiteratureFulfilment_entityname" type="java.lang.String" />
+      <form-property name="LiteratureFulfilment_detail" type="java.lang.String" />
+      <form-property name="LiteratureFulfilment_statusname" type="java.lang.String" />
+      <form-property name="LiteratureFulfilment_literaturename" type="java.lang.String" />
+      <form-property name="Meetings_entityVO" type="java.lang.String" />
+      <form-property name="Meetings_opportunityID" type="java.lang.String" />
+      <form-property name="Meetings_owner" type="java.lang.String" />
+      <form-property name="Meetings_notes" type="java.lang.String" />
+      <form-property name="Meetings_activityDetails" type="java.lang.String" />
+      <form-property name="Meetings_individualVO" type="java.lang.String" />
+      <form-property name="Meetings_projectID" type="java.lang.String" />
+      <form-property name="Meetings_status" type="java.lang.String" />
+      <form-property name="NextActions_entityVO" type="java.lang.String" />
+      <form-property name="NextActions_opportunityID" type="java.lang.String" />
+      <form-property name="NextActions_owner" type="java.lang.String" />
+      <form-property name="NextActions_notes" type="java.lang.String" />
+      <form-property name="NextActions_activityDetails" type="java.lang.String" />
+      <form-property name="NextActions_individualVO" type="java.lang.String" />
+      <form-property name="NextActions_projectID" type="java.lang.String" />
+      <form-property name="NextActions_status" type="java.lang.String" />
+      <form-property name="Notes_title" type="java.lang.String" />
+      <form-property name="Notes_detail" type="java.lang.String" />
+      <form-property name="Notes_entity" type="java.lang.String" />
+      <form-property name="Notes_individual" type="java.lang.String" />
+      <form-property name="Opportunities_description" type="java.lang.String" />
+      <form-property name="Opportunities_stage" type="java.lang.String" />
+      <form-property name="Opportunities_opportunitytype" type="java.lang.String" />
+      <form-property name="Opportunities_forcastedamount" type="java.lang.String" />
+      <form-property name="Opportunities_sourcename" type="java.lang.String" />
+      <form-property name="Opportunities_statusname" type="java.lang.String" />
+      <form-property name="Opportunities_opportunitytypename" type="java.lang.String" />
+      <form-property name="Opportunities_probabilityname" type="java.lang.String" />
+      <form-property name="Opportunities_actualclose" type="java.lang.String" />
+      <form-property name="Opportunities_acctteamname" type="java.lang.String" />
+      <form-property name="Opportunities_entityname" type="java.lang.String" />
+      <form-property name="Opportunities_title" type="java.lang.String" />
+      <form-property name="Opportunities_individualid" type="java.lang.String" />
+      <form-property name="Opportunities_sourceid" type="java.lang.String" />
+      <form-property name="Opportunities_stageid" type="java.lang.String" />
+      <form-property name="Opportunities_totalamount" type="java.lang.String" />
+      <form-property name="Opportunities_acctmgrid" type="java.lang.String" />
+      <form-property name="Opportunities_source" type="java.lang.String" />
+      <form-property name="Opportunities_status" type="java.lang.String" />
+      <form-property name="Opportunities_probability" type="java.lang.String" />
+      <form-property name="Opportunities_estimatedclosedate" type="java.lang.String" />
+      <form-property name="Opportunities_stagename" type="java.lang.String" />
+      <form-property name="Opportunities_forecastedamount" type="java.lang.String" />
+      <form-property name="Opportunities_estimatedclose" type="java.lang.String" />
+      <form-property name="Opportunities_acctmgrname" type="java.lang.String" />
+      <form-property name="Opportunities_entityid" type="java.lang.String" />
+      <form-property name="Opportunities_opportunityid" type="java.lang.String" />
+      <form-property name="Opportunities_activityid" type="java.lang.String" />
+      <form-property name="Opportunities_individualname" type="java.lang.String" />
+      <form-property name="Opportunities_statusid" type="java.lang.String" />
+      <form-property name="Opportunities_opportunitytypeid" type="java.lang.String" />
+      <form-property name="Opportunities_probabilityid" type="java.lang.String" />
+      <form-property name="Opportunities_acctteamid" type="java.lang.String" />
+      <form-property name="OrderHistory_statusIdValue" type="java.lang.String" />
+      <form-property name="OrderHistory_termsIdValue" type="java.lang.String" />
+      <form-property name="OrderHistory_projectIdValue" type="java.lang.String" />
+      <form-property name="OrderHistory_project" type="java.lang.String" />
+      <form-property name="OrderHistory_acctMgrIdValue" type="java.lang.String" />
+      <form-property name="OrderHistory_acctMgr" type="java.lang.String" />
+      <form-property name="Payment_reference" type="java.lang.String" />
+      <form-property name="Payment_description" type="java.lang.String" />
+      <form-property name="Projects_entity" type="java.lang.String" />
+      <form-property name="Projects_manager" type="java.lang.String" />
+      <form-property name="Projects_start" type="java.lang.String" />
+      <form-property name="Projects_status" type="java.lang.String" />
+      <form-property name="Projects_usedHours" type="java.lang.String" />
+      <form-property name="Projects_description" type="java.lang.String" />
+      <form-property name="Projects_contact" type="java.lang.String" />
+      <form-property name="Projects_team" type="java.lang.String" />
+      <form-property name="Projects_end" type="java.lang.String" />
+      <form-property name="Projects_budhr" type="java.lang.String" />
+      <form-property name="Projects_available" type="java.lang.String" />
+      <form-property name="Promotion_startdate" type="java.lang.String" />
+      <form-property name="Promotion_customfield" type="java.lang.String" />
+      <form-property name="Promotion_itemlines" type="java.lang.String" />
+      <form-property name="Promotion_description" type="java.lang.String" />
+      <form-property name="Promotion_status" type="java.lang.String" />
+      <form-property name="Promotion_notes" type="java.lang.String" />
+      <form-property name="Proposals_estimatedclosedate" type="java.lang.String" />
+      <form-property name="Proposals_stage" type="java.lang.String" />
+      <form-property name="Proposals_description" type="java.lang.String" />
+      <form-property name="Proposals_billingaddress" type="java.lang.String" />
+      <form-property name="Proposals_statuslist" type="java.lang.String" />
+      <form-property name="Proposals_actualclose" type="java.lang.String" />
+      <form-property name="Proposals_item" type="java.lang.String" />
+      <form-property name="Proposals_attachFileValues" type="java.lang.String" />
+      <form-property name="Proposals_proposaltype" type="java.lang.String" />
+      <form-property name="Proposals_status" type="java.lang.String" />
+      <form-property name="Proposals_probability" type="java.lang.String" />
+      <form-property name="Proposals_prodescription" type="java.lang.String" />
+      <form-property name="Proposals_shippingaddress" type="java.lang.String" />
+      <form-property name="Proposals_estimatedclose" type="java.lang.String" />
+      <form-property name="Proposals_terms" type="java.lang.String" />
+      <form-property name="Proposals_specialinstructions" type="java.lang.String" />
+      <form-property name="PurchaseOrder_purchaseorderDate" type="java.lang.String" />
+      <form-property name="PurchaseOrder_accountManagerId" type="java.lang.String" />
+      <form-property name="PurchaseOrder_statusId" type="java.lang.String" />
+      <form-property name="PurchaseOrder_termId" type="java.lang.String" />
+      <form-property name="Tasks_description" type="java.lang.String" />
+      <form-property name="Tasks_sendAlert" type="java.lang.String" />
+      <form-property name="Tasks_alertTypeEmail" type="java.lang.String" />
+      <form-property name="Tasks_manager" type="java.lang.String" />
+      <form-property name="Tasks_percentComplete" type="java.lang.String" />
+      <form-property name="Tasks_milestone" type="java.lang.String" />
+      <form-property name="Tasks_alertTypeAlert" type="java.lang.String" />
+      <form-property name="Tasks_sendTo" type="java.lang.String" />
+      <form-property name="Tasks_status" type="java.lang.String" />
+      <form-property name="Tasks_assignedTo" type="java.lang.String" />
+      <form-property name="Ticket_detail" type="java.lang.String" />
+      <form-property name="Ticket_contact" type="java.lang.String" />
+      <form-property name="Ticket_email" type="java.lang.String" />
+      <form-property name="Ticket_assignedto" type="java.lang.String" />
+      <form-property name="Ticket_priority" type="java.lang.String" />
+      <form-property name="Ticket_entityname" type="java.lang.String" />
+      <form-property name="Ticket_phone" type="java.lang.String" />
+      <form-property name="Ticket_managername" type="java.lang.String" />
+      <form-property name="Time Sheets_notes" type="java.lang.String" />
+      <form-property name="Time Sheets_description" type="java.lang.String" />
+      <form-property name="Time Sheets_status" type="java.lang.String" />
+      <form-property name="Time Slips_project" type="java.lang.String" />
+      <form-property name="Time Slips_ticket" type="java.lang.String" />
+      <form-property name="Time Slips_task" type="java.lang.String" />
+      <form-property name="ToDos_entityVO" type="java.lang.String" />
+      <form-property name="ToDos_opportunityID" type="java.lang.String" />
+      <form-property name="ToDos_owner" type="java.lang.String" />
+      <form-property name="ToDos_notes" type="java.lang.String" />
+      <form-property name="ToDos_activityDetails" type="java.lang.String" />
+      <form-property name="ToDos_individualVO" type="java.lang.String" />
+      <form-property name="ToDos_projectID" type="java.lang.String" />
+      <form-property name="ToDos_status" type="java.lang.String" />
+      <form-property name="moduleright" type="java.lang.String[]"  />
+    </form-bean>
+
+    <form-bean name="licenseForm" type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="licenseID" type="java.lang.String"/>
+      <form-property name="lastVerifiedDate" type="java.lang.String"/>
+      <form-property name="licenseKey" type="java.lang.String" />
+      <form-property name="licenseStatus" type="java.lang.String" />
+      <form-property name="licenseVerification" type="java.lang.String"/>
+      <form-property name="expirationDate" type="java.lang.String"/>
+      <form-property name="numberOfUsers" type="java.lang.String"/>
+    </form-bean>
+
+    <form-bean name="customViewSelectForm" type="org.apache.struts.action.DynaActionForm">
+      <form-property name="linkList" type="java.util.ArrayList" />
+    </form-bean>
+
+  </form-beans>
+  
+  <action-mappings>
+
+    <action path="/administration/user_list" scope="request" type="com.centraview.administration.user.UserListHandler" validate="false">
+      <forward name=".view.administration.user_list" path=".view.valuelist.nosearch"/>
+    </action>
+
+    <action path="/administration/user_detail" scope="request" type="com.centraview.administration.user.ViewUserHandler" validate="false">
+      <forward name=".view.administration.user_detail" path=".view.administration.user_detail"/>
+    </action>
+
+    <action path="/administration/delete_user" type="com.centraview.administration.user.DeleteUserHandler" scope="request" validate="false">
+      <forward name=".forward.administration.user_list" path="/administration/user_list.do" redirect="true" />
+    </action>
+
+    <action path="/administration/save_user" name="userform" scope="request" type="com.centraview.administration.user.SaveUserDispatch" validate="false">
+      <forward name="saveNew" path="/administration/save_new_user.do" />
+      <forward name="update" path="/administration/update_user.do" />
+    </action>
+    
+    <action path="/administration/save_new_user" name="userform" scope="request" type="com.centraview.administration.user.SaveNewUserHandler" validate="false">
+      <forward name="saveandnew" path="/administration/new_user.do" redirect="true"/>
+      <forward name="saveandclose" path="/administration/user_list.do" redirect="true"/>
+      <forward name="userexists" path="/administration/new_user.do" />
+      <forward name="save" path="/administration/user_detail.do?rowId=" redirect="true"/>
+    </action>
+    
+    <action path="/administration/update_user" name="userform" scope="request" type="com.centraview.administration.user.UpdateUserHandler" validate="false">
+      <forward name="savecloseuser" path="/administration/user_list.do" redirect="true"/>        
+      <forward name="saveedituser" path="/administration/user_detail.do"/>        
+      <forward name="addnewuser" path="/administration/new_user.do" redirect="true"/>        
+    </action>
+
+    <action path="/administration/new_user" scope="request" type="com.centraview.administration.user.NewUserHandler" name="userform" validate="false">
+      <forward name=".view.administration.user_detail" path=".view.administration.user_detail"/>
+    </action>
+
+    <action path="/administration/server_settings" type="com.centraview.administration.configuration.DisplayServerSettingsHandler" scope="request" validate="false" name="serverSettingsForm">
+      <forward name=".view.administration.server_settings" path=".view.administration.server_settings" />
+      <forward name="showsettings" path="/jsp/administration/configuration/configuration_c.jsp"/>
+    </action>
+
+    <action path="/administration/save_server_settings" type="com.centraview.administration.configuration.SaveServerSettingsHandler" scope="request" validate="true" name="serverSettingsForm">
+      <forward name=".forward.administration.server_settings" path="/administration/server_settings.do" redirect="true" />
+    </action>
+
+    <action path="/administration/email_settings" type="com.centraview.administration.configuration.DisplayEmailSettingsHandler" scope="request" validate="false" name="emailSettingsForm">
+      <forward name=".view.administration.email_settings" path=".view.administration.email_settings" />
+    </action>
+
+    <action path="/administration/save_email_settings" type="com.centraview.administration.configuration.SaveEmailSettingsHandler" scope="request" validate="true" name="emailSettingsForm">
+      <forward name=".forward.administration.email_settings" path="/administration/email_settings.do" redirect="true"/>
+    </action>
+
+    <action path="/administration/view_email_template" type="com.centraview.administration.configuration.DisplayEmailTemplateHandler" scope="request" validate="false" name="emailTemplateForm">
+      <forward name=".view.administration.view_email_template" path=".view.administration.view_email_template" />
+    </action>
+    
+    <action path="/administration/save_email_template" type="com.centraview.administration.configuration.SaveEmailTemplateHandler" scope="request" validate="true" name="emailTemplateForm">
+      <forward name=".forward.administration.view_email_template" path="/administration/view_email_template.do" />
+      <forward name=".view.administration.view_email_template" path=".view.administration.view_email_template" />
+    </action>  
+
+    <action path="/administration/customer_logo" type="com.centraview.administration.configuration.DisplayCustomerLogoHandler" scope="request" validate="false" name="CustomerLogo">
+      <forward name=".view.administration.customer_logo" path=".view.administration.customer_logo" />
+    </action>
+
+    <action path="/administration/save_customer_logo" type="com.centraview.administration.configuration.SaveCustomerLogoHandler" scope="request" validate="false" name="CustomerLogo">
+      <forward name=".forward.administration.customer_logo" path="/administration/customer_logo.do" redirect="true" />
+      <forward name=".view.administration.customer_logo" path=".view.administration.customer_logo" />
+    </action>
+
+    <action path="/administration/view_module_settings" type="com.centraview.administration.modulesettings.DisplayModuleSettingsHandler" scope="request" validate="false">
+      <forward name=".view.administration.module_settings" path=".view.administration.module_settings" />
+    </action>
+
+
+    <action path="/administration/default_view" type="com.centraview.administration.modulesettings.DisplayDefaultViewHandler" scope="request" name="masterdataform" validate="false" >
+      <forward name=".view.administration.default_view" path=".view.administration.default_view" />
+    </action>
+
+    <action path="/administration/set_default_view" type="com.centraview.administration.modulesettings.SetDefaultViewHandler" scope="request" name="masterdataform" validate="false" input="/jsp/administration/modulesettings/modulesettings_c.jsp">
+      <forward name=".view.administration.default_view" path="/administration/default_view.do"/>
+      <forward name=".view.administration.module_settings" path=".view.administration.module_settings" />
+    </action>
+
+    <action path="/administration/list_custom_view" type="com.centraview.administration.customview.CustomViewListHandler" scope="request" validate="false" name="">
+      <forward name=".view.administration.list_custom_view" path=".view.valuelist" />
+    </action>
+
+    <action path="/administration/edit_custom_view" type="com.centraview.administration.modulesettings.EditCustomViewHandler" name="customViewForm" scope="request" validate="false">
+      <forward name=".view.administration.edit_custom_view" path=".view.administration.edit_custom_view" />
+    </action>
+
+    <action path="/administration/new_custom_view" type="com.centraview.administration.modulesettings.DisplayCustomViewHandler" scope="request" validate="false" name="customViewSelectForm">
+      <forward name=".view.administration.customview.new" path=".view.administration.customview.new"/>
+    </action>
+
+    <action path="/administration/save_custom_view" type="com.centraview.administration.modulesettings.SaveCustomViewHandler" scope="request" validate="false" name="viewform">
+      <forward name="savenewview" path="/administration/new_custom_view.do"/>
+        <forward name="saveapply" path="/administration/list_custom_view.do"/>
+    </action>
+
+    <action path="/administration/view_custom_field" type="com.centraview.administration.customfield.DisplayEditCustomFieldHandler" scope="request" validate="false" name="customfield">
+      <forward name=".view.administration.view_custom_field" path=".view.administration.view_custom_field" />
+    </action>
+
+    <action path="/administration/delete_custom_field" type="com.centraview.administration.customfield.DeleteCustomFieldHandler" scope="request" validate="false" name="customfield">
+      <forward name="customFieldList" path="/administration/list_custom_fields.do" redirect="true" />
+    </action>
+
+    <action path="/administration/save_edit_custom_field" type="com.centraview.administration.customfield.SaveEditCustomFieldHandler" validate="false" name="customfield">
+      <forward name="savenew" path="/administration/new_custom_field.do" />
+      <forward name="saveclose" path="/administration/list_custom_fields.do" />
+    </action>
+
+    <action path="/administration/new_custom_field" type="com.centraview.administration.customfield.DisplayNewCustomFieldHandler" scope="request" validate="false" name="customfield">
+      <forward name=".view.administration.new_custom_field" path=".view.administration.new_custom_field" />
+    </action>
+
+    <action path="/administration/save_new_custom_field" type="com.centraview.administration.customfield.SaveNewCustomFieldHandler" validate="false" name="customfield">
+      <forward name="savenew" path="/administration/new_custom_field.do"/>
+      <forward name="saveclose" path="/administration/list_custom_fields.do" redirect="true" />
+    </action>
+
+    <action path="/administration/view_field_settings" type="com.centraview.administration.modulesettings.ViewSourceSettingHandler" name="masterdataform" scope="request" validate="false">
+      <forward name=".view.administration.field_settings" path=".view.administration.field_settings" />
+    </action>
+
+    <action path="/administration/save_field_settings" type="com.centraview.administration.modulesettings.SaveSettingsHandler"  scope="request" validate="false" name="masterdataform" input="/jsp/administration/modulesettings/modulesettings_c.jsp">
+      <forward name=".view.administration.field_settings" path="/administration/view_field_settings.do"/>
+      <forward name=".view.administration.module_settings" path=".view.administration.module_settings" />
+    </action>
+    
+    <action path="/administration/calendar_settings" type="com.centraview.administration.modulesettings.ViewCalSettingsHandler" scope="request" validate="false" name="masterdataform">
+      <forward name=".view.administration.calendar_settings" path=".view.administration.calendar_settings" />
+    </action>
+    
+    <action path="/administration/save_calendar_settings" type="com.centraview.administration.modulesettings.SaveCalSettingsHandler" scope="request" validate="false" name="masterdataform">
+      <forward name=".view.administration.calendar_settings" path="/administration/calendar_settings.do?sourcefor=Calendar&amp;setting=Calendar" redirect="true" />
+      <forward name=".view.administration.module_settings" path="/administration/view_module_settings.do?typeofsubmodule=Calendar" redirect="true" />  
+    </action>
+    
+    <action path="/administration/new_literature" type="com.centraview.administration.modulesettings.NewLiteratureHandler" scope="request" validate="false">
+      <forward name=".view.administration.new_literature" path=".view.administration.new_literature" />
+    </action>
+    
+    <action path="/administration/save_new_literature" type="com.centraview.administration.modulesettings.SaveLiteratureHandler" name="newliteratureformadmin" scope="request" validate="false">
+      <forward name=".view.adminstration.view_literature" path="/administration/view_literature.do" />
+      <forward name=".view.adminstration.list_literature" path="/administration/literature_list.do" redirect="true"/>
+    </action>
+    
+    <action path="/administration/view_literature" type="com.centraview.administration.modulesettings.EditLiteratureHandler"  scope="request" validate="true" >
+      <forward name=".view.administration.view_literature" path=".view.administration.view_literature" />
+    </action>
+    
+    <action path="/administration/update_literature" type="com.centraview.administration.modulesettings.UpdateLiteratureHandler" name="newliteratureformadmin" scope="request" validate="false">
+      <forward name=".view.administration.view_literature" path="/administration/view_literature.do" />
+      <forward name=".view.administration.list_literature" path="/administration/literature_list.do" redirect="true"/>
+    </action>
+
+	<action path="/administration/delete_literature" type="com.centraview.administration.modulesettings.DeleteLiteratureHandler" scope="request" validate="false" >
+		<forward name="literaturelist" path="/administration/literature_list.do"  redirect="true"/>
+	</action>
+    
+    <action path="/administration/support_inbox" type="com.centraview.administration.modulesettings.DisplaySupportInboxHandler" scope="request" validate="false" name="masterdataform">
+      <forward name=".view.administration.support_inbox" path=".view.administration.support_inbox" />
+    </action>
+    
+    <action path="/administration/save_support_inbox" type="com.centraview.administration.modulesettings.SaveSupportInboxHandler" scope="request" validate="false" name="masterdataform">
+      <forward name=".view.administration.support_inbox" path="/administration/support_inbox.do" />
+    </action>
+
+    <action path="/administration/tax_settings" type="com.centraview.administration.modulesettings.TaxSettingsHandler" name="masterdataform" scope="request" validate="false">
+      <forward name=".view.administration.tax_settings" path=".view.administration.tax_settings" />
+    </action>
+    
+    <action path="/administration/save_tax_settings" type="com.centraview.administration.modulesettings.SaveTaxSettingsHandler"  scope="request" validate="false" name="masterdataform" input="/jsp/administration/modulesettings/modulesettings_c.jsp">
+      <forward name=".view.administration.tax_settings" path="/administration/tax_settings.do" redirect="true" />
+      <forward name=".view.administration.module_settings" path="/administration/view_module_settings.do?typeofsubmodule=Accounting" redirect="true"/>
+    </action>
+    
+    <action path="/administration/template_list" type="com.centraview.administration.modulesettings.templates.TemplateListHandler">
+      <forward name=".view.administration.template_list" path=".view.valuelist.nosearch" />
+    </action>
+    
+    <action path="/administration/template_detail" type="com.centraview.administration.modulesettings.templates.TemplateDetailHandler" name="printTemplateForm" scope="request">
+      <forward name=".view.administration.view_template" path=".view.administration.view_template" />
+    </action>
+
+    <action path="/administration/save_template" type="com.centraview.administration.modulesettings.templates.SaveTemplateHandler" name="printTemplateForm" scope="request">
+      <forward name=".view.administration.view_template" path="/administration/template_detail.do?templateId="/>
+    </action>
+
+    <action path="/administration/delete_template" type="com.centraview.administration.modulesettings.templates.DeleteTemplateHandler">
+      <forward name="displayList" path="/administration/template_list.do" redirect="true"/>
+    </action>
+
+    <action path="/administration/new_template" type="com.centraview.administration.modulesettings.templates.NewTemplateHandler" name="printTemplateForm" scope="request">
+      <forward name=".view.administration.new_template" path=".view.administration.new_template" />
+      <forward name="displayDetail" path="/jsp/administration/modulesettings/templates/template_c.jsp"/>
+    </action>
+
+    <action path="/administration/literature_list" type="com.centraview.administration.modulesettings.LiteratureListHandler" scope="request" validate="false">
+      <forward name=".view.administration.literature_list" path=".view.valuelist.nosearch" />
+    </action>
+
+    <action path="/administration/garbage_list" type="com.centraview.administration.cvgarbage.GarbageListHandler" scope="request" validate="false">
+      <forward name=".view.administration.garbage_list" path=".view.valuelist.nosearch" />
+    </action>
+
+    <action path="/administration/attic_list" type="com.centraview.administration.cvattic.AtticListHandler" scope="request" validate="false">
+      <forward name="attic" path="/jsp/administration/cvattic/list_attic_c.jsp"/>
+      <forward name=".view.administration.attic_list" path=".view.valuelist.nosearch" />
+    </action>
+
+    <action path="/administration/delete_attic" type="com.centraview.administration.cvattic.DeleteAtticHandler" scope="request" validate="false">
+      <forward name=".forward.administration.attic_list" path="/administration/attic_list.do" redirect="true" />
+    </action>
+  
+    <action path="/administration/restore_attic" type="com.centraview.administration.common.AtticHandler" scope="request" validate="false" name="" parameter="method">
+      <forward name="restoregarbage" path="/administration/garbage_list.do"/>
+      <forward name="restoreattic" path="/administration/attic_list.do"/>
+      <forward name="movetoattic" path="/administration/garbage_list.do"/>
+    </action>
+
+    <action path="/administration/history_list" type="com.centraview.administration.history.HistoryListHandler" scope="request" validate="false">
+      <forward name=".view.administration.history_list" path=".view.valuelist.nosearch" />
+    </action>
+
+    <action path="/administration/merge_search" type="com.centraview.administration.merge.MergeSearch" name="mergeSearchForm" scope="session" validate="false">
+      <forward name="displaymergesearch" path="/jsp/administration/merge/merge_c.jsp"/>
+      <forward name=".view.administration.merge_search" path=".view.administration.merge_search" />
+    </action>
+    
+    <action path="/administration/merge_search_results" type="com.centraview.administration.merge.MergeSearchResults" name="mergeSearchForm" scope="session" validate="true" input=".view.administration.merge_search">
+      <forward name=".view.administration.merge_search_results" path="/administration/display_merge_search_results.do" redirect="true"/>
+    </action>
+    
+    <action path="/administration/display_merge_search_results" type="com.centraview.administration.merge.DisplayMergeSearchResults">
+      <forward name=".view.administration.merge_search_results" path=".view.administration.merge_search_results" />
+      <forward name=".view.administration.merge_complete" path=".view.administration.merge_complete"/>
+    </action>
+    
+    <action path="/administration/merge_detail" type="com.centraview.administration.merge.MergeDetail" name="mergeSearchForm" scope="session" validate="false">
+      <forward name="entityMergeDetail" path="/administration/entity_merge_detail.do" redirect="true" />
+      <forward name="individualMergeDetail" path="/administration/individual_merge_detail.do" redirect="true" />
+    </action>
+    
+    <!-- Retrieves the Entity detail and puts it on a form for manipulation -->
+    <action path="/administration/entity_merge_detail" type="com.centraview.administration.merge.EntityMergeDetail" name="mergeEntityDetails" scope="session" validate="false">
+      <forward name=".view.administration.entity_merge_detail" path=".view.administration.entity_merge_detail" />
+    </action>
+    
+    <action path="/administration/entity_merge_confirm" type="com.centraview.administration.merge.EntityMergeConfirm" name="mergeEntityDetails" scope="session" validate="true" input=".view.administration.entity_merge_detail">
+      <forward name=".view.administration.entity_merge_confirm" path=".view.administration.entity_merge_confirm" />
+    </action>
+    
+    <!-- EntityMerge will build the final VOs and commit the changes. -->
+    <action path="/administration/entity_merge" type="com.centraview.administration.merge.EntityMerge" name="mergeEntityDetails" scope="session" validate="false">
+      <forward name="displaynextsearchresults" path="/administration/display_merge_search_results.do?next=true" redirect="true"/>
+      <forward name=".view.administration.merge_complete" path=".view.administration.merge_complete"/>
+    </action>
+
+    <action path="/administration/individual_merge_detail" type="com.centraview.administration.merge.IndividualMergeDetail" name="mergeIndividualDetails" scope="session" validate="false">
+      <forward name=".view.administration.individual_merge_detail" path=".view.administration.individual_merge_detail" />
+    </action>
+
+    <action path="/administration/individual_merge_confirm" type="com.centraview.administration.merge.IndividualMergeConfirm" name="mergeIndividualDetails" scope="session" validate="true" input=".view.administration.individual_merge_detail">
+      <forward name=".view.administration.individual_merge_confirm" path=".view.administration.individual_merge_confirm" />
+    </action>
+    
+    <!-- IndividualMerge will build the final VOs and commit the changes. -->
+    <action path="/administration/individual_merge" type="com.centraview.administration.merge.IndividualMerge" name="mergeIndividualDetails" scope="session" validate="false">
+      <forward name="displaynextsearchresults" path="/administration/display_merge_search_results.do?next=true" redirect="true"/>
+      <forward name=".view.administration.merge_complete" path=".view.administration.merge_complete"/>
+    </action>
+    
+    <action path="/administration/global_replace" type="com.centraview.administration.globalreplace.GlobalReplaceHandler" name="globalReplaceForm" scope="session" validate="false">
+      <forward name=".forward.administration.global_replace.search" path="/administration/global_replace_search.do" redirect="true" />
+    </action>
+
+    <action path="/administration/global_replace_search" type="com.centraview.administration.globalreplace.GlobalReplaceSearchHandler" name="globalReplaceForm" scope="session" validate="false">
+      <forward name=".view.administration.global_replace.search" path=".view.administration.global_replace.search" />
+      <forward name=".forward.administration.global_replace.fields" path="/administration/global_replace_fields.do" redirect="true" />
+    </action>    
+
+    <action path="/administration/global_replace_fields" type="com.centraview.administration.globalreplace.GlobalReplaceFieldsHandler" name="globalReplaceForm" scope="session" validate="false">
+      <forward name=".view.administration.global_replace.fields" path=".view.administration.global_replace.fields" />
+    </action>       
+
+    <action path="/administration/global_replace_perform" type="com.centraview.administration.globalreplace.GlobalReplacePerform" name="globalReplaceForm" scope="session" validate="false">
+      <forward name=".view.administration.global_replace.confirm" path=".view.administration.global_replace.confirm" />
+    </action>    
+    
+    <action path="/administration/default_preferences" type="com.centraview.preference.DefaultPreferencesHandler" name="permissionform" scope="request" validate="false">
+      <forward name=".view.administration.default_preferences" path=".view.administration.default_preferences" />
+      <forward name="defaultpreferences" path="/jsp/administration/user/user_admin_c.jsp?admin=VIEWUSERDEFAULTS"/>
+    </action>
+
+    <action path="/administration/save_default_preferences" type="com.centraview.preference.SaveDefaultPreferencesHandler" name="permissionform" scope="request" validate="false">
+      <forward name=".forward.administration.user_list" path="/administration/user_list.do" redirect="true"/>
+    </action>
+
+    <action path="/administration/security_profile_lookup" scope="request" type="com.centraview.administration.authorization.SecurityProfileLookupHandler" validate="false">
+      <forward name=".view.lookup" path=".view.lookup"/>
+    </action>
+
+    <action path="/administration/security_profile_list" scope="request" type="com.centraview.administration.authorization.SecurityProfileListHandler" validate="false">
+      <forward name=".view.administration.security_profile_list" path=".view.valuelist.nosearch"/>
+    </action>
+
+    <action path="/administration/view_profile" type="com.centraview.administration.authorization.ViewSecurityProfileHandler" scope="request" validate="false" name="securityprofile">
+      <forward name=".view.administration.security_profile" path=".view.administration.security_profile" />
+    </action>
+
+    <action path="/administration/update_profile" type="com.centraview.administration.authorization.UpdateSecurityProfileHandler" scope="request" validate="false" name="securityprofile">
+      <forward name="save" path="/administration/view_profile.do" />
+      <forward name="saveandnew" path="/administration/new_security_profile.do" redirect="true" />
+      <forward name="saveandclose" path="/administration/security_profile_list.do"/>
+    </action>
+
+    <action path="/administration/new_security_profile" type="com.centraview.administration.authorization.ViewSecurityProfileHandler" scope="request" validate="false" name="securityprofile">
+      <forward name=".view.administration.security_profile" path=".view.administration.security_profile" />
+    </action>
+
+    <action path="/administration/license" type="com.centraview.administration.configuration.DisplayLicenseHandler" scope="request" validate="false" name="licenseForm">
+      <forward name=".view.administration.license" path=".view.administration.license"/>
+    </action>
+  
+    <action path="/administration/save_license" type="com.centraview.administration.configuration.SaveLicenseHandler" scope="request" validate="false" name="licenseForm">
+      <forward name="savelicense" path="/administration/license.do" redirect="true"/>
+    </action>
+
+    <action path="/administration/list_custom_fields" type="com.centraview.administration.customfield.CustomFieldsListHandler" scope="request" validate="false" >
+      <forward name=".view.administration.list_custom_fields" path=".view.valuelist" />
+    </action>
+
+    <action path="/administration/delete_garbagelist" type="com.centraview.administration.cvgarbage.GarbageListDeleteHandler">
+      <forward name="garbageList" path="/administration/garbage_list.do" redirect="true"/>
+    </action>
+  </action-mappings>
+  
+</struts-config>

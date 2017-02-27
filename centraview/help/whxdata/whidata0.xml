@@ -1,0 +1,171 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<indexdata>
+<key name="About" >
+  <key name="accounting" >
+    <topic name="About Accounting" url="about_accounting.htm" />
+  </key>
+  <key name="activities" >
+    <topic name="About Activities" url="about_activities.htm" />
+  </key>
+  <key name="appointments" >
+    <topic name="About Appointments" url="about_appointments.htm" />
+  </key>
+  <key name="calendar" >
+    <topic name="About Calendar" url="about_calendar.htm" />
+  </key>
+  <key name="calls" >
+    <topic name="About Calls" url="about_calls.htm" />
+  </key>
+  <key name="contact lists" >
+    <topic name="About Contact Lists" url="about_contact_lists.htm" />
+  </key>
+  <key name="contacts" >
+    <topic name="About Contacts" url="about_contacts.htm" />
+  </key>
+  <key name="email" >
+    <topic name="About Email" url="about_email.htm" />
+  </key>
+  <key name="employee handbook" >
+    <topic name="About Employee Handbook" url="about_employee_handbook.htm" />
+  </key>
+  <key name="employee list" >
+    <topic name="About Employee List" url="about_employee_list.htm" />
+  </key>
+  <key name="entities" >
+    <topic name="About Entities" url="about_entities.htm" />
+  </key>
+  <key name="events" >
+    <topic name="About Events" url="about_events.htm" />
+  </key>
+  <key name="expense forms" >
+    <topic name="About Expense Forms" url="about_expense_forms.htm" />
+  </key>
+  <key name="expenses" >
+    <topic name="About Expenses" url="about_expenses.htm" />
+  </key>
+  <key name="FAQs" >
+    <topic name="About FAQs" url="about_faqs.htm" />
+  </key>
+  <key name="files" >
+    <topic name="About Files" url="about_files.htm" />
+  </key>
+  <key name="forecast sales" >
+    <topic name="About Forecast Sales" url="about_forecast_sales.htm" />
+  </key>
+  <key name="general ledger accounts" >
+    <topic name="About GL Accounts" url="about_gl_accounts.htm" />
+  </key>
+  <key name="groups" >
+    <topic name="About Groups" url="about_groups.htm" />
+  </key>
+  <key name="human resources" >
+    <topic name="About HR" url="about_hr.htm" />
+  </key>
+  <key name="individuals" >
+    <topic name="About Individuals" url="about_individuals.htm" />
+  </key>
+  <key name="inventory" >
+    <topic name="About Inventory" url="about_inventory.htm" />
+  </key>
+  <key name="invoice history" >
+    <topic name="About Invoice History" url="about_invoice_history.htm" />
+  </key>
+  <key name="items" >
+    <topic name="About Items" url="about_items.htm" />
+  </key>
+  <key name="knowledge base" >
+    <topic name="About Knowledge Base" url="about_knowledge_base.htm" />
+  </key>
+  <key name="list manager" >
+    <topic name="About List Manager" url="about_list_manager.htm" />
+  </key>
+  <key name="literature fulfillment" >
+    <topic name="About Literature Fulfillment" url="about_literature_fulfillment.htm" />
+  </key>
+  <key name="literature requests" >
+    <topic name="About Literature Requests" url="about_literature_requests.htm" />
+  </key>
+  <key name="marketing" >
+    <topic name="About Marketing" url="about_marketing.htm" />
+  </key>
+  <key name="meetings" >
+    <topic name="About Meetings" url="about_meetings.htm" />
+  </key>
+  <key name="next actions" >
+    <topic name="About Next Actions" url="about_next_actions.htm" />
+  </key>
+  <key name="notes" >
+    <topic name="About Notes" url="about_notes.htm" />
+  </key>
+  <key name="opportunity" >
+    <topic name="About Opportunity" url="about_opportunity.htm" />
+  </key>
+  <key name="order history" >
+    <topic name="About Order History" url="about_order_history.htm" />
+  </key>
+  <key name="payments" >
+    <topic name="About Payments" url="about_payments.htm" />
+  </key>
+  <key name="preferences" >
+    <topic name="About Preferences" url="about_preferences.htm" />
+  </key>
+  <key name="print templates" >
+    <topic name="About Print Templates" url="about_print_templates.htm" />
+  </key>
+  <key name="project tasks" >
+    <topic name="About Project Tasks" url="about_project_tasks.htm" />
+  </key>
+  <key name="projects" >
+    <topic name="About Projects" url="about_projects.htm" />
+  </key>
+  <key name="proposals" >
+    <topic name="About Proposals" url="about_proposals.htm" />
+  </key>
+  <key name="purchase orders" >
+    <topic name="About Purchase Orders" url="about_purchase_orders.htm" />
+  </key>
+  <key name="reports" >
+    <topic name="About Reports" url="about_reports.htm" />
+  </key>
+  <key name="sales" >
+    <topic name="About Sales" url="about_sales.htm" />
+  </key>
+  <key name="suggestion box" >
+    <topic name="About Suggestion Box" url="about_suggestion_box.htm" />
+  </key>
+  <key name="support" >
+    <topic name="About Support" url="about_support.htm" />
+  </key>
+  <key name="support tickets" >
+    <topic name="About Support Tickets" url="about_support_tickets.htm" />
+  </key>
+  <key name="synchronize" >
+    <topic name="About Synchronize" url="setting_up_synchronization.htm" />
+  </key>
+  <key name="tasks" >
+    <topic name="About Tasks" url="about_tasks.htm" />
+  </key>
+  <key name="time sheets" >
+    <topic name="About Time Sheets" url="about_time_sheets.htm" />
+  </key>
+  <key name="timeslips" >
+    <topic name="About Timeslips" url="about_timeslips.htm" />
+  </key>
+  <key name="to dos" >
+    <topic name="About To Dos" url="about_to_dos.htm" />
+  </key>
+  <key name="vendors" >
+    <topic name="About Vendors" url="about_vendors.htm" />
+  </key>
+  <key name="volume discounts" >
+    <topic name="About Volume Discounts" url="about_volume_discounts.htm" />
+  </key>
+</key>
+<key name="Activities" >
+  <topic name="Adding Activities to your Calendar" url="adding_activities_to_your_calendar.htm" />
+  <key name="adding to your calendar" >
+    <topic name="Adding Activities to your Calendar" url="adding_activities_to_your_calendar.htm" />
+  </key>
+</key>
+
+</indexdata>

@@ -1,0 +1,139 @@
+INSTALLATION
+------------
+
+- Prerequisite software:
+
+1. Download MySQL-server. Be sure to download version 4.0. 
+   http://www.mysql.com/downloads/mysql-4.0.html
+
+2. Download mysql-connector-j. Be sure you download version 3.0.x as
+   there is a known bug in 3.1.x when used with CentraView. We
+   reccommend version 3.0.16-ga. Note that the URL given below does
+   not contain a download link for this specific version. Please click
+   the "Connector/J" link, then click the "Connector/J 3.0 Downloads"
+   which is found on the right side of the next page.*
+   http://dev.mysql.com/downloads/connector/
+   
+3. Download JBoss 3.0.8 with integrated Tomcat4.  This can be found
+   here: 
+   http://sourceforge.net/project/showfiles.php?group_id=22866&package_id=16946&release_id=163978
+   
+4. Download Sun Java 2 SDK 1.4.2
+   http://java.sun.com/j2se/1.4.2/download.html
+   
+5. Install Sun java following the directions given.
+
+6. export PATH=<pathtojavainstall>/bin:$PATH
+
+7. export JAVA_HOME=<pathtojavainstall>
+
+8. Unpack jboss to a location of your choice. This is where you will be
+   installing both JBoss and CentraView. We will refer to this folder as
+   <path-to-jboss> from now until the end of this document.
+
+9. Copy mysql-connector-j jar file into <path-to-jboss>/server/default/lib/
+
+10. Install MySQL however you want to. (recommended mysql rpms)
+
+- That takes care of all the prerequisites
+
+11. Download centraview package that includes centraview.ear,
+    mysql-service.xml, cvdb.sql, fs.zip. 
+    
+12. Copy centraview.ear and mysql-service.xml to 
+	/<path-to-jboss>/server/default/deploy/
+    
+13. Create a directory somewhere on your local disk for the centraview
+    filesystem, (where user files are stored) and unzip the file fs.zip
+    into that folder.
+    
+14. Import cvdb.sql into a new centraview database.
+    mysqladmin -u root -p"password" create cvdb
+    mysql -u root -p"password" cvdb < "cvdb.sql"
+    
+15. Set up a centraview user that has ALL PRIVILEGES on the
+    cvdb database.
+    GRANT all privileges on cvdb.* TO "newuser"@localhost IDENTIFIED BY 'password';
+    GRANT all privileges on cvdb.* TO "newuser"@"HOSTNAME" IDENTIFIED BY 'password';
+    
+16. Update the "cvfolderlocation" setting in the database, with the full
+    path to where you unziped the fs.zip file. Do this by logging into
+    the cvdb database and executing the following command:
+    
+    mysql -u "user" -p"password" cvdb
+    UPDATE cvfolderlocation SET Detail = '/Path/to/filesystem';
+
+17. Edit mysql-service.xml to allow jboss to connect to the database:
+
+ <properties>
+        <config-property name="ConnectionURL" type="java.lang.String">jdbc:mysql://localhost:3306/DATABASE-NAME-HERE</config-property>
+        <config-property name="DriverClass" type="java.lang.String">org.gjt.mm.mysql.Driver</config-property>
+        <!--set these only if you want only default logins, not through JAAS -->
+        <config-property name="UserName" type="java.lang.String">USERNAME-HERE</config-property>
+        <config-property name="Password" type="java.lang.String">PASSWORD-HERE</config-property>
+ </properties>
+
+    Note that you'll be changing the three values "DATABASE-NAME-HERE",
+    "USERNAME-HERE", and "PASSWORD-HERE".
+
+
+18. Remove the files <path-to-jboss>/server/default/lib/mail.jar and <path-to-jboss>/server/default/deploy/mail-service.xml
+
+19. cd <path-to-jboss>/bin
+
+20. sh run.sh
+
+21. Browse to the http://hostname:8080/centraview/
+
+22. Login with user admin, password admin.
+
+You are now finished installing CentraView. 
+
+TROUBLESHOOTING
+---------------
+
+1. Chart images don't display in Sales and Support modules
+
+   On some linux systems, users have reported that the chart images do
+   not show up in Sales and Support. This is a known issue with the
+   JFreeChart libraries used to generate these chart images. There is
+   a simple solution, however. 
+ 
+   You have to add the java.awt.headless option in your tomcat4.conf: 
+   
+JAVA_OPTS="-Xincgc -Xss128k -Xms1024M -Xmx1024M -server -Djava.awt.headless=true" 
+   
+   is our recommended setting. The java.awt.headless=true fixes the
+   chart issues.
+
+   In some installations, you may have to set the JAVA_OPTS by changing
+   the value inside the startup script in <path-to-jboss>/bin/run.sh
+
+2. We have found a bug in Struts that causes an issue with some of our
+   code. However, we've found an easy configuration change that solves
+   these issues. 
+   
+   Simply edit <JBOSSHOME>/server/default/conf/log4j.xml. Nested under
+   the <root> element, add <priority value="INFO"/>. Other values may
+   be fine too, as long as it isn't "DEBUG". 
+    
+   So starting on line 164 you should have: 
+    
+<root> 
+  <priority value="INFO"/> 
+  <appender-ref ref="CONSOLE"/> 
+  <appender-ref ref="FILE"/> 
+</root> 
+     
+   This should resolve some of the issues that have been seen. 
+
+MISCELLANEOUS
+-------------
+
+If you experience problems installing or using CentraView on Windows or Linux,
+please post to one of our forums at http://sourceforge.net/projects/centraview
+
+* Please note that the download pages for required third-party may change over
+  time. We have done our best to give good information for finding the
+  appropriate download links. If you notice it is wrong, let us know, 
+  and we'll fix it.

@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<ftstdata>
+<topic name="Deleting Support Tickets" url="deleting_support_tickets.htm" />
+<topic name="Deleting Tasks" url="deleting_tasks.htm" />
+<topic name="Deleting Timeslips" url="deleting_timeslips.htm" />
+<topic name="Deleting To Dos" url="deleting_to_dos.htm" />
+<topic name="Deleting Vendors" url="deleting_vendors.htm" />
+<topic name="Deleting Volume Discounts" url="deleting_volume_discounts.htm" />
+<topic name="Duplicating a Literature Fulfillment Request" url="duplicating_a_literature_fulfillment_request.htm" />
+<topic name="Duplicating a Marketing List" url="duplicating_a_marketing_list.htm" />
+<topic name="Duplicating Appointments" url="duplicating_appointments.htm" />
+<topic name="Duplicating Calls" url="duplicating_calls.htm" />
+<topic name="Duplicating Entities" url="duplicating_entities.htm" />
+<topic name="Duplicating Events" url="duplicating_events.htm" />
+<topic name="Duplicating FAQs" url="duplicating_faqs.htm" />
+<topic name="Duplicating Files" url="duplicating_files.htm" />
+<topic name="Duplicating Forecast Sales" url="duplicating_forecast_sales.htm" />
+<topic name="Duplicating Groups" url="duplicating_groups.htm" />
+<topic name="Duplicating Individuals" url="duplicating_individuals.htm" />
+<topic name="Duplicating Items in the Knowledge Base" url="duplicating_items_in_the_knowledge_base.htm" />
+<topic name="Duplicating Literature Requests" url="duplicating_literature_requests.htm" />
+<topic name="Duplicating Meetings" url="duplicating_meetings.htm" />
+<topic name="Duplicating Next Actions" url="duplicating_next_actions.htm" />
+<topic name="Duplicating Notes" url="duplicating_notes.htm" />
+<topic name="Duplicating Project Tasks" url="duplicating_project_tasks.htm" />
+<topic name="Duplicating Projects" url="duplicating_projects.htm" />
+<topic name="Duplicating Proposals" url="duplicating_proposals.htm" />
+<topic name="Duplicating Sales Opportunities" url="duplicating_sales_opportunities.htm" />
+<topic name="Duplicating Support Tickets" url="duplicating_support_tickets.htm" />
+<topic name="Duplicating Tasks" url="duplicating_tasks.htm" />
+<topic name="Duplicating Timeslips" url="duplicating_timeslips.htm" />
+<topic name="Duplicating To Dos" url="duplicating_to_dos.htm" />
+<topic name="Files, Notes and Email" url="files,_notes_and_email.htm" />
+<topic name="Getting Started for Administrators" url="getting_started_for_administrators.htm" />
+<topic name="Getting Started for New Users" url="getting_started_for_new_users.htm" />
+<topic name="How do I use CentraView?" url="how_do_i_use_centraview_.htm" />
+<topic name="Importing a Marketing List" url="importing_a_marketing_list.htm" />
+<topic name="Managing Email Templates" url="managing_email_templates.htm" />
+<topic name="Managing Print Templates" url="managing_print_templates.htm" />
+<topic name="Managing Sales Proposal Templates" url="managing_sales_proposal_templates.htm" />
+<topic name="Managing Support Ticket Templates" url="managing_support_ticket_templates.htm" />
+<topic name="Managing Templates" url="managing_templates.htm" />
+<topic name="Merging Data with Print Templates" url="merging_data_with_print_templates.htm" />
+<topic name="Projects and Support" url="projects_and_support.htm" />
+<topic name="Reading Email" url="reading_email.htm" />
+<topic name="Sales and Marketing" url="sales_and_marketing.htm" />
+<topic name="Searching Information in CentraView" url="searching_information_in_centraview.htm" />
+<topic name="Setting Automatic Email Checking Preferences" url="setting_automatic_email_checking_preferences.htm" />
+<topic name="Setting Default Privileges" url="setting_default_privileges.htm" />
+<topic name="Setting Delegation Calendar Preferences" url="setting_delegation_calendar_preferences.htm" />
+<topic name="Setting Email Account Preferences" url="setting_email_account_preferences.htm" />
+<topic name="Setting Email Composition Preferences" url="setting_email_composition_preferences.htm" />
+<topic name="Setting Email Rules" url="setting_email_rules.htm" />
+<topic name="Setting General Calendar Preferences" url="setting_general_calendar_preferences.htm" />
+<topic name="Setting Homepage Preferences" url="setting_homepage_preferences.htm" />
+<topic name="Setting up Available Literature" url="setting_up_available_literature.htm" />
+<topic name="Setting up Custom Views" url="setting_up_custom_views.htm" />
+<topic name="Setting up Default Views" url="setting_up_default_views.htm" />
+<topic name="Setting up Invoice Status" url="setting_up_invoice_status.htm" />
+<topic name="Setting up Locations" url="setting_up_locations.htm" />
+<topic name="Setting up Order Status" url="setting_up_order_status.htm" />
+<topic name="Setting up Project Status" url="setting_up_project_status.htm" />
+<topic name="Setting up Resources" url="setting_up_resources.htm" />
+<topic name="Setting up Sales Stages" url="setting_up_sales_stages.htm" />
+<topic name="Setting up Sales Types" url="setting_up_sales_types.htm" />
+<topic name="Setting up Saved Searches" url="setting_up_saved_searches.htm" />
+<topic name="Setting up Sources" url="setting_up_sources.htm" />
+<topic name="Setting Up Synchronization" url="setting_up_synchronization.htm" />
+<topic name="Setting up Terms" url="setting_up_terms.htm" />
+<topic name="Setting up the Suggestion Box" url="setting_up_the_suggestion_box.htm" />
+<topic name="Setting up the Support Inbox" url="setting_up_the_support_inbox.htm" />
+<topic name="Setting up Working Hours" url="setting_up_working_hours.htm" />
+<topic name="Setting User Profile Preferences" url="setting_user_profile_preferences.htm" />
+<topic name="Template Management" url="template_management.htm" />
+<topic name="Using the CentraView Homepage" url="using_the_centraview_homepage.htm" />
+<topic name="Viewing a Literature Fulfillment Request" url="viewing_a_literature_fulfillment_request.htm" />
+<topic name="Viewing a Marketing List" url="viewing_a_marketing_list.htm" />
+<topic name="Viewing Appointments" url="viewing_appointments.htm" />
+<topic name="Viewing Calls" url="viewing_calls.htm" />
+<topic name="Viewing Entities" url="viewing_entities.htm" />
+<topic name="Viewing Events" url="viewing_events.htm" />
+<topic name="Viewing Expenses" url="viewing_expenses.htm" />
+<topic name="Viewing FAQs" url="viewing_faqs.htm" />
+<topic name="Viewing Files" url="viewing_files.htm" />
+<topic name="Viewing Forecast Sales" url="viewing_forecast_sales.htm" />
+<topic name="Viewing Groups" url="viewing_groups.htm" />
+<topic name="Viewing Individuals" url="viewing_individuals.htm" />
+<topic name="Viewing Inventory" url="viewing_inventory.htm" />
+<topic name="Viewing Invoice History" url="viewing_invoice_history.htm" />
+<topic name="Viewing Items" url="viewing_items.htm" />
+<topic name="Viewing Literature Requests" url="viewing_literature_requests.htm" />
+<topic name="Viewing Meetings" url="viewing_meetings.htm" />
+<topic name="Viewing Next Actions" url="viewing_next_actions.htm" />
+<topic name="Viewing Notes" url="viewing_notes.htm" />
+<topic name="Viewing Order History" url="viewing_order_history.htm" />
+<topic name="Viewing Payments" url="viewing_payments.htm" />
+<topic name="Viewing Project Tasks" url="viewing_project_tasks.htm" />
+<topic name="Viewing Projects" url="viewing_projects.htm" />
+<topic name="Viewing Proposals" url="viewing_proposals.htm" />
+<topic name="Viewing Purchase Orders" url="viewing_purchase_orders.htm" />
+<topic name="Viewing Sales Opportunities" url="viewing_sales_opportunities.htm" />
+<topic name="Viewing Support Tickets" url="viewing_support_tickets.htm" />
+<topic name="Viewing Tasks" url="viewing_tasks.htm" />
+<topic name="Viewing the Knowledge Base" url="viewing_the_knowledge_base.htm" />
+<topic name="Viewing Timeslips" url="viewing_timeslips.htm" />
+<topic name="Viewing To Dos" url="viewing_to_dos.htm" />
+<topic name="Viewing Vendors" url="viewing_vendors.htm" />
+<topic name="Viewing Volume Discounts" url="viewing_volume_discounts.htm" />
+<topic name="Welcome to CentraView" url="welcome_to_centraview.htm" />
+
+</ftstdata>  

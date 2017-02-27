@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+  "http://java.sun.com/dtds/web-app_2_3.dtd">
+<web-app>
+    <distributable/>
+  <filter>
+    <filter-name>PopulateUserObject</filter-name>
+    <filter-class>com.centraview.filter.PopulateUserObject</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>PopulateUserObject</filter-name>
+    <url-pattern>*.do</url-pattern>
+  </filter-mapping>
+
+  <!-- Action Servlet Configuration -->
+  <servlet>
+    <servlet-name>action</servlet-name>
+    <servlet-class>org.apache.struts.action.ActionServlet</servlet-class>
+    <init-param>
+      <param-name>config</param-name>
+      <param-value>
+        /WEB-INF/struts-config.xml,
+        /WEB-INF/mappings/common.xml,
+        /WEB-INF/mappings/customer.xml,
+        /WEB-INF/mappings/accounting.xml,
+        /WEB-INF/mappings/preference.xml,
+        /WEB-INF/mappings/contacts.xml,
+        /WEB-INF/mappings/email.xml,
+        /WEB-INF/mappings/projects.xml,
+        /WEB-INF/mappings/activity.xml,
+        /WEB-INF/mappings/files.xml,
+        /WEB-INF/mappings/notes.xml,
+        /WEB-INF/mappings/sales.xml,
+        /WEB-INF/mappings/marketing.xml,
+        /WEB-INF/mappings/support.xml,
+        /WEB-INF/mappings/calendar.xml,
+        /WEB-INF/mappings/relatedinfo.xml,
+        /WEB-INF/mappings/hr.xml,
+        /WEB-INF/mappings/administration.xml,
+        /WEB-INF/mappings/reports.xml,
+        /WEB-INF/mappings/advancedsearch.xml,
+        /WEB-INF/mappings/additionalmenu.xml,
+        /WEB-INF/mappings/sync.xml
+      </param-value>
+    </init-param>
+    <init-param>
+      <param-name>debug</param-name>
+      <param-value>2</param-value>
+    </init-param>
+    <init-param>
+      <param-name>detail</param-name>
+      <param-value>2</param-value>
+    </init-param>
+    <init-param>
+      <param-name>validating</param-name>
+      <param-value>false</param-value>
+    </init-param>
+    <load-on-startup>2</load-on-startup>
+  </servlet>
+  <!-- Servlet necessary handle Axis transactions. -->
+  <servlet>
+    <servlet-name>AxisServlet</servlet-name>
+    <display-name>Apache-Axis Servlet</display-name>
+    <servlet-class>
+      org.apache.axis.transport.http.AxisServlet
+    </servlet-class>
+  </servlet>
+
+  <!-- servlet settings and mapping for alerts frame -->
+  <servlet>
+    <servlet-name>AlertServlet</servlet-name>
+    <display-name>Alert Servlet</display-name>
+    <servlet-class>
+      com.centraview.servlet.AlertServlet
+    </servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>ImageServlet</servlet-name>
+    <display-name>Image Servlet</display-name>
+    <servlet-class>
+      com.centraview.servlet.ImageServlet
+    </servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>CustomerLogo</servlet-name>
+    <display-name>Customer Logo</display-name>
+    <servlet-class>
+      com.centraview.servlet.CustomerLogo
+    </servlet-class>
+  </servlet>
+
+<!-- Precompiled JSP definitions will follow -->

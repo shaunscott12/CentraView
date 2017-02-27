@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE ejb-jar PUBLIC "-//Sun Microsystems, Inc.//DTD Enterprise JavaBeans 2.0//EN" "http://java.sun.com/dtd/ejb-jar_2_0.dtd">
+
+<ejb-jar>
+ <enterprise-beans>
+  <session>
+		<ejb-name>Preference</ejb-name>
+		<remote>com.centraview.preference.Preference</remote>
+		<ejb-class>com.centraview.preference.PreferenceEJB</ejb-class>
+		<home>com.centraview.preference.PreferenceHome</home>
+		<local>com.centraview.preference.PreferenceLocal</local>
+		<local-home>com.centraview.preference.PreferenceLocalHome</local-home>
+
+		<session-type>Stateless</session-type>
+		<transaction-type>Bean</transaction-type>
+  </session>
+ </enterprise-beans>
+</ejb-jar>

@@ -1,0 +1,103 @@
+<!DOCTYPE tiles-definitions PUBLIC
+  "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+  "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+<!--
+ * $RCSfile: preference.xml,v $    $Revision: 1.2 $  $Date: 2005/07/25 13:07:52 $ - $Author: mcallist $
+ * 
+ * The contents of this file are subject to the Open Software License
+ * Version 2.1 ("the License"); you may not use this file except in
+ * compliance with the License. You may obtain a copy of the License at
+ * http://www.centraview.com/opensource/license.html
+ * 
+ * Software distributed under the License is distributed on an "AS IS"
+ * basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+ * License for the specific language governing rights and limitations
+ * under the License.
+ * 
+ * The Original Code is: CentraView Open Source. 
+ * 
+ * The developer of the Original Code is CentraView.  Portions of the
+ * Original Code created by CentraView are Copyright (c) 2004 CentraView,
+ * LLC; All Rights Reserved.  The terms "CentraView" and the CentraView
+ * logos are trademarks and service marks of CentraView, LLC.
+-->
+<tiles-definitions>
+
+  <definition name=".view.preference.user_profile" extends=".view.default">
+    <put name="focus_element" value="" />
+    <put name="search_bar" value="/jsp/pages/blank.jsp" />
+    <put name="main_content" value="/jsp/pages/preference/user_profile.jsp" />
+
+  </definition>
+
+  <definition name=".view.preference.home_settings" extends=".view.default">
+    <put name="focus_element" value="" />
+    <put name="search_bar" value="/jsp/pages/blank.jsp" />
+    <put name="main_content" value="/jsp/pages/preference/home_settings.jsp" />
+
+  </definition>
+
+  <definition name=".view.preference.mail.account_list" extends=".view.default">
+    <put name="focus_element" value="" />
+    <put name="search_bar" value="/jsp/pages/blank.jsp" />
+    <put name="main_content" value="/jsp/pages/preference/mail/account_list.jsp" />
+
+  </definition>
+
+  <definition name=".view.preference.mail.new_account" extends=".view.default">
+    <put name="focus_element" value="" />
+    <put name="search_bar" value="/jsp/pages/blank.jsp" />
+    <put name="main_content" value="/jsp/pages/preference/mail/new_account.jsp" />
+
+  </definition>
+
+  <definition name=".view.preference.mail.view_account" extends=".view.default">
+    <put name="focus_element" value="" />
+    <put name="search_bar" value="/jsp/pages/blank.jsp" />
+    <put name="main_content" value="/jsp/pages/preference/mail/view_account.jsp" />
+
+  </definition>
+
+  <definition name=".view.preference.mail.compose_settings" extends=".view.default">
+    <put name="focus_element" value="" />
+    <put name="search_bar" value="/jsp/pages/blank.jsp" />
+    <put name="main_content" value="/jsp/pages/preference/mail/compose_settings.jsp" />
+
+  </definition>
+
+  <definition name=".view.preference.mail.auto_check_settings" extends=".view.default">
+    <put name="focus_element" value="" />
+    <put name="search_bar" value="/jsp/pages/blank.jsp" />
+    <put name="main_content" value="/jsp/pages/preference/mail/auto_check_settings.jsp" />
+
+  </definition>
+
+  <definition name=".view.preference.mail.delegation_settings" extends=".view.default">
+    <put name="focus_element" value="" />
+    <put name="search_bar" value="/jsp/pages/blank.jsp" />
+    <put name="main_content" value="/jsp/pages/preference/mail/delegation_settings.jsp" />
+
+  </definition>
+
+  <definition name=".view.preference.calendar_settings" extends=".view.default">
+    <put name="focus_element" value="" />
+    <put name="search_bar" value="/jsp/pages/blank.jsp" />
+    <put name="main_content" value="/jsp/pages/preference/calendar_settings.jsp" />
+
+  </definition>
+  
+  <definition name=".view.preference.calendar_delegation" extends=".view.default">
+    <put name="focus_element" value="" />
+    <put name="search_bar" value="/jsp/pages/blank.jsp" />
+    <put name="main_content" value="/jsp/pages/preference/calendar_delegation.jsp" />
+
+  </definition>
+
+  <definition name=".view.preference.sync_prefs" extends=".view.default">
+    <put name="focus_element" value="" />
+    <put name="search_bar" value="/jsp/pages/blank.jsp" />
+    <put name="main_content" value="/jsp/pages/preference/sync_prefs.jsp" />
+
+  </definition>
+
+</tiles-definitions>

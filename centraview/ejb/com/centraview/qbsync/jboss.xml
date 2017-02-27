@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jboss>
+	<enterprise-beans>
+		<session>
+			<ejb-name>QBSync</ejb-name>
+
+         <method-attributes>
+           <method>
+             <method-name>get*</method-name>
+             <read-only>true</read-only>
+           </method>
+           <method>
+             <method-name>initializeLog4j</method-name>
+             <read-only>true</read-only>
+           </method>
+            <method>
+              <method-name>setDataSource</method-name>
+              <read-only>true</read-only>
+            </method>
+          </method-attributes>
+
+			<jndi-name>QBSync</jndi-name><local-jndi-name>local/QBSync</local-jndi-name>
+		</session>
+	</enterprise-beans>
+</jboss>

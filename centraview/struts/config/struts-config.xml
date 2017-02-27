@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+          "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<!--
+ * $RCSfile: struts-config.xml,v $    $Revision: 1.9 $  $Date: 2005/09/02 12:00:07 $ - $Author: mcallist $
+ *
+ * The contents of this file are subject to the Open Software License
+ * Version 2.1 ("the License"); you may not use this file except in
+ * compliance with the License. You may obtain a copy of the License at
+ * http://www.centraview.com/opensource/license.html
+ *
+ * Software distributed under the License is distributed on an "AS IS"
+ * basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+ * License for the specific language governing rights and limitations
+ * under the License.
+ *
+ * The Original Code is: CentraView Open Source.
+ *
+ * The developer of the Original Code is CentraView.  Portions of the
+ * Original Code created by CentraView are Copyright (c) 2004 CentraView,
+ * LLC; All Rights Reserved.  The terms "CentraView" and the CentraView
+ * logos are trademarks and service marks of CentraView, LLC.
+-->
+<struts-config>
+
+  <form-beans>
+  </form-beans>
+  
+  <global-exceptions>
+    <exception key="error.general.databaseError" type="javax.naming.CommunicationException" path="/common/error.do" />
+    <exception key="error.general.jndiError" type="javax.naming.NamingException" path="/common/error.do" />
+    <exception key="error.general.nullError" type="java.lang.NullPointerException" path="/common/error.do" />
+    <exception key="error.unknownError" type="java.lang.Exception" path="/common/error.do" />
+  </global-exceptions>
+  
+  <global-forwards>
+    <forward name="failure" path="/jsp/errorPage.jsp"/>
+    <forward name="dataerror" path="/jsp/dataerror.jsp"/>
+  </global-forwards>
+
+  <action-mappings>
+  </action-mappings>
+  
+  <controller processorClass="com.centraview.struts.CustomRequestProcessor">
+    <!-- The "input" parameter on "action" elements is the name of a
+         local or global "forward" rather than a module-relative path -->
+    <set-property property="inputForward" value="false"/>
+  </controller>
+
+  <message-resources parameter="ApplicationResources" null="false" />
+  <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+    <set-property property="pathnames" value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml"/>
+  </plug-in>
+  <!-- This plugin sets up the EJB JNDI context and the dataSource -->
+  <plug-in className="com.centraview.settings.SettingsPlugin"/>
+
+  <!-- set up the tiles configurations -->
+  <plug-in className="org.apache.struts.tiles.TilesPlugin">
+    <set-property property="definitions-config" value="/WEB-INF/tiles/preference.xml,/WEB-INF/tiles/common_pages.xml,/WEB-INF/tiles/contacts.xml,/WEB-INF/tiles/email.xml,/WEB-INF/tiles/notes.xml,/WEB-INF/tiles/sales.xml,/WEB-INF/tiles/marketing.xml,/WEB-INF/tiles/support.xml,/WEB-INF/tiles/calendar.xml,/WEB-INF/tiles/activity.xml,/WEB-INF/tiles/files.xml,/WEB-INF/tiles/hr.xml,/WEB-INF/tiles/projects.xml,/WEB-INF/tiles/administration.xml,/WEB-INF/tiles/accounting.xml,/WEB-INF/tiles/customer.xml,/WEB-INF/tiles/reports.xml,/WEB-INF/tiles/advancedsearch.xml"/>
+  </plug-in>
+  
+</struts-config>

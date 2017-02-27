@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<tocdata>
+<book name="Tickets" url="about_support_tickets.htm" >
+  <item name="Adding Support Tickets" url="adding_support_tickets.htm" />
+  <item name="Viewing Support Tickets" url="viewing_support_tickets.htm" />
+  <item name="Deleting Support Tickets" url="deleting_support_tickets.htm" />
+  <item name="Duplicating Support Tickets" url="duplicating_support_tickets.htm" />
+</book>
+<book name="FAQs" url="about_faqs.htm" >
+  <item name="Adding FAQs" url="adding_faqs.htm" />
+  <item name="Viewing FAQs" url="viewing_faqs.htm" />
+  <item name="Deleting FAQs" url="deleting_faqs.htm" />
+  <item name="Duplicating FAQs" url="duplicating_faqs.htm" />
+</book>
+<book name="Knowledge Base" url="about_knowledge_base.htm" >
+  <item name="Adding to the Knowledge Base" url="adding_to_the_knowledge_base.htm" />
+  <item name="Viewing the Knowledge Base" url="viewing_the_knowledge_base.htm" />
+  <item name="Categorizing the Knowledge Base" url="categorizing_the_knowledge_base.htm" />
+  <item name="Deleting from the Knowledge Base" url="deleting_from_the_knowledge_base.htm" />
+  <item name="Duplicating Items in the Knowledge Base" url="duplicating_items_in_the_knowledge_base.htm" />
+</book>
+
+</tocdata>

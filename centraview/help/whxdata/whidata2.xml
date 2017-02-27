@@ -1,0 +1,264 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<indexdata>
+<key name="Deleting" >
+  <topic name="Deleting a Literature Fulfillment Request" url="deleting_a_literature_fulfillment_request.htm" />
+  <topic name="Deleting a Marketing List" url="deleting_a_marketing_list.htm" />
+  <topic name="Deleting Appointments" url="deleting_appointments.htm" />
+  <topic name="Deleting Calls" url="deleting_calls.htm" />
+  <topic name="Deleting Email" url="deleting_email.htm" />
+  <topic name="Deleting Entities" url="deleting_entities.htm" />
+  <topic name="Deleting Events" url="deleting_events.htm" />
+  <topic name="Deleting Expenses" url="deleting_expenses.htm" />
+  <topic name="Deleting FAQs" url="deleting_faqs.htm" />
+  <topic name="Deleting Files" url="deleting_files.htm" />
+  <topic name="Deleting Forecast Sales" url="deleting_forecast_sales.htm" />
+  <topic name="Deleting Groups" url="deleting_groups.htm" />
+  <topic name="Deleting Individuals" url="deleting_individuals.htm" />
+  <topic name="Deleting Inventory" url="deleting_inventory.htm" />
+  <topic name="Deleting Invoice History" url="deleting_invoice_history.htm" />
+  <topic name="Deleting Items" url="deleting_items.htm" />
+  <topic name="Deleting Literature Requests" url="deleting_literature_requests.htm" />
+  <topic name="Deleting Meetings" url="deleting_meetings.htm" />
+  <topic name="Deleting Next Actions" url="deleting_next_actions.htm" />
+  <topic name="Deleting Notes" url="deleting_notes.htm" />
+  <topic name="Deleting Order History" url="deleting_order_history.htm" />
+  <topic name="Deleting Payments" url="deleting_payments.htm" />
+  <topic name="Deleting Project Tasks" url="deleting_project_tasks.htm" />
+  <topic name="Deleting Projects" url="deleting_projects.htm" />
+  <topic name="Deleting Proposals" url="deleting_proposals.htm" />
+  <topic name="Deleting Purchase Orders" url="deleting_purchase_orders.htm" />
+  <topic name="Deleting Sales Opportunities" url="deleting_sales_opportunities.htm" />
+  <topic name="Deleting Tasks" url="deleting_tasks.htm" />
+  <topic name="Deleting Timeslips" url="deleting_timeslips.htm" />
+  <topic name="Deleting ToDos" url="deleting_to_dos.htm" />
+  <topic name="Deleting Trouble Tickets" url="deleting_support_tickets.htm" />
+  <topic name="Deleting Vendors" url="deleting_vendors.htm" />
+  <topic name="Deleting Volume Discounts" url="deleting_volume_discounts.htm" />
+  <key name="appointments" >
+    <topic name="Deleting Appointments" url="deleting_appointments.htm" />
+  </key>
+  <key name="calls" >
+    <topic name="Deleting Calls" url="deleting_calls.htm" />
+  </key>
+  <key name="email" >
+    <topic name="Deleting Email" url="deleting_email.htm" />
+  </key>
+  <key name="entities" >
+    <topic name="Deleting Entities" url="deleting_entities.htm" />
+  </key>
+  <key name="events" >
+    <topic name="Deleting Events" url="deleting_events.htm" />
+  </key>
+  <key name="expenses" >
+    <topic name="Deleting Expenses" url="deleting_expenses.htm" />
+  </key>
+  <key name="FAQs" >
+    <topic name="Deleting FAQs" url="deleting_faqs.htm" />
+  </key>
+  <key name="files" >
+    <topic name="Deleting Files" url="deleting_files.htm" />
+  </key>
+  <key name="forecast sales" >
+    <topic name="Deleting Forecast Sales" url="deleting_forecast_sales.htm" />
+  </key>
+  <key name="groups" >
+    <topic name="Deleting Groups" url="deleting_groups.htm" />
+  </key>
+  <key name="individuals" >
+    <topic name="Deleting Individuals" url="deleting_individuals.htm" />
+  </key>
+  <key name="inventory" >
+    <topic name="Deleting Inventory" url="deleting_inventory.htm" />
+  </key>
+  <key name="invoice history" >
+    <topic name="Deleting Invoice History" url="deleting_invoice_history.htm" />
+  </key>
+  <key name="items" >
+    <topic name="Deleting Items" url="deleting_items.htm" />
+  </key>
+  <key name="literature fulfillment request" >
+    <topic name="Deleting a Literature Fulfillment Request" url="deleting_a_literature_fulfillment_request.htm" />
+  </key>
+  <key name="literature requests" >
+    <topic name="Deleting Literature Requests" url="deleting_literature_requests.htm" />
+  </key>
+  <key name="marketing list" >
+    <topic name="Deleting a Marketing List" url="deleting_a_marketing_list.htm" />
+  </key>
+  <key name="meetings" >
+    <topic name="Deleting Meetings" url="deleting_meetings.htm" />
+  </key>
+  <key name="next actions" >
+    <topic name="Deleting Next Actions" url="deleting_next_actions.htm" />
+  </key>
+  <key name="notes" >
+    <topic name="Deleting Notes" url="deleting_notes.htm" />
+  </key>
+  <key name="order history" >
+    <topic name="Deleting Order History" url="deleting_order_history.htm" />
+  </key>
+  <key name="payments" >
+    <topic name="Deleting Payments" url="deleting_payments.htm" />
+  </key>
+  <key name="project tasks" >
+    <topic name="Deleting Project Tasks" url="deleting_project_tasks.htm" />
+  </key>
+  <key name="projects" >
+    <topic name="Deleting Projects" url="deleting_projects.htm" />
+  </key>
+  <key name="proposals" >
+    <topic name="Deleting Proposals" url="deleting_proposals.htm" />
+  </key>
+  <key name="purchase orders" >
+    <topic name="Deleting Purchase Orders" url="deleting_purchase_orders.htm" />
+  </key>
+  <key name="sales opportunities" >
+    <topic name="Deleting Sales Opportunities" url="deleting_sales_opportunities.htm" />
+  </key>
+  <key name="support tickets" >
+    <topic name="Deleting Support Tickets" url="deleting_support_tickets.htm" />
+  </key>
+  <key name="tasks" >
+    <topic name="Deleting Tasks" url="deleting_tasks.htm" />
+  </key>
+  <key name="timeslips" >
+    <topic name="Deleting Timeslips" url="deleting_timeslips.htm" />
+  </key>
+  <key name="to dos" >
+    <topic name="Deleting ToDos" url="deleting_to_dos.htm" />
+  </key>
+  <key name="vendors" >
+    <topic name="Deleting Vendors" url="deleting_vendors.htm" />
+  </key>
+  <key name="volume discounts" >
+    <topic name="Deleting Volume Discounts" url="deleting_volume_discounts.htm" />
+  </key>
+</key>
+<key name="Duplicating" >
+  <topic name="Duplicating a Literature Fulfillment Request" url="duplicating_a_literature_fulfillment_request.htm" />
+  <topic name="Duplicating a Marketing List" url="duplicating_a_marketing_list.htm" />
+  <topic name="Duplicating Appointments" url="duplicating_appointments.htm" />
+  <topic name="Duplicating Calls" url="duplicating_calls.htm" />
+  <topic name="Duplicating Entities" url="duplicating_entities.htm" />
+  <topic name="Duplicating Events" url="duplicating_events.htm" />
+  <topic name="Duplicating FAQs" url="duplicating_faqs.htm" />
+  <topic name="Duplicating Files" url="duplicating_files.htm" />
+  <topic name="Duplicating Forecast Sales" url="duplicating_forecast_sales.htm" />
+  <topic name="Duplicating Groups" url="duplicating_groups.htm" />
+  <topic name="Duplicating Individuals" url="duplicating_individuals.htm" />
+  <topic name="Duplicating Items in the Knowledge Base" url="duplicating_items_in_the_knowledge_base.htm" />
+  <topic name="Duplicating Literature Requests" url="duplicating_literature_requests.htm" />
+  <topic name="Duplicating Meetings" url="duplicating_meetings.htm" />
+  <topic name="Duplicating Next Actions" url="duplicating_next_actions.htm" />
+  <topic name="Duplicating Notes" url="duplicating_notes.htm" />
+  <topic name="Duplicating Project Tasks" url="duplicating_project_tasks.htm" />
+  <topic name="Duplicating Projects" url="duplicating_projects.htm" />
+  <topic name="Duplicating Proposals" url="duplicating_proposals.htm" />
+  <topic name="Duplicating Sales Opportunities" url="duplicating_sales_opportunities.htm" />
+  <topic name="Duplicating Tasks" url="duplicating_tasks.htm" />
+  <topic name="Duplicating Timeslips" url="duplicating_timeslips.htm" />
+  <topic name="Duplicating ToDos" url="duplicating_to_dos.htm" />
+  <topic name="Duplicating Trouble Tickets" url="duplicating_support_tickets.htm" />
+  <key name="appointments" >
+    <topic name="Duplicating Appointments" url="duplicating_appointments.htm" />
+  </key>
+  <key name="calls" >
+    <topic name="Duplicating Calls" url="duplicating_calls.htm" />
+  </key>
+  <key name="entities" >
+    <topic name="Duplicating Entities" url="duplicating_entities.htm" />
+  </key>
+  <key name="events" >
+    <topic name="Duplicating Events" url="duplicating_events.htm" />
+  </key>
+  <key name="FAQs" >
+    <topic name="Duplicating FAQs" url="duplicating_faqs.htm" />
+  </key>
+  <key name="files" >
+    <topic name="Duplicating Files" url="duplicating_files.htm" />
+  </key>
+  <key name="forecast sales" >
+    <topic name="Duplicating Forecast Sales" url="duplicating_forecast_sales.htm" />
+  </key>
+  <key name="groups" >
+    <topic name="Duplicating Groups" url="duplicating_groups.htm" />
+  </key>
+  <key name="individuals" >
+    <topic name="Duplicating Individuals" url="duplicating_individuals.htm" />
+  </key>
+  <key name="items" >
+    <topic name="Duplicating Items in the Knowledge Base" url="duplicating_items_in_the_knowledge_base.htm" />
+  </key>
+  <key name="literature fulfillment request" >
+    <topic name="Duplicating a Literature Fulfillment Request" url="duplicating_a_literature_fulfillment_request.htm" />
+  </key>
+  <key name="literature requests" >
+    <topic name="Duplicating Literature Requests" url="duplicating_literature_requests.htm" />
+  </key>
+  <key name="marketing list" >
+    <topic name="Duplicating a Marketing List" url="duplicating_a_marketing_list.htm" />
+  </key>
+  <key name="meetings" >
+    <topic name="Duplicating Meetings" url="duplicating_meetings.htm" />
+  </key>
+  <key name="next actions" >
+    <topic name="Duplicating Next Actions" url="duplicating_next_actions.htm" />
+  </key>
+  <key name="notes" >
+    <topic name="Duplicating Notes" url="duplicating_notes.htm" />
+  </key>
+  <key name="project tasks" >
+    <topic name="Duplicating Project Tasks" url="duplicating_project_tasks.htm" />
+  </key>
+  <key name="projects" >
+    <topic name="Duplicating Projects" url="duplicating_projects.htm" />
+  </key>
+  <key name="proposals" >
+    <topic name="Duplicating Proposals" url="duplicating_proposals.htm" />
+  </key>
+  <key name="sales opportunities" >
+    <topic name="Duplicating Sales Opportunities" url="duplicating_sales_opportunities.htm" />
+  </key>
+  <key name="tasks" >
+    <topic name="Duplicating Tasks" url="duplicating_tasks.htm" />
+  </key>
+  <key name="timeslips" >
+    <topic name="Duplicating Timeslips" url="duplicating_timeslips.htm" />
+  </key>
+  <key name="to dos" >
+    <topic name="Duplicating ToDos" url="duplicating_to_dos.htm" />
+  </key>
+  <key name="trouble tickets" >
+    <topic name="Duplicating Trouble Tickets" url="duplicating_support_tickets.htm" />
+  </key>
+</key>
+<key name="Email" >
+  <topic name="Deleting Email" url="deleting_email.htm" />
+  <topic name="Reading Email" url="reading_email.htm" />
+  <key name="composing" >
+    <topic name="Composing_Email" url="composing_email.htm" />
+  </key>
+  <key name="creating folders" >
+    <topic name="Creating Email Folders" url="creating_email_folders.htm" />
+  </key>
+  <key name="deleting" >
+    <topic name="Deleting Email" url="deleting_email.htm" />
+  </key>
+  <key name="reading" >
+    <topic name="Reading Email" url="reading_email.htm" />
+  </key>
+</key>
+<key name="Email folders" >
+  <topic name="Creating Email Folders" url="creating_email_folders.htm" />
+  <key name="creating" >
+    <topic name="Creating Email Folders" url="creating_email_folders.htm" />
+  </key>
+</key>
+<key name="Email rules" >
+  <topic name="Setting Email Rules" url="setting_email_rules.htm" />
+  <key name="setting" >
+    <topic name="Setting Email Rules" url="setting_email_rules.htm" />
+  </key>
+</key>
+
+</indexdata>

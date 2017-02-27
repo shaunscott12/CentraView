@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<jboss>
+
+	<enterprise-beans>
+		<session>
+		        <ejb-name>SaveDraft</ejb-name>
+         <method-attributes>
+            <method>
+              <method-name>setDataSource</method-name>
+              <read-only>true</read-only>
+            </method>
+          </method-attributes>
+			<jndi-name>SaveDraft</jndi-name><local-jndi-name>local/SaveDraft</local-jndi-name>
+	    	</session>	
+	</enterprise-beans>
+
+
+   </jboss> 
+  
+  

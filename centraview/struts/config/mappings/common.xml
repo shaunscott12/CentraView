@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" 
+          "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<!--
+/*
+ * $RCSfile: common.xml,v $    $Revision: 1.17 $  $Date: 2005/09/30 15:56:29 $ - $Author: mcallist $
+ * 
+ * The contents of this file are subject to the Open Software License
+ * Version 1.0.0 (the "License"); you may not use this file except in
+ * compliance with the License. You may obtain a copy of the License at
+ * http://www.centraview.com/opensource/license.html
+ * 
+ * Software distributed under the License is distributed on an "AS IS"
+ * basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+ * License for the specific language governing rights and limitations
+ * under the License.
+ * 
+ * The Original Code is: CentraView Open Source. 
+ * 
+ * The developer of the Original Code is CentraView.  Portions of the
+ * Original Code created by CentraView are Copyright (c) 2004 CentraView,
+ * LLC; All Rights Reserved.  The terms "CentraView" and the CentraView
+ * logos are trademarks and service marks of CentraView, LLC.
+ */ 
+-->         
+<struts-config>
+  <form-beans>
+    <!-- Login form bean -->
+    <form-bean name="loginform" type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="username" type="java.lang.String"/>
+      <form-property name="password" type="java.lang.String"/>
+      <form-property name="userType" type="java.lang.String" initial="EMPLOYEE"/>
+    </form-bean>
+
+    <form-bean name="folderLookupForm" type="org.apache.struts.action.DynaActionForm">
+      <form-property name="actionType" type="java.lang.String"/>
+      <form-property name="folderID" type="java.lang.Integer"/>
+      <form-property name="parentID" type="java.lang.Integer"/>
+      <form-property name="folderList" type="java.util.ArrayList" />
+      <form-property name="fullPathList" type="java.util.ArrayList" />
+    </form-bean>      
+  
+    <form-bean name="permissionform" type="com.centraview.administration.authorization.RecordPermissionForm"/>
+
+    <form-bean name="ForgotPasswordForm" type="com.centraview.user.ForgotPasswordForm"/>
+  
+    <form-bean name="viewform" type="com.centraview.common.ViewForm"/>
+
+  </form-beans>
+  
+  <action-mappings>
+    <!-- Login -->
+    <action path="/start" type="com.centraview.common.StartHandler" name="loginform" scope="request" validate="false">
+      <forward name=".view.login" path=".view.login" />
+    </action>
+    
+    <!-- Login -->
+    <action path="/login" type="com.centraview.common.LoginHandler" name="loginform" scope="request" validate="false">
+      <forward name=".view.login.failure" path=".view.login" />
+      <forward name=".view.home" path="/home.do" redirect="true"/>
+      <forward name=".view.login.admin_license" path="/administration/license.do" redirect="true"/>
+    </action>
+    
+    <!-- Logout -->
+    <action path="/logout" type="com.centraview.common.LogoutHandler" name="loginform" scope="request" validate="false">
+      <forward name=".view.login" path=".view.login"/>
+    </action>
+
+    <!-- Forgot password -->
+    <action path="/forgot" type="com.centraview.user.ForgotPasswordHandler" name="ForgotPasswordForm" scope="request" validate="false">
+      <forward name=".view.forgot" path=".view.forgot"/>
+    </action>
+
+    <action path="/home" type="com.centraview.home.HomeHandler" scope="request" validate="false">
+      <forward name=".view.home" path=".view.home" />
+    </action>
+
+    <action path="/common/error" forward=".view.error" />
+
+    <action path="/folder_lookup" type="com.centraview.common.FolderLookupHandler" name="folderLookupForm" scope="request" validate="false">
+      <forward name=".view.common.folderlookup" path=".view.common.folder.lookup"/>
+    </action>    
+
+    <!-- Sorting Stuff -->
+    <action path="/Sort" type="com.centraview.valuelist.Sort">
+      <forward name="entityList" path="/contacts/entity_list.do" />
+      <forward name="individualList" path="/contacts/individual_list.do" />
+      <forward name="groupList" path="/contacts/group_list.do" />
+      <forward name="opportunityList" path="/sales/opportunity_list.do" />
+      <forward name="proposalsList" path="/sales/proposal_list.do" />
+      <forward name="activityList" path="/activities/activity_list.do" />
+      <forward name="appointmentList" path="/activities/activity_list.do" />
+      <forward name="callList" path="/activities/activity_list.do" />
+      <forward name="forecastSalesList" path="/activities/activity_list.do" />
+      <forward name="literatureRequestList" path="/activities/activity_list.do" />
+      <forward name="meetingList" path="/activities/activity_list.do" />
+      <forward name="nextActionList" path="/activities/activity_list.do" />
+      <forward name="todoList" path="/activities/activity_list.do" />
+      <forward name="taskList" path="/activities/activity_list.do" />
+      <forward name="templateList" path="/administration/template_list.do" />  
+      <forward name="ticketList" path="/support/ticket_list.do" />  
+      <forward name="emailList" path="/email/email_list.do" />
+      <forward name="rulesList" path="/email/rules_list.do"/>      
+      <forward name="noteList" path="/notes/note_list.do"/>
+      <forward name="listManagerList" path="/marketing/listmanager_list.do"/>
+      <forward name="promotionList" path="/marketing/promotions_list.do"/>
+      <forward name="literatureFulfillmentList" path="/marketing/literaturefulfillment_list.do"/>
+      <forward name="eventList" path="/marketing/events_list.do"/>
+      <forward name="projectsList" path="/projects/project_list.do"/>
+      <forward name="tasksList" path="/projects/task_list.do"/>
+      <forward name="timeslipsList" path="/projects/timeslip_list.do"/>
+      <forward name="orderList" path="/accounting/order_list.do"/>
+      <forward name="invoiceList" path="/accounting/invoice_list.do"/>
+      <forward name="paymentList" path="/accounting/payment_list.do"/>
+      <forward name="expensesList" path="/accounting/expense_list.do"/>
+      <forward name="purchaseorderList" path="/accounting/purchaseorder_list.do"/>
+      <forward name="itemList" path="/accounting/item_list.do"/>
+      <forward name="glaccountList" path="/accounting/glaccount_list.do"/>
+      <forward name="inventoryList" path="/accounting/inventory_list.do"/>
+      <forward name="vendorList" path="/accounting/vendor_list.do"/>
+      <forward name="knowledgeBaseList" path="/support/knowledgebase_list.do"/>
+      <forward name="FAQList" path="/support/faq_list.do"/>
+      <forward name="fileList" path="/files/file_list.do"/>
+      <forward name="expenseFormList" path="/hr/expenseform_list.do"/>
+      <forward name="timeSheetList" path="/hr/timesheet_list.do"/>
+      <forward name="employeeHandbookList" path="/hr/employeehandbook_list.do"/>
+      <forward name="employeeList" path="/hr/employeelist_list.do"/>
+      <forward name="relatedInfo" path="/relatedinfo/list.do" />
+      <forward name="groupMemberList" path="/contacts/view_group.do" />
+      <forward name="viewListManager" path="/marketing/view_listmanager.do" />
+      <forward name="relatedInfoList" path="/relatedinfo/list.do" />
+      <forward name="viewEventList" path="/marketing/view_event.do" />
+      <forward name="groupLookupList" path="/contacts/group_lookup.do" />
+      <forward name="userList" path="/administration/user_list.do" />
+      <forward name="customerEmailList" path="/customer/email_list.do" />
+      <forward name="customerOrderList" path="/customer/order_list.do" />
+      <forward name="customerInvoiceList" path="/customer/invoice_list.do" />
+      <forward name="customerPaymentList" path="/customer/payment_list.do" />
+      <forward name="customerTicketList" path="/customer/ticket_list.do" />
+      <forward name="customerFaqList" path="/customer/faq_list.do" />
+      <forward name="customerEventList" path="/customer/event_list.do" />
+      <forward name="customerUserList" path="/customer/user_list.do" />
+      <forward name="customerFileList" path="/customer/file_list.do" />
+      <forward name="standardReportList" path="/report/standard_list.do" />
+      <forward name="literatureList" path="/administration/literature_list.do" />
+      <forward name="adhocReportList" path="/report/adhoc_list.do" />
+      <forward name="securityProfileList" path="/ListSecurityProfile.do" />
+      <forward name="addresslookupList" path="/AddressLookup.do"/>
+      <forward name="emailAddressLookupList" path="/email/address_lookup.do"/>
+    </action>
+  
+    <action path="/ChangeView" type="com.centraview.valuelist.ChangeView">
+      <forward name="entityList" path="/contacts/entity_list.do" redirect="true"/>
+      <forward name="individualList" path="/contacts/individual_list.do" redirect="true"/>
+      <forward name="groupList" path="/contacts/group_list.do" redirect="true"/>
+      <forward name="opportunityList" path="/sales/opportunity_list.do" />
+      <forward name="proposalsList" path="/sales/proposal_list.do" redirect="true"/>
+      <forward name="activityList" path="/activities/activity_list.do"/>      
+      <forward name="appointmentList" path="/activities/activity_list.do"/>
+      <forward name="callList" path="/activities/activity_list.do"/>
+      <forward name="forecastSalesList" path="/activities/activity_list.do"/>
+      <forward name="literatureRequestList" path="/activities/activity_list.do" />
+      <forward name="meetingList" path="/activities/activity_list.do"/>
+      <forward name="nextActionList" path="/activities/activity_list.do"/>
+      <forward name="todoList" path="/activities/activity_list.do"/>
+      <forward name="taskList" path="/activities/activity_list.do"/>
+      <forward name="ticketList" path="/support/ticket_list.do" />  
+      <forward name="emailList" path="/email/email_list.do" />      
+      <forward name="noteList" path="/notes/note_list.do" />    
+      <forward name="listManagerList" path="/marketing/listmanager_list.do"/>
+      <forward name="promotionList" path="/marketing/promotions_list.do"/>
+      <forward name="literatureFulfillmentList" path="/marketing/literaturefulfillment_list.do"/>
+      <forward name="eventList" path="/marketing/events_list.do"/>      
+      <forward name="projectsList" path="/projects/project_list.do"/>
+      <forward name="tasksList" path="/projects/task_list.do"/>
+      <forward name="timeslipsList" path="/projects/timslip_list.do"/>      
+      <forward name="orderList" path="/accounting/order_list.do"/>
+      <forward name="invoiceList" path="/accounting/invoice_list.do"/>
+      <forward name="paymentList" path="/accounting/payment_list.do"/>
+      <forward name="expensesList" path="/accounting/expense_list.do"/>
+      <forward name="purchaseorderList" path="/accounting/purchaseorder_list.do"/>
+      <forward name="itemList" path="/accounting/item_list.do"/>
+      <forward name="glaccountList" path="/accounting/glaccount_list.do"/>
+      <forward name="inventoryList" path="/accounting/inventory_list.do"/>
+      <forward name="vendorList" path="/accounting/vendor_list.do"/>
+      <forward name="knowledgeBaseList" path="/support/knowledgebase_list.do"/>
+      <forward name="fileList" path="/files/file_list.do"/>
+      <forward name="expenseFormList" path="/hr/expenseform_list.do"/>
+      <forward name="timeSheetList" path="/hr/timesheet_list.do"/>
+      <forward name="employeeHandbookList" path="/hr/employeehandbook_list.do"/>
+      <forward name="employeeList" path="/hr/employeelist_list.do"/>
+      <forward name="addresslookupList" path="/AddressLookup.do"/>    
+    </action>
+  
+    <action path="/show_terms" type="org.apache.struts.actions.ForwardAction" scope="request" validate="false" parameter="/jsp/pages/terms_c.jsp" />    
+  
+    <action path="/common/duplicate" type="com.centraview.common.DuplicateHandler">
+      <forward name="DuplicateEntity" path="/contacts/duplicate_entity.do"/>
+      <forward name="DuplicateIndividual" path="/contacts/duplicate_individual.do"/>
+    </action>
+
+    <!-- Record Permission -->
+    <action path="/common/record_permission" type="com.centraview.administration.authorization.RecordPermissionHandler" scope="request" validate="false" name="permissionform">
+      <forward name=".view.permission" path=".view.permission"/>
+      <forward name="knowledgebasecategory" path="/jsp/support/knowledgebase/addCategory_support_c.jsp"/>
+      <forward name="timeslips_permission" path="/jsp/projects/timeslip/addpermission_timeslip.jsp"/>
+      <forward name="task_permission" path="/jsp/projects/task/addpermission_task.jsp"/>
+      <forward name="projectpermission" path="/jsp/projects/project/addpermission_project.jsp"/>
+      <forward name="folderpermission" path="/jsp/file/addedit_common_c.jsp"/>
+      <forward name="salepermission" path="/jsp/sale/addedit_opportunity_c.jsp"/>
+      <forward name="filepermission" path=".view.permission"/>
+      <forward name="permissionnote" path=".view.permission"/>
+    </action>
+    
+    <action path="/common/save_record_permission" type="com.centraview.administration.authorization.SavePermissionHandler" scope="request" validate="false" name="permissionform">
+      <forward name="salepermission" path="/sales/opportunity_list.do" />
+      <forward name="saveandclose" path="/jsp/pages/common/window_close.jsp" />
+      <forward name="faqpermission" path="/jsp/pages/common/window_close.jsp"/>
+      <forward name="knowledgebasepermission" path="/jsp/pages/common/window_close.jsp"/>
+      <forward name="timeslipspermission" path="/projects/timeslip_list.do"/>
+      <forward name="taskpermission" path="/jsp/pages/common/window_close.jsp"/>
+    </action>
+
+    <action path="/common/source_lookup" type="com.centraview.common.SourceLookupHandler" scope="request" validate="false">
+      <forward name=".view.lookup" path=".view.lookup"/>
+    </action>
+
+    <action path="/common/location_lookup" type="com.centraview.common.LocationLookupHandler" scope="request" validate="false">
+      <forward name=".view.lookup" path=".view.lookup"/>
+    </action>    
+
+    <action path="/common/new_view" type="com.centraview.common.DisplayNewViewHandler" scope="request" validate="false" name="viewform">
+      <forward name="displaynewview" path=".view.common.viewdetail"/>
+    </action>
+
+    <action path="/common/edit_view" type="com.centraview.common.DisplayEditViewHandler" scope="request" validate="false" name="viewform">
+      <forward name="displayeditview" path=".view.common.viewdetail"/>
+    </action>
+
+    <action path="/common/save_view" type="com.centraview.common.SaveViewHandler" scope="request" validate="true" name="viewform" input="/jsp/view/newedit_view_c.jsp">
+      <forward name="saveview" path=".view.common.viewdetail"/>
+      <forward name="savenewview" path="/common/new_view.do"/>
+    </action>
+
+    <action path="/DisplayUserlist" type="com.centraview.common.DisplayUserListHandler" scope="request" validate="false" name="viewform">
+      <forward name="cancelEntity" path="/contacts/entity_list.do"/>
+      <forward name="cancelGroup" path="/contacts/group_list.do"/>
+      <forward name="cancelIndividual" path="/contacts/individual_list.do"/>
+      <forward name="cancelGroupMember" path="/ViewGroupDetail.do"/>
+      <forward name="cancelAppointment" path="/AppointmentList.do"/>
+      <forward name="cancelCall" path="/CallList.do"/>
+      <forward name="cancelMeeting" path="/MeetingList.do"/>
+      <forward name="cancelToDo" path="/ToDoList.do"/>
+      <forward name="cancelNextAction" path="/NextActionList.do"/>
+      <forward name="cancelMultiActivity" path="/activities/activity_list.do"/>
+      <forward name="cancelFile" path="/ListFile.do"/>
+      <forward name="cancelNote" path="/ListNote.do"/>
+      <forward name="cancelRule" path="/email/rules_list.do"/>
+      <forward name="cancelTicket" path="/ListTicket.do"/>
+      <forward name="cancelFAQ" path="/support/faq_list.do"/>
+      <forward name="cancelKnowledgebase" path="/ListKnowledgebase.do"/>
+      <forward name="cancelItem" path="/accounting/item_list.do"/>
+      <forward name="cancelEmail" path="/email/email_list.do"/>
+      <forward name="cancelOrder" path="/accounting/order_list.do"/>
+      <forward name="cancelEvent" path="/EventListHandler.do"/>
+      <forward name="cancelPromotion" path="/PromotionListHandler.do"/>
+      <forward name="cancelLiteratureFulfillment" path="/LiteratureFulfillmentListHandler.do"/>
+      <forward name="cancelProject" path="/projects/project_list.do"/>
+      <forward name="cancelTask" path="/projects/task_list.do"/>
+      <forward name="cancelTimeslip" path="/projects/timeslip_list.do"/>
+      <forward name="cancelInventory" path="/accounting/inventory_list.do"/>
+      <forward name="cancelInvoiceHistory" path="/accounting/invoice_list.do"/>
+      <forward name="cancelGLAccount" path="/accounting/glaccount_list.do"/>
+      <forward name="cancelMarketing" path="/ListMarketing.do"/>
+      <forward name="cancelOpportunity" path="/sales/opportunity_list.do"/>
+      <forward name="cancelProposal" path="/sales/proposal_list.do"/>
+      <forward name="cancelExpense" path="/accounting/expense_list.do"/>
+      <forward name="cancelPurchaseOrder" path="/accounting/invoice_list.do"/>
+      <forward name="cancelExpenses" path="/hr/expenseform_list.do"/>
+      <forward name="cancelEmployee" path="/hr/employeelist_list.do"/>
+      <forward name="cancelTimeSheet" path="/hr/timesheet_list.do"/>
+      <forward name="cancelEmployeeHandbook" path="/hr/employeehandbook_list.do"/>
+    </action>
+    
+    <action path="/DeleteUserView" type="com.centraview.common.DeleteUserViewHandler" scope="request" name="viewform">
+      <forward name="displaylist" path="/DisplayUserlist.do"/>
+    </action>
+
+    <action path="/AddressLookup" type="com.centraview.contacts.common.AddressLookupHandler" scope="request" validate="false" parameter="action">
+      <forward name=".view.contacts.addreslookup" path=".view.lookup"/>
+    </action>
+    
+    <!-- printing value list -->
+    <action path="/common/print_valuelist" type="com.centraview.valuelist.ValueListPrintHandler" scope="request" validate="false">
+      <forward name="printValueList" path="/jsp/pages/common/printValueList.jsp"/>
+    </action>
+
+    <!-- System monitoring -->
+    <action path="/monitor" type="com.centraview.common.Monitor" scope="request" validate="false" >
+      <forward name="default" path="/jsp/pages/common/monitor.jsp"/>
+    </action>
+    
+    <!-- Home page allerts -->
+    <action path="/home/delete_alert" type="com.centraview.alert.DeleteAlertHandler" scope="request">
+      <forward name="default" path="/home.do" redirect="true" />
+    </action>
+    
+  </action-mappings>
+
+</struts-config>

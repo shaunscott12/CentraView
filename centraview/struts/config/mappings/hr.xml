@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" 
+          "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<!--
+ * $RCSfile: hr.xml,v $    $Revision: 1.4 $  $Date: 2005/07/31 04:17:36 $ - $Author: mcallist $
+ * 
+ * The contents of this file are subject to the Open Software License
+ * Version 2.1 ("the License"); you may not use this file except in
+ * compliance with the License. You may obtain a copy of the License at
+ * http://www.centraview.com/opensource/license.html
+ * 
+ * Software distributed under the License is distributed on an "AS IS"
+ * basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+ * License for the specific language governing rights and limitations
+ * under the License.
+ * 
+ * The Original Code is: CentraView Open Source. 
+ * 
+ * The developer of the Original Code is CentraView.  Portions of the
+ * Original Code created by CentraView are Copyright (c) 2004 CentraView,
+ * LLC; All Rights Reserved.  The terms "CentraView" and the CentraView
+ * logos are trademarks and service marks of CentraView, LLC.
+-->
+
+<struts-config>
+  <form-beans>
+    <form-bean name="HrExpenseForm" type="com.centraview.hr.expenses.HrExpenseForm"/>
+    
+    <form-bean name="NewTimeSheetForm" type="com.centraview.hr.timesheet.NewTimeSheetForm">
+      <form-property name="employeeId" type="java.lang.String" initial=""/>
+      <form-property name="timesheetID" type="java.lang.String" initial=""/>
+      <form-property name="reportingToId" type="java.lang.String" initial=""/>
+      <form-property name="reportingTo" type="java.lang.String" initial=""/>
+      <form-property name="employee" type="java.lang.String" initial=""/>
+      <form-property name="notes" type="java.lang.String" initial=""/>
+      <form-property name="description" type="java.lang.String" initial=""/>
+      <form-property name="fromday" type="java.lang.String" initial=""/>
+      <form-property name="frommonth" type="java.lang.String" initial=""/>
+      <form-property name="fromyear" type="java.lang.String" initial=""/>
+      <form-property name="today" type="java.lang.String" initial=""/>
+      <form-property name="tomonth" type="java.lang.String" initial=""/>
+      <form-property name="toyear" type="java.lang.String" initial=""/>
+      <form-property name="reportingToLookUp" type="java.lang.String" initial=""/>
+      <form-property name="employeeLookUp" type="java.lang.String" initial=""/>
+      <form-property name="save" type="java.lang.String"/>
+      <form-property name="saveclose" type="java.lang.String"/>
+      <form-property name="savenew" type="java.lang.String"/>
+      <form-property name="addslip" type="java.lang.String"/>
+      <form-property name="status" type="java.lang.String"/>
+      <form-property name="status1" type="java.lang.Long"/>
+    </form-bean>
+
+    <form-bean name="suggestionForm" type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="suggestion" type="java.lang.String"/>
+    </form-bean>    
+    
+  </form-beans>
+  
+  <action-mappings>
+    <!-- View expense form -->
+    <action path="/hr/expenseform_list" type="com.centraview.hr.expenses.ExpenseFormValueListAction">
+      <forward name=".view.hr.expenseform.list" path=".view.valuelist"/>      
+    </action>
+    
+    <!-- View/New expense form -->
+    <action path="/hr/expenseform_new" type="com.centraview.hr.expenses.NewHRExpenseHandler" name="HrExpenseForm" scope="session" validate="false">
+      <forward name=".view.hr.expenseform.detail" path=".view.hr.expenseform.detail"/>
+    </action>
+    
+    <!-- Delete expense form -->
+    <action path="/hr/expenseform_delete" type="com.centraview.hr.expenses.ExpenseFormListDeleteHandler">
+      <forward name=".view.hr.expenseform.list" path="/hr/expenseform_list.do"/>      
+    </action>
+    
+    <!-- Duplicate expense form -->
+    <action path="/hr/expenseform_dup" type="com.centraview.hr.expenses.DuplicateHrExpenseHandler" scope="request" validate="false" name="expenseform">
+      <forward name=".view.hr.expenseform.detail" path=".view.hr.expenseform.detail"/>
+    </action>
+    
+    <!-- Timesheet list -->
+    <action path="/hr/timesheet_list" type="com.centraview.hr.timesheet.TimeSheetValueListAction">
+      <forward name=".view.hr.timesheet.list" path=".view.valuelist"/>
+    </action>
+    
+    <!-- View time sheets -->
+    <action path="/hr/timesheet_view" type="com.centraview.hr.timesheet.ViewTimeSheetDetailHandler" name="NewTimeSheetForm"  scope="request" validate="false">
+      <forward name=".view.hr.timesheet.detail" path=".view.hr.timesheet.detail"/>
+    </action>
+
+    <action path="/hr/save_timesheet" type="com.centraview.hr.timesheet.AddTimeSheetHandler" name="NewTimeSheetForm"  input="/hr/timesheet_new.do" scope="request" validate="true">
+      <forward name=".view.hr.timesheet.edit" path="/hr/timesheet_view.do"/>
+      <forward name=".view.hr.timesheet.list" path="/hr/timesheet_list.do" />
+      <forward name=".view.hr.timesheet.new" path="/hr/timesheet_new.do" />
+      <forward name="addTimeSlip" path="/hr/timesheet_view.do"/>
+    </action>
+
+    <action path="/hr/delete_timeslip" type="com.centraview.hr.timesheet.DeleteTimeSlipHandler" >
+      <forward name=".view.success" path="/hr/timesheet_view.do?TYPEOFOPERATION=EDIT"/>
+    </action>
+
+
+    <!-- New time sheet -->
+    <action path="/hr/timesheet_new" type="com.centraview.hr.timesheet.NewTimeSheetHandler" name="NewTimeSheetForm" validate="false">
+      <forward name=".view.hr.timesheet.detail" path=".view.hr.timesheet.detail"/>
+    </action>
+    
+    <!-- Delete time sheet -->
+    <action path="/hr/timesheet_delete" type="com.centraview.hr.timesheet.TimeSheetListDeleteHandler">
+      <forward name=".view.hr.timesheet.list" path="/hr/timesheet_list.do"/>
+    </action>
+    
+    <!-- Employee Handbook list -->
+    <action path="/hr/employeehandbook_list" type="com.centraview.hr.employeehandbook.EmployeeHandbookValueListAction">
+      <forward name=".view.hr.employeehandbook.list" path=".view.valuelist"/>
+    </action>
+    
+    <!-- View employee handbook -->
+    
+    <action path="/hr/employeehandbook_new" type="org.apache.struts.actions.ForwardAction" parameter="/files/file_new.do?employeeHandBookFlag=true"/>
+    
+    <!-- Delete employee handbook -->
+    <action path="/hr/employeehandbook_delete" type="com.centraview.hr.employeehandbook.EmployeeHandbookListDeleteHandler"/>
+    
+    <!-- Duplicate employee handbook -->
+    <action path="/hr/employeehandbook_dup" type="com.centraview.hr.employeehandbook.DuplicateEmployeeHandbookHandler" scope="request" name="fileform" validate="false">
+      <forward name="duplicateEmployeeFile" path="/jsp/hr/employeehandbook/addedit_folder_c.jsp"/>
+    </action>
+    
+    <!-- Employee List list -->
+    <action path="/hr/employeelist_list" type="com.centraview.hr.employeelist.EmployeeListValueListAction">
+      <forward name=".view.hr.employeelist.list" path=".view.valuelist"/>
+    </action>
+
+    <action path="/hr/save_expenseform" type="com.centraview.hr.expenses.SaveHrExpenseHandler" scope="request" validate="true" name="HrExpenseForm" input="/hr/expenseform_new.do?actionType=error" >
+      <forward name=".view.hr.save.expenseform" path=".view.hr.expenseform.detail"/>
+      <forward name=".view.hr.savenew.expenseform" path="/hr/expenseform_new.do" redirect="true"/>
+      <forward name=".view.hr.expenseform.list" path="/hr/expenseform_list.do"/>
+    </action>
+
+
+    <action path="/hr/suggestionbox_list" type="com.centraview.hr.suggestion.SuggestionHandler" name="suggestionForm" scope="request" validate="false">    
+      <forward name=".view.hr.suggestionbox" path=".view.hr.suggestionbox"/>
+    </action>
+
+    <action path="/hr/send_suggestion" type="com.centraview.hr.suggestion.SendSuggestionHandler" name="suggestionForm" input=".view.hr.suggestionbox" scope="request" validate="true">
+      <forward name=".view.hr.suggestionbox" path="/hr/suggestionbox_list.do"/>
+    </action>   
+    
+  </action-mappings>
+</struts-config>

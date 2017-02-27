@@ -1,0 +1,13 @@
+As for upgrading existing installations, apply the queries from
+2_0_4-to-2_0_5.sql to your database [1] and you will need to manually
+create a directory under the centraview filesystem to afford for the
+"Public Folders" feature.  Something like "mkdir
+'/<PATHTOFS>/CV_ROOT/CVFS_ROOT/Public Folders'" should work for you.
+
+Otherwise simply deploying the new ear should do the rest of the
+trick.
+
+
+1. This update file will work for versions 2.0.3 and 2.0.4 as the
+   schema didn't change at all.  If you don't believe us look at the
+   file, it is pretty simple.

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ejb-jar PUBLIC "-//Sun Microsystems, Inc.//DTD Enterprise JavaBeans 2.0//EN" "http://java.sun.com/dtd/ejb-jar_2_0.dtd">
+<ejb-jar>
+	<enterprise-beans>
+		<session>
+			<ejb-name>HrFacade</ejb-name>
+			<home>com.centraview.hr.hrfacade.HrFacadeHome</home>
+			<remote>com.centraview.hr.hrfacade.HrFacade</remote>
+			<local-home>com.centraview.hr.hrfacade.HrFacadeLocalHome</local-home>
+			<local>com.centraview.hr.hrfacade.HrFacadeLocal</local>
+			<ejb-class>com.centraview.hr.hrfacade.HrFacadeEJB</ejb-class>
+			<session-type>Stateless</session-type>
+			<transaction-type>Bean</transaction-type>
+		</session>
+	</enterprise-beans>
+</ejb-jar>

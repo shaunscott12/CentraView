@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jboss>
+	<enterprise-beans>
+		<session>
+			<ejb-name>EmailFacade</ejb-name>
+
+         <method-attributes>
+           <method>
+             <method-name>get*</method-name>
+             <read-only>true</read-only>
+           </method>
+           <method>
+             <method-name>checkEmailAccount</method-name>
+             <read-only>true</read-only>
+           </method>
+           <method>
+             <method-name>checkFoldersPresence</method-name>
+             <read-only>true</read-only>
+           </method>
+           <method>
+             <method-name>fetchEmails</method-name>
+             <read-only>true</read-only>
+           </method>
+           <method>
+             <method-name>sendForgottenPasswordMail</method-name>
+             <read-only>true</read-only>
+           </method>
+           <method>
+             <method-name>sendMailMessageBasic</method-name>
+             <read-only>true</read-only>
+           </method>
+            <method>
+              <method-name>setDataSource</method-name>
+              <read-only>true</read-only>
+            </method>
+          </method-attributes>
+
+			<jndi-name>EmailFacade</jndi-name><local-jndi-name>local/EmailFacade</local-jndi-name>
+			<!--<resource-ref>
+		          <res-ref-name>java:/OraclePool</res-ref-name>
+		          <resource-name>java:/OraclePool</resource-name>
+		        </resource-ref>-->
+		</session>
+	</enterprise-beans>
+	<!--<resource-managers>
+    <resource-manager res-class="org.jboss.ejb.deployment.JDBCResource">
+    <res-name>java:/OraclePool</res-name>
+    <res-jndi-name>java:/OraclePool</res-jndi-name>
+    </resource-manager>
+  </resource-managers>-->
+</jboss>

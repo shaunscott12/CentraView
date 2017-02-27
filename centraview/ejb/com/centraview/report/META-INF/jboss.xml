@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE jboss PUBLIC "-//JBoss//DTD JBOSS 3.0//EN" "http://www.jboss.org/j2ee/dtd/jboss_3_0.dtd">
+<jboss>
+  <enterprise-beans>
+    <entity>
+      <ejb-name>Report</ejb-name>
+
+       <method-attributes>
+         <method>
+           <method-name>get*</method-name>
+           <read-only>true</read-only>
+         </method>
+        </method-attributes>
+
+      <jndi-name>report/ejb/entity/Report</jndi-name>
+      <local-jndi-name>report/ejb/entity/ReportLocal</local-jndi-name>
+    </entity>
+    <entity>
+      <ejb-name>ReportType</ejb-name>
+
+       <method-attributes>
+         <method>
+           <method-name>get*</method-name>
+           <read-only>true</read-only>
+         </method>
+        </method-attributes>
+
+      <jndi-name>report/ejb/entity/ReportType</jndi-name>
+      <local-jndi-name>report/ejb/entity/ReportTypeLocal</local-jndi-name>
+    </entity>
+    <entity>
+      <ejb-name>ReportContent</ejb-name>
+
+       <method-attributes>
+         <method>
+           <method-name>get*</method-name>
+           <read-only>true</read-only>
+         </method>
+        </method-attributes>
+
+      <jndi-name>report/ejb/entity/ReportContent</jndi-name>
+      <local-jndi-name>report/ejb/entity/ReportContentLocal</local-jndi-name>
+    </entity>
+    <session>
+      <ejb-name>ReportFacade</ejb-name>
+
+       <method-attributes>
+         <method>
+           <method-name>get*</method-name>
+           <read-only>true</read-only>
+         </method>
+          <method>
+            <method-name>setDataSource</method-name>
+            <read-only>true</read-only>
+          </method>
+        </method-attributes>
+
+      <jndi-name>report/ejb/session/ReportFacade</jndi-name>
+      <local-jndi-name>report/ejb/session/ReportFacadeLocal</local-jndi-name>
+    </session>
+  </enterprise-beans>
+</jboss>

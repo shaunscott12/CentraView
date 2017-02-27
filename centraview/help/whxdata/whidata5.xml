@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<indexdata>
+<key name="Viewing" >
+  <topic name="Viewing a Literature Fulfillment Request" url="viewing_a_literature_fulfillment_request.htm" />
+  <topic name="Viewing a Marketing List" url="viewing_a_marketing_list.htm" />
+  <topic name="Viewing Appointments" url="viewing_appointments.htm" />
+  <topic name="Viewing Calls" url="viewing_calls.htm" />
+  <topic name="Viewing Entities" url="viewing_entities.htm" />
+  <topic name="Viewing Events" url="viewing_events.htm" />
+  <topic name="Viewing Expenses" url="viewing_expenses.htm" />
+  <topic name="Viewing FAQs" url="viewing_faqs.htm" />
+  <topic name="Viewing Files" url="viewing_files.htm" />
+  <topic name="Viewing Forecast Sales" url="viewing_forecast_sales.htm" />
+  <topic name="Viewing Groups" url="viewing_groups.htm" />
+  <topic name="Viewing Individuals" url="viewing_individuals.htm" />
+  <topic name="Viewing Inventory" url="viewing_inventory.htm" />
+  <topic name="Viewing Invoice History" url="viewing_invoice_history.htm" />
+  <topic name="Viewing Items" url="viewing_items.htm" />
+  <topic name="Viewing Literature Requests" url="viewing_literature_requests.htm" />
+  <topic name="Viewing Meetings" url="viewing_meetings.htm" />
+  <topic name="Viewing Next Actions" url="viewing_next_actions.htm" />
+  <topic name="Viewing Notes" url="viewing_notes.htm" />
+  <topic name="Viewing Order History" url="viewing_order_history.htm" />
+  <topic name="Viewing Payments" url="viewing_payments.htm" />
+  <topic name="Viewing Project Tasks" url="viewing_project_tasks.htm" />
+  <topic name="Viewing Projects" url="viewing_projects.htm" />
+  <topic name="Viewing Proposals" url="viewing_proposals.htm" />
+  <topic name="Viewing Purchase Orders" url="viewing_purchase_orders.htm" />
+  <topic name="Viewing Sales Opportunities" url="viewing_sales_opportunities.htm" />
+  <topic name="Viewing Tasks" url="viewing_tasks.htm" />
+  <topic name="Viewing the Knowledge Base" url="viewing_the_knowledge_base.htm" />
+  <topic name="Viewing Timeslips" url="viewing_timeslips.htm" />
+  <topic name="Viewing ToDos" url="viewing_to_dos.htm" />
+  <topic name="Viewing Trouble Tickets" url="viewing_support_tickets.htm" />
+  <topic name="Viewing Vendors" url="viewing_vendors.htm" />
+  <topic name="Viewing Volume Discounts" url="viewing_volume_discounts.htm" />
+  <key name="appointments" >
+    <topic name="Viewing Appointments" url="viewing_appointments.htm" />
+  </key>
+  <key name="calls" >
+    <topic name="Viewing Calls" url="viewing_calls.htm" />
+  </key>
+  <key name="entities" >
+    <topic name="Viewing Entities" url="viewing_entities.htm" />
+  </key>
+  <key name="events" >
+    <topic name="Viewing Events" url="viewing_events.htm" />
+  </key>
+  <key name="expenses" >
+    <topic name="Viewing Expenses" url="viewing_expenses.htm" />
+  </key>
+  <key name="FAQs" >
+    <topic name="Viewing FAQs" url="viewing_faqs.htm" />
+  </key>
+  <key name="files" >
+    <topic name="Viewing Files" url="viewing_files.htm" />
+  </key>
+  <key name="forecast sales" >
+    <topic name="Viewing Forecast Sales" url="viewing_forecast_sales.htm" />
+  </key>
+  <key name="groups" >
+    <topic name="Viewing Groups" url="viewing_groups.htm" />
+  </key>
+  <key name="individuals" >
+    <topic name="Viewing Individuals" url="viewing_individuals.htm" />
+  </key>
+  <key name="inventory" >
+    <topic name="Viewing Inventory" url="viewing_inventory.htm" />
+  </key>
+  <key name="invoice history" >
+    <topic name="Viewing Invoice History" url="viewing_invoice_history.htm" />
+  </key>
+  <key name="items" >
+    <topic name="Viewing Items" url="viewing_items.htm" />
+  </key>
+  <key name="knowledge base" >
+    <topic name="Viewing the Knowledge Base" url="viewing_the_knowledge_base.htm" />
+  </key>
+  <key name="literature fulfillment request" >
+    <topic name="Viewing a Literature Fulfillment Request" url="viewing_a_literature_fulfillment_request.htm" />
+  </key>
+  <key name="literature requests" >
+    <topic name="Viewing Literature Requests" url="viewing_literature_requests.htm" />
+  </key>
+  <key name="marketing list" >
+    <topic name="Viewing a Marketing List" url="viewing_a_marketing_list.htm" />
+  </key>
+  <key name="meetings" >
+    <topic name="Viewing Meetings" url="viewing_meetings.htm" />
+  </key>
+  <key name="next actions" >
+    <topic name="Viewing Next Actions" url="viewing_next_actions.htm" />
+  </key>
+  <key name="notes" >
+    <topic name="Viewing Notes" url="viewing_notes.htm" />
+  </key>
+  <key name="order history" >
+    <topic name="Viewing Order History" url="viewing_order_history.htm" />
+  </key>
+  <key name="payments" >
+    <topic name="Viewing Payments" url="viewing_payments.htm" />
+  </key>
+  <key name="project tasks" >
+    <topic name="Viewing Project Tasks" url="viewing_project_tasks.htm" />
+  </key>
+  <key name="projects" >
+    <topic name="Viewing Projects" url="viewing_projects.htm" />
+  </key>
+  <key name="proposals" >
+    <topic name="Viewing Proposals" url="viewing_proposals.htm" />
+  </key>
+  <key name="purchase orders" >
+    <topic name="Viewing Purchase Orders" url="viewing_purchase_orders.htm" />
+  </key>
+  <key name="sales opportunities" >
+    <topic name="Viewing Sales Opportunities" url="viewing_sales_opportunities.htm" />
+  </key>
+  <key name="support tickets" >
+    <topic name="Viewing Support Tickets" url="viewing_support_tickets.htm" />
+  </key>
+  <key name="tasks" >
+    <topic name="Viewing Tasks" url="viewing_tasks.htm" />
+  </key>
+  <key name="timeslips" >
+    <topic name="Viewing Timeslips" url="viewing_timeslips.htm" />
+  </key>
+  <key name="to dos" >
+    <topic name="Viewing ToDos" url="viewing_to_dos.htm" />
+  </key>
+  <key name="vendors" >
+    <topic name="Viewing Vendors" url="viewing_vendors.htm" />
+  </key>
+  <key name="volume discounts" >
+    <topic name="Viewing Volume Discounts" url="viewing_volume_discounts.htm" />
+  </key>
+</key>
+<key name="Volume discounts" >
+  <topic name="Adding Volume Discounts" url="adding_volume_discounts.htm" />
+  <topic name="Deleting Volume Discounts" url="deleting_volume_discounts.htm" />
+  <topic name="Viewing Volume Discounts" url="viewing_volume_discounts.htm" />
+  <key name="adding" >
+    <topic name="Adding Volume Discounts" url="adding_volume_discounts.htm" />
+  </key>
+  <key name="deleting" >
+    <topic name="Deleting Volume Discounts" url="deleting_volume_discounts.htm" />
+  </key>
+  <key name="viewing" >
+    <topic name="Viewing Volume Discounts" url="viewing_volume_discounts.htm" />
+  </key>
+</key>
+<key name="WebForm" >
+  <topic name="About WebForm Import" url="about_webform_import.htm" />
+</key>
+<key name="Welcome to CentraView" >
+  <topic name="Welcome to CentraView" url="welcome_to_centraview.htm" />
+</key>
+
+</indexdata>

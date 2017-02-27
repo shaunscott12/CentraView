@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jboss>
+	<enterprise-beans>
+		<session>
+			<ejb-name>Alert</ejb-name>
+
+         <method-attributes>
+           <method>
+             <method-name>getAlertList</method-name>
+             <read-only>true</read-only>
+           </method>
+            <method>
+              <method-name>setDataSource</method-name>
+              <read-only>true</read-only>
+            </method>
+          </method-attributes>
+
+			<jndi-name>Alert</jndi-name><local-jndi-name>local/Alert</local-jndi-name>
+		</session>
+	</enterprise-beans>
+</jboss>

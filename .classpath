@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="**/testclients/**" kind="src" path="centraview/ejb"/>
+	<classpathentry kind="src" path="centraview/struts"/>
+	<classpathentry kind="src" path="centraview/applet"/>
+	<classpathentry kind="src" path="centraview/servlet"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="thirdpartyjars/axis.jar"/>
+	<classpathentry kind="lib" path="thirdpartyjars/axis-ant.jar"/>
+	<classpathentry kind="lib" path="thirdpartyjars/commons-beanutils.jar"/>
+	<classpathentry kind="lib" path="thirdpartyjars/commons-dbcp.jar"/>
+	<classpathentry kind="lib" path="thirdpartyjars/commons-digester.jar"/>
+	<classpathentry kind="lib" path="thirdpartyjars/commons-discovery.jar"/>
+	<classpathentry kind="lib" path="thirdpartyjars/commons-fileupload.jar"/>
+	<classpathentry kind="lib" path="thirdpartyjars/commons-logging.jar"/>
+	<classpathentry kind="lib" path="thirdpartyjars/commons-pool.jar"/>
+	<classpathentry kind="lib" path="thirdpartyjars/commons-resources.jar"/>
+	<classpathentry kind="lib" path="thirdpartyjars/commons-validator.jar"/>
+	<classpathentry kind="lib" path="thirdpartyjars/jboss.jar"/>
+	<classpathentry kind="lib" path="thirdpartyjars/jboss-boot.jar"/>
+	<classpathentry kind="lib" path="thirdpartyjars/jboss-common.jar"/>
+	<classpathentry kind="lib" path="thirdpartyjars/jboss-j2ee.jar"/>
+	<classpathentry sourcepath="/home/mcallist/software/src/jboss-3.0.8-src/jmx/src/main/" kind="lib" path="thirdpartyjars/jboss-jmx.jar"/>
+	<classpathentry sourcepath="/home/mcallist/software/src/jboss-3.0.8-src/system/src/main/" kind="lib" path="thirdpartyjars/jboss-system.jar"/>
+	<classpathentry kind="lib" path="thirdpartyjars/jdbc2_0-stdext.jar"/>
+	<classpathentry kind="lib" path="thirdpartyjars/jnpserver.jar"/>
+	<classpathentry kind="lib" path="thirdpartyjars/log4j-1.2.8.jar"/>
+	<classpathentry kind="lib" path="thirdpartyjars/log4j-boot.jar"/>
+	<classpathentry kind="lib" path="thirdpartyjars/saaj.jar"/>
+	<classpathentry sourcepath="/home/mcallist/env/src/struts-1.2.7-src/src/share" kind="lib" path="thirdpartyjars/struts.jar"/>
+	<classpathentry kind="lib" path="thirdpartyjars/commons-codec-1.2.jar"/>
+	<classpathentry kind="lib" path="thirdpartyjars/jcommon-0.9.6.jar"/>
+	<classpathentry kind="lib" path="thirdpartyjars/jfreechart-0.9.21.jar"/>
+	<classpathentry kind="lib" path="thirdpartyjars/imap.jar"/>
+	<classpathentry kind="lib" path="thirdpartyjars/mailapi.jar"/>
+	<classpathentry kind="lib" path="thirdpartyjars/pop3.jar"/>
+	<classpathentry kind="lib" path="thirdpartyjars/smtp.jar"/>
+	<classpathentry kind="lib" path="thirdpartyjars/activation.jar"/>
+	<classpathentry kind="lib" path="thirdpartyjars/jaxrpc.jar"/>
+	<classpathentry kind="lib" path="thirdpartyjars/bcprov-jdk14-119.jar"/>
+	<classpathentry kind="lib" path="thirdpartyjars/jug_1.0.3.jar"/>
+	<classpathentry kind="lib" path="thirdpartyjars/antlr.jar"/>
+	<classpathentry kind="lib" path="thirdpartyjars/jakarta-oro.jar"/>
+	<classpathentry kind="lib" path="thirdpartyjars/commons-collections.jar"/>
+	<classpathentry kind="lib" path="thirdpartyjars/javax.servlet.jar"/>
+	<classpathentry kind="lib" path="thirdpartyjars/javax.servlet.jsp.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
