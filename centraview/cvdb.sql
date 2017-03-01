@@ -17,7 +17,7 @@ CREATE TABLE `accountingstatus` (
   `title` varchar(25) NOT NULL default '',
   `description` text NOT NULL,
   PRIMARY KEY  (`statusid`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `accountingstatus`
@@ -35,7 +35,7 @@ CREATE TABLE `accountingterms` (
   `title` varchar(25) default NULL,
   `description` text,
   PRIMARY KEY  (`termsid`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `accountingterms`
@@ -57,7 +57,7 @@ CREATE TABLE `action` (
   `ActionInterval` int(11) default NULL,
   PRIMARY KEY  (`ActionID`),
   UNIQUE KEY `ActionID` (`ActionID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `action`
@@ -99,7 +99,7 @@ CREATE TABLE `activity` (
   KEY `Owner` (`Owner`),
   KEY `ModifiedBy` (`ModifiedBy`),
   KEY `Location` (`Location`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `activity`
@@ -118,7 +118,7 @@ CREATE TABLE `activityaction` (
   KEY `ActivityID` (`ActivityID`),
   KEY `ActionID` (`ActionID`),
   KEY `recipient` (`recipient`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `activityaction`
@@ -137,7 +137,7 @@ CREATE TABLE `activitylink` (
   KEY `ActivityID` (`ActivityID`),
   KEY `RecordTypeID` (`RecordTypeID`),
   KEY `RecordID` (`RecordID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `activitylink`
@@ -154,7 +154,7 @@ CREATE TABLE `activityportlet` (
   `activitytype` int(11) unsigned default NULL,
   KEY `individualid` (`individualid`),
   KEY `activitytype` (`activitytype`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `activityportlet`
@@ -172,7 +172,7 @@ CREATE TABLE `activitypriority` (
   `PriorityOrder` int(11) NOT NULL default '0',
   PRIMARY KEY  (`PriorityID`),
   UNIQUE KEY `PriorityID` (`PriorityID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `activitypriority`
@@ -191,7 +191,7 @@ CREATE TABLE `activityresources` (
   `Detail` text,
   PRIMARY KEY  (`ActivityResourceID`),
   UNIQUE KEY `ActivityResourceID` (`ActivityResourceID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `activityresources`
@@ -209,7 +209,7 @@ CREATE TABLE `activitystatus` (
   PRIMARY KEY  (`StatusID`),
   UNIQUE KEY `StatusID` (`StatusID`),
   UNIQUE KEY `Name` (`Name`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `activitystatus`
@@ -227,7 +227,7 @@ CREATE TABLE `activitytype` (
   `Name` varchar(25) NOT NULL default '',
   PRIMARY KEY  (`TypeID`),
   UNIQUE KEY `TypeID` (`TypeID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `activitytype`
@@ -251,7 +251,7 @@ CREATE TABLE `additionalmenu` (
   `menuitem_order` int(2) unsigned NOT NULL default '0',
   PRIMARY KEY  (`menuitem_id`),
   KEY `menuitem_id` (`menuitem_id`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `additionalmenu`
@@ -277,7 +277,7 @@ CREATE TABLE `address` (
   `jurisdictionID` int(11) unsigned default '0',
   PRIMARY KEY  (`AddressID`),
   KEY `AddressType` (`AddressType`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `address`
@@ -301,7 +301,7 @@ CREATE TABLE `addressrelate` (
   KEY `ContactType` (`ContactType`),
   KEY `Contact` (`Contact`),
   KEY `AddressType` (`AddressType`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `addressrelate`
@@ -318,7 +318,7 @@ CREATE TABLE `addresstype` (
   `TypeID` int(11) unsigned NOT NULL auto_increment,
   `Name` varchar(25) default NULL,
   PRIMARY KEY  (`TypeID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `addresstype`
@@ -339,7 +339,7 @@ CREATE TABLE `alert` (
   `displayedtime` datetime default NULL,
   PRIMARY KEY  (`alertid`),
   KEY `owner` (`owner`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `alert`
@@ -357,7 +357,7 @@ CREATE TABLE `alertpreference` (
   `emailvisability` enum('BOTH','HOME','NONE') default NULL,
   `acknowledgeddays` int(11) default NULL,
   KEY `individualid` (`individualid`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `alertpreference`
@@ -378,7 +378,7 @@ CREATE TABLE `applicationsetting` (
   `workingdays` varchar(50) NOT NULL default '',
   PRIMARY KEY  (`modulesettingid`),
   UNIQUE KEY `msname` (`msname`)
-) TYPE=InnoDB COMMENT='InnoDB free: 68608 kB; InnoDB free: 75776 kB';
+) ENGINE=InnoDB COMMENT='InnoDB free: 68608 kB; InnoDB free: 75776 kB';
 
 --
 -- Dumping data for table `applicationsetting`
@@ -400,7 +400,7 @@ CREATE TABLE `applypayment` (
   PRIMARY KEY  (`LineID`),
   KEY `PaymentID` (`PaymentID`),
   KEY `InvoiceID` (`InvoiceID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `applypayment`
@@ -420,7 +420,7 @@ CREATE TABLE `attachment` (
   PRIMARY KEY  (`AttachmentID`),
   KEY `MessageID` (`MessageID`),
   KEY `FileID` (`FileID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `attachment`
@@ -440,7 +440,7 @@ CREATE TABLE `attendee` (
   KEY `ActivityID` (`ActivityID`),
   KEY `IndividualID` (`IndividualID`),
   KEY `Status` (`Status`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `attendee`
@@ -458,7 +458,7 @@ CREATE TABLE `attendeestatus` (
   PRIMARY KEY  (`StatusID`),
   UNIQUE KEY `StatusID` (`StatusID`),
   UNIQUE KEY `Name` (`Name`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `attendeestatus`
@@ -485,7 +485,7 @@ CREATE TABLE `attic` (
   KEY `owner` (`owner`),
   KEY `moduleid` (`moduleid`),
   KEY `record` (`record`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `attic`
@@ -505,7 +505,7 @@ CREATE TABLE `atticdata` (
   KEY `atticid` (`atticid`),
   KEY `fieldid` (`fieldid`),
   KEY `recordtypeid` (`recordtypeid`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `atticdata`
@@ -526,7 +526,7 @@ CREATE TABLE `authorizationsettings` (
   `usernameField` varchar(100) NOT NULL default '',
   `passwordField` varchar(100) NOT NULL default '',
   `authField` varchar(100) NOT NULL default ''
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `authorizationsettings`
@@ -543,7 +543,7 @@ CREATE TABLE `calendarportlet` (
   `activitytype` int(11) unsigned default NULL,
   KEY `individualid` (`individualid`),
   KEY `activitytype` (`activitytype`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `calendarportlet`
@@ -560,7 +560,7 @@ CREATE TABLE `call` (
   `CallType` int(11) unsigned default NULL,
   KEY `ActivityID` (`ActivityID`),
   KEY `CallType` (`CallType`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `call`
@@ -577,7 +577,7 @@ CREATE TABLE `calltype` (
   `Name` varchar(25) NOT NULL default '',
   PRIMARY KEY  (`CallTypeID`),
   UNIQUE KEY `CallTypeID` (`CallTypeID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `calltype`
@@ -607,7 +607,7 @@ CREATE TABLE `category` (
   KEY `createdby` (`createdby`),
   KEY `modifiedby` (`modifiedby`),
   KEY `owner` (`owner`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `category`
@@ -625,7 +625,7 @@ CREATE TABLE `companynews` (
   `DateFrom` datetime NOT NULL default '0000-00-00 00:00:00',
   `DateTo` datetime NOT NULL default '0000-00-00 00:00:00',
   KEY `FileID` (`FileID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `companynews`
@@ -645,7 +645,7 @@ CREATE TABLE `competition` (
   `Notes` text,
   PRIMARY KEY  (`CompetitionID`),
   KEY `EntityID` (`EntityID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `competition`
@@ -661,7 +661,7 @@ CREATE TABLE `contacttype` (
   `ContactTypeID` int(11) unsigned NOT NULL auto_increment,
   `Name` varchar(25) default NULL,
   PRIMARY KEY  (`ContactTypeID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `contacttype`
@@ -678,7 +678,7 @@ CREATE TABLE `contentstatus` (
   `statusid` int(10) unsigned NOT NULL default '0',
   `name` varchar(25) NOT NULL default '',
   PRIMARY KEY  (`statusid`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `contentstatus`
@@ -694,7 +694,7 @@ CREATE TABLE `country` (
   `CountryID` int(11) unsigned NOT NULL auto_increment,
   `Name` varchar(50) default NULL,
   PRIMARY KEY  (`CountryID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `country`
@@ -717,7 +717,7 @@ CREATE TABLE `createfieldauthorisation` (
   KEY `groupid` (`groupid`),
   KEY `fieldid` (`fieldid`),
   KEY `owner` (`owner`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `createfieldauthorisation`
@@ -739,7 +739,7 @@ CREATE TABLE `createrecordauthorisation` (
   KEY `groupid` (`groupid`),
   KEY `recordid` (`recordid`),
   KEY `owner` (`owner`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `createrecordauthorisation`
@@ -760,7 +760,7 @@ CREATE TABLE `customfield` (
   UNIQUE KEY `CustomFieldID` (`CustomFieldID`),
   KEY `CustomFieldTypeID` (`CustomFieldTypeID`),
   KEY `RecordType` (`RecordType`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `customfield`
@@ -780,7 +780,7 @@ CREATE TABLE `customfieldmultiple` (
   KEY `CustomFieldID` (`CustomFieldID`),
   KEY `ValueID` (`ValueID`),
   KEY `RecordID` (`RecordID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `customfieldmultiple`
@@ -799,7 +799,7 @@ CREATE TABLE `customfieldscalar` (
   `Value` varchar(25) default NULL,
   KEY `CustomFieldID` (`CustomFieldID`),
   KEY `RecordID` (`RecordID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `customfieldscalar`
@@ -819,7 +819,7 @@ CREATE TABLE `customfieldvalue` (
   PRIMARY KEY  (`ValueID`),
   UNIQUE KEY `ValueID` (`ValueID`),
   KEY `CustomFieldID` (`CustomFieldID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `customfieldvalue`
@@ -858,7 +858,7 @@ CREATE TABLE `cvfile` (
   KEY `Author` (`Author`),
   KEY `RelateEntity` (`RelateEntity`),
   KEY `RelateIndividual` (`RelateIndividual`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `cvfile`
@@ -876,7 +876,7 @@ CREATE TABLE `cvfilefolder` (
   `referencetype` enum('PHYSICAL','VIRTUAL') default NULL,
   KEY `fileid` (`fileid`),
   KEY `folderid` (`folderid`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `cvfilefolder`
@@ -895,7 +895,7 @@ CREATE TABLE `cvfilelink` (
   KEY `FileID` (`FileID`),
   KEY `RecordTypeID` (`RecordTypeID`),
   KEY `RecordID` (`RecordID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `cvfilelink`
@@ -928,7 +928,7 @@ CREATE TABLE `cvfolder` (
   KEY `ModifiedBy` (`ModifiedBy`),
   KEY `LocationID` (`LocationID`),
   KEY `owner` (`owner`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `cvfolder`
@@ -945,7 +945,7 @@ CREATE TABLE `cvfolderlocation` (
   `LocationID` int(11) unsigned NOT NULL auto_increment,
   `Detail` varchar(250) default NULL,
   PRIMARY KEY  (`LocationID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `cvfolderlocation`
@@ -970,7 +970,7 @@ CREATE TABLE `cvjoin` (
   KEY `tableid2` (`tableid2`),
   KEY `fieldid1` (`fieldid1`),
   KEY `fieldid2` (`fieldid2`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `cvjoin`
@@ -1025,7 +1025,7 @@ CREATE TABLE `cvorder` (
   KEY `creator` (`creator`),
   KEY `owner` (`owner`),
   KEY `modifiedby` (`modifiedby`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `cvorder`
@@ -1043,7 +1043,7 @@ CREATE TABLE `cvtable` (
   `name` varchar(25) NOT NULL default '',
   PRIMARY KEY  (`tableid`),
   KEY `moduleid` (`moduleid`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `cvtable`
@@ -1062,7 +1062,7 @@ CREATE TABLE `cvtableextra` (
   `Appearance` enum('TOP','BOTTOM','BOTH') default 'BOTH',
   UNIQUE KEY `TableId` (`TableId`),
   CONSTRAINT `0_21439` FOREIGN KEY (`TableId`) REFERENCES `cvtable` (`tableid`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `cvtableextra`
@@ -1085,7 +1085,7 @@ CREATE TABLE `defaultprivilege` (
   KEY `IndividualId` (`IndividualId`),
   CONSTRAINT `0_21441` FOREIGN KEY (`OwnerId`) REFERENCES `individual` (`IndividualID`) ON DELETE CASCADE,
   CONSTRAINT `0_21442` FOREIGN KEY (`IndividualId`) REFERENCES `individual` (`IndividualID`) ON DELETE CASCADE
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `defaultprivilege`
@@ -1103,7 +1103,7 @@ CREATE TABLE `defaultrecordauthorisation` (
   `privilegelevel` tinyint(4) NOT NULL default '0',
   KEY `recordid` (`recordid`),
   KEY `recordtypeid` (`recordtypeid`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `defaultrecordauthorisation`
@@ -1121,7 +1121,7 @@ CREATE TABLE `defaultviews` (
   `viewid` int(10) unsigned default NULL,
   PRIMARY KEY  (`listtype`),
   KEY `viewid` (`viewid`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `defaultviews`
@@ -1144,7 +1144,7 @@ CREATE TABLE `delegation` (
   KEY `fromuser` (`fromuser`),
   KEY `touser` (`touser`),
   KEY `moduleid` (`moduleid`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `delegation`
@@ -1160,7 +1160,7 @@ CREATE TABLE `deliverymethod` (
   `DeliveryID` int(10) unsigned NOT NULL auto_increment,
   `Name` varchar(25) NOT NULL default '',
   PRIMARY KEY  (`DeliveryID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `deliverymethod`
@@ -1197,7 +1197,7 @@ CREATE TABLE `emailaccount` (
   `POPBeforeSMTP` enum('NO','YES') NOT NULL default 'NO',
   PRIMARY KEY  (`AccountID`),
   KEY `Owner` (`Owner`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `emailaccount`
@@ -1215,7 +1215,7 @@ CREATE TABLE `emailaction` (
   `TargetID` int(11) default NULL,
   KEY `RuleID` (`RuleID`),
   KEY `TargetID` (`TargetID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `emailaction`
@@ -1231,7 +1231,7 @@ CREATE TABLE `emailcomposition` (
   `individualid` int(10) unsigned default NULL,
   `composestyle` enum('TEXT','HTML') default NULL,
   KEY `individualid` (`individualid`)
-) TYPE=InnoDB ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB ROW_FORMAT=DYNAMIC;
 
 --
 -- Dumping data for table `emailcomposition`
@@ -1247,7 +1247,7 @@ CREATE TABLE `emaildelegation` (
   `individualID` int(11) unsigned NOT NULL default '0',
   `delegatorID` int(11) unsigned NOT NULL default '0',
   UNIQUE KEY `delegationID` (`individualID`,`delegatorID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `emaildelegation`
@@ -1269,7 +1269,7 @@ CREATE TABLE `emailfolder` (
   PRIMARY KEY  (`FolderID`),
   KEY `Parent` (`Parent`),
   KEY `AccountID` (`AccountID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `emailfolder`
@@ -1311,7 +1311,7 @@ CREATE TABLE `emailmessage` (
   KEY `Owner` (`Owner`),
   KEY `CreatedBy` (`CreatedBy`),
   KEY `AccountID` (`AccountID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `emailmessage`
@@ -1331,7 +1331,7 @@ CREATE TABLE `emailmessagefolder` (
   KEY `FolderID` (`FolderID`),
   CONSTRAINT `0_21617` FOREIGN KEY (`MessageID`) REFERENCES `emailmessage` (`MessageID`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `0_21618` FOREIGN KEY (`FolderID`) REFERENCES `emailfolder` (`FolderID`) ON DELETE CASCADE ON UPDATE CASCADE
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `emailmessagefolder`
@@ -1347,7 +1347,7 @@ CREATE TABLE `emailpreference` (
   `individualid` int(11) default NULL,
   `composestyle` enum('TEXT','HTML') default NULL,
   KEY `individualid` (`individualid`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `emailpreference`
@@ -1367,7 +1367,7 @@ CREATE TABLE `emailrecipient` (
   `RecipientIsGroup` enum('YES','NO') default NULL,
   KEY `MessageID` (`MessageID`),
   KEY `RecipientID` (`RecipientID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `emailrecipient`
@@ -1387,7 +1387,7 @@ CREATE TABLE `emailrule` (
   `enabled` enum('YES','NO') default NULL,
   PRIMARY KEY  (`ruleID`),
   KEY `accountID` (`accountID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `emailrule`
@@ -1406,7 +1406,7 @@ CREATE TABLE `emailruleaction` (
   KEY `ruleID` (`ruleID`),
   KEY `folderID` (`folderID`),
   CONSTRAINT `0_21655` FOREIGN KEY (`ruleID`) REFERENCES `emailrule` (`ruleID`) ON DELETE CASCADE ON UPDATE CASCADE
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `emailruleaction`
@@ -1429,7 +1429,7 @@ CREATE TABLE `emailrulecriteria` (
   KEY `fieldID` (`fieldID`),
   KEY `conditionID` (`conditionID`),
   CONSTRAINT `0_21653` FOREIGN KEY (`ruleID`) REFERENCES `emailrule` (`ruleID`) ON DELETE CASCADE ON UPDATE CASCADE
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `emailrulecriteria`
@@ -1447,7 +1447,7 @@ CREATE TABLE `emailsettings` (
   `authentication` enum('YES','NO') default 'NO',
   `smtpport` int(4) unsigned NOT NULL default '25',
   `smtpserver` varchar(255) default NULL
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `emailsettings`
@@ -1475,7 +1475,7 @@ CREATE TABLE `emailtemplate` (
   `requiredSubject` enum('YES','NO') default 'NO',
   `requiredBody` enum('YES','NO') default 'NO',
   PRIMARY KEY  (`templateID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `emailtemplate`
@@ -1493,7 +1493,7 @@ CREATE TABLE `employee` (
   `IndividualID` int(10) unsigned NOT NULL default '0',
   PRIMARY KEY  (`EmployeeID`),
   KEY `IndividualID` (`IndividualID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `employee`
@@ -1530,7 +1530,7 @@ CREATE TABLE `entity` (
   KEY `Creator` (`Creator`),
   KEY `AccountManagerID` (`AccountManagerID`),
   KEY `AccountTeamID` (`AccountTeamID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `entity`
@@ -1562,7 +1562,7 @@ CREATE TABLE `event` (
   KEY `Creator` (`Creator`),
   KEY `ModifiedBy` (`ModifiedBy`),
   KEY `moderator` (`moderator`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `event`
@@ -1581,7 +1581,7 @@ CREATE TABLE `eventlink` (
   KEY `EventID` (`EventID`),
   KEY `RecordTypeID` (`RecordTypeID`),
   KEY `RecordID` (`RecordID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `eventlink`
@@ -1599,7 +1599,7 @@ CREATE TABLE `eventregister` (
   `accepted` enum('NO','YES') NOT NULL default 'NO',
   KEY `EventID` (`EventID`),
   KEY `IndividualID` (`IndividualID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `eventregister`
@@ -1643,7 +1643,7 @@ CREATE TABLE `expense` (
   KEY `LineID` (`LineID`),
   KEY `GLAccountsID` (`GLAccountsID`),
   KEY `ExpenseFormID` (`ExpenseFormID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `expense`
@@ -1675,7 +1675,7 @@ CREATE TABLE `expenseform` (
   KEY `Owner` (`Owner`),
   KEY `Creator` (`Creator`),
   KEY `ModifiedBy` (`ModifiedBy`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `expenseform`
@@ -1699,7 +1699,7 @@ CREATE TABLE `expenseitem` (
   PRIMARY KEY  (`LineID`),
   KEY `ExpenseID` (`ExpenseID`),
   KEY `ExpenseItemID` (`ExpenseItemID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `expenseitem`
@@ -1726,7 +1726,7 @@ CREATE TABLE `faq` (
   KEY `createdby` (`createdby`),
   KEY `updatedby` (`updatedby`),
   KEY `owner` (`owner`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `faq`
@@ -1744,7 +1744,7 @@ CREATE TABLE `field` (
   `name` varchar(25) default NULL,
   PRIMARY KEY  (`fieldid`),
   KEY `tableid` (`tableid`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `field`
@@ -1767,7 +1767,7 @@ CREATE TABLE `fieldauthorisation` (
   KEY `fieldid` (`fieldid`),
   KEY `referenceid` (`referenceid`),
   KEY `profileid` (`profileid`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `fieldauthorisation`
@@ -1787,7 +1787,7 @@ CREATE TABLE `fieldextra` (
   UNIQUE KEY `FieldId` (`FieldId`),
   CONSTRAINT `0_21468` FOREIGN KEY (`FieldId`) REFERENCES `field` (`fieldid`),
   CONSTRAINT `0_21469` FOREIGN KEY (`FieldId`) REFERENCES `field` (`fieldid`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `fieldextra`
@@ -1806,7 +1806,7 @@ CREATE TABLE `finalmappings` (
   `table` varchar(50) NOT NULL default '',
   `column` varchar(50) NOT NULL default '',
   PRIMARY KEY  (`mapid`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `finalmappings`
@@ -1831,7 +1831,7 @@ CREATE TABLE `folderlist` (
   KEY `AccountID` (`AccountID`),
   KEY `Parent` (`Parent`),
   KEY `FolderID` (`FolderID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `folderlist`
@@ -1853,7 +1853,7 @@ CREATE TABLE `glaccount` (
   `Parent` int(11) NOT NULL default '0',
   PRIMARY KEY  (`GLAccountsID`),
   KEY `Parent` (`Parent`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `glaccount`
@@ -1869,7 +1869,7 @@ DROP TABLE IF EXISTS `glaccounttype`;
 CREATE TABLE `glaccounttype` (
   `accounttype` varchar(30) NOT NULL default '',
   PRIMARY KEY  (`accounttype`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `glaccounttype`
@@ -1890,7 +1890,7 @@ CREATE TABLE `globalreplacerelate` (
   KEY `SearchTableID` (`SearchTableID`),
   CONSTRAINT `0_21721` FOREIGN KEY (`RelateTableID`) REFERENCES `searchtable` (`SearchTableID`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `0_21722` FOREIGN KEY (`SearchTableID`) REFERENCES `searchtable` (`SearchTableID`) ON DELETE CASCADE ON UPDATE CASCADE
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `globalreplacerelate`
@@ -1909,7 +1909,7 @@ CREATE TABLE `gobalreplacevalue` (
   `fieldName` varchar(255) default NULL,
   `tableName` varchar(255) default NULL,
   UNIQUE KEY `replaceValueID` (`tableID`,`fieldID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `gobalreplacevalue`
@@ -1932,7 +1932,7 @@ CREATE TABLE `grouptbl` (
   PRIMARY KEY  (`GroupID`),
   UNIQUE KEY `GroupID` (`GroupID`),
   KEY `owner` (`owner`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `grouptbl`
@@ -1959,7 +1959,7 @@ CREATE TABLE `history` (
   KEY `operation` (`operation`),
   KEY `individualid` (`individualid`),
   KEY `referenceactivityid` (`referenceactivityid`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `history`
@@ -1976,7 +1976,7 @@ CREATE TABLE `historytype` (
   `historytypeid` int(10) unsigned NOT NULL auto_increment,
   `historytype` varchar(25) NOT NULL default '',
   PRIMARY KEY  (`historytypeid`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `historytype`
@@ -2013,7 +2013,7 @@ CREATE TABLE `individual` (
   KEY `ModifiedBy` (`ModifiedBy`),
   KEY `Source` (`Source`),
   KEY `list` (`list`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `individual`
@@ -2048,7 +2048,7 @@ CREATE TABLE `inventory` (
   KEY `customerid` (`customerid`),
   KEY `vendorid` (`vendorid`),
   KEY `LineID` (`LineID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `inventory`
@@ -2064,7 +2064,7 @@ CREATE TABLE `inventorystatus` (
   `StatusID` int(11) unsigned NOT NULL default '0',
   `StatusName` char(50) NOT NULL default '',
   KEY `StatusID` (`StatusID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `inventorystatus`
@@ -2115,7 +2115,7 @@ CREATE TABLE `invoice` (
   KEY `shipaddress` (`shipaddress`),
   KEY `accountmgr` (`accountmgr`),
   KEY `project` (`project`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `invoice`
@@ -2142,7 +2142,7 @@ CREATE TABLE `invoiceitems` (
   KEY `InvoiceID` (`InvoiceID`),
   KEY `ItemID` (`ItemID`),
   KEY `TransactionID` (`TransactionID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `invoiceitems`
@@ -2187,7 +2187,7 @@ CREATE TABLE `item` (
   KEY `createdby` (`createdby`),
   KEY `modifiedby` (`modifiedby`),
   KEY `glaccountid` (`glaccountid`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `item`
@@ -2203,7 +2203,7 @@ CREATE TABLE `itemcategory` (
   `categoryid` int(10) unsigned NOT NULL auto_increment,
   `categoryname` varchar(25) NOT NULL default '',
   PRIMARY KEY  (`categoryid`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `itemcategory`
@@ -2220,7 +2220,7 @@ CREATE TABLE `itemtype` (
   `title` varchar(25) NOT NULL default '',
   `description` text NOT NULL,
   PRIMARY KEY  (`itemtypeid`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `itemtype`
@@ -2250,7 +2250,7 @@ CREATE TABLE `knowledgebase` (
   KEY `updatedby` (`updatedby`),
   KEY `owner` (`owner`),
   KEY `category` (`category`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `knowledgebase`
@@ -2269,7 +2269,7 @@ CREATE TABLE `knowledgebaselink` (
   KEY `ticketid` (`ticketid`),
   KEY `recordtypeid` (`recordtypeid`),
   KEY `recordid` (`recordid`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `knowledgebaselink`
@@ -2288,7 +2288,7 @@ CREATE TABLE `license` (
   `LicenseVerification` varchar(32) default NULL,
   PRIMARY KEY  (`LicenseID`),
   UNIQUE KEY `LicenseID` (`LicenseID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `license`
@@ -2305,7 +2305,7 @@ CREATE TABLE `listcolumns` (
   `columnname` varchar(100) NOT NULL default '',
   `columnorder` int(11) NOT NULL default '0',
   PRIMARY KEY  (`listtype`,`columnorder`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `listcolumns`
@@ -2328,7 +2328,7 @@ CREATE TABLE `listpreferences` (
   PRIMARY KEY  (`individualid`,`listtype`),
   KEY `defaultviewid` (`defaultviewid`),
   KEY `individualid` (`individualid`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `listpreferences`
@@ -2345,7 +2345,7 @@ CREATE TABLE `listtypes` (
   `moduleid` int(11) default NULL,
   PRIMARY KEY  (`typename`),
   KEY `moduleid` (`moduleid`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `listtypes`
@@ -2373,7 +2373,7 @@ CREATE TABLE `listview` (
   CONSTRAINT `0_21729` FOREIGN KEY (`valueListId`) REFERENCES `valuelist` (`valueListId`) ON DELETE CASCADE,
   CONSTRAINT `0_21730` FOREIGN KEY (`sortColumn`) REFERENCES `valuelistfield` (`valueListFieldId`) ON DELETE CASCADE,
   CONSTRAINT `0_21731` FOREIGN KEY (`owner`) REFERENCES `individual` (`IndividualID`) ON DELETE CASCADE
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `listview`
@@ -2400,7 +2400,7 @@ CREATE TABLE `listviews` (
   KEY `ownerid` (`ownerid`),
   KEY `creatorid` (`creatorid`),
   KEY `searchid` (`searchid`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `listviews`
@@ -2420,7 +2420,7 @@ CREATE TABLE `literature` (
   `Description` text NOT NULL,
   KEY `LiteratureID` (`LiteratureID`),
   KEY `FileID` (`FileID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `literature`
@@ -2438,7 +2438,7 @@ CREATE TABLE `literaturerequest` (
   `DeliveryMethod` int(10) unsigned NOT NULL default '0',
   KEY `ActivityID` (`ActivityID`),
   KEY `RequestedBy` (`RequestedBy`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `literaturerequest`
@@ -2455,7 +2455,7 @@ CREATE TABLE `literaturerequestlink` (
   `LiteratureID` int(11) unsigned default NULL,
   KEY `ActivityID` (`ActivityID`),
   KEY `LiteratureID` (`LiteratureID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `literaturerequestlink`
@@ -2473,7 +2473,7 @@ CREATE TABLE `location` (
   `parent` int(10) unsigned NOT NULL default '0',
   PRIMARY KEY  (`locationid`),
   KEY `parent` (`parent`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `location`
@@ -2492,7 +2492,7 @@ CREATE TABLE `mailimportfields` (
   `fieldName` varchar(255) NOT NULL default '',
   PRIMARY KEY  (`fieldID`),
   KEY `typeID` (`typeID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `mailimportfields`
@@ -2509,7 +2509,7 @@ CREATE TABLE `mailimporttypes` (
   `typeID` int(11) unsigned NOT NULL auto_increment,
   `name` varchar(255) NOT NULL default '',
   PRIMARY KEY  (`typeID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `mailimporttypes`
@@ -2540,7 +2540,7 @@ CREATE TABLE `marketinglist` (
   KEY `Owner` (`Owner`),
   KEY `Creator` (`Creator`),
   KEY `ModifiedBy` (`ModifiedBy`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `marketinglist`
@@ -2556,7 +2556,7 @@ DROP TABLE IF EXISTS `mastertable`;
 CREATE TABLE `mastertable` (
   `Name` varchar(50) default NULL,
   `TableType` varchar(50) NOT NULL default ''
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `mastertable`
@@ -2574,7 +2574,7 @@ CREATE TABLE `member` (
   `ChildID` int(10) unsigned default NULL,
   KEY `GroupID` (`GroupID`),
   KEY `ChildID` (`ChildID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `member`
@@ -2595,7 +2595,7 @@ CREATE TABLE `methodofcontact` (
   `MOCOrder` varchar(11) default NULL,
   PRIMARY KEY  (`MOCID`),
   KEY `MOCType` (`MOCType`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `methodofcontact`
@@ -2616,7 +2616,7 @@ CREATE TABLE `mocrelate` (
   KEY `MOCID` (`MOCID`),
   KEY `ContactType` (`ContactType`),
   KEY `ContactID` (`ContactID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `mocrelate`
@@ -2633,7 +2633,7 @@ CREATE TABLE `moctype` (
   `MOCTypeID` int(10) unsigned NOT NULL auto_increment,
   `Name` varchar(25) default NULL,
   PRIMARY KEY  (`MOCTypeID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `moctype`
@@ -2659,7 +2659,7 @@ CREATE TABLE `module` (
   `name` varchar(25) default NULL,
   PRIMARY KEY  (`moduleid`),
   KEY `parentid` (`parentid`)
-) TYPE=InnoDB COMMENT='InnoDB free: 68608 kB; InnoDB free: 66560 kB';
+) ENGINE=InnoDB COMMENT='InnoDB free: 68608 kB; InnoDB free: 66560 kB';
 
 --
 -- Dumping data for table `module`
@@ -2680,7 +2680,7 @@ CREATE TABLE `moduleauthorisation` (
   KEY `individualid` (`individualid`),
   KEY `moduleid` (`moduleid`),
   KEY `profileid` (`profileid`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `moduleauthorisation`
@@ -2704,7 +2704,7 @@ CREATE TABLE `modulefieldmapping` (
   PRIMARY KEY  (`mapid`),
   KEY `fieldid` (`fieldid`),
   KEY `moduleid` (`moduleid`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `modulefieldmapping`
@@ -2722,7 +2722,7 @@ CREATE TABLE `modulepreference` (
   `moduleid` int(11) unsigned default NULL,
   KEY `moduleid` (`moduleid`),
   KEY `individualid` (`individualid`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `modulepreference`
@@ -2739,7 +2739,7 @@ CREATE TABLE `newsportlet` (
   `visible` enum('YES','NO') default NULL,
   `days` int(11) default NULL,
   KEY `individualid` (`individualid`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `newsportlet`
@@ -2769,7 +2769,7 @@ CREATE TABLE `note` (
   KEY `UpdatedBy` (`UpdatedBy`),
   KEY `RelateEntity` (`RelateEntity`),
   KEY `RelateIndividual` (`RelateIndividual`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `note`
@@ -2808,7 +2808,7 @@ CREATE TABLE `opportunity` (
   KEY `Source` (`Source`),
   KEY `AccountManager` (`AccountManager`),
   KEY `AccountTeam` (`AccountTeam`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `opportunity`
@@ -2827,7 +2827,7 @@ CREATE TABLE `opportunitylink` (
   KEY `OpportunityID` (`OpportunityID`),
   KEY `RecordTypeID` (`RecordTypeID`),
   KEY `RecordID` (`RecordID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `opportunitylink`
@@ -2843,7 +2843,7 @@ CREATE TABLE `opportunityportlet` (
   `individualid` int(11) unsigned default NULL,
   `visible` enum('YES','NO') default NULL,
   KEY `individualid` (`individualid`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `opportunityportlet`
@@ -2868,7 +2868,7 @@ CREATE TABLE `orderitem` (
   PRIMARY KEY  (`lineid`),
   KEY `orderid` (`orderid`),
   KEY `itemid` (`itemid`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `orderitem`
@@ -2885,7 +2885,7 @@ CREATE TABLE `otherpreferences` (
   `PreferenceValue` varchar(100) NOT NULL default '',
   `IndividualID` int(11) unsigned NOT NULL default '0',
   KEY `IndividualID` (`IndividualID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `otherpreferences`
@@ -2925,7 +2925,7 @@ CREATE TABLE `payment` (
   KEY `Creator` (`Creator`),
   KEY `ModifiedBy` (`ModifiedBy`),
   KEY `LineID` (`LineID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `payment`
@@ -2942,7 +2942,7 @@ CREATE TABLE `paymentmethod` (
   `externalID` varchar(25) default '[NULL]',
   `Title` varchar(50) NOT NULL default '',
   PRIMARY KEY  (`MethodID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `paymentmethod`
@@ -2974,7 +2974,7 @@ CREATE TABLE `project` (
   KEY `Owner` (`Owner`),
   KEY `Creator` (`Creator`),
   KEY `ModifiedBy` (`ModifiedBy`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `project`
@@ -2993,7 +2993,7 @@ CREATE TABLE `projectlink` (
   KEY `ProjectID` (`ProjectID`),
   KEY `RecordTypeID` (`RecordTypeID`),
   KEY `RecordID` (`RecordID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `projectlink`
@@ -3010,7 +3010,7 @@ CREATE TABLE `projectstatus` (
   `Title` varchar(25) default NULL,
   `Description` text,
   PRIMARY KEY  (`StatusID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `projectstatus`
@@ -3031,7 +3031,7 @@ CREATE TABLE `promoitem` (
   `Price` float NOT NULL default '0',
   KEY `PromotionID` (`PromotionID`),
   KEY `ItemID` (`ItemID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `promoitem`
@@ -3060,7 +3060,7 @@ CREATE TABLE `promotion` (
   KEY `Owner` (`Owner`),
   KEY `Creator` (`Creator`),
   KEY `ModifiedBy` (`ModifiedBy`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `promotion`
@@ -3118,7 +3118,7 @@ CREATE TABLE `proposal` (
   KEY `ModifiedBy` (`ModifiedBy`),
   KEY `Shippingid` (`Shippingid`),
   KEY `Billingid` (`Billingid`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `proposal`
@@ -3145,7 +3145,7 @@ CREATE TABLE `proposalitem` (
   PRIMARY KEY  (`ProposalLineID`),
   KEY `ProposalID` (`ProposalID`),
   KEY `ItemID` (`ItemID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `proposalitem`
@@ -3164,7 +3164,7 @@ CREATE TABLE `proposallink` (
   KEY `ProposalID` (`ProposalID`),
   KEY `RecordTypeID` (`RecordTypeID`),
   KEY `RecordID` (`RecordID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `proposallink`
@@ -3180,7 +3180,7 @@ CREATE TABLE `ptartifact` (
   `artifactid` int(10) unsigned NOT NULL auto_increment,
   `artifactname` char(25) NOT NULL default '',
   PRIMARY KEY  (`artifactid`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `ptartifact`
@@ -3202,7 +3202,7 @@ CREATE TABLE `ptcategory` (
   PRIMARY KEY  (`ptcategoryid`),
   KEY `artifactid` (`artifactid`),
   KEY `parentid` (`parentid`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `ptcategory`
@@ -3229,7 +3229,7 @@ CREATE TABLE `ptdetail` (
   KEY `ptcategoryid` (`ptcategoryid`),
   KEY `userid` (`userid`),
   KEY `artifactid` (`artifactid`)
-) TYPE=InnoDB COMMENT='InnoDB free: 68608 kB; InnoDB free: 75776 kB';
+) ENGINE=InnoDB COMMENT='InnoDB free: 68608 kB; InnoDB free: 75776 kB';
 
 --
 -- Dumping data for table `ptdetail`
@@ -3247,7 +3247,7 @@ CREATE TABLE `publicrecords` (
   `moduleid` int(11) NOT NULL default '0',
   KEY `recordid` (`recordid`),
   KEY `moduleid` (`moduleid`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `publicrecords`
@@ -3298,7 +3298,7 @@ CREATE TABLE `purchaseorder` (
   KEY `ModifiedBy` (`ModifiedBy`),
   KEY `terms` (`terms`),
   KEY `accountmgr` (`accountmgr`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `purchaseorder`
@@ -3320,7 +3320,7 @@ CREATE TABLE `purchaseorderitem` (
   `description` varchar(100) NOT NULL default '',
   `status` enum('Active','Deleted') NOT NULL default 'Active',
   PRIMARY KEY  (`purchaseorderlineid`,`itemid`,`purchaseorderid`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `purchaseorderitem`
@@ -3339,7 +3339,7 @@ CREATE TABLE `question` (
   `answer` text,
   PRIMARY KEY  (`questionid`),
   KEY `faqid` (`faqid`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `question`
@@ -3357,7 +3357,7 @@ CREATE TABLE `record` (
   `Name` varchar(25) default NULL,
   PRIMARY KEY  (`RecordID`),
   KEY `ParentID` (`ParentID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `record`
@@ -3378,7 +3378,7 @@ CREATE TABLE `recordauthorisation` (
   KEY `individualid` (`individualid`),
   KEY `recordid` (`recordid`),
   KEY `recordtypeid` (`recordtypeid`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `recordauthorisation`
@@ -3395,7 +3395,7 @@ CREATE TABLE `recurexcept` (
   `RecurrenceID` int(11) unsigned NOT NULL default '0',
   `Exception` date NOT NULL default '0000-00-00',
   KEY `RecurrenceID` (`RecurrenceID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `recurexcept`
@@ -3418,7 +3418,7 @@ CREATE TABLE `recurrence` (
   PRIMARY KEY  (`RecurrenceID`),
   UNIQUE KEY `RecurrenceID` (`RecurrenceID`),
   KEY `ActivityID` (`ActivityID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `recurrence`
@@ -3448,7 +3448,7 @@ CREATE TABLE `report` (
   KEY `ReportTypeId` (`ReportTypeId`),
   CONSTRAINT `0_21533` FOREIGN KEY (`ReportTypeId`) REFERENCES `reporttype` (`ReportTypeId`),
   CONSTRAINT `0_21534` FOREIGN KEY (`ModuleId`) REFERENCES `module` (`moduleid`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `report`
@@ -3474,7 +3474,7 @@ CREATE TABLE `reportcontent` (
   KEY `FieldId` (`FieldId`),
   CONSTRAINT `0_21734` FOREIGN KEY (`FieldId`) REFERENCES `searchfield` (`SearchFieldID`),
   CONSTRAINT `0_21735` FOREIGN KEY (`ReportId`) REFERENCES `report` (`ReportId`) ON DELETE CASCADE
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `reportcontent`
@@ -3494,7 +3494,7 @@ CREATE TABLE `reportmodule` (
   KEY `SearchTableID` (`SearchTableID`),
   CONSTRAINT `0_21737` FOREIGN KEY (`ModuleID`) REFERENCES `module` (`moduleid`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `0_21738` FOREIGN KEY (`SearchTableID`) REFERENCES `searchtable` (`SearchTableID`) ON DELETE CASCADE ON UPDATE CASCADE
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `reportmodule`
@@ -3513,7 +3513,7 @@ CREATE TABLE `reportsearch` (
   UNIQUE KEY `ReportID` (`ReportID`),
   KEY `SearchID` (`SearchID`),
   CONSTRAINT `0_21645` FOREIGN KEY (`SearchID`) REFERENCES `search` (`SearchID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `reportsearch`
@@ -3540,7 +3540,7 @@ CREATE TABLE `reportsearchcriteria` (
   CONSTRAINT `0_21539` FOREIGN KEY (`ExpressionId`) REFERENCES `reportsearchexpression` (`ExpressionId`) ON DELETE CASCADE,
   CONSTRAINT `0_21540` FOREIGN KEY (`ReportId`) REFERENCES `report` (`ReportId`) ON DELETE CASCADE,
   CONSTRAINT `0_21541` FOREIGN KEY (`FieldId`) REFERENCES `field` (`fieldid`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `reportsearchcriteria`
@@ -3559,7 +3559,7 @@ CREATE TABLE `reportsearchexpression` (
   `PreValue` varchar(20) NOT NULL default '',
   `PostValue` varchar(20) NOT NULL default '',
   PRIMARY KEY  (`ExpressionId`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `reportsearchexpression`
@@ -3577,7 +3577,7 @@ CREATE TABLE `reporttype` (
   `ReportTypeName` varchar(20) NOT NULL default '',
   PRIMARY KEY  (`ReportTypeId`),
   UNIQUE KEY `ReportTypeName` (`ReportTypeName`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `reporttype`
@@ -3595,7 +3595,7 @@ CREATE TABLE `resourcerelate` (
   `ResourceID` int(11) unsigned default NULL,
   KEY `ActivityID` (`ActivityID`),
   KEY `ResourceID` (`ResourceID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `resourcerelate`
@@ -3615,7 +3615,7 @@ CREATE TABLE `restoresequence` (
   KEY `moduleid` (`moduleid`),
   KEY `tableid` (`tableid`),
   KEY `primaryTable` (`primaryTable`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `restoresequence`
@@ -3632,7 +3632,7 @@ CREATE TABLE `role` (
   `roleid` int(10) NOT NULL auto_increment,
   `rolename` varchar(20) NOT NULL default '',
   PRIMARY KEY  (`roleid`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `role`
@@ -3650,7 +3650,7 @@ CREATE TABLE `salesprobability` (
   `Title` varchar(25) default NULL,
   `Description` text,
   PRIMARY KEY  (`ProbabilityID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `salesprobability`
@@ -3667,7 +3667,7 @@ CREATE TABLE `salesstage` (
   `SalesStageID` int(11) NOT NULL auto_increment,
   `Name` varchar(25) default NULL,
   PRIMARY KEY  (`SalesStageID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `salesstage`
@@ -3686,7 +3686,7 @@ CREATE TABLE `salesstatus` (
   `ActivityStatusID` int(10) unsigned NOT NULL default '0',
   PRIMARY KEY  (`SalesStatusID`),
   KEY `ActivityStatusID` (`ActivityStatusID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `salesstatus`
@@ -3703,7 +3703,7 @@ CREATE TABLE `salestype` (
   `SalesTypeID` int(11) NOT NULL auto_increment,
   `Name` varchar(25) default NULL,
   PRIMARY KEY  (`SalesTypeID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `salestype`
@@ -3735,7 +3735,7 @@ CREATE TABLE `search` (
   CONSTRAINT `0_21604` FOREIGN KEY (`OwnerID`) REFERENCES `individual` (`IndividualID`) ON DELETE SET NULL ON UPDATE CASCADE,
   CONSTRAINT `0_21605` FOREIGN KEY (`CreatedBy`) REFERENCES `individual` (`IndividualID`) ON DELETE SET NULL ON UPDATE CASCADE,
   CONSTRAINT `0_21606` FOREIGN KEY (`ModifiedBy`) REFERENCES `individual` (`IndividualID`) ON DELETE SET NULL ON UPDATE CASCADE
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `search`
@@ -3764,7 +3764,7 @@ CREATE TABLE `searchcriteria` (
   CONSTRAINT `0_21608` FOREIGN KEY (`SearchID`) REFERENCES `search` (`SearchID`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `0_21609` FOREIGN KEY (`SearchTableID`) REFERENCES `searchtable` (`SearchTableID`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `0_21610` FOREIGN KEY (`SearchFieldID`) REFERENCES `searchfield` (`SearchFieldID`) ON DELETE CASCADE ON UPDATE CASCADE
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `searchcriteria`
@@ -3780,7 +3780,7 @@ CREATE TABLE `searchexpression` (
   `expressionid` int(10) unsigned NOT NULL auto_increment,
   `label` varchar(25) default NULL,
   PRIMARY KEY  (`expressionid`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `searchexpression`
@@ -3810,7 +3810,7 @@ CREATE TABLE `searchfield` (
   UNIQUE KEY `SearchFieldID` (`SearchFieldID`),
   KEY `SearchTableID` (`SearchTableID`),
   CONSTRAINT `0_21598` FOREIGN KEY (`SearchTableID`) REFERENCES `searchtable` (`SearchTableID`) ON DELETE CASCADE ON UPDATE CASCADE
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `searchfield`
@@ -3832,7 +3832,7 @@ CREATE TABLE `searchmodule` (
   KEY `SearchTableID` (`SearchTableID`),
   CONSTRAINT `0_21595` FOREIGN KEY (`ModuleID`) REFERENCES `module` (`moduleid`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `0_21596` FOREIGN KEY (`SearchTableID`) REFERENCES `searchtable` (`SearchTableID`) ON DELETE CASCADE ON UPDATE CASCADE
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `searchmodule`
@@ -3854,7 +3854,7 @@ CREATE TABLE `searchtable` (
   `IsOnGobalReplaceTable` enum('N','Y') NOT NULL default 'N',
   PRIMARY KEY  (`SearchTableID`),
   UNIQUE KEY `SearchTableID` (`SearchTableID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `searchtable`
@@ -3876,7 +3876,7 @@ CREATE TABLE `searchtablerelate` (
   KEY `RightSearchTableID` (`RightSearchTableID`),
   CONSTRAINT `0_21600` FOREIGN KEY (`LeftSearchTableID`) REFERENCES `searchtable` (`SearchTableID`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `0_21601` FOREIGN KEY (`RightSearchTableID`) REFERENCES `searchtable` (`SearchTableID`) ON DELETE CASCADE ON UPDATE CASCADE
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `searchtablerelate`
@@ -3893,7 +3893,7 @@ CREATE TABLE `securityprofile` (
   `profileid` int(11) unsigned NOT NULL auto_increment,
   `profilename` varchar(100) NOT NULL default '',
   PRIMARY KEY  (`profileid`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `securityprofile`
@@ -3916,7 +3916,7 @@ CREATE TABLE `serversettings` (
   `filesystemstoragepath` varchar(50) NOT NULL default '',
   `defaulttimezone` varchar(50) NOT NULL default '',
   PRIMARY KEY  (`serversettingid`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `serversettings`
@@ -3948,7 +3948,7 @@ CREATE TABLE `simplesearch` (
   CONSTRAINT `0_21669` FOREIGN KEY (`OwnerID`) REFERENCES `individual` (`IndividualID`) ON DELETE SET NULL ON UPDATE CASCADE,
   CONSTRAINT `0_21670` FOREIGN KEY (`CreatedBy`) REFERENCES `individual` (`IndividualID`) ON DELETE SET NULL ON UPDATE CASCADE,
   CONSTRAINT `0_21671` FOREIGN KEY (`ModifiedBy`) REFERENCES `individual` (`IndividualID`) ON DELETE SET NULL ON UPDATE CASCADE
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `simplesearch`
@@ -3978,7 +3978,7 @@ CREATE TABLE `simplesearchcriteria` (
   CONSTRAINT `0_21673` FOREIGN KEY (`SearchID`) REFERENCES `simplesearch` (`SearchID`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `0_21674` FOREIGN KEY (`SearchTableID`) REFERENCES `searchtable` (`SearchTableID`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `0_21675` FOREIGN KEY (`SearchFieldID`) REFERENCES `searchfield` (`SearchFieldID`) ON DELETE CASCADE ON UPDATE CASCADE
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `simplesearchcriteria`
@@ -3995,7 +3995,7 @@ CREATE TABLE `source` (
   `SourceID` int(10) NOT NULL auto_increment,
   `Name` varchar(25) default NULL,
   PRIMARY KEY  (`SourceID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `source`
@@ -4013,7 +4013,7 @@ CREATE TABLE `state` (
   `Name` varchar(50) default NULL,
   PRIMARY KEY  (`StateID`),
   UNIQUE KEY `stateID` (`StateID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `state`
@@ -4033,7 +4033,7 @@ CREATE TABLE `supportemailaccount` (
   UNIQUE KEY `SupportEmailAccountID` (`SupportEmailAccountID`),
   KEY `EmailAccountID` (`EmailAccountID`),
   CONSTRAINT `0_21615` FOREIGN KEY (`EmailAccountID`) REFERENCES `emailaccount` (`AccountID`) ON DELETE CASCADE ON UPDATE CASCADE
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `supportemailaccount`
@@ -4048,7 +4048,7 @@ DROP TABLE IF EXISTS `supportportlet`;
 CREATE TABLE `supportportlet` (
   `individualid` int(11) unsigned default NULL,
   `visible` enum('YES','NO') default NULL
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `supportportlet`
@@ -4064,7 +4064,7 @@ CREATE TABLE `supportpriority` (
   `priorityid` int(10) unsigned NOT NULL auto_increment,
   `name` varchar(25) NOT NULL default '',
   PRIMARY KEY  (`priorityid`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `supportpriority`
@@ -4081,7 +4081,7 @@ CREATE TABLE `supportstatus` (
   `statusid` int(10) unsigned NOT NULL auto_increment,
   `name` varchar(25) NOT NULL default '',
   PRIMARY KEY  (`statusid`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `supportstatus`
@@ -4098,7 +4098,7 @@ CREATE TABLE `syncconfig` (
   `lastsynceddate` datetime NOT NULL default '0000-00-00 00:00:00',
   `syncedid` int(11) NOT NULL default '0',
   KEY `syncedid` (`syncedid`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `syncconfig`
@@ -4113,7 +4113,7 @@ DROP TABLE IF EXISTS `syncmaster`;
 CREATE TABLE `syncmaster` (
   `syncas` varchar(25) NOT NULL default '',
   PRIMARY KEY  (`syncas`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `syncmaster`
@@ -4132,7 +4132,7 @@ CREATE TABLE `syncnote` (
   `content` text,
   UNIQUE KEY `noteID` (`recordID`,`recordTypeID`),
   KEY `recordID` (`recordID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `syncnote`
@@ -4152,7 +4152,7 @@ CREATE TABLE `syncproperties` (
   PRIMARY KEY  (`syncID`),
   KEY `recordType` (`recordType`),
   KEY `recordID` (`recordID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `syncproperties`
@@ -4172,7 +4172,7 @@ CREATE TABLE `systememailsettings` (
   `smtpServer` varchar(255) NOT NULL default '',
   `description` varchar(255) default NULL,
   PRIMARY KEY  (`systemEmailID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `systememailsettings`
@@ -4190,7 +4190,7 @@ CREATE TABLE `systemsettings` (
   `settingName` varchar(255) NOT NULL default '',
   `settingValue` varchar(255) NOT NULL default '',
   PRIMARY KEY  (`settingID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `systemsettings`
@@ -4214,7 +4214,7 @@ CREATE TABLE `task` (
   KEY `ActivityID` (`ActivityID`),
   KEY `ProjectID` (`ProjectID`),
   KEY `Parent` (`Parent`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `task`
@@ -4231,7 +4231,7 @@ CREATE TABLE `taskassigned` (
   `AssignedTo` int(11) unsigned default NULL,
   KEY `TaskID` (`TaskID`),
   KEY `AssignedTo` (`AssignedTo`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `taskassigned`
@@ -4247,7 +4247,7 @@ CREATE TABLE `taskportlet` (
   `individualid` int(11) unsigned default NULL,
   `visibility` enum('YES','NO') default NULL,
   KEY `individualid` (`individualid`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `taskportlet`
@@ -4264,7 +4264,7 @@ CREATE TABLE `taxclass` (
   `title` varchar(25) NOT NULL default '',
   `description` text NOT NULL,
   PRIMARY KEY  (`taxclassid`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `taxclass`
@@ -4282,7 +4282,7 @@ CREATE TABLE `taxjurisdiction` (
   `taxjurisdictionname` varchar(25) NOT NULL default '',
   `taxjurisdictioncode` varchar(25) NOT NULL default '',
   PRIMARY KEY  (`taxjurisdictionid`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `taxjurisdiction`
@@ -4301,7 +4301,7 @@ CREATE TABLE `taxmatrix` (
   `taxrate` float NOT NULL default '0',
   KEY `taxclassid` (`taxclassid`),
   KEY `taxjurisdictionid` (`taxjurisdictionid`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `taxmatrix`
@@ -4318,7 +4318,7 @@ CREATE TABLE `terms` (
   `TermID` int(11) NOT NULL auto_increment,
   `TermName` varchar(20) NOT NULL default '',
   PRIMARY KEY  (`TermID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `terms`
@@ -4344,7 +4344,7 @@ CREATE TABLE `thread` (
   KEY `ticketid` (`ticketid`),
   KEY `creator` (`creator`),
   KEY `priority` (`priority`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `thread`
@@ -4383,7 +4383,7 @@ CREATE TABLE `ticket` (
   KEY `createdby` (`createdby`),
   KEY `modifiedby` (`modifiedby`),
   KEY `manager` (`manager`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `ticket`
@@ -4402,7 +4402,7 @@ CREATE TABLE `ticketlink` (
   KEY `ticketid` (`ticketid`),
   KEY `recordtypeid` (`recordtypeid`),
   KEY `recordid` (`recordid`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `ticketlink`
@@ -4435,7 +4435,7 @@ CREATE TABLE `timeentry` (
   KEY `owner` (`owner`),
   KEY `Creator` (`Creator`),
   KEY `Status` (`Status`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `timeentry`
@@ -4466,7 +4466,7 @@ CREATE TABLE `timesheet` (
   KEY `ModifiedBy` (`ModifiedBy`),
   KEY `Status` (`Status`),
   KEY `ReportingTo` (`ReportingTo`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `timesheet`
@@ -4501,7 +4501,7 @@ CREATE TABLE `timeslip` (
   KEY `TicketID` (`TicketID`),
   KEY `CreatedBy` (`CreatedBy`),
   KEY `TimeSheetID` (`TimeSheetID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `timeslip`
@@ -4518,7 +4518,7 @@ CREATE TABLE `uidlist` (
   `uid` varchar(100) NOT NULL default '',
   UNIQUE KEY `messageUID` (`accountID`,`uid`),
   KEY `accountID` (`accountID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `uidlist`
@@ -4536,7 +4536,7 @@ CREATE TABLE `uifieldmapping` (
   `moduleid` int(11) NOT NULL default '0',
   `fieldid` int(11) NOT NULL default '0',
   PRIMARY KEY  (`ID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `uifieldmapping`
@@ -4559,7 +4559,7 @@ CREATE TABLE `user` (
   PRIMARY KEY  (`UserID`),
   KEY `IndividualID` (`IndividualID`),
   CONSTRAINT `0_21584` FOREIGN KEY (`IndividualID`) REFERENCES `individual` (`IndividualID`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `user`
@@ -4582,7 +4582,7 @@ CREATE TABLE `userpreference` (
   PRIMARY KEY  (`preferenceid`),
   KEY `individualid` (`individualid`),
   KEY `moduleid` (`moduleid`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `userpreference`
@@ -4603,7 +4603,7 @@ CREATE TABLE `userpreferencedefault` (
   `tag` varchar(100) NOT NULL default '',
   PRIMARY KEY  (`preferenceid`),
   KEY `moduleid` (`moduleid`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `userpreferencedefault`
@@ -4621,7 +4621,7 @@ CREATE TABLE `usersecurityprofile` (
   `individualid` int(11) unsigned NOT NULL default '0',
   KEY `profileid` (`profileid`),
   KEY `individualid` (`individualid`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `usersecurityprofile`
@@ -4638,7 +4638,7 @@ CREATE TABLE `valuelist` (
   `valueListId` int(11) unsigned NOT NULL auto_increment,
   `valueListName` varchar(255) NOT NULL default '',
   PRIMARY KEY  (`valueListId`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `valuelist`
@@ -4661,7 +4661,7 @@ CREATE TABLE `valuelistfield` (
   PRIMARY KEY  (`valueListFieldId`),
   KEY `valueListId` (`valueListId`),
   CONSTRAINT `0_21727` FOREIGN KEY (`valueListId`) REFERENCES `valuelist` (`valueListId`) ON DELETE CASCADE ON UPDATE CASCADE
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `valuelistfield`
@@ -4677,7 +4677,7 @@ DROP TABLE IF EXISTS `vendor`;
 CREATE TABLE `vendor` (
   `entityid` int(10) unsigned NOT NULL default '0',
   PRIMARY KEY  (`entityid`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `vendor`
@@ -4694,7 +4694,7 @@ CREATE TABLE `viewcolumns` (
   `columnname` varchar(100) default NULL,
   `columnorder` int(3) unsigned default NULL,
   KEY `viewid` (`viewid`)
-) TYPE=InnoDB;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `viewcolumns`
